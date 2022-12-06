@@ -19,6 +19,8 @@ $bp-large: 62.5em;   // 1000px
 $bp-medium: 50em;    // 800px;
 $bp-small: 37.5em;   // 600px;
 
+
+
 *,
 *::after,
 *::before {
@@ -29,7 +31,8 @@ $bp-small: 37.5em;   // 600px;
 
 body {
     font-family: $font-primary;
-    color: #FFFFFF;
+    color: $color-grey-light-1;
+    
 }
 
 .container {
