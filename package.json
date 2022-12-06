@@ -1,0 +1,20 @@
+{
+  "name": "personal-project",
+  "version": "1.0.0",
+  "description": "\"Personal Project\"",
+  "main": "script.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/THG20203/Personal-Project.git"
+  },
+  "author": "Tristan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/THG20203/Personal-Project/issues"
+  },
+  "homepage": "https://github.com/THG20203/Personal-Project#readme",
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
