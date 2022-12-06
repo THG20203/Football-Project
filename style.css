@@ -1,0 +1,20 @@
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;   // 1200px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 50em;    // 800px;
+$bp-small: 37.5em;    // 600px;
+
+.container {
+    display: grid;
+    grid-template-rows: 
+    grid-template-columns: 
+
+    @media only screen and (max-width: $bp-large) {
+        grid-template-rows: 
+        grid-template-columns: 
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-rows: 
+    }
+}
