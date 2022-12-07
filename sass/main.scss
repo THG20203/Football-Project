@@ -1,17 +1,5 @@
-@import "base/base"
+@import "base";
+@import "layout";
+@import "components";
 
 
-.container {
-    display: grid;
-    grid-template-rows: 
-    grid-template-columns: 
-
-    @media only screen and (max-width: $bp-large) {
-        grid-template-rows: 
-        grid-template-columns: 
-    }
-
-    @media only screen and (max-width: $bp-medium) {
-        grid-template-rows: 
-    }
-}
