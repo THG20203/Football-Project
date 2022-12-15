@@ -1,15 +1,22 @@
 {
   "name": "personal-project",
   "version": "1.0.0",
-  "description": "\"Personal Project\"",
-  "main": "script.js",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "concat": "^1.0.3",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  },
   "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/THG20203/Personal-Project.git"
   },
-  "author": "Tristan",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/THG20203/Personal-Project/issues"
@@ -17,8 +24,7 @@
   "homepage": "https://github.com/THG20203/Personal-Project#readme",
   "devDependencies": {
     "node-sass": "^8.0.0",
-  },
-  "dependencies": {
-    "live-server": "^1.2.2",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^10.1.0"
   }
 }
