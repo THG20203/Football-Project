@@ -1,5 +1,5 @@
 {
-  "name": "personal-project",
+  "name": "football-project",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -19,14 +19,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/THG20203/Personal-Project.git"
+    "url": "git+https://github.com/THG20203/Football-Project.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/THG20203/Personal-Project/issues"
+    "url": "https://github.com/THG20203/Football-Project/issues"
   },
-  "homepage": "https://github.com/THG20203/Personal-Project#readme",
+  "homepage": "https://github.com/THG20203/Football-Project#readme",
   "devDependencies": {
     "autoprefixer": "^7.1.4",
     "node-sass": "^8.0.0",
