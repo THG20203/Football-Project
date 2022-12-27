@@ -6,9 +6,6 @@
 
   $color-grey-light-1: #f9f7f6;
   $color-grey-light-2: #aaa;
-
-  $color-grey-dark-1: #54483a;
-  $color-grey-dark-2: #6d5d4b;
 }
 
 /* RESPONSIVE BREAKPOINTS */
@@ -45,6 +42,7 @@ html {
 
 body {
   font-family: $font;
+  color: $color-grey-light-1;
   line-height: 1.6;
   min-height: 100vh;
 }
