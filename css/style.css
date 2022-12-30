@@ -28,9 +28,13 @@ html {
 
 body {
   font-family: "Nunito", sans-serif;
-  color: #f9f7f6;
+  color: #aaa;
   line-height: 1.6;
   min-height: 100vh; }
+
+.container {
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content); }
 
 .features {
   background-color: #aaa; }

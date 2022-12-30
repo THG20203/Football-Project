@@ -40,7 +40,12 @@ html {
 
 body {
   font-family: $font;
-  color: $color-grey-1;
+  color: $color-grey-2;
   line-height: 1.6;
   min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
 }
