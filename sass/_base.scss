@@ -1,12 +1,10 @@
-:root {
-  $color-primary: #0c22e8; /* Brighter blue */
-  $color-primary-dark: #0a19a1; /* blue */
+$color-primary: #0c22e8; /* Brighter blue */
+$color-primary-dark: #0a19a1; /* blue */
 
-  $color-secondary: #101d2c;
+$color-secondary: #101d2c;
 
-  $color-grey-light-1: #f9f7f6;
-  $color-grey-light-2: #aaa;
-}
+$color-grey-1: #f9f7f6;
+$color-grey-2: #aaa;
 
 /* RESPONSIVE BREAKPOINTS */
 $bp-largest: 75em; /* 1200px */
@@ -42,7 +40,7 @@ html {
 
 body {
   font-family: $font;
-  color: $color-grey-light-1;
+  color: $color-grey-1;
   line-height: 1.6;
   min-height: 100vh;
 }

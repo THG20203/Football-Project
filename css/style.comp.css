@@ -1,0 +1,60 @@
+/* Brighter blue */
+/* blue */
+/* RESPONSIVE BREAKPOINTS */
+/* 1200px */
+/* 1100px */
+/* 900px */
+/* 600px */
+/* 500px */
+/* FONT VARIABLES */
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /* 1rem = 10px, 10px/16px = 62.5% */ }
+  @media only screen and (max-width: 68.75em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: #f9f7f6;
+  line-height: 1.6;
+  min-height: 100vh; }
+
+.features {
+  background-color: #aaa; }
+
+.footer {
+  background-color: #101d2c; }
+
+.gallery {
+  background-color: #f9f7f6; }
+
+.header {
+  background-color: #f9f7f6; }
+
+.homes {
+  background-color: #101d2c; }
+
+.players {
+  background-color: #101d2c; }
+
+.sidebar {
+  background-color: #0c22e8; }
+
+.story__pictures {
+  background-color: #0c22e8; }
+
+.story__content {
+  background-color: #f9f7f6; }
