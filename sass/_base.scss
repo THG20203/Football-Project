@@ -58,5 +58,8 @@ body {
   // 8rem is for sidebar
   // need to center the 8 minmax function columns - by put 1fr either side of the 8 min-max section
   // 1fr units will be first to shrink. without the 8rem sidebar - could've used margin auto
-  grid-template-columns: 8rem 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
+  grid-template-columns:
+    [sidebar-start] 8rem [sidebar-end full-start] 1fr [center-start]
+    repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end] 1fr [full-end];
 }
