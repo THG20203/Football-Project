@@ -1,3 +1,5 @@
 .footer {
   background-color: $color-secondary;
+  /* goes all the way from one end to the other end full bleed section */
+  grid-column: full-start / full-end;
 }

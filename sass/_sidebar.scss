@@ -1,3 +1,9 @@
 .sidebar {
   background-color: $color-primary;
+  /* sidebar to start at the grid line sidebar-start, end at sidebar-end */
+  grid-column: sidebar-start / sidebar-end;
+  /* second step - want it to span from the beginning of the grid to the end */
+  /* (what is meant above is - all the way down the webpage) */
+  /* keyword for the end is -1 */
+  grid-row: 1 / -1;
 }
