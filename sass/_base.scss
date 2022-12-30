@@ -57,11 +57,12 @@ body {
   // function below - minmax - minimum it can be = min-content, max it can be per column = 14rem
   // 8rem is for sidebar
   // need to center the 8 minmax function columns - by put 1fr either side of the 8 min-max section
-  // 1fr units will be first to shrink. without the 8rem sidebar - could've used margin auto
+  // mixmax 6rem, 1fr units will be first to shrink. without the 8rem sidebar - min of 60px (6rem) width
   grid-template-columns:
-    [sidebar-start] 8rem [sidebar-end full-start] 1fr [center-start]
+    [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr)
+    [center-start]
     repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
-    [center-end] 1fr [full-end];
+    [center-end] minmax(6rem, 1fr) [full-end];
 
   /* container and all children - for development purposes */
   & > * {
