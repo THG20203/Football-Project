@@ -56,6 +56,7 @@ body {
   // something between 1100 - 1200 px to divide up width of the screen
   // function below - minmax - minimum it can be = min-content, max it can be per column = 14rem
   // 8rem is for sidebar
-  // need to center the 8 minmax function columns
-  grid-template-columns: 8rem repeat(8, minmax(min-content, 14rem));
+  // need to center the 8 minmax function columns - by put 1fr either side of the 8 min-max section
+  // 1fr units will be first to shrink. without the 8rem sidebar - could've used margin auto
+  grid-template-columns: 8rem 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
 }

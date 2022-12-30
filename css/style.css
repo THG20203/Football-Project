@@ -37,7 +37,7 @@ body {
   /* comments for the grid-template-rows */
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   /* comments for the grid-template-columns */
-  grid-template-columns: 8rem repeat(8, minmax(min-content, 14rem)); }
+  grid-template-columns: 8rem 1fr repeat(8, minmax(min-content, 14rem)) 1fr; }
 
 .features {
   background-color: #aaa; }
