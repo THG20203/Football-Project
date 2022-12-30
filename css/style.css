@@ -37,11 +37,15 @@ body {
   /* comments for the grid-template-rows */
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   /* comments for the grid-template-columns */
-  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end]; }
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end];
+  /* container and all children - for development purposes */ }
+  .container > * {
+    padding: 40px;
+    font-size: 3rem; }
 
 /* why only name the columns and not the rows? */
 .features {
-  background-color: #aaa;
+  background-color: #0a19a1;
   /* features go from center-start to center-end - beginning to end of centre 8 grid */
   grid-column: center-start / center-end; }
 
@@ -56,13 +60,18 @@ body {
   grid-column: full-start / full-end; }
 
 .header {
-  background-color: #f9f7f6; }
+  background-color: #f9f7f6;
+  /* 6/8 columns = for the header, 2/8 columns for the players section */
+  grid-column: full-start / col-end 6; }
 
 .homes {
-  background-color: #101d2c; }
+  background-color: #101d2c;
+  /* homes same as features go from center-start to center-end - beginning to end of centre 8 grid */
+  grid-column: center-start / center-end; }
 
 .players {
-  background-color: #101d2c; }
+  background-color: #101d2c;
+  grid-column: col-start 7 / full-end; }
 
 .sidebar {
   background-color: #0c22e8;
@@ -74,7 +83,9 @@ body {
   grid-row: 1 / -1; }
 
 .story__pictures {
-  background-color: #0c22e8; }
+  background-color: #0c22e8;
+  grid-column: full-start / col-end 4; }
 
 .story__content {
-  background-color: #f9f7f6; }
+  background-color: #f9f7f6;
+  grid-column: col-start 5 / full-end; }

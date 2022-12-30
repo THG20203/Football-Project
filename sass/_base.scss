@@ -62,6 +62,12 @@ body {
     [sidebar-start] 8rem [sidebar-end full-start] 1fr [center-start]
     repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
     [center-end] 1fr [full-end];
+
+  /* container and all children - for development purposes */
+  & > * {
+    padding: 40px;
+    font-size: 3rem;
+  }
 }
 
 /* why only name the columns and not the rows? */
