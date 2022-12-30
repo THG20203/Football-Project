@@ -34,7 +34,10 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 80vh min-content 40vw repeat(3, min-content); }
+  /* comments for the grid-template-rows */
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  /* comments for the grid-template-columns */
+  grid-template-columns: 8rem repeat(8, minmax(min-content, 14rem)); }
 
 .features {
   background-color: #aaa; }
