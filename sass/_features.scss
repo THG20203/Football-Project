@@ -1,5 +1,10 @@
 .features {
-  background-color: $color-primary-dark;
   /* features go from center-start to center-end - beginning to end of centre 8 grid */
   grid-column: center-start / center-end;
+  margin: 15rem 0;
+  /* making features grid item a grid container */
+  display: grid;
+  /* making columns for this 'sub grid'. */
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 6rem;
 }
