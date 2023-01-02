@@ -123,3 +123,16 @@ body {
 
 .heading-4 {
   font-size: 1.9rem; }
+
+.btn {
+  background-color: #0c22e8;
+  color: #f9f7f6;
+  border: none;
+  border-radius: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1.8rem 3rem;
+  cursor: pointer; }
+  .btn:hover {
+    background-color: #0a19a1; }
