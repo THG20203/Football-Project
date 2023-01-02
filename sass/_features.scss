@@ -5,7 +5,8 @@
   /* making features grid item a grid container */
   display: grid;
   /* making columns for this 'sub grid'. */
-  grid-template-columns: repeat(3, 1fr);
+  // auto-fit - CSS add as many tracks as fit in the container, 25rem (or 250px) minimum size column has to have
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 6rem;
   /* align text to be at the top of the boxes within the grid */
   align-items: start;
