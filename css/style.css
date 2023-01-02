@@ -50,12 +50,16 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 6rem; }
 
-.feature__icon {
-  width: 4.5rem;
-  height: 4.5rem; }
-
-.feature__text {
-  font-size: 1.7rem; }
+.feature {
+  /* Need to make the feature elements themselves individual grids */
+  display: grid;
+  grid-template-columns: min-content 1fr; }
+  .feature__icon {
+    width: 4.5rem;
+    height: 4.5rem;
+    grid-row: 1 / span 2; }
+  .feature__text {
+    font-size: 1.7rem; }
 
 .footer {
   background-color: #101d2c;

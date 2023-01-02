@@ -10,9 +10,21 @@
 }
 
 .feature {
+  /* Need to make the feature elements themselves individual grids */
+  display: grid;
+  // first column contain the icon (width of icon = 4.5rem) - so min-content.
+  // why min-content and not 4.5rem? If we change size of icon,
+  // automatically the width of column would change. Second column occupy the rest - hence 1fr
+  grid-template-columns: min-content 1fr;
+  //Again, no need to define rows - just columns
+
   &__icon {
     width: 4.5rem;
     height: 4.5rem;
+    // -1 only works with an explicit grid, but we didn't define grid rows so have to do span 2
+    // span 2 makes the icon span the first row and the second.
+    // This means the main body of text will shift to the bottom right
+    grid-row: 1 / span 2;
   }
 
   &__text {
