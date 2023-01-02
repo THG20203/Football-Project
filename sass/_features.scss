@@ -16,6 +16,8 @@
   // why min-content and not 4.5rem? If we change size of icon,
   // automatically the width of column would change. Second column occupy the rest - hence 1fr
   grid-template-columns: min-content 1fr;
+  grid-row-gap: 1.5rem;
+  grid-column-gap: 2.5rem;
   //Again, no need to define rows - just columns
 
   &__icon {
