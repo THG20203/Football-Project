@@ -36,8 +36,26 @@
   text-transform: uppercase;
   padding: 1.8rem 3rem;
   cursor: pointer;
+  transition: all 0.2s;
 
   &:hover {
     background-color: $color-primary-dark;
   }
+}
+
+//helper classes - mb stands for margin bottom
+.mb-sm {
+  margin-bottom: 2rem;
+}
+
+.mb-md {
+  margin-bottom: 3rem;
+}
+
+.mb-lg {
+  margin-bottom: 4rem;
+}
+
+.mb-hg {
+  margin-bottom: 8rem;
 }

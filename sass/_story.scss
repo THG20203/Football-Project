@@ -9,4 +9,10 @@
 
     padding: 6rem 12rem;
   }
+
+  &__text {
+    font-size: 1.5rem;
+    // ok to use margin-bottom here because story__text is not going to be a re usable element
+    margin-bottom: 4rem;
+  }
 }
