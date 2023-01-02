@@ -7,6 +7,8 @@
   /* making columns for this 'sub grid'. */
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 6rem;
+  /* align text to be at the top of the boxes within the grid */
+  align-items: start;
 }
 
 .feature {
