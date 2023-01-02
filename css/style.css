@@ -55,7 +55,7 @@ body {
   height: 4.5rem; }
 
 .feature__text {
-  font-size: 2rem; }
+  font-size: 1.7rem; }
 
 .footer {
   background-color: #101d2c;
@@ -101,3 +101,6 @@ body {
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Roboto", sans-serif;
   font-weight: 400; }
+
+.heading-4 {
+  font-size: 1.9rem; }
