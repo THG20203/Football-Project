@@ -14,7 +14,8 @@ $bp-small: 37.5em; /* 600px */
 $bp-smallest: 31.25em; /* 500px */
 
 /* FONT VARIABLES */
-$font: 'Nunito', sans-serif;
+$font-primary: 'Nunito', sans-serif;
+$font-display: 'Roboto', sans-serif;
 
 * {
   margin: 0;
@@ -39,7 +40,7 @@ html {
 }
 
 body {
-  font-family: $font;
+  font-family: $font-primary;
   color: $color-secondary;
   line-height: 1.6;
   min-height: 100vh;

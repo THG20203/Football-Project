@@ -1,4 +1,11 @@
+//sass extend, cause all of these need same font-family and weight
+%heading {
+  font-family: $font-display;
+  font-weight: 400;
+}
+
 .heading-1 {
+  @extend %heading;
 }
 
 .heading-2 {
