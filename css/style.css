@@ -59,7 +59,8 @@ body {
   .feature__icon {
     width: 4.5rem;
     height: 4.5rem;
-    grid-row: 1 / span 2; }
+    grid-row: 1 / span 2;
+    transform: translateY(-1rem); }
   .feature__text {
     font-size: 1.7rem; }
 

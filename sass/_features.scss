@@ -27,6 +27,8 @@
     // span 2 makes the icon span the first row and the second.
     // This means the main body of text will shift to the bottom right
     grid-row: 1 / span 2;
+    // move the icon up a bit
+    transform: translateY(-1rem);
   }
 
   &__text {
