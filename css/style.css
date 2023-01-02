@@ -105,11 +105,21 @@ body {
 
 .story__content {
   background-color: #f9f7f6;
-  grid-column: col-start 5 / full-end; }
+  grid-column: col-start 5 / full-end;
+  padding: 6rem 12rem; }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Roboto", sans-serif;
   font-weight: 400; }
+
+.heading-2 {
+  font-size: 3rem;
+  line-height: 1; }
+
+.heading-3 {
+  font-size: 1.6rem;
+  color: #0a19a1;
+  text-transform: uppercase; }
 
 .heading-4 {
   font-size: 1.9rem; }

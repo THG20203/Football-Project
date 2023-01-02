@@ -10,10 +10,15 @@
 
 .heading-2 {
   @extend %heading;
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .heading-3 {
   @extend %heading;
+  font-size: 1.6rem;
+  color: $color-primary-dark;
+  text-transform: uppercase;
 }
 
 .heading-4 {
