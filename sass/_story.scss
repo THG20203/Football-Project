@@ -6,8 +6,16 @@
   &__content {
     background-color: $color-grey-1;
     grid-column: col-start 5 / full-end;
-
     padding: 6rem 12rem;
+    //using flex to center - only 1 dimensional - didn't need grid
+    display: flex;
+    flex-direction: column;
+    //vertically centered
+    justify-content: center;
+    align-items: flex-start;
+
+    // Could've done this with grid - display: grid, align-content: center
+    // equivalent of align-items? justify-items: start - align rows in grid
   }
 
   &__text {
