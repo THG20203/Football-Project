@@ -8,3 +8,14 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 6rem;
 }
+
+.feature {
+  &__icon {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  &__text {
+    font-size: 2rem;
+  }
+}

@@ -50,6 +50,13 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 6rem; }
 
+.feature__icon {
+  width: 4.5rem;
+  height: 4.5rem; }
+
+.feature__text {
+  font-size: 2rem; }
+
 .footer {
   background-color: #101d2c;
   /* goes all the way from one end to the other end full bleed section */
