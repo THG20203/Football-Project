@@ -2,6 +2,12 @@
   &__pictures {
     background-color: $color-primary;
     grid-column: full-start / col-end 4;
+    background-image: linear-gradient(
+        rgba($color-primary-dark, 0.3),
+        rgba($color-primary-dark, 0.3)
+      ),
+      url(../img/stadium-stand.png);
+    background-repeat: no-repeat;
 
     display: grid;
     grid-template-rows: repeat(6, 1fr);
@@ -13,14 +19,14 @@
   /* Set the styles for images */
   &__img--1 {
     width: 100%;
-    grid-row: 3 / 6;
-    grid-column: 2 / 6;
+    grid-row: 2 / 6;
+    grid-column: 1 / 5;
   }
 
   &__img--2 {
     width: 110%;
     z-index: 1;
-    grid-row: 1 / 6;
+    grid-row: 1 / 5;
     grid-column: 4 / 7;
   }
 
