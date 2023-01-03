@@ -7,3 +7,29 @@
   /* keyword for the end is -1 */
   grid-row: 1 / -1;
 }
+
+.nav-btn {
+  border: none;
+  border-radius: 0;
+
+  background-color: $color-grey-1;
+  height: 2px;
+  width: 4.5rem;
+
+  &::before,
+  &::after {
+    background-color: $color-grey-1;
+    height: 2px;
+    width: 4.5rem;
+    // Make them visible with the content visible property
+    content: '';
+    display: block;
+  }
+  // Move them up or down
+  &::before {
+    transform: translateY(-1.5rem);
+  }
+  &::after {
+    transform: translateY(1.5rem);
+  }
+}

@@ -89,6 +89,23 @@ body {
   /* keyword for the end is -1 */
   grid-row: 1 / -1; }
 
+.nav-btn {
+  border: none;
+  border-radius: 0;
+  background-color: #f9f7f6;
+  height: 2px;
+  width: 4.5rem; }
+  .nav-btn::before, .nav-btn::after {
+    background-color: #f9f7f6;
+    height: 2px;
+    width: 4.5rem;
+    content: '';
+    display: block; }
+  .nav-btn::before {
+    transform: translateY(-1.5rem); }
+  .nav-btn::after {
+    transform: translateY(1.5rem); }
+
 .story {
   /* Set the styles for images */ }
   .story__pictures {
