@@ -7,18 +7,21 @@
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(6, 1fr);
     //align image in the center of the container vertically.
-    // needs to be done cause images have aspect ratio - need to be aligned. in the container so they are ordered.
+    // needs to be done cause images have aspect ratio - need to be aligned.
     align-items: center;
   }
   /* Set the styles for images */
   &__img--1 {
     width: 100%;
-    grid-row: 2 / 6;
+    grid-row: 3 / 6;
     grid-column: 2 / 6;
   }
 
   &__img--2 {
-    width: 100%;
+    width: 110%;
+    z-index: 1;
+    grid-row: 1 / 6;
+    grid-column: 4 / 7;
   }
 
   &__content {
