@@ -1,5 +1,5 @@
 .sidebar {
-  background-color: $color-primary;
+  background-color: $color-grey-1;
   /* sidebar to start at the grid line sidebar-start, end at sidebar-end */
   grid-column: sidebar-start / sidebar-end;
   /* second step - want it to span from the beginning of the grid to the end */
@@ -8,8 +8,7 @@
   grid-row: 1 / -1;
 
   display: grid;
-  grid-template-columns: 1fr 8.5rem 1fr;
-
+  grid-template-columns: 1fr 15rem 1fr;
   &__badge {
     width: 100%;
     grid-column: 2 / 3;
