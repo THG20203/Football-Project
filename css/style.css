@@ -99,7 +99,7 @@ body {
   .story__pictures {
     background-color: #0c22e8;
     grid-column: full-start / col-end 4;
-    background-image: linear-gradient(rgba(10, 25, 161, 0.3), rgba(10, 25, 161, 0.3)), url(../img/stadium-stand.png);
+    background-image: url(../img/stadium-stand.png);
     background-repeat: no-repeat;
     display: grid;
     grid-template-rows: repeat(6, 1fr);
