@@ -8,9 +8,27 @@
   grid-row: 1 / -1;
 
   display: grid;
-  grid-template-columns: 1fr 15rem 1fr;
+  grid-template-columns: 1fr 14rem 1fr;
+  grid-template-rows: 3.5rem 10rem 5rem 10rem 10rem;
+  grid-row-gap: 3.5rem;
   &__badge {
     width: 100%;
     grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+  &__logo--1 {
+    width: 100%;
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+  }
+  &__logo--2 {
+    width: 100%;
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+  }
+  &__logo--3 {
+    width: 100%;
+    grid-column: 2 / 3;
+    grid-row: 6 / 7;
   }
 }
