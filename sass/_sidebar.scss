@@ -6,6 +6,9 @@
   /* (what is meant above is - all the way down the webpage) */
   /* keyword for the end is -1 */
   grid-row: 1 / -1;
+
+  display: flex;
+  justify-content: center;
 }
 
 .nav-btn {
@@ -21,6 +24,8 @@
     background-color: $color-grey-1;
     height: 2px;
     width: 4.5rem;
+    // Move it down a bit cause couldn't see before
+    margin-top: 4rem;
     // Make them visible with the content visible property
     content: '';
     display: block;
