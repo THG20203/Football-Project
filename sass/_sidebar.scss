@@ -7,34 +7,11 @@
   /* keyword for the end is -1 */
   grid-row: 1 / -1;
 
-  display: flex;
-  justify-content: center;
-}
+  display: grid;
+  grid-template-columns: 1fr 8.5rem 1fr;
 
-.nav-btn {
-  border: none;
-  border-radius: 0;
-
-  background-color: $color-grey-1;
-  height: 2px;
-  width: 2.5rem;
-  // Move it down a bit cause couldn't see before
-  margin-top: 3rem;
-
-  &::before,
-  &::after {
-    background-color: $color-grey-1;
-    height: 2px;
-    width: 2.5rem;
-    // Make them visible with the content visible property
-    content: '';
-    display: block;
-  }
-  // Move them up or down
-  &::before {
-    transform: translateY(-1rem);
-  }
-  &::after {
-    transform: translateY(1rem);
+  &__badge {
+    width: 100%;
+    grid-column: 2 / 3;
   }
 }
