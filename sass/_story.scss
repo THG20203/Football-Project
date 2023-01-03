@@ -2,7 +2,13 @@
   &__pictures {
     background-color: $color-primary;
     grid-column: full-start / col-end 4;
-    background-image: url(../img/stadium-stand.png);
+    background-image: linear-gradient(
+        rgba($color-primary, 0.7),
+        rgba($color-primary, 0.7)
+      ),
+      url(../img/stadium-stand.png);
+    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
 
     display: grid;

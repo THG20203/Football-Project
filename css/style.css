@@ -35,7 +35,7 @@ body {
 .container {
   display: grid;
   /* comments for the grid-template-rows */
-  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  grid-template-rows: 80vh min-content 40vw min-content;
   /* comments for the grid-template-columns */
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
@@ -76,11 +76,6 @@ body {
   /* 6/8 columns = for the header, 2/8 columns for the players section */
   grid-column: full-start / col-end 6; }
 
-.homes {
-  background-color: #101d2c;
-  /* homes same as features go from center-start to center-end - beginning to end of centre 8 grid */
-  grid-column: center-start / center-end; }
-
 .players {
   background-color: #101d2c;
   grid-column: col-start 7 / full-end; }
@@ -99,7 +94,9 @@ body {
   .story__pictures {
     background-color: #0c22e8;
     grid-column: full-start / col-end 4;
-    background-image: url(../img/stadium-stand.png);
+    background-image: linear-gradient(rgba(12, 34, 232, 0.7), rgba(12, 34, 232, 0.7)), url(../img/stadium-stand.png);
+    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
     display: grid;
     grid-template-rows: repeat(6, 1fr);
