@@ -90,8 +90,8 @@ body {
   grid-row: 1 / -1;
   display: grid;
   grid-template-columns: 1fr 14rem 1fr;
-  grid-template-rows: 3.5rem 10rem 5rem 10rem 10rem;
-  grid-row-gap: 3.5rem; }
+  grid-template-rows: 1rem 10rem 5rem 10rem 10rem 10rem;
+  grid-row-gap: 5rem; }
   .sidebar__badge {
     width: 100%;
     grid-column: 2 / 3;
