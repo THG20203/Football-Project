@@ -37,7 +37,7 @@ body {
   /* comments for the grid-template-rows */
   grid-template-rows: 80vh min-content 40vw min-content;
   /* comments for the grid-template-columns */
-  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  grid-template-columns: [sidebar-start] 5rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
 /* why only name the columns and not the rows? */
 .features {
@@ -96,18 +96,18 @@ body {
   border-radius: 0;
   background-color: #f9f7f6;
   height: 2px;
-  width: 4.5rem; }
+  width: 2.5rem;
+  margin-top: 3rem; }
   .nav-btn::before, .nav-btn::after {
     background-color: #f9f7f6;
     height: 2px;
-    width: 4.5rem;
-    margin-top: 4rem;
+    width: 2.5rem;
     content: '';
     display: block; }
   .nav-btn::before {
-    transform: translateY(-1.5rem); }
+    transform: translateY(-1rem); }
   .nav-btn::after {
-    transform: translateY(1.5rem); }
+    transform: translateY(1rem); }
 
 .story {
   /* Set the styles for images */ }

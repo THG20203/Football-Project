@@ -17,24 +17,24 @@
 
   background-color: $color-grey-1;
   height: 2px;
-  width: 4.5rem;
+  width: 2.5rem;
+  // Move it down a bit cause couldn't see before
+  margin-top: 3rem;
 
   &::before,
   &::after {
     background-color: $color-grey-1;
     height: 2px;
-    width: 4.5rem;
-    // Move it down a bit cause couldn't see before
-    margin-top: 4rem;
+    width: 2.5rem;
     // Make them visible with the content visible property
     content: '';
     display: block;
   }
   // Move them up or down
   &::before {
-    transform: translateY(-1.5rem);
+    transform: translateY(-1rem);
   }
   &::after {
-    transform: translateY(1.5rem);
+    transform: translateY(1rem);
   }
 }
