@@ -74,7 +74,11 @@ body {
 .header {
   background-color: #0a19a1;
   /* 6/8 columns = for the header, 2/8 columns for the players section */
-  grid-column: full-start / col-end 6; }
+  grid-column: full-start / col-end 6;
+  background-image: liner-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), .header __logo;
+    background-image-height: 4rem; }
+  .header__corporate-logos img {
+    height: 8rem; }
 
 .players {
   background-color: #101d2c;
@@ -133,6 +137,11 @@ body {
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Roboto", sans-serif;
   font-weight: 400; }
+
+.heading-1 {
+  font-size: 4.5rem;
+  color: #f9f7f6;
+  line-height: 1; }
 
 .heading-2 {
   font-size: 3rem;
