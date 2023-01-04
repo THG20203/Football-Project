@@ -90,28 +90,11 @@ body {
   grid-row: 1 / -1;
   display: grid;
   grid-template-columns: 1fr 10rem 1fr;
-  grid-template-rows: 1rem 10rem 5rem 10rem 10rem 10rem 10rem;
-  grid-row-gap: 5rem; }
+  grid-template-rows: 2rem 10rem; }
   .sidebar__badge {
     width: 100%;
     grid-column: 2 / 3;
     grid-row: 2 / 3; }
-  .sidebar__logo--1 {
-    width: 100%;
-    grid-column: 2 / 3;
-    grid-row: 4 / 5; }
-  .sidebar__logo--2 {
-    width: 100%;
-    grid-column: 2 / 3;
-    grid-row: 5 / 6; }
-  .sidebar__logo--3 {
-    width: 100%;
-    grid-column: 2 / 3;
-    grid-row: 6 / 7; }
-  .sidebar__logo--4 {
-    width: 100%;
-    grid-column: 2 / 3;
-    grid-row: 7 / 8; }
 
 .story {
   /* Set the styles for images */ }
