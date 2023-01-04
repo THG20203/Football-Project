@@ -37,7 +37,7 @@ body {
   /* comments for the grid-template-rows */
   grid-template-rows: 80vh min-content 40vw min-content;
   /* comments for the grid-template-columns */
-  grid-template-columns: [sidebar-start] 20rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  grid-template-columns: [sidebar-start] 17rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
 /* why only name the columns and not the rows? */
 .features {
@@ -90,21 +90,28 @@ body {
   grid-row: 1 / -1;
   display: grid;
   grid-template-columns: 1fr 14rem 1fr;
-  grid-template-rows: 1rem 10rem 5rem 10rem 10rem 10rem;
+  grid-template-rows: 13rem 5rem 10rem 10rem 10rem 10rem;
   grid-row-gap: 5rem; }
   .sidebar__badge {
     width: 100%;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2; }
+  .sidebar__heading {
     grid-column: 2 / 3;
     grid-row: 2 / 3; }
   .sidebar__logo--1 {
     width: 100%;
     grid-column: 2 / 3;
-    grid-row: 4 / 5; }
+    grid-row: 3 / 4; }
   .sidebar__logo--2 {
     width: 100%;
     grid-column: 2 / 3;
-    grid-row: 5 / 6; }
+    grid-row: 4 / 5; }
   .sidebar__logo--3 {
+    width: 100%;
+    grid-column: 2 / 3;
+    grid-row: 5 / 6; }
+  .sidebar__logo--4 {
     width: 100%;
     grid-column: 2 / 3;
     grid-row: 6 / 7; }

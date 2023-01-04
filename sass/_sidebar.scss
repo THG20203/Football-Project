@@ -9,24 +9,33 @@
 
   display: grid;
   grid-template-columns: 1fr 14rem 1fr;
-  grid-template-rows: 1rem 10rem 5rem 10rem 10rem 10rem;
+  grid-template-rows: 13rem 5rem 10rem 10rem 10rem 10rem;
   grid-row-gap: 5rem;
   &__badge {
     width: 100%;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+  &__heading {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
   }
   &__logo--1 {
     width: 100%;
     grid-column: 2 / 3;
-    grid-row: 4 / 5;
+    grid-row: 3 / 4;
   }
   &__logo--2 {
     width: 100%;
     grid-column: 2 / 3;
-    grid-row: 5 / 6;
+    grid-row: 4 / 5;
   }
   &__logo--3 {
+    width: 100%;
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+  }
+  &__logo--4 {
     width: 100%;
     grid-column: 2 / 3;
     grid-row: 6 / 7;
