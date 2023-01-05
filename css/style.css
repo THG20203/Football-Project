@@ -74,7 +74,7 @@ body {
 .header {
   /* 6/8 columns = for the header, 2/8 columns for the players section */
   grid-column: full-start / col-end 6;
-  background-image: linear-gradient(rgba(249, 247, 246, 0.7), rgba(249, 247, 246, 0.7)), url(../img/header-image1.png);
+  background-image: linear-gradient(rgba(249, 247, 246, 0.8), rgba(249, 247, 246, 0.8)), url(../img/header-image1.png);
   background-size: cover;
   background-position: center;
   padding: 8rem;
@@ -152,7 +152,7 @@ body {
   font-weight: 400; }
 
 .heading-1 {
-  font-size: 5rem;
+  font-size: 6rem;
   color: #0a19a1;
   line-height: 1; }
 
