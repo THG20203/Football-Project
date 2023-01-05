@@ -7,7 +7,7 @@
 .heading-1 {
   @extend %heading;
   font-size: 4.5rem;
-  color: $color-grey-1;
+  color: $color-primary-dark;
   line-height: 1;
 }
 
@@ -20,8 +20,8 @@
 .heading-3 {
   @extend %heading;
   font-size: 1.6rem;
-  color: $color-primary-dark;
   text-transform: uppercase;
+  color: $color-secondary;
 }
 
 .heading-4 {
@@ -30,7 +30,7 @@
 }
 
 .btn {
-  background-color: $color-primary;
+  background-color: $color-secondary;
   color: $color-grey-1;
   border: none;
   border-radius: 0;

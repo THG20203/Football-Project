@@ -74,13 +74,18 @@ body {
 .header {
   /* 6/8 columns = for the header, 2/8 columns for the players section */
   grid-column: full-start / col-end 6;
-  background-image: linear-gradient(rgba(10, 25, 161, 0.5), rgba(10, 25, 161, 0.5)), url(../img/header-image1.png);
+  background-image: linear-gradient(rgba(249, 247, 246, 0.4), rgba(249, 247, 246, 0.4)), url(../img/header-image1.png);
   background-size: cover;
   background-position: center;
+  padding: 8rem;
   display: grid;
-  grid-template-rows: 1fr; }
+  grid-template-rows: 1fr min-content 6rem 1fr;
+  grid-row-gap: 1.5rem; }
   .header__logo {
     height: 3rem; }
+  .header__btn {
+    align-self: start;
+    justify-self: start; }
   .header__corporate-logos img {
     height: 8rem; }
 
@@ -144,7 +149,7 @@ body {
 
 .heading-1 {
   font-size: 4.5rem;
-  color: #f9f7f6;
+  color: #0a19a1;
   line-height: 1; }
 
 .heading-2 {
@@ -153,14 +158,14 @@ body {
 
 .heading-3 {
   font-size: 1.6rem;
-  color: #0a19a1;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: #101d2c; }
 
 .heading-4 {
   font-size: 1.9rem; }
 
 .btn {
-  background-color: #0c22e8;
+  background-color: #101d2c;
   color: #f9f7f6;
   border: none;
   border-radius: 0;
