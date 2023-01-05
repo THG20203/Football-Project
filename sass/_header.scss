@@ -12,17 +12,22 @@
   background-size: cover;
   background-position: center;
   padding: 8rem;
+  padding-top: 4rem;
 
   display: grid;
 
   grid-template-rows: 1fr min-content 6rem 1fr;
+  // make the columns all as wide as the max piece of content
+  grid-template-columns: max-content;
   grid-row-gap: 1.5rem;
 
   &__logo {
     height: 3rem;
+    justify-self: center;
   }
 
   &__btn {
+    // need align-self:start and justify-self: start otherwise button will take up whole area of the grid cell
     align-self: start;
     justify-self: start;
   }

@@ -78,11 +78,14 @@ body {
   background-size: cover;
   background-position: center;
   padding: 8rem;
+  padding-top: 4rem;
   display: grid;
   grid-template-rows: 1fr min-content 6rem 1fr;
+  grid-template-columns: max-content;
   grid-row-gap: 1.5rem; }
   .header__logo {
-    height: 3rem; }
+    height: 3rem;
+    justify-self: center; }
   .header__btn {
     align-self: start;
     justify-self: start; }
@@ -149,7 +152,7 @@ body {
 
 .heading-1 {
   font-size: 5rem;
-  color: #0c22e8;
+  color: #0a19a1;
   line-height: 1; }
 
 .heading-2 {
@@ -165,7 +168,7 @@ body {
   font-size: 1.9rem; }
 
 .btn {
-  background-color: #101d2c;
+  background-color: #0c22e8;
   color: #f9f7f6;
   border: none;
   border-radius: 0;
@@ -176,7 +179,7 @@ body {
   cursor: pointer;
   transition: all 0.2s; }
   .btn:hover {
-    background-color: #0c22e8; }
+    background-color: #0a19a1; }
 
 .mb-sm {
   margin-bottom: 2rem; }

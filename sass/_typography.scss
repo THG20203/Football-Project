@@ -7,7 +7,7 @@
 .heading-1 {
   @extend %heading;
   font-size: 5rem;
-  color: $color-primary;
+  color: $color-primary-dark;
   line-height: 1;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .btn {
-  background-color: $color-secondary;
+  background-color: $color-primary;
   color: $color-grey-1;
   border: none;
   border-radius: 0;
@@ -42,7 +42,7 @@
   transition: all 0.2s;
 
   &:hover {
-    background-color: $color-primary;
+    background-color: $color-primary-dark;
   }
 }
 
