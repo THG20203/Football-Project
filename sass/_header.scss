@@ -1,15 +1,16 @@
 .header {
-  background-color: $color-primary-dark;
   /* 6/8 columns = for the header, 2/8 columns for the players section */
   // please note comment above doesn't include outer parts - (1fr parts - for full bleed)
   // 8 columns are only for the central section
   grid-column: full-start / col-end 6;
   // col-end 6? - ends after the sixth column - at the end of col 6
-  background-image: liner-gradient(
-      rgba($color-secondary, 0.93),
-      rgba($color-secondary, 0.93)
+  background-image: linear-gradient(
+      rgba($color-primary-dark, 0.6),
+      rgba($color-primary-dark, 0.6)
     ),
-    &__logo {
+    url(../img/header-image1.png);
+  background-size: cover;
+  &__logo {
     height: 4rem;
   }
 
