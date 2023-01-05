@@ -74,10 +74,13 @@ body {
 .header {
   /* 6/8 columns = for the header, 2/8 columns for the players section */
   grid-column: full-start / col-end 6;
-  background-image: linear-gradient(rgba(10, 25, 161, 0.6), rgba(10, 25, 161, 0.6)), url(../img/header-image1.png);
-  background-size: cover; }
+  background-image: linear-gradient(rgba(10, 25, 161, 0.5), rgba(10, 25, 161, 0.5)), url(../img/header-image1.png);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-rows: 1fr; }
   .header__logo {
-    height: 4rem; }
+    height: 3rem; }
   .header__corporate-logos img {
     height: 8rem; }
 
