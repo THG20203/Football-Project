@@ -80,13 +80,14 @@ body {
   padding: 8rem;
   padding-top: 4rem;
   display: grid;
+  /* grid row explanation */
   grid-template-rows: 1fr min-content 6rem 1fr;
   grid-template-columns: max-content;
-  grid-row-gap: 1.5rem;
+  grid-row-gap: 3rem;
   justify-content: center; }
-  .header__logo {
+  .header__headline-text {
     height: 3rem;
-    justify-self: center; }
+    align-self: end; }
   .header__btn {
     align-self: start;
     justify-self: start; }

@@ -16,23 +16,26 @@
   padding-top: 4rem;
 
   display: grid;
+  /* grid row explanation */
   // 1fr - have logo on top - push all elements down to the bottom.
   // Fractional unit (if nothing set for other rows) means they will be set automatically.
   // 1fr fills up all space that is avaliable-mthe other rows would be set automatically (minimum size they need)
+  // why does this all work also? defined height of 80vh - grid container. (80% of viewport height)
   grid-template-rows: 1fr min-content 6rem 1fr;
   // make the columns all as wide as the max piece of content
   grid-template-columns: max-content;
-  grid-row-gap: 1.5rem;
+  grid-row-gap: 3rem;
   // center entire grid track inside of the container
   justify-content: center;
 
-  &__logo {
+  &__headline-text {
     height: 3rem;
-    justify-self: center;
+    align-self: end;
   }
 
   &__btn {
     // need align-self:start and justify-self: start otherwise button will take up whole area of the grid cell
+    // remember - button is 1fr - so will use all space otherwise
     align-self: start;
     justify-self: start;
   }
