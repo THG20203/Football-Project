@@ -74,7 +74,7 @@ body {
 .header {
   /* 6/8 columns = for the header, 2/8 columns for the players section */
   grid-column: full-start / col-end 6;
-  background-image: linear-gradient(rgba(249, 247, 246, 0.4), rgba(249, 247, 246, 0.4)), url(../img/header-image1.png);
+  background-image: linear-gradient(rgba(249, 247, 246, 0.6), rgba(249, 247, 246, 0.6)), url(../img/header-image1.png);
   background-size: cover;
   background-position: center;
   padding: 8rem;
@@ -148,8 +148,8 @@ body {
   font-weight: 400; }
 
 .heading-1 {
-  font-size: 4.5rem;
-  color: #0a19a1;
+  font-size: 5rem;
+  color: #0c22e8;
   line-height: 1; }
 
 .heading-2 {
@@ -176,7 +176,7 @@ body {
   cursor: pointer;
   transition: all 0.2s; }
   .btn:hover {
-    background-color: #0a19a1; }
+    background-color: #0c22e8; }
 
 .mb-sm {
   margin-bottom: 2rem; }

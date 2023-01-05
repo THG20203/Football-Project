@@ -6,8 +6,8 @@
 
 .heading-1 {
   @extend %heading;
-  font-size: 4.5rem;
-  color: $color-primary-dark;
+  font-size: 5rem;
+  color: $color-primary;
   line-height: 1;
 }
 
@@ -42,7 +42,7 @@
   transition: all 0.2s;
 
   &:hover {
-    background-color: $color-primary-dark;
+    background-color: $color-primary;
   }
 }
 
