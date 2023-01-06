@@ -41,9 +41,24 @@
 
   &__corporate-text {
     display: grid;
+    // need max-content cause don't want text to break onto new line - want corporate partners same line
+    grid-template-columns: 1fr max-content 1fr;
+    // need space between sudo before and after elements and text
+    grid-column-gap: 15px;
+    // need to vertically align these three items
+    align-items: center;
     font-size: 1.6rem;
     color: $color-secondary;
     text-transform: uppercase;
+    &::before,
+    &::after {
+      // define content property as empty - otherwise before and after elements don't work
+      content: '';
+      height: 1px;
+      display: block;
+      // currentColor takes current text colour defined in color property
+      background-color: currentColor;
+    }
   }
 
   &__corporate-logos {

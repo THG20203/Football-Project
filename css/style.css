@@ -92,9 +92,17 @@ body {
     justify-self: start; }
   .header__corporate-text {
     display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-column-gap: 15px;
+    align-items: center;
     font-size: 1.6rem;
     color: #101d2c;
     text-transform: uppercase; }
+    .header__corporate-text::before, .header__corporate-text::after {
+      content: '';
+      height: 1px;
+      display: block;
+      background-color: currentColor; }
   .header__corporate-logos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
