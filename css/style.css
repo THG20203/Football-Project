@@ -81,7 +81,7 @@ body {
   padding-top: 4rem;
   display: grid;
   /* grid row explanation */
-  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) min-content;
   grid-template-columns: max-content;
   grid-row-gap: 1.5rem;
   justify-content: center; }
