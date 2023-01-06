@@ -90,8 +90,13 @@ body {
   .header__btn {
     align-self: start;
     justify-self: start; }
-  .header__corporate-logos img {
-    height: 8rem; }
+  .header__corporate-logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 3rem;
+    justify-items: center; }
+    .header__corporate-logos img {
+      height: 8rem; }
 
 .players {
   background-color: #101d2c;

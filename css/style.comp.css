@@ -28,33 +28,171 @@ html {
 
 body {
   font-family: "Nunito", sans-serif;
-  color: #f9f7f6;
+  color: #101d2c;
   line-height: 1.6;
   min-height: 100vh; }
 
+.container {
+  display: grid;
+  /* comments for the grid-template-rows */
+  grid-template-rows: 80vh min-content 40vw min-content;
+  /* comments for the grid-template-columns */
+  grid-template-columns: [sidebar-start] 13rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+
+/* why only name the columns and not the rows? */
 .features {
-  background-color: #aaa; }
+  /* features go from center-start to center-end - beginning to end of centre 8 grid */
+  grid-column: center-start / center-end;
+  margin: 15rem 0;
+  /* making features grid item a grid container */
+  display: grid;
+  /* making columns for this 'sub grid'. */
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 6rem;
+  /* align text to be at the top of the boxes within the grid */
+  align-items: start; }
+
+.feature {
+  /* Need to make the feature elements themselves individual grids */
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-row-gap: 1.5rem;
+  grid-column-gap: 2.5rem; }
+  .feature__icon {
+    width: 4.5rem;
+    height: 4.5rem;
+    grid-row: 1 / span 2;
+    transform: translateY(-1rem); }
+  .feature__text {
+    font-size: 1.7rem; }
 
 .footer {
-  background-color: #101d2c; }
-
-.gallery {
-  background-color: #f9f7f6; }
+  background-color: #101d2c;
+  /* goes all the way from one end to the other end full bleed section */
+  grid-column: full-start / full-end; }
 
 .header {
-  background-color: #f9f7f6; }
-
-.homes {
-  background-color: #101d2c; }
+  /* 6/8 columns = for the header, 2/8 columns for the players section */
+  grid-column: full-start / col-end 6;
+  background-image: linear-gradient(rgba(249, 247, 246, 0.65), rgba(249, 247, 246, 0.65)), url(../img/header-image1.png);
+  background-size: cover;
+  background-position: center;
+  padding: 5rem;
+  padding-top: 4rem;
+  display: grid;
+  /* grid row explanation */
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+  grid-template-columns: max-content;
+  grid-row-gap: 1.5rem;
+  justify-content: center; }
+  .header__headline-text {
+    align-self: end; }
+  .header__btn {
+    align-self: start;
+    justify-self: start; }
+  .header__corporate-logos img {
+    height: 8rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 3rem; }
 
 .players {
-  background-color: #101d2c; }
+  background-color: #101d2c;
+  grid-column: col-start 7 / full-end; }
 
 .sidebar {
-  background-color: #0c22e8; }
+  background-color: #f9f7f6;
+  /* sidebar to start at the grid line sidebar-start, end at sidebar-end */
+  grid-column: sidebar-start / sidebar-end;
+  /* second step - want it to span from the beginning of the grid to the end */
+  /* (what is meant above is - all the way down the webpage) */
+  /* keyword for the end is -1 */
+  grid-row: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 10rem 1fr;
+  grid-template-rows: 2rem 10rem; }
+  .sidebar__badge {
+    width: 100%;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3; }
 
-.story__pictures {
-  background-color: #0c22e8; }
+.story {
+  /* Set the styles for images */ }
+  .story__pictures {
+    background-color: #0c22e8;
+    grid-column: full-start / col-end 4;
+    background-image: linear-gradient(rgba(16, 29, 44, 0.7), rgba(16, 29, 44, 0.7)), url(../img/stadium-stand.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center; }
+  .story__img--1 {
+    width: 100%;
+    grid-row: 2 / 6;
+    grid-column: 1 / 5; }
+  .story__img--2 {
+    width: 110%;
+    z-index: 1;
+    grid-row: 1 / 5;
+    grid-column: 4 / 7; }
+  .story__content {
+    background-color: #f9f7f6;
+    grid-column: col-start 5 / full-end;
+    padding: 6rem 8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; }
+  .story__text {
+    font-size: 1.5rem;
+    margin-bottom: 4rem; }
 
-.story__content {
-  background-color: #f9f7f6; }
+.heading-1, .heading-2, .heading-3, .heading-4 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400; }
+
+.heading-1 {
+  font-size: 4.5rem;
+  color: #0a19a1;
+  line-height: 1; }
+
+.heading-2 {
+  font-size: 3rem;
+  line-height: 1; }
+
+.heading-3 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: #101d2c; }
+
+.heading-4 {
+  font-size: 1.9rem; }
+
+.btn {
+  background-color: #0c22e8;
+  color: #f9f7f6;
+  border: none;
+  border-radius: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1.8rem 3rem;
+  cursor: pointer;
+  transition: all 0.2s; }
+  .btn:hover {
+    background-color: #0a19a1; }
+
+.mb-sm {
+  margin-bottom: 2rem; }
+
+.mb-md {
+  margin-bottom: 3rem; }
+
+.mb-lg {
+  margin-bottom: 4rem; }
+
+.mb-hg {
+  margin-bottom: 8rem; }

@@ -43,6 +43,11 @@
   }
 
   &__corporate-logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 3rem;
+    // center items in the grid horizontally
+    justify-items: center;
     img {
       // images all need the same height - if it was same width they might have different heights
       height: 8rem;
