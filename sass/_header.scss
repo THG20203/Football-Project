@@ -40,6 +40,10 @@
   }
 
   &__corporate-text {
+    display: grid;
+    font-size: 1.6rem;
+    color: $color-secondary;
+    text-transform: uppercase;
   }
 
   &__corporate-logos {

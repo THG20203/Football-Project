@@ -90,6 +90,11 @@ body {
   .header__btn {
     align-self: start;
     justify-self: start; }
+  .header__corporate-text {
+    display: grid;
+    font-size: 1.6rem;
+    color: #101d2c;
+    text-transform: uppercase; }
   .header__corporate-logos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
