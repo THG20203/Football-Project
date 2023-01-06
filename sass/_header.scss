@@ -6,8 +6,8 @@
   grid-column: full-start / col-end 6;
   //overlay - best way to create is with linear gradient. ../img - need to get out of sass folder
   background-image: linear-gradient(
-      rgba($color-grey-1, 0.8),
-      rgba($color-grey-1, 0.8)
+      rgba($color-grey-1, 0.65),
+      rgba($color-grey-1, 0.65)
     ),
     url(../img/header-image1.png);
   background-size: cover;
