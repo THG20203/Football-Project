@@ -22,8 +22,10 @@
   // 1fr fills up all space that is avaliable-mthe other rows would be set automatically (minimum size they need)
   // why does this all work also? defined height of 80vh - grid container. (80% of viewport height)
   grid-template-rows: 1fr min-content minmax(6rem, min-content) min-content;
-  // make the columns ALL as wide as the max piece of content
-  grid-template-columns: max-content;
+  // make the columns ALL as wide as the max piece of content. Max it can be is max content.
+  // But minimum content could be is min-content. Could have specified rem - but instead
+  // 'Column should never be more narrow than the content' i.e. min-content
+  grid-template-columns: minmax(min-content, max-content);
   grid-row-gap: 1.5rem;
   // center entire grid track inside of the container
   justify-content: center;
@@ -67,9 +69,12 @@
     grid-column-gap: 3rem;
     // center items in the grid horizontally
     justify-items: center;
+    align-itmes: center;
     img {
       // images all need the same height - if it was same width they might have different heights
-      height: 8rem;
+      // use max-height and a percentage max width to make the images responsive
+      max-height: 8rem;
+      max-width: 100%;
     }
   }
 }

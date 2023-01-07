@@ -82,7 +82,7 @@ body {
   display: grid;
   /* grid row explanation */
   grid-template-rows: 1fr min-content minmax(6rem, min-content) min-content;
-  grid-template-columns: max-content;
+  grid-template-columns: minmax(min-content, max-content);
   grid-row-gap: 1.5rem;
   justify-content: center; }
   .header__headline-text {
@@ -107,9 +107,11 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 3rem;
-    justify-items: center; }
+    justify-items: center;
+    align-itmes: center; }
     .header__corporate-logos img {
-      height: 8rem; }
+      max-height: 8rem;
+      max-width: 100%; }
 
 .players {
   background-color: #101d2c;
