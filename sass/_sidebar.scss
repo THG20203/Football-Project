@@ -19,14 +19,18 @@
 
 .menu-toggle {
   grid-column: 2 / 3;
-  grid-row: 4 /5;
+  grid-row: 4 / 5;
   background: transparent;
   border: none;
   cursor: pointer;
-  display: block;
-  background-color: $color-primary-dark;
+  display: flex;
+  background-color: $color-primary;
   position: relative;
   text-align: center;
+
+  &:hover {
+    background-color: $color-primary-dark;
+  }
 
   &__inner {
     height: 4rem;
@@ -60,6 +64,6 @@
   }
 
   &__label {
-    display: block;
+    // display: block;
   }
 }

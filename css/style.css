@@ -129,14 +129,16 @@ body {
 
 .menu-toggle {
   grid-column: 2 / 3;
-  grid-row: 4 /5;
+  grid-row: 4 / 5;
   background: transparent;
   border: none;
   cursor: pointer;
-  display: block;
-  background-color: #0a19a1;
+  display: flex;
+  background-color: #0c22e8;
   position: relative;
   text-align: center; }
+  .menu-toggle:hover {
+    background-color: #0a19a1; }
   .menu-toggle__inner {
     height: 4rem;
     width: 4rem;
@@ -161,8 +163,6 @@ body {
       transform: translateY(-1.3rem); }
     .menu-toggle span::after {
       transform: translateY(1.1rem); }
-  .menu-toggle__label {
-    display: block; }
 
 .story {
   /* Set the styles for images */ }
