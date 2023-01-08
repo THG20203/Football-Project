@@ -29,7 +29,18 @@
   text-align: center;
 
   &__inner {
+    height: 4rem;
+    width: 4rem;
     margin: auto;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  span {
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: $color-grey-1;
   }
 }
