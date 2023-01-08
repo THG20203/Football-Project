@@ -134,6 +134,11 @@ body {
   border: none;
   cursor: pointer;
   display: flex;
+  flex-direction: column;
+  /* WHY? - remember the flex-direction has now been set as column so align-items will now be horizontally */
+  align-items: center;
+  /* WHY? - remember the flex-direction has now been set as column so justify-content will now be horizontally */
+  justify-content: center;
   background-color: #0c22e8;
   position: relative;
   text-align: center; }
@@ -142,20 +147,13 @@ body {
   .menu-toggle__inner {
     height: 4rem;
     width: 4rem;
-    margin: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     display: grid;
     align-items: center; }
   .menu-toggle span {
-    display: block;
     height: 3px;
-    width: 100%;
     background-color: #f9f7f6; }
     .menu-toggle span::before, .menu-toggle span::after {
-      background-color: #fff;
+      background-color: #f9f7f6;
       height: 3px;
       content: '';
       display: block; }
@@ -163,6 +161,10 @@ body {
       transform: translateY(-1.3rem); }
     .menu-toggle span::after {
       transform: translateY(1.1rem); }
+  .menu-toggle__label {
+    font-family: "Lato", sans-serif;
+    color: #f9f7f6;
+    text-transform: uppercase; }
 
 .story {
   /* Set the styles for images */ }
