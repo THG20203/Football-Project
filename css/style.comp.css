@@ -1,12 +1,7 @@
 /* Brighter blue */
 /* blue */
-/* RESPONSIVE BREAKPOINTS */
-/* 1200px */
-/* 1100px */
-/* 900px */
-/* 600px */
-/* 500px */
 /* FONT VARIABLES */
+/* RESPONSIVE BREAKPOINTS */
 * {
   margin: 0;
   padding: 0; }
@@ -22,7 +17,7 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   /* 1rem = 10px, 10px/16px = 62.5% */ }
-  @media only screen and (max-width: 68.75em) {
+  @media only screen and (max-width: 75em) {
     html {
       font-size: 50%; } }
 
@@ -37,9 +32,9 @@ body {
   /* comments for the grid-template-rows */
   grid-template-rows: 80vh min-content 40vw min-content;
   /* comments for the grid-template-columns */
-  grid-template-columns: [sidebar-start] 13rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  grid-template-columns: [sidebar-start] 13rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  /* why only name the columns and not the rows? */ }
 
-/* why only name the columns and not the rows? */
 .features {
   /* features go from center-start to center-end - beginning to end of centre 8 grid */
   grid-column: center-start / center-end;
@@ -81,8 +76,8 @@ body {
   padding-top: 4rem;
   display: grid;
   /* grid row explanation */
-  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
-  grid-template-columns: max-content;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) min-content;
+  grid-template-columns: minmax(min-content, max-content);
   grid-row-gap: 1.5rem;
   justify-content: center; }
   .header__headline-text {
@@ -90,11 +85,28 @@ body {
   .header__btn {
     align-self: start;
     justify-self: start; }
-  .header__corporate-logos img {
-    height: 8rem;
+  .header__corporate-text {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-column-gap: 15px;
+    align-items: center;
+    font-size: 1.6rem;
+    color: #101d2c;
+    text-transform: uppercase; }
+    .header__corporate-text::before, .header__corporate-text::after {
+      content: '';
+      height: 1px;
+      display: block;
+      background-color: currentColor; }
+  .header__corporate-logos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 3rem; }
+    grid-column-gap: 3rem;
+    justify-items: center;
+    align-itmes: center; }
+    .header__corporate-logos img {
+      max-height: 8rem;
+      max-width: 100%; }
 
 .players {
   background-color: #101d2c;
@@ -110,11 +122,26 @@ body {
   grid-row: 1 / -1;
   display: grid;
   grid-template-columns: 1fr 10rem 1fr;
-  grid-template-rows: 2rem 10rem; }
+  grid-template-rows: 2rem 10rem 2rem 10rem; }
   .sidebar__badge {
     width: 100%;
     grid-column: 2 / 3;
     grid-row: 2 / 3; }
+
+.nav-btn {
+  border: none;
+  border-radius: 0;
+  background-color: #0c22e8;
+  height: 2px;
+  width: 4.5rem;
+  content: '';
+  display: block;
+  grid-column: 2 / 3;
+  grid-row: 4 / 5; }
+  .nav-btn::before {
+    transform: translateY(-1.5rem); }
+  .nav-btn::after {
+    transform: translateY(1.3rem); }
 
 .story {
   /* Set the styles for images */ }

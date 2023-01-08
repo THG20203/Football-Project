@@ -9,10 +9,40 @@
 
   display: grid;
   grid-template-columns: 1fr 10rem 1fr;
-  grid-template-rows: 2rem 10rem;
+  grid-template-rows: 2rem 10rem 2rem 10rem;
   &__badge {
     width: 100%;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+  }
+}
+
+.nav-btn {
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+
+  border: none;
+  border-radius: 0;
+
+  background-color: $color-primary-dark;
+  height: 2px;
+  width: 4.5rem;
+  content: '';
+  display: block;
+
+  &::before,
+  &::after {
+    background-color: $color-primary-dark;
+    height: 2px;
+    width: 4.5rem;
+    content: '';
+    display: block;
+  }
+
+  &::before {
+    transform: translateY(-1.5rem);
+  }
+  &::after {
+    transform: translateY(1.3rem);
   }
 }

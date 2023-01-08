@@ -122,11 +122,32 @@ body {
   grid-row: 1 / -1;
   display: grid;
   grid-template-columns: 1fr 10rem 1fr;
-  grid-template-rows: 2rem 10rem; }
+  grid-template-rows: 2rem 10rem 2rem 10rem; }
   .sidebar__badge {
     width: 100%;
     grid-column: 2 / 3;
     grid-row: 2 / 3; }
+
+.nav-btn {
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+  border: none;
+  border-radius: 0;
+  background-color: #0a19a1;
+  height: 2px;
+  width: 4.5rem;
+  content: '';
+  display: block; }
+  .nav-btn::before, .nav-btn::after {
+    background-color: #0a19a1;
+    height: 2px;
+    width: 4.5rem;
+    content: '';
+    display: block; }
+  .nav-btn::before {
+    transform: translateY(-1.5rem); }
+  .nav-btn::after {
+    transform: translateY(1.3rem); }
 
 .story {
   /* Set the styles for images */ }
