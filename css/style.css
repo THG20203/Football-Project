@@ -30,10 +30,14 @@ body {
 .container {
   display: grid;
   /* comments for the grid-template-rows */
-  grid-template-rows: 80vh min-content 40vw min-content;
-  /* comments for the grid-template-columns */
-  grid-template-columns: [sidebar-start] 13rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-  /* why only name the columns and not the rows? */ }
+  grid-template-rows: 10vh 80vh min-content 40vw min-content;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  @media only screen and (max-width: 62.5rem) {
+    .container {
+      grid-template-rows: 80vh min-content 40vw min-content;
+      /* comments for the grid-template-columns */
+      grid-template-columns: [sidebar-start] 11rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+      /* why only name the columns and not the rows? */ } }
 
 .features {
   /* features go from center-start to center-end - beginning to end of centre 8 grid */
@@ -120,8 +124,8 @@ body {
   /* keyword for the end is -1 */
   grid-row: 1 / -1;
   display: grid;
-  grid-template-columns: 1fr 10rem 1fr;
-  grid-template-rows: 2rem 10rem 2rem 10rem; }
+  grid-template-columns: 1fr 8rem 1fr;
+  grid-template-rows: 2rem 8rem 2rem 8rem; }
   .sidebar__badge {
     width: 100%;
     grid-column: 2 / 3;
@@ -164,7 +168,9 @@ body {
   .menu-toggle__label {
     font-family: "Lato", sans-serif;
     color: #f9f7f6;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-top: 0.2rem; }
 
 .story {
   /* Set the styles for images */ }
