@@ -128,26 +128,19 @@ body {
     grid-column: 2 / 3;
     grid-row: 2 / 3; }
 
-.nav-btn {
+.menu-toggle {
   grid-column: 2 / 3;
-  grid-row: 4 / 5;
+  grid-row: 4 /5;
+  background: transparent;
   border: none;
-  border-radius: 0;
+  cursor: pointer;
+  display: block;
   background-color: #0a19a1;
-  height: 2px;
-  width: 4.5rem;
-  content: '';
-  display: block; }
-  .nav-btn::before, .nav-btn::after {
-    background-color: #0a19a1;
-    height: 2px;
-    width: 4.5rem;
-    content: '';
-    display: block; }
-  .nav-btn::before {
-    transform: translateY(-1.5rem); }
-  .nav-btn::after {
-    transform: translateY(1.3rem); }
+  position: relative;
+  text-align: center; }
+  .menu-toggle__inner {
+    margin: auto;
+    position: relative; }
 
 .story {
   /* Set the styles for images */ }

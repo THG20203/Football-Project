@@ -17,32 +17,19 @@
   }
 }
 
-.nav-btn {
+.menu-toggle {
   grid-column: 2 / 3;
-  grid-row: 4 / 5;
-
+  grid-row: 4 /5;
+  background: transparent;
   border: none;
-  border-radius: 0;
-
-  background-color: $color-primary-dark;
-  height: 2px;
-  width: 4.5rem;
-  content: '';
+  cursor: pointer;
   display: block;
+  background-color: $color-primary-dark;
+  position: relative;
+  text-align: center;
 
-  &::before,
-  &::after {
-    background-color: $color-primary-dark;
-    height: 2px;
-    width: 4.5rem;
-    content: '';
-    display: block;
-  }
-
-  &::before {
-    transform: translateY(-1.5rem);
-  }
-  &::after {
-    transform: translateY(1.3rem);
+  &__inner {
+    margin: auto;
+    position: relative;
   }
 }
