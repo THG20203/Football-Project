@@ -1,11 +1,5 @@
 /* Brighter blue */
 /* blue */
-/* RESPONSIVE BREAKPOINTS */
-/* 1200px */
-/* 1100px */
-/* 900px */
-/* 600px */
-/* 500px */
 /* FONT VARIABLES */
 /* RESPONSIVE BREAKPOINTS */
 * {
@@ -23,7 +17,7 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   /* 1rem = 10px, 10px/16px = 62.5% */ }
-  @media only screen and (max-width: 68.75em) {
+  @media only screen and (max-width: 75em) {
     html {
       font-size: 50%; } }
 

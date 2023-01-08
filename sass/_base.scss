@@ -6,13 +6,6 @@ $color-secondary: #101d2c;
 $color-grey-1: #f9f7f6;
 $color-grey-2: #aaa;
 
-/* RESPONSIVE BREAKPOINTS */
-$bp-largest: 75em; /* 1200px */
-$bp-large: 68.75em; /* 1100px */
-$bp-medium: 56.25em; /* 900px */
-$bp-small: 37.5em; /* 600px */
-$bp-smallest: 31.25em; /* 500px */
-
 /* FONT VARIABLES */
 $font-primary: 'Nunito', sans-serif;
 $font-display: 'Lato', sans-serif;
@@ -37,7 +30,7 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; /* 1rem = 10px, 10px/16px = 62.5% */
 
-  @media only screen and (max-width: $bp-large) {
+  @media only screen and (max-width: $bp-largest) {
     font-size: 50%;
   }
 }
