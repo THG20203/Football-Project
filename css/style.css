@@ -32,9 +32,9 @@ body {
   /* comments for the grid-template-rows */
   grid-template-rows: 80vh min-content 40vw min-content;
   /* comments for the grid-template-columns */
-  grid-template-columns: [sidebar-start] 13rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  grid-template-columns: [sidebar-start] 13rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  /* why only name the columns and not the rows? */ }
 
-/* why only name the columns and not the rows? */
 .features {
   /* features go from center-start to center-end - beginning to end of centre 8 grid */
   grid-column: center-start / center-end;
