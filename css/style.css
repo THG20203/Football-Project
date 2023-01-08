@@ -102,8 +102,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 3rem;
-    justify-items: center;
-    align-itmes: center; }
+    justify-items: center; }
     .header__corporate-logos img {
       max-height: 8rem;
       max-width: 100%; }
@@ -145,12 +144,25 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    display: grid;
+    align-items: center; }
   .menu-toggle span {
     display: block;
-    height: 1px;
+    height: 3px;
     width: 100%;
     background-color: #f9f7f6; }
+    .menu-toggle span::before, .menu-toggle span::after {
+      background-color: #fff;
+      height: 3px;
+      content: '';
+      display: block; }
+    .menu-toggle span::before {
+      transform: translateY(-1.3rem); }
+    .menu-toggle span::after {
+      transform: translateY(1.1rem); }
+  .menu-toggle__label {
+    display: block; }
 
 .story {
   /* Set the styles for images */ }
