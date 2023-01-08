@@ -17,6 +17,9 @@ $bp-smallest: 31.25em; /* 500px */
 $font-primary: 'Nunito', sans-serif;
 $font-display: 'Lato', sans-serif;
 
+/* RESPONSIVE BREAKPOINTS */
+$bp-largest: 75em; // 1200px divided by 16 (default font-size for a browser)
+
 * {
   margin: 0;
   padding: 0;
