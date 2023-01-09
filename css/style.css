@@ -117,15 +117,19 @@ body {
 
 .sidebar {
   background-color: #f9f7f6;
-  /* sidebar to start at the grid line sidebar-start, end at sidebar-end */
-  grid-column: sidebar-start / sidebar-end;
-  /* second step - want it to span from the beginning of the grid to the end */
-  /* (what is meant above is - all the way down the webpage) */
-  /* keyword for the end is -1 */
-  grid-row: 1 / -1;
+  grid-column: full-start / full-end;
+  display: grid;
   display: grid;
   grid-template-columns: 1fr 8rem 1fr;
   grid-template-rows: 2rem 8rem 2rem 8rem; }
+  @media only screen and (max-width: 62.5rem) {
+    .sidebar {
+      /* sidebar to start at the grid line sidebar-start, end at sidebar-end */
+      grid-column: sidebar-start / sidebar-end;
+      /* second step - want it to span from the beginning of the grid to the end */
+      /* (what is meant above is - all the way down the webpage) */
+      /* keyword for the end is -1 */
+      grid-row: 1 / -1; } }
   .sidebar__badge {
     width: 100%;
     grid-column: 2 / 3;
