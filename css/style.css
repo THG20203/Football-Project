@@ -36,7 +36,7 @@ body {
     .container {
       grid-template-rows: 80vh min-content 40vw min-content;
       /* comments for the grid-template-columns */
-      grid-template-columns: [sidebar-start] 11rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+      grid-template-columns: [sidebar-start] 7rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
       /* why only name the columns and not the rows? */ } }
 
 .features {
@@ -120,8 +120,8 @@ body {
   grid-column: full-start / full-end;
   display: grid;
   display: grid;
-  grid-template-columns: 1fr 8rem 1fr;
-  grid-template-rows: 2rem 8rem 2rem 8rem; }
+  grid-template-columns: 1fr 6rem 1fr;
+  grid-template-rows: 2rem 6rem 2rem 6rem; }
   @media only screen and (max-width: 62.5rem) {
     .sidebar {
       /* sidebar to start at the grid line sidebar-start, end at sidebar-end */
@@ -153,28 +153,28 @@ body {
   .menu-toggle:hover {
     background-color: #0a19a1; }
   .menu-toggle__inner {
-    height: 4rem;
-    width: 4rem;
+    height: 3rem;
+    width: 3rem;
     display: grid;
     align-items: center; }
   .menu-toggle span {
-    height: 3px;
+    height: 2px;
     background-color: #f9f7f6; }
     .menu-toggle span::before, .menu-toggle span::after {
       background-color: #f9f7f6;
-      height: 3px;
+      height: 2px;
       content: '';
       display: block; }
     .menu-toggle span::before {
-      transform: translateY(-1.3rem); }
+      transform: translateY(-1rem); }
     .menu-toggle span::after {
-      transform: translateY(1.1rem); }
+      transform: translateY(0.8rem); }
   .menu-toggle__label {
     font-family: "Lato", sans-serif;
     color: #f9f7f6;
     text-transform: uppercase;
-    font-size: 1.2rem;
-    margin-top: 0.2rem; }
+    font-size: 1rem;
+    margin-top: 0.1rem; }
 
 .story {
   /* Set the styles for images */ }

@@ -14,8 +14,8 @@
     grid-row: 1 / -1;
   }
   display: grid;
-  grid-template-columns: 1fr 8rem 1fr;
-  grid-template-rows: 2rem 8rem 2rem 8rem;
+  grid-template-columns: 1fr 6rem 1fr;
+  grid-template-rows: 2rem 6rem 2rem 6rem;
   &__badge {
     width: 100%;
     grid-column: 2 / 3;
@@ -48,31 +48,31 @@
 
   &__inner {
     // define height and width of the grid with the span and before & after elements in it
-    height: 4rem;
-    width: 4rem;
+    height: 3rem;
+    width: 3rem;
     // define the inner container (with span and before and after elements) as a grid to group
     display: grid;
     // align them vertically centrally (rather than at top of blue button as before)
     align-items: center;
   }
   span {
-    height: 3px;
+    height: 2px;
     background-color: $color-grey-1;
     &::before,
     &::after {
       background-color: $color-grey-1;
-      height: 3px;
+      height: 2px;
       //need to define a content
       content: '';
       display: block;
     }
     &::before {
       //move before element up
-      transform: translateY(-1.3rem);
+      transform: translateY(-1rem);
     }
     &::after {
       // move after elements down
-      transform: translateY(1.1rem);
+      transform: translateY(0.8rem);
     }
   }
 
@@ -80,7 +80,7 @@
     font-family: $font-display;
     color: $color-grey-1;
     text-transform: uppercase;
-    font-size: 1.2rem;
-    margin-top: 0.2rem;
+    font-size: 1rem;
+    margin-top: 0.1rem;
   }
 }
