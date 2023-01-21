@@ -23,7 +23,7 @@ html {
 
 body {
   font-family: "Nunito", sans-serif;
-  color: #101d2c;
+  font-color: #101d2c;
   line-height: 1.6;
   min-height: 100vh; }
 
@@ -66,7 +66,7 @@ body {
     font-size: 1.7rem; }
 
 .footer {
-  background-color: #101d2c;
+  background-color: #0a19a1;
   /* goes all the way from one end to the other end full bleed section */
   grid-column: full-start / full-end; }
 
@@ -112,12 +112,30 @@ body {
       max-width: 100%; }
 
 .players {
-  background-color: #101d2c;
-  grid-column: col-start 7 / full-end; }
+  background-color: #0a19a1;
+  grid-column: col-start 7 / full-end;
+  padding: 3rem;
+  display: grid;
+  align-content: center;
+  justify-content: center; }
+  .players__list {
+    display: grid;
+    /* first column for images, second for the text */
+    grid-template-columns: min-content max-content;
+    grid-column-gap: 2rem;
+    grid-row-gap: 5vh;
+    /* align-items: center; */
+    margin-top: 1.5rem; }
   .players__img {
-    width: 100%;
+    /* width: 140px */
+    width: 14rem;
     border-radius: 50%;
     display: block; }
+  .players__goals {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #f9f7f6;
+    margin-top: -3px; }
 
 .sidebar {
   background-color: #f9f7f6;
@@ -226,6 +244,8 @@ body {
 .heading-2 {
   font-size: 3rem;
   line-height: 1; }
+  .heading-2--light {
+    color: #aaa; }
 
 .heading-3 {
   font-size: 1.6rem;

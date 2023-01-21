@@ -23,7 +23,7 @@ html {
 
 body {
   font-family: "Nunito", sans-serif;
-  color: #101d2c;
+  font-color: #101d2c;
   line-height: 1.6;
   min-height: 100vh; }
 
@@ -66,7 +66,7 @@ body {
     font-size: 1.7rem; }
 
 .footer {
-  background-color: #101d2c;
+  background-color: #0a19a1;
   /* goes all the way from one end to the other end full bleed section */
   grid-column: full-start / full-end; }
 
@@ -112,7 +112,7 @@ body {
       max-width: 100%; }
 
 .players {
-  background-color: #101d2c;
+  background-color: #0a19a1;
   grid-column: col-start 7 / full-end;
   padding: 3rem;
   display: grid;
@@ -124,7 +124,8 @@ body {
     grid-template-columns: min-content max-content;
     grid-column-gap: 2rem;
     grid-row-gap: 5vh;
-    align-items: center; }
+    align-items: center;
+    margin-top: 1.5rem; }
   .players__img {
     /* width: 140px */
     width: 14rem;
@@ -166,7 +167,7 @@ body {
   flex-direction: column;
   /* WHY? - remember the flex-direction has now been set as column so align-items will now be horizontally */
   align-items: center;
-  /* WHY? - remember the flex-direction has now been set as column so justify-content will now be horizontally */
+  /* WHY? - remember the flex-direction has now been set as column so justify-content will now be vertically */
   justify-content: center;
   background-color: #0c22e8;
   position: relative;

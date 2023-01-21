@@ -36,7 +36,7 @@
   /* WHY? - remember the flex-direction has now been set as column so align-items will now be horizontally */
   align-items: center;
   // this will align everything vertically
-  /* WHY? - remember the flex-direction has now been set as column so justify-content will now be horizontally */
+  /* WHY? - remember the flex-direction has now been set as column so justify-content will now be vertically */
   justify-content: center;
   background-color: $color-primary;
   position: relative;

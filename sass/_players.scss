@@ -1,10 +1,13 @@
 .players {
-  background-color: $color-secondary;
+  background-color: $color-primary-dark;
   grid-column: col-start 7 / full-end;
   padding: 3rem;
 
   display: grid;
+  // align the whole players grid in the overall players box centrally
+  // align-content = centered vertically
   align-content: center;
+  // justify-content = centered horizontally
   justify-content: center;
 
   &__list {
@@ -17,7 +20,10 @@
     grid-column-gap: 2rem;
     // row 5% of viewport height - because margin spacing should change whenever change height of viewport
     grid-row-gap: 5vh;
+    // align the text in grid vertically
     align-items: center;
+    // push the whole text & image grid down from Top 3 goalscores by 1.5rem
+    margin-top: 1.5rem;
   }
 
   &__img {
