@@ -18,7 +18,7 @@
   &__list {
     display: grid;
     /* first column for images, second for the text */
-    // image is 15rem - so going to set it to min-content - so it fits the image nicely
+    // image is 13rem - so going to set it to min-content - so it fits the image nicely
     // for the text - using max-content - (so doesn't create any line breaks in our text)
     grid-template-columns: min-content max-content;
     //need to define some spacing - columns and rows
@@ -30,8 +30,8 @@
   }
 
   &__img {
-    /* width: 150px */
-    width: 15rem;
+    /* width: 130px */
+    width: 13rem;
     border-radius: 50%;
     display: block;
   }

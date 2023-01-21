@@ -128,8 +128,8 @@ body {
     grid-row-gap: 5vh;
     align-items: center; }
   .players__img {
-    /* width: 150px */
-    width: 15rem;
+    /* width: 130px */
+    width: 13rem;
     border-radius: 50%;
     display: block; }
   .players__goals {
