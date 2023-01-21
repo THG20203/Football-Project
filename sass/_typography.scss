@@ -27,6 +27,10 @@
 .heading-4 {
   @extend %heading;
   font-size: 1.9rem;
+
+  &--light {
+    color: $color-grey-light-1;
+  }
 }
 
 .btn {
