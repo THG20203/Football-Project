@@ -114,7 +114,10 @@ body {
 .players {
   background-color: #101d2c;
   grid-column: col-start 7 / full-end;
-  padding: 3rem; }
+  padding: 3rem;
+  display: grid;
+  align-content: center;
+  justify-content: center; }
   .players__list {
     display: grid;
     /* first column for images, second for the text */
@@ -123,12 +126,13 @@ body {
     grid-row-gap: 5vh;
     align-items: center; }
   .players__img {
-    /* width: 160px */
-    width: 16rem;
+    /* width: 140px */
+    width: 14rem;
     border-radius: 50%;
     display: block; }
   .players__goals {
     text-transform: uppercase;
+    font-size: 1.5rem;
     color: #f9f7f6;
     margin-top: -3px; }
 

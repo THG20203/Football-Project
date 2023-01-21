@@ -3,10 +3,14 @@
   grid-column: col-start 7 / full-end;
   padding: 3rem;
 
+  display: grid;
+  align-content: center;
+  justify-content: center;
+
   &__list {
     display: grid;
     /* first column for images, second for the text */
-    // image is 16rem - so going to set it to min-content - so it fits the image nicely
+    // image is 14rem - so going to set it to min-content - so it fits the image nicely
     // for the text - using max-content - (so doesn't create any line breaks in our text)
     grid-template-columns: min-content max-content;
     //need to define some spacing - columns and rows
@@ -17,14 +21,15 @@
   }
 
   &__img {
-    /* width: 160px */
-    width: 16rem;
+    /* width: 140px */
+    width: 14rem;
     border-radius: 50%;
     display: block;
   }
 
   &__goals {
     text-transform: uppercase;
+    font-size: 1.5rem;
     color: $color-grey-1;
     // move the text up slightly so not too far away from players names
     margin-top: -3px;
