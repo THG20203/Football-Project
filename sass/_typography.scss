@@ -15,6 +15,9 @@
   @extend %heading;
   font-size: 3rem;
   line-height: 1;
+  &--light {
+    color: $color-grey-2;
+  }
 }
 
 .heading-3 {

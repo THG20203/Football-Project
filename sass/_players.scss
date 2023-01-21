@@ -1,6 +1,7 @@
 .players {
   background-color: $color-secondary;
   grid-column: col-start 7 / full-end;
+  padding: 3rem;
 
   &__list {
     display: grid;
@@ -12,6 +13,7 @@
     grid-column-gap: 2rem;
     // row 5% of viewport height - because margin spacing should change whenever change height of viewport
     grid-row-gap: 5vh;
+    align-items: center;
   }
 
   &__img {

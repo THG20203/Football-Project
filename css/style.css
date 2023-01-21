@@ -113,13 +113,15 @@ body {
 
 .players {
   background-color: #101d2c;
-  grid-column: col-start 7 / full-end; }
+  grid-column: col-start 7 / full-end;
+  padding: 3rem; }
   .players__list {
     display: grid;
     /* first column for images, second for the text */
     grid-template-columns: min-content max-content;
     grid-column-gap: 2rem;
-    grid-row-gap: 5vh; }
+    grid-row-gap: 5vh;
+    align-items: center; }
   .players__img {
     /* width: 160px */
     width: 16rem;
@@ -237,6 +239,8 @@ body {
 .heading-2 {
   font-size: 3rem;
   line-height: 1; }
+  .heading-2--light {
+    color: #aaa; }
 
 .heading-3 {
   font-size: 1.6rem;
