@@ -12,6 +12,8 @@
   // list is treated as second row (implicit grid - so grid-row-gap provides space
   // space is 2rem between top 3 goalscorers and the images/ list in list
   grid-row-gap: 2rem;
+  // center the title horizontally
+  justify-items: center;
 
   &__list {
     display: grid;

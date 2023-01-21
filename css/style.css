@@ -118,7 +118,8 @@ body {
   display: grid;
   align-content: center;
   justify-content: center;
-  grid-row-gap: 2rem; }
+  grid-row-gap: 2rem;
+  justify-items: center; }
   .players__list {
     display: grid;
     /* first column for images, second for the text */
