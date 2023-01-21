@@ -57,7 +57,7 @@ body {
     [center-end] minmax(6rem, 1fr) [full-end];
 
   @media only screen and (max-width: $bp-large) {
-    grid-template-rows: 80vh 80vh min-content 40vw min-content;
+    grid-template-rows: 80vh 70vh min-content 40vw min-content;
     /* comments for the grid-template-columns */
     // column layout specified below  1140/8 = 142px -> 140px -> 14rem because 14rem = 140px
     // something between 1100 - 1200 px to divide up width of the screen

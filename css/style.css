@@ -34,7 +34,7 @@ body {
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
   @media only screen and (max-width: 62.5rem) {
     .container {
-      grid-template-rows: 80vh 80vh min-content 40vw min-content;
+      grid-template-rows: 80vh 70vh min-content 40vw min-content;
       /* comments for the grid-template-columns */
       grid-template-columns: [sidebar-start] 7rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
       /* why only name the columns and not the rows? */ } }

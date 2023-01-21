@@ -25,7 +25,7 @@
   // Fractional unit (if nothing set for other rows) means they will be set automatically.
   // 1fr fills up all space that is avaliable-mthe other rows would be set automatically (minimum size they need)
   // why does this all work also? defined height of 80vh - grid container. (80% of viewport height)
-  // min 6rem before breaks onto a new line
+  // min 6rem before breaks onto a new line - hence minmax
   grid-template-rows: 1fr min-content minmax(6rem, min-content) min-content;
   // make the columns ALL as wide as the max piece of content. Max it can be is max content.
   // But minimum content could be is min-content. Could have specified rem - but instead
@@ -78,6 +78,7 @@
       // images all need the same height - if it was same width they might have different heights
       // use max-height and a percentage max width to make the images responsive
       max-height: 8rem;
+      // when height is less then 2.5rem the max-width will decrease
       max-width: 100%;
     }
   }
