@@ -115,10 +115,12 @@ body {
   background-color: #101d2c;
   grid-column: col-start 7 / full-end; }
   .players__list {
-    display: grid; }
+    display: grid;
+    /* first column for images, second for the text */
+    grid-template-columns: min-content max-content; }
   .players__img {
-    /* width: 160px */
-    width: 16rem;
+    /* width: 180px */
+    width: 18rem;
     border-radius: 50%;
     display: block; }
 

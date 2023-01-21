@@ -3,13 +3,16 @@
   grid-column: col-start 7 / full-end;
 
   &__list {
-    // test
     display: grid;
+    /* first column for images, second for the text */
+    // image is 18rem - so going to set it to min-content - so it fits the image nicely
+    // for the text
+    grid-template-columns: min-content max-content;
   }
 
   &__img {
-    /* width: 160px */
-    width: 16rem;
+    /* width: 180px */
+    width: 18rem;
     border-radius: 50%;
     display: block;
   }
