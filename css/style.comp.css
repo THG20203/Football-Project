@@ -30,10 +30,14 @@ body {
 .container {
   display: grid;
   /* comments for the grid-template-rows */
-  grid-template-rows: 80vh min-content 40vw min-content;
-  /* comments for the grid-template-columns */
-  grid-template-columns: [sidebar-start] 13rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-  /* why only name the columns and not the rows? */ }
+  grid-template-rows: 10vh 80vh min-content 40vw min-content;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  @media only screen and (max-width: 62.5rem) {
+    .container {
+      grid-template-rows: 80vh min-content 40vw min-content;
+      /* comments for the grid-template-columns */
+      grid-template-columns: [sidebar-start] 7rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+      /* why only name the columns and not the rows? */ } }
 
 .features {
   /* features go from center-start to center-end - beginning to end of centre 8 grid */
@@ -110,18 +114,26 @@ body {
 .players {
   background-color: #101d2c;
   grid-column: col-start 7 / full-end; }
+  .players__img {
+    width: 100%;
+    border-radius: 50%;
+    display: block; }
 
 .sidebar {
   background-color: #f9f7f6;
-  /* sidebar to start at the grid line sidebar-start, end at sidebar-end */
-  grid-column: sidebar-start / sidebar-end;
-  /* second step - want it to span from the beginning of the grid to the end */
-  /* (what is meant above is - all the way down the webpage) */
-  /* keyword for the end is -1 */
-  grid-row: 1 / -1;
+  grid-column: full-start / full-end;
   display: grid;
-  grid-template-columns: 1fr 10rem 1fr;
-  grid-template-rows: 2rem 10rem 2rem 10rem; }
+  display: grid;
+  grid-template-columns: 1fr 6rem 1fr;
+  grid-template-rows: 2rem 6rem 2rem 6rem; }
+  @media only screen and (max-width: 62.5rem) {
+    .sidebar {
+      /* sidebar to start at the grid line sidebar-start, end at sidebar-end */
+      grid-column: sidebar-start / sidebar-end;
+      /* second step - want it to span from the beginning of the grid to the end */
+      /* (what is meant above is - all the way down the webpage) */
+      /* keyword for the end is -1 */
+      grid-row: 1 / -1; } }
   .sidebar__badge {
     width: 100%;
     grid-column: 2 / 3;
@@ -135,29 +147,38 @@ body {
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  /* WHY? - remember the flex-direction has now been set as column so align-items will now be horizontally */
+  align-items: center;
+  /* WHY? - remember the flex-direction has now been set as column so justify-content will now be horizontally */
+  justify-content: center;
   background-color: #0c22e8;
   position: relative;
   text-align: center; }
   .menu-toggle:hover {
     background-color: #0a19a1; }
   .menu-toggle__inner {
-    height: 4rem;
-    width: 4rem;
+    height: 3rem;
+    width: 3rem;
     display: grid;
     align-items: center; }
   .menu-toggle span {
-    height: 3px;
-    width: 100%;
+    height: 2px;
     background-color: #f9f7f6; }
     .menu-toggle span::before, .menu-toggle span::after {
-      background-color: #fff;
-      height: 3px;
+      background-color: #f9f7f6;
+      height: 2px;
       content: '';
       display: block; }
     .menu-toggle span::before {
-      transform: translateY(-1.3rem); }
+      transform: translateY(-1rem); }
     .menu-toggle span::after {
-      transform: translateY(1.1rem); }
+      transform: translateY(0.8rem); }
+  .menu-toggle__label {
+    font-family: "Lato", sans-serif;
+    color: #f9f7f6;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-top: 0.1rem; }
 
 .story {
   /* Set the styles for images */ }
@@ -213,6 +234,8 @@ body {
 
 .heading-4 {
   font-size: 1.9rem; }
+  .heading-4--light {
+    color: #aaa; }
 
 .btn {
   background-color: #0c22e8;

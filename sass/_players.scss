@@ -3,9 +3,15 @@
   grid-column: col-start 7 / full-end;
 
   &__list {
+    // test
+    display: grid;
   }
 
   &__img {
+    /* width: 160px */
+    width: 16rem;
+    border-radius: 50%;
+    display: block;
   }
 
   &__goals {
