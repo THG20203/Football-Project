@@ -30,7 +30,7 @@ $bp-large: 62.5rem; // 1000px divided by 16 (default font-size for a browser)
 html {
   box-sizing: border-box;
   font-size: 62.5%; /* 1rem = 10px, 10px/16px = 62.5% */
-
+  // decrease font-size when screen width = 1200px
   @media only screen and (max-width: $bp-largest) {
     font-size: 50%;
   }
@@ -57,19 +57,7 @@ body {
     [center-end] minmax(6rem, 1fr) [full-end];
 
   @media only screen and (max-width: $bp-large) {
-    grid-template-rows: 80vh 70vh min-content 40vw min-content;
-    /* comments for the grid-template-columns */
-    // column layout specified below  1140/8 = 142px -> 140px -> 14rem because 14rem = 140px
-    // something between 1100 - 1200 px to divide up width of the screen
-    // function below - minmax - minimum it can be = min-content, max it can be per column = 14rem
-    // 8rem is for sidebar
-    // need to center the 8 minmax function columns - by put 1fr either side of the 8 min-max section
-    // mixmax 6rem, 1fr units will be first to shrink. without the 8rem sidebar - min of 60px (6rem) width
-    grid-template-columns:
-      [sidebar-start] 7rem [sidebar-end full-start] minmax(6rem, 1fr)
-      [center-start]
-      repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
-      [center-end] minmax(6rem, 1fr) [full-end];
+    grid-template-rows: 15vh 80vh 70vh min-content 40vw min-content;
     // AFTER NOTES
     /* why only name the columns and not the rows? */
     // in overall layout focus is generally on the columns and not the rows - columns more important

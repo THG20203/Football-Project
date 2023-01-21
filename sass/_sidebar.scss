@@ -2,18 +2,6 @@
   background-color: $color-grey-1;
   grid-column: full-start / full-end;
   display: grid;
-
-  // Now need to build a navbar using css grid
-
-  @media only screen and (max-width: $bp-large) {
-    /* sidebar to start at the grid line sidebar-start, end at sidebar-end */
-    grid-column: sidebar-start / sidebar-end;
-    /* second step - want it to span from the beginning of the grid to the end */
-    /* (what is meant above is - all the way down the webpage) */
-    /* keyword for the end is -1 */
-    grid-row: 1 / -1;
-  }
-  display: grid;
   grid-template-columns: 1fr 6rem 1fr;
   grid-template-rows: 2rem 6rem 2rem 6rem;
   &__badge {
