@@ -4,6 +4,10 @@
   // 8 columns are only for the central section
   // col-end 6? - ends after the sixth column - at the end of col 6
   grid-column: full-start / col-end 6;
+  /* MEDIA QUERY - when width of screen is 62.5rem ($bp-large */
+  @media only screen and (max-width: $bp-large) {
+    grid-column: full-start / full-end;
+  }
   //overlay - best way to create is with linear gradient. ../img - need to get out of sass folder
   background-image: linear-gradient(
       rgba($color-grey-1, 0.65),

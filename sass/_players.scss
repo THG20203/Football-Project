@@ -1,6 +1,10 @@
 .players {
   background-color: $color-primary-dark;
   grid-column: col-start 7 / full-end;
+  /* MEDIA QUERY - when width of screen is 62.5rem ($bp-large */
+  @media only screen and (max-width: $bp-large) {
+    grid-column: full-start / full-end;
+  }
   padding: 3rem;
 
   display: grid;
