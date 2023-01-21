@@ -121,10 +121,14 @@ body {
     grid-column-gap: 2rem;
     grid-row-gap: 5vh; }
   .players__img {
-    /* width: 180px */
-    width: 18rem;
+    /* width: 160px */
+    width: 16rem;
     border-radius: 50%;
     display: block; }
+  .players__goals {
+    text-transform: uppercase;
+    color: #f9f7f6;
+    margin-top: -3px; }
 
 .sidebar {
   background-color: #f9f7f6;

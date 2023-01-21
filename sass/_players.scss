@@ -5,7 +5,7 @@
   &__list {
     display: grid;
     /* first column for images, second for the text */
-    // image is 18rem - so going to set it to min-content - so it fits the image nicely
+    // image is 16rem - so going to set it to min-content - so it fits the image nicely
     // for the text - using max-content - (so doesn't create any line breaks in our text)
     grid-template-columns: min-content max-content;
     //need to define some spacing - columns and rows
@@ -15,12 +15,16 @@
   }
 
   &__img {
-    /* width: 180px */
-    width: 18rem;
+    /* width: 160px */
+    width: 16rem;
     border-radius: 50%;
     display: block;
   }
 
   &__goals {
+    text-transform: uppercase;
+    color: $color-grey-1;
+    // move the text up slightly so not too far away from players names
+    margin-top: -3px;
   }
 }
