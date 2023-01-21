@@ -117,7 +117,9 @@ body {
   .players__list {
     display: grid;
     /* first column for images, second for the text */
-    grid-template-columns: min-content max-content; }
+    grid-template-columns: min-content max-content;
+    grid-column-gap: 2rem;
+    grid-row-gap: 5vh; }
   .players__img {
     /* width: 180px */
     width: 18rem;

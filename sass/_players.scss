@@ -6,8 +6,12 @@
     display: grid;
     /* first column for images, second for the text */
     // image is 18rem - so going to set it to min-content - so it fits the image nicely
-    // for the text
+    // for the text - using max-content - (so doesn't create any line breaks in our text)
     grid-template-columns: min-content max-content;
+    //need to define some spacing - columns and rows
+    grid-column-gap: 2rem;
+    // row 5% of viewport height - because margin spacing should change whenever change height of viewport
+    grid-row-gap: 5vh;
   }
 
   &__img {
