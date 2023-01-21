@@ -9,11 +9,14 @@
   align-content: center;
   // justify-content = centered horizontally
   justify-content: center;
+  // list is treated as second row (implicit grid - so grid-row-gap provides space
+  // space is 2rem between top 3 goalscorers and the images/ list in list
+  grid-row-gap: 2rem;
 
   &__list {
     display: grid;
     /* first column for images, second for the text */
-    // image is 14rem - so going to set it to min-content - so it fits the image nicely
+    // image is 15rem - so going to set it to min-content - so it fits the image nicely
     // for the text - using max-content - (so doesn't create any line breaks in our text)
     grid-template-columns: min-content max-content;
     //need to define some spacing - columns and rows
@@ -22,13 +25,11 @@
     grid-row-gap: 5vh;
     // align the text in grid vertically
     align-items: center;
-    // push the whole text & image grid down from Top 3 goalscores by 1.5rem
-    margin-top: 1.5rem;
   }
 
   &__img {
-    /* width: 140px */
-    width: 14rem;
+    /* width: 150px */
+    width: 15rem;
     border-radius: 50%;
     display: block;
   }

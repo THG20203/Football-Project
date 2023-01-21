@@ -117,18 +117,18 @@ body {
   padding: 3rem;
   display: grid;
   align-content: center;
-  justify-content: center; }
+  justify-content: center;
+  grid-row-gap: 2rem; }
   .players__list {
     display: grid;
     /* first column for images, second for the text */
     grid-template-columns: min-content max-content;
     grid-column-gap: 2rem;
     grid-row-gap: 5vh;
-    align-items: center;
-    margin-top: 1.5rem; }
+    align-items: center; }
   .players__img {
-    /* width: 140px */
-    width: 14rem;
+    /* width: 150px */
+    width: 15rem;
     border-radius: 50%;
     display: block; }
   .players__goals {
