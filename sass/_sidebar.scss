@@ -2,18 +2,15 @@
   background-color: $color-grey-1;
   grid-column: full-start / full-end;
   display: grid;
-  grid-template-columns: 1fr 6rem 1fr;
-  grid-template-rows: 2rem 6rem 2rem 6rem;
+  grid-template-columns: 6rem 1fr 6rem;
   &__badge {
     width: 100%;
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
+    grid-column: 1 / 2;
   }
 }
 
 .menu-toggle {
-  grid-column: 2 / 3;
-  grid-row: 4 / 5;
+  grid-column: 3 / 4;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -50,12 +47,12 @@
     &::after {
       background-color: $color-grey-1;
       height: 2px;
-      //need to define a content
+      // need to define a content
       content: '';
       display: block;
     }
     &::before {
-      //move before element up
+      // move before element up
       transform: translateY(-1rem);
     }
     &::after {

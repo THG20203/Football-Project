@@ -148,16 +148,13 @@ body {
   background-color: #f9f7f6;
   grid-column: full-start / full-end;
   display: grid;
-  grid-template-columns: 1fr 6rem 1fr;
-  grid-template-rows: 2rem 6rem 2rem 6rem; }
+  grid-template-columns: 6rem 1fr 6rem; }
   .sidebar__badge {
     width: 100%;
-    grid-column: 2 / 3;
-    grid-row: 2 / 3; }
+    grid-column: 1 / 2; }
 
 .menu-toggle {
-  grid-column: 2 / 3;
-  grid-row: 4 / 5;
+  grid-column: 3 / 4;
   background: transparent;
   border: none;
   cursor: pointer;
