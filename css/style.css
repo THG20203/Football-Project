@@ -33,12 +33,6 @@ body {
   grid-template-rows: 10rem 80vh min-content 40vw min-content;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   /* AFTER NOTES */ }
-  @media only screen and (max-width: 62.5rem) {
-    .container {
-      grid-template-rows: 15vh 80vh 70vh min-content 40vw min-content; } }
-  @media only screen and (max-width: 50em) {
-    .container {
-      grid-template-rows: 15vh 85vh 70vh min-content 40vw min-content; } }
 
 .features {
   /* features go from center-start to center-end - beginning to end of centre 8 grid */
@@ -153,14 +147,8 @@ body {
   display: grid;
   grid-template-columns: 1rem 8rem 1fr 8rem 1rem;
   grid-column-gap: 1rem;
-  grid-template-rows: 1rem 8rem 1rem;
+  grid-template-rows: 10% 80% 10%;
   align-items: center; }
-  @media only screen and (max-width: 62.5rem) {
-    .navbar {
-      grid-template-rows: 2rem 8rem 2rem; } }
-  @media only screen and (max-width: 50em) {
-    .navbar {
-      grid-template-rows: 2.2rem 8rem 2.2rem; } }
   .navbar__badge {
     width: 100%;
     grid-column: 2 / 3;

@@ -4,13 +4,7 @@
   display: grid;
   grid-template-columns: 1rem 8rem 1fr 8rem 1rem;
   grid-column-gap: 1rem;
-  grid-template-rows: 1rem 8rem 1rem;
-  @media only screen and (max-width: $bp-large) {
-    grid-template-rows: 2rem 8rem 2rem;
-  }
-  @media only screen and (max-width: $bp-medium) {
-    grid-template-rows: 2.2rem 8rem 2.2rem;
-  }
+  grid-template-rows: 10% 80% 10%;
   // make sure within their grid cells the items are centered vertically
   align-items: center;
   &__badge {

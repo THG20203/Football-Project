@@ -59,13 +59,4 @@ body {
   /* AFTER NOTES */
   // why only name the columns and not the rows?
   // in overall layout focus is generally on the columns and not the rows - columns more important
-
-  @media only screen and (max-width: $bp-large) {
-    grid-template-rows: 15vh 80vh 70vh min-content 40vw min-content;
-  }
-
-  @media only screen and (max-width: $bp-medium) {
-    // 15vh + 85vh = 100vh - hence on smaller devices the navbar and header row will be 100vh
-    grid-template-rows: 15vh 85vh 70vh min-content 40vw min-content;
-  }
 }
