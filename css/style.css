@@ -130,16 +130,28 @@ body {
     grid-column-gap: 2rem;
     grid-row-gap: 5vh;
     align-items: center; }
+    @media only screen and (max-width: 62.5rem) {
+      .players__list {
+        grid-row-gap: 3vh; } }
+    @media only screen and (max-width: 50em) {
+      .players__list {
+        grid-row-gap: 2vh; } }
   .players__img {
     /* width: 130px */
     width: 13rem;
     border-radius: 50%;
     display: block; }
+    @media only screen and (max-width: 62.5rem) {
+      .players__img {
+        width: 12rem; } }
   .players__goals {
     text-transform: uppercase;
     font-size: 1.5rem;
     color: #f9f7f6;
     margin-top: -3px; }
+    @media only screen and (max-width: 62.5rem) {
+      .players__goals {
+        font-size: 1.2rem; } }
 
 .navbar {
   background-color: #f9f7f6;
