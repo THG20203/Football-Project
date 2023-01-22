@@ -66,6 +66,6 @@ body {
 
   @media only screen and (max-width: $bp-medium) {
     // 15vh + 85vh = 100vh - hence on smaller devices the navbar and header row will be 100vh
-    grid-template-rows: 10vh 90vh 70vh min-content 40vw min-content;
+    grid-template-rows: 15vh 85vh 70vh min-content 40vw min-content;
   }
 }
