@@ -82,7 +82,7 @@ body {
   padding-top: 4rem;
   display: grid;
   /* grid row explanation */
-  grid-template-rows: 1fr min-content minmax(6rem, min-content) min-content;
+  grid-template-rows: 1fr min-content minmax(12rem, min-content) min-content;
   grid-template-columns: minmax(min-content, max-content);
   grid-row-gap: 1.5rem;
   justify-content: center; }
@@ -92,14 +92,14 @@ body {
   .header__headline-text {
     align-self: end; }
   .header__btn {
-    align-self: start;
+    align-self: center;
     justify-self: start; }
   .header__corporate-text {
     display: grid;
     grid-template-columns: 1fr max-content 1fr;
     grid-column-gap: 15px;
     align-items: center;
-    font-size: 1.6rem;
+    font-size: 2rem;
     color: #101d2c;
     text-transform: uppercase; }
     .header__corporate-text::before, .header__corporate-text::after {
@@ -253,7 +253,7 @@ body {
     color: #aaa; }
 
 .heading-3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-transform: uppercase;
   color: #101d2c; }
 

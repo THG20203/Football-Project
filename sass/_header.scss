@@ -25,8 +25,8 @@
   // Fractional unit (if nothing set for other rows) means they will be set automatically.
   // 1fr fills up all space that is avaliable-mthe other rows would be set automatically (minimum size they need)
   // why does this all work also? defined height of 80vh - grid container. (80% of viewport height)
-  // min 6rem before breaks onto a new line - hence minmax
-  grid-template-rows: 1fr min-content minmax(6rem, min-content) min-content;
+  // min 12rem before breaks onto a new line - hence minmax
+  grid-template-rows: 1fr min-content minmax(12rem, min-content) min-content;
   // make the columns ALL as wide as the max piece of content. Max it can be is max content.
   // But minimum content could be is min-content. Could have specified rem - but instead
   // 'Column should never be more narrow than the content' i.e. min-content
@@ -40,9 +40,9 @@
   }
 
   &__btn {
-    // need align-self:start and justify-self: start otherwise button will take up whole area of the grid cell
+    // justify-self: start otherwise button will take up whole area of the grid cell
     // remember - button is 1fr - so will use all space otherwise
-    align-self: start;
+    align-self: center;
     justify-self: start;
   }
 
@@ -54,7 +54,7 @@
     grid-column-gap: 15px;
     // need to vertically align these three items
     align-items: center;
-    font-size: 1.6rem;
+    font-size: 2rem;
     color: $color-secondary;
     text-transform: uppercase;
     &::before,
