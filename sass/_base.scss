@@ -63,4 +63,8 @@ body {
   @media only screen and (max-width: $bp-large) {
     grid-template-rows: 15vh 80vh 70vh min-content 40vw min-content;
   }
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-rows: 15vh 85vh 70vh min-content 40vw min-content;
+  }
 }

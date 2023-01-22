@@ -36,6 +36,9 @@ body {
   @media only screen and (max-width: 62.5rem) {
     .container {
       grid-template-rows: 15vh 80vh 70vh min-content 40vw min-content; } }
+  @media only screen and (max-width: 50em) {
+    .container {
+      grid-template-rows: 15vh 85vh 70vh min-content 40vw min-content; } }
 
 .features {
   /* features go from center-start to center-end - beginning to end of centre 8 grid */
