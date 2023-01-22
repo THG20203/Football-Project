@@ -132,10 +132,12 @@ body {
     grid-template-columns: min-content max-content;
     grid-column-gap: 2rem;
     grid-row-gap: 5vh;
-    align-items: center; }
+    align-items: center;
+    justify-items: center; }
     @media only screen and (max-width: 62.5rem) {
       .players__list {
-        grid-template-columns: repeat(3, 5rem min-content); } }
+        grid-template-columns: repeat(3, 5rem min-content);
+        grid-column-gap: 0.5rem; } }
   .players__img {
     /* width: 130px */
     width: 13rem;
@@ -143,8 +145,8 @@ body {
     display: block; }
     @media only screen and (max-width: 62.5rem) {
       .players__img {
-        width: 6rem;
-        padding-right: 3px; } }
+        width: 7rem;
+        padding: 0 5px 0; } }
   .players__goals {
     text-transform: uppercase;
     font-size: 1.5rem;
