@@ -143,7 +143,8 @@ body {
     display: block; }
     @media only screen and (max-width: 62.5rem) {
       .players__img {
-        width: 7rem; } }
+        width: 6rem;
+        padding-right: 3px; } }
   .players__goals {
     text-transform: uppercase;
     font-size: 1.5rem;
@@ -151,7 +152,11 @@ body {
     margin-top: -3px; }
     @media only screen and (max-width: 62.5rem) {
       .players__goals {
-        font-size: 1rem; } }
+        font-size: 1rem;
+        margin-top: 0px; } }
+  @media only screen and (max-width: 62.5rem) {
+    .players__name {
+      line-height: 1.7rem; } }
 
 .navbar {
   background-color: #f9f7f6;
