@@ -11,8 +11,9 @@ $font-primary: 'Nunito', sans-serif;
 $font-display: 'Lato', sans-serif;
 
 /* RESPONSIVE BREAKPOINTS */
-$bp-largest: 75em; // 1200px divided by 16 (default font-size for a browser)
-$bp-large: 62.5rem; // 1000px divided by 16 (default font-size for a browser)
+$bp-largest: 75em; // 1200px divided by 16 (16 -> default font-size for a browser)
+$bp-large: 62.5rem; // 1000px divided by 16
+$bp-medium: 50em; // 800px divided by 16
 
 * {
   margin: 0;
@@ -55,11 +56,11 @@ body {
       [col-start] minmax(min-content, 14rem) [col-end]
     )
     [center-end] minmax(6rem, 1fr) [full-end];
+  /* AFTER NOTES */
+  // why only name the columns and not the rows?
+  // in overall layout focus is generally on the columns and not the rows - columns more important
 
   @media only screen and (max-width: $bp-large) {
     grid-template-rows: 15vh 80vh 70vh min-content 40vw min-content;
-    // AFTER NOTES
-    /* why only name the columns and not the rows? */
-    // in overall layout focus is generally on the columns and not the rows - columns more important
   }
 }
