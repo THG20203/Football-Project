@@ -59,4 +59,7 @@ body {
   /* AFTER NOTES */
   // why only name the columns and not the rows?
   // in overall layout focus is generally on the columns and not the rows - columns more important
+  @media only screen and (max-width: $bp-large) {
+    grid-template-rows: 10rem 80vh min-content 40vw min-content;
+  }
 }

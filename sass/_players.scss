@@ -30,10 +30,7 @@
     // row 5% of viewport height - because margin spacing should change whenever change height of viewport
     grid-row-gap: 5vh;
     @media only screen and (max-width: $bp-large) {
-      grid-row-gap: 3vh;
-    }
-    @media only screen and (max-width: $bp-medium) {
-      grid-row-gap: 2vh;
+      grid-template-columns: repeat(3, 5rem min-content);
     }
     // align the text in grid vertically
     align-items: center;
@@ -45,7 +42,7 @@
     border-radius: 50%;
     display: block;
     @media only screen and (max-width: $bp-large) {
-      width: 12rem;
+      width: 7rem;
     }
   }
 
@@ -56,7 +53,7 @@
     // move the text up slightly so not too far away from players names
     margin-top: -3px;
     @media only screen and (max-width: $bp-large) {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
   }
 }

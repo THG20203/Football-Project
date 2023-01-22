@@ -33,6 +33,9 @@ body {
   grid-template-rows: 10rem 80vh min-content 40vw min-content;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   /* AFTER NOTES */ }
+  @media only screen and (max-width: 62.5rem) {
+    .container {
+      grid-template-rows: 10rem 80vh min-content 40vw min-content; } }
 
 .features {
   /* features go from center-start to center-end - beginning to end of centre 8 grid */
@@ -132,10 +135,7 @@ body {
     align-items: center; }
     @media only screen and (max-width: 62.5rem) {
       .players__list {
-        grid-row-gap: 3vh; } }
-    @media only screen and (max-width: 50em) {
-      .players__list {
-        grid-row-gap: 2vh; } }
+        grid-template-columns: repeat(3, 5rem min-content); } }
   .players__img {
     /* width: 130px */
     width: 13rem;
@@ -143,7 +143,7 @@ body {
     display: block; }
     @media only screen and (max-width: 62.5rem) {
       .players__img {
-        width: 12rem; } }
+        width: 7rem; } }
   .players__goals {
     text-transform: uppercase;
     font-size: 1.5rem;
@@ -151,7 +151,7 @@ body {
     margin-top: -3px; }
     @media only screen and (max-width: 62.5rem) {
       .players__goals {
-        font-size: 1.2rem; } }
+        font-size: 1rem; } }
 
 .navbar {
   background-color: #f9f7f6;
