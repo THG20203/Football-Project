@@ -1,13 +1,8 @@
 .players {
   background-color: $color-primary-dark;
-  grid-column: col-start 7 / full-end;
-  /* MEDIA QUERY - when width of screen is 62.5rem ($bp-large */
-  @media only screen and (max-width: $bp-large) {
-    grid-column: full-start / full-end;
-  }
-  padding: 3rem;
-
   display: grid;
+  grid-column: col-start 7 / full-end;
+  padding: 3rem;
   // align the whole players grid in the overall players box centrally
   // align-content = centered vertically
   align-content: center;
@@ -19,6 +14,11 @@
   // center the title horizontally
   justify-items: center;
 
+  /* MEDIA QUERY - when width of screen is 62.5rem ($bp-large */
+  @media only screen and (max-width: $bp-large) {
+    grid-column: full-start / full-end;
+    justify-content: space-evenly;
+  }
   &__list {
     display: grid;
     /* first column for images, second for the text */
@@ -29,13 +29,20 @@
     grid-column-gap: 2rem;
     // row 5% of viewport height - because margin spacing should change whenever change height of viewport
     grid-row-gap: 5vh;
-    @media only screen and (max-width: $bp-large) {
-      grid-template-columns: repeat(3, 5rem min-content);
-      grid-column-gap: 0.5rem;
-    }
     // align the text in grid vertically
     align-items: center;
     justify-items: center;
+    @media only screen and (max-width: $bp-largest) {
+      grid-column-gap: 1.2rem;
+      grid-row-gap: 3vh;
+    }
+    @media only screen and (max-width: $bp-large) {
+      grid-template-columns: repeat(3, min-content max-content);
+    }
+    @media only screen and (max-width: $bp-small) {
+      //
+      grid-template-columns: repeat(3, 6rem min-content);
+    }
   }
 
   &__img {
@@ -44,8 +51,7 @@
     border-radius: 50%;
     display: block;
     @media only screen and (max-width: $bp-large) {
-      width: 7rem;
-      padding: 0 5px 0;
+      width: 6.5rem;
     }
   }
 
@@ -56,7 +62,7 @@
     // move the text up slightly so not too far away from players names
     margin-top: -3px;
     @media only screen and (max-width: $bp-large) {
-      font-size: 1rem;
+      font-size: 0.75rem;
       margin-top: 0px;
     }
   }
