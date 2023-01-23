@@ -17,9 +17,6 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   /* 1rem = 10px, 10px/16px = 62.5% */ }
-  @media only screen and (max-width: 87.5em) {
-    html {
-      font-size: 50%; } }
 
 body {
   font-family: "Nunito", sans-serif;
@@ -71,7 +68,7 @@ body {
 .header {
   /* 6/8 columns = for the header, 2/8 columns for the players section */
   grid-column: full-start / col-end 6;
-  /* MEDIA QUERY - when width of screen is 62.5rem ($bp-large */
+  /* MEDIA QUERY - when width of screen is 87.5rem ($bp-largest) */
   background-image: linear-gradient(rgba(249, 247, 246, 0.65), rgba(249, 247, 246, 0.65)), url(../img/header-image1.png);
   background-size: cover;
   background-position: center;
@@ -83,7 +80,7 @@ body {
   grid-template-columns: minmax(min-content, max-content);
   grid-row-gap: 1.5rem;
   justify-content: center; }
-  @media only screen and (max-width: 62.5rem) {
+  @media only screen and (max-width: 87.5em) {
     .header {
       grid-column: full-start / full-end; } }
   .header__headline-text {
@@ -122,8 +119,8 @@ body {
   justify-content: center;
   grid-row-gap: 2rem;
   justify-items: center;
-  /* MEDIA QUERY - when width of screen is 62.5rem ($bp-large */ }
-  @media only screen and (max-width: 62.5rem) {
+  /* MEDIA QUERY - when width of screen is 87.5rem ($bp-largest) */ }
+  @media only screen and (max-width: 87.5em) {
     .players {
       grid-column: full-start / full-end;
       justify-content: space-evenly; } }
@@ -134,28 +131,28 @@ body {
     grid-column-gap: 2rem;
     grid-row-gap: 5vh;
     align-items: center;
-    justify-items: center; }
+    justify-items: center;
+    /* largest being 87.5em - 1400px */
+    /* large being 62.5em - 1000px */
+    /* medium being 50em - 800px */ }
     @media only screen and (max-width: 87.5em) {
       .players__list {
-        grid-column-gap: 1.2rem;
-        grid-row-gap: 3vh; } }
+        grid-template-columns: repeat(3, min-content max-content); } }
     @media only screen and (max-width: 62.5rem) {
       .players__list {
-        grid-template-columns: repeat(3, min-content max-content); } }
-    @media only screen and (max-width: 37.5rem) {
+        grid-column-gap: 4rem; } }
+    @media only screen and (max-width: 50em) {
       .players__list {
-        grid-template-columns: repeat(3, 6rem min-content); } }
-    @media only screen and (max-width: 22rem) {
-      .players__list {
-        grid-template-columns: min-content max-content; } }
+        grid-template-columns: min-content max-content;
+        grid-row-gap: 2vh; } }
   .players__img {
-    /* width: 130px */
-    width: 13rem;
+    /* width: 150px */
+    width: 15rem;
     border-radius: 50%;
     display: block; }
     @media only screen and (max-width: 62.5rem) {
       .players__img {
-        width: 7.5rem; } }
+        width: 6rem; } }
   .players__goals {
     text-transform: uppercase;
     font-size: 1.5rem;
@@ -237,7 +234,8 @@ body {
     display: grid;
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(6, 1fr);
-    align-items: center; }
+    align-items: center;
+    /* MEDIA QUERY - when width of screen is 62.5rem ($bp-large) */ }
     @media only screen and (max-width: 62.5rem) {
       .story__pictures {
         grid-column: full-start / full-end;
@@ -245,7 +243,8 @@ body {
   .story__img--1 {
     width: 100%;
     grid-row: 2 / 6;
-    grid-column: 1 / 5; }
+    grid-column: 1 / 5;
+    /* large being 62.5em - 1000px */ }
     @media only screen and (max-width: 62.5rem) {
       .story__img--1 {
         grid-column: 1 / 4;
@@ -256,7 +255,8 @@ body {
     width: 110%;
     z-index: 1;
     grid-row: 1 / 5;
-    grid-column: 4 / 7; }
+    grid-column: 4 / 7;
+    /* large being 62.5em - 1000px */ }
     @media only screen and (max-width: 62.5rem) {
       .story__img--2 {
         grid-row: 1 / -1;
@@ -269,7 +269,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; }
+    align-items: flex-start;
+    /* large being 62.5em - 1000px */ }
     @media only screen and (max-width: 62.5rem) {
       .story__content {
         grid-column: full-start / full-end;

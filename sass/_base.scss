@@ -14,8 +14,7 @@ $font-display: 'Lato', sans-serif;
 $bp-largest: 87.5em; // 1400px divided by 16 (16 -> default font-size for a browser)
 $bp-large: 62.5rem; // 1000px divided by 16
 $bp-medium: 50em; // 800px divided by 16
-$bp-small: 37.5rem; // 600px divided by 16
-$bp-smallest: 22rem; // 350px
+$bp-small: 37.5em; // 600px divided by 16
 * {
   margin: 0;
   padding: 0;
@@ -32,10 +31,6 @@ $bp-smallest: 22rem; // 350px
 html {
   box-sizing: border-box;
   font-size: 62.5%; /* 1rem = 10px, 10px/16px = 62.5% */
-  // decrease font-size when screen width = 1200px
-  @media only screen and (max-width: $bp-largest) {
-    font-size: 50%;
-  }
 }
 
 body {

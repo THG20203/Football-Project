@@ -17,9 +17,6 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   /* 1rem = 10px, 10px/16px = 62.5% */ }
-  @media only screen and (max-width: 87.5em) {
-    html {
-      font-size: 50%; } }
 
 body {
   font-family: "Nunito", sans-serif;
@@ -35,7 +32,7 @@ body {
   /* AFTER NOTES */ }
   @media only screen and (max-width: 62.5rem) {
     .container {
-      grid-template-rows: 10rem calc(100vh-10rem) max-content 40vw min-content; } }
+      grid-template-rows: 10rem calc(100vh - 10rem); } }
 
 .features {
   /* features go from center-start to center-end - beginning to end of centre 8 grid */
@@ -142,17 +139,17 @@ body {
     @media only screen and (max-width: 62.5rem) {
       .players__list {
         grid-template-columns: repeat(3, min-content max-content); } }
-    @media only screen and (max-width: 37.5rem) {
+    @media only screen and (max-width: 37.5em) {
       .players__list {
-        grid-template-columns: repeat(3, 6rem min-content); } }
+        grid-template-columns: min-content max-content; } }
   .players__img {
-    /* width: 130px */
-    width: 13rem;
+    /* width: 120px */
+    width: 12rem;
     border-radius: 50%;
     display: block; }
     @media only screen and (max-width: 62.5rem) {
       .players__img {
-        width: 7.5rem; } }
+        width: 6rem; } }
   .players__goals {
     text-transform: uppercase;
     font-size: 1.5rem;

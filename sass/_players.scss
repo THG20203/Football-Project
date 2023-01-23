@@ -14,15 +14,15 @@
   // center the title horizontally
   justify-items: center;
 
-  /* MEDIA QUERY - when width of screen is 62.5rem ($bp-large */
-  @media only screen and (max-width: $bp-large) {
+  /* MEDIA QUERY - when width of screen is 87.5rem ($bp-largest) */
+  @media only screen and (max-width: $bp-largest) {
     grid-column: full-start / full-end;
     justify-content: space-evenly;
   }
   &__list {
     display: grid;
     /* first column for images, second for the text */
-    // image is 13rem - so going to set it to min-content - so it fits the image nicely
+    // image is 15rem - so going to set it to min-content - so it fits the image nicely
     // for the text - using max-content - (so doesn't create any line breaks in our text)
     grid-template-columns: min-content max-content;
     //need to define some spacing - columns and rows
@@ -32,30 +32,31 @@
     // align the text in grid vertically
     align-items: center;
     justify-items: center;
+    /* largest being 87.5em - 1400px */
     @media only screen and (max-width: $bp-largest) {
-      grid-column-gap: 1.2rem;
-      grid-row-gap: 3vh;
-    }
-    @media only screen and (max-width: $bp-large) {
-      // min-content for the image. text = max-content - so doesn't create any line breaks in our text
       grid-template-columns: repeat(3, min-content max-content);
     }
-    @media only screen and (max-width: $bp-small) {
-      // 6rem for the image - min-content for the text- (accept line breaks - minimum needed)
-      grid-template-columns: repeat(3, 6rem min-content);
+    /* large being 62.5em - 1000px */
+    @media only screen and (max-width: $bp-large) {
+      // spreading out the columns a bit more than by 2rem
+      grid-column-gap: 4rem;
     }
-    @media only screen and (max-width: $bp-smallest) {
+    /* medium being 50em - 800px */
+    @media only screen and (max-width: $bp-medium) {
+      // go back to the two column of min-content for player image then max content for text so no line break
       grid-template-columns: min-content max-content;
+      // decreasing the grid-row-gap to 2% of viewport height - appearance
+      grid-row-gap: 2vh;
     }
   }
 
   &__img {
-    /* width: 130px */
-    width: 13rem;
+    /* width: 150px */
+    width: 15rem;
     border-radius: 50%;
     display: block;
     @media only screen and (max-width: $bp-large) {
-      width: 7.5rem;
+      width: 6rem;
     }
   }
 
