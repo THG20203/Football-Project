@@ -44,6 +44,9 @@
       // 6rem for the image - min-content for the text- (accept line breaks - minimum needed)
       grid-template-columns: repeat(3, 6rem min-content);
     }
+    @media only screen and (max-width: $bp-smallest) {
+      grid-template-columns: min-content max-content;
+    }
   }
 
   &__img {

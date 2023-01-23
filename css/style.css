@@ -145,6 +145,9 @@ body {
     @media only screen and (max-width: 37.5rem) {
       .players__list {
         grid-template-columns: repeat(3, 6rem min-content); } }
+    @media only screen and (max-width: 22rem) {
+      .players__list {
+        grid-template-columns: min-content max-content; } }
   .players__img {
     /* width: 130px */
     width: 13rem;
