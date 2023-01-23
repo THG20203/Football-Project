@@ -35,7 +35,7 @@ body {
   /* AFTER NOTES */ }
   @media only screen and (max-width: 62.5rem) {
     .container {
-      grid-template-rows: 10rem 85vh repeat(4, min-content); } }
+      grid-template-rows: 10rem calc(100vh - 10rem); } }
 
 .features {
   /* features go from center-start to center-end - beginning to end of centre 8 grid */
