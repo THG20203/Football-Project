@@ -37,10 +37,11 @@
       grid-row-gap: 3vh;
     }
     @media only screen and (max-width: $bp-large) {
+      // min-content for the image. text = max-content - so doesn't create any line breaks in our text
       grid-template-columns: repeat(3, min-content max-content);
     }
     @media only screen and (max-width: $bp-small) {
-      //
+      // 6rem for the image - min-content for the text- (accept line breaks - minimum needed)
       grid-template-columns: repeat(3, 6rem min-content);
     }
   }
@@ -50,9 +51,6 @@
     width: 13rem;
     border-radius: 50%;
     display: block;
-    @media only screen and (max-width: $bp-large) {
-      width: 6.5rem;
-    }
   }
 
   &__goals {
