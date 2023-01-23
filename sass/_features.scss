@@ -1,7 +1,7 @@
 .features {
   /* features go from center-start to center-end - beginning to end of centre 8 grid */
   grid-column: center-start / center-end;
-  margin: 15rem 0;
+  margin: 5rem 0;
   /* making features grid item a grid container */
   display: grid;
   /* making columns for this 'sub grid'. */
@@ -10,6 +10,10 @@
   grid-gap: 6rem;
   /* align text to be at the top of the boxes within the grid */
   align-items: start;
+  /* large being 87.5em - 1400px */
+  @media only screen and (max-width: $bp-largest) {
+    margin: 5rem 0;
+  }
 }
 
 .feature {

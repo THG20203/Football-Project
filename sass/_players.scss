@@ -17,7 +17,6 @@
   /* MEDIA QUERY - when width of screen is 87.5rem ($bp-largest) */
   @media only screen and (max-width: $bp-largest) {
     grid-column: full-start / full-end;
-    justify-content: space-evenly;
   }
   &__list {
     display: grid;
@@ -31,6 +30,7 @@
     grid-row-gap: 5vh;
     // align the text in grid vertically
     align-items: center;
+    // align the text in grid horizontally
     justify-items: center;
     /* largest being 87.5em - 1400px */
     @media only screen and (max-width: $bp-largest) {
@@ -47,6 +47,8 @@
       grid-template-columns: min-content max-content;
       // decreasing the grid-row-gap to 2% of viewport height - appearance
       grid-row-gap: 2vh;
+      // align the text of goalscores at start - horizontally
+      justify-items: start;
     }
   }
 
@@ -55,6 +57,7 @@
     width: 15rem;
     border-radius: 50%;
     display: block;
+    /* large being 62.5em - 1000px */
     @media only screen and (max-width: $bp-large) {
       width: 6rem;
     }
@@ -66,12 +69,14 @@
     color: $color-grey-1;
     // move the text up slightly so not too far away from players names
     margin-top: -3px;
+    /* large being 62.5em - 1000px */
     @media only screen and (max-width: $bp-large) {
       font-size: 0.75rem;
       margin-top: 0px;
     }
   }
   &__name {
+    /* large being 62.5em - 1000px */
     @media only screen and (max-width: $bp-large) {
       line-height: 1.7rem;
     }

@@ -20,7 +20,7 @@
     /* MEDIA QUERY - when width of screen is 62.5rem ($bp-large) */
     @media only screen and (max-width: $bp-large) {
       grid-column: full-start / full-end;
-      padding: 6rem;
+      padding: 5rem;
     }
   }
   /* Set the styles for images */
@@ -57,7 +57,7 @@
   &__content {
     background-color: $color-grey-1;
     grid-column: col-start 5 / full-end;
-    padding: 6rem 8vw;
+    padding: 5rem 8vw;
     //using flex to center - only 1 dimensional - didn't need grid
     display: flex;
     flex-direction: column;
