@@ -51,6 +51,9 @@
     width: 13rem;
     border-radius: 50%;
     display: block;
+    @media only screen and (max-width: $bp-large) {
+      width: 7.5rem;
+    }
   }
 
   &__goals {
