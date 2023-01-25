@@ -40,13 +40,13 @@
   }
 
   &__inner {
-    // define height and width of the grid with the span and before & after elements in it
-    height: 3rem;
-    width: 3rem;
     // define the inner container (with span and before and after elements) as a grid to group
     display: grid;
     // align them vertically centrally - rather than at top of blue button as before
     align-items: center;
+    // define height and width of the grid with the span and before & after elements in it
+    height: 3rem;
+    width: 3rem;
   }
   span {
     height: 2px;
