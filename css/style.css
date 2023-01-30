@@ -30,7 +30,7 @@ body {
   grid-template-rows: 10rem 80vh min-content repeat(2, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   /* AFTER NOTES */ }
-  @media only screen and (max-width: 62.5rem) {
+  @media only screen and (max-width: 62.5em) {
     .container {
       grid-template-rows: 10rem calc(100vh - 10rem); } }
 
@@ -73,7 +73,7 @@ body {
   /* 6/8 columns = for the header, 2/8 columns for the players section */
   grid-column: full-start / col-end 6;
   /* MEDIA QUERY - when width of screen is 87.5rem ($bp-largest) */
-  background-image: linear-gradient(rgba(249, 247, 246, 0.65), rgba(249, 247, 246, 0.65)), url(../img/header-image1.png);
+  background-image: linear-gradient(rgba(249, 247, 246, 0.7), rgba(249, 247, 246, 0.7)), url(../img/header-image1.png);
   background-size: cover;
   background-position: center;
   padding: 5rem;
@@ -140,7 +140,7 @@ body {
     @media only screen and (max-width: 87.5em) {
       .players__list {
         grid-template-columns: repeat(3, min-content max-content); } }
-    @media only screen and (max-width: 62.5rem) {
+    @media only screen and (max-width: 62.5em) {
       .players__list {
         grid-column-gap: 4rem; } }
     @media only screen and (max-width: 50em) {
@@ -154,7 +154,7 @@ body {
     border-radius: 50%;
     display: block;
     /* large being 62.5em - 1000px */ }
-    @media only screen and (max-width: 62.5rem) {
+    @media only screen and (max-width: 62.5em) {
       .players__img {
         width: 6rem; } }
   .players__goals {
@@ -163,13 +163,13 @@ body {
     color: #f9f7f6;
     margin-top: -3px;
     /* large being 62.5em - 1000px */ }
-    @media only screen and (max-width: 62.5rem) {
+    @media only screen and (max-width: 62.5em) {
       .players__goals {
         font-size: 0.75rem;
         margin-top: 0px; } }
   .players__name {
     /* large being 62.5em - 1000px */ }
-    @media only screen and (max-width: 62.5rem) {
+    @media only screen and (max-width: 62.5em) {
       .players__name {
         line-height: 1.7rem; } }
 
@@ -206,10 +206,10 @@ body {
   .menu-toggle:hover {
     background-color: #0a19a1; }
   .menu-toggle__inner {
-    height: 3rem;
-    width: 3rem;
     display: grid;
-    align-items: center; }
+    align-items: center;
+    height: 3rem;
+    width: 3rem; }
   .menu-toggle span {
     height: 2px;
     background-color: #f9f7f6; }
@@ -243,7 +243,7 @@ body {
     grid-template-columns: repeat(6, 1fr);
     align-items: center;
     /* MEDIA QUERY - when width of screen is 62.5rem ($bp-large) */ }
-    @media only screen and (max-width: 62.5rem) {
+    @media only screen and (max-width: 62.5em) {
       .story__pictures {
         grid-column: full-start / full-end;
         padding: 5rem; } }
@@ -252,7 +252,7 @@ body {
     grid-row: 2 / 6;
     grid-column: 1 / 5;
     /* large being 62.5em - 1000px */ }
-    @media only screen and (max-width: 62.5rem) {
+    @media only screen and (max-width: 62.5em) {
       .story__img--1 {
         grid-column: 1 / 4;
         grid-row: 1 / -1;
@@ -264,7 +264,7 @@ body {
     grid-row: 1 / 5;
     grid-column: 4 / 7;
     /* large being 62.5em - 1000px */ }
-    @media only screen and (max-width: 62.5rem) {
+    @media only screen and (max-width: 62.5em) {
       .story__img--2 {
         grid-row: 1 / -1;
         width: 100%;
@@ -278,7 +278,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     /* large being 62.5em - 1000px */ }
-    @media only screen and (max-width: 62.5rem) {
+    @media only screen and (max-width: 62.5em) {
       .story__content {
         grid-column: full-start / full-end;
         grid-row: 5 / 6; } }
