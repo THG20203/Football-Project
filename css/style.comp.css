@@ -27,24 +27,28 @@ body {
 .container {
   display: grid;
   /* comments for the grid-template-rows */
-  grid-template-rows: 10rem 80vh min-content 40vw min-content;
+  grid-template-rows: 10rem 80vh min-content repeat(2, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   /* AFTER NOTES */ }
-  @media only screen and (max-width: 62.5rem) {
+  @media only screen and (max-width: 62.5em) {
     .container {
       grid-template-rows: 10rem calc(100vh - 10rem); } }
 
 .features {
   /* features go from center-start to center-end - beginning to end of centre 8 grid */
   grid-column: center-start / center-end;
-  margin: 15rem 0;
+  margin: 5rem 0;
   /* making features grid item a grid container */
   display: grid;
   /* making columns for this 'sub grid'. */
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 6rem;
   /* align text to be at the top of the boxes within the grid */
-  align-items: start; }
+  align-items: start;
+  /* large being 87.5em - 1400px */ }
+  @media only screen and (max-width: 87.5em) {
+    .features {
+      margin: 5rem 0; } }
 
 .feature {
   /* Need to make the feature elements themselves individual grids */
@@ -68,19 +72,18 @@ body {
 .header {
   /* 6/8 columns = for the header, 2/8 columns for the players section */
   grid-column: full-start / col-end 6;
-  /* MEDIA QUERY - when width of screen is 62.5rem ($bp-large */
-  background-image: linear-gradient(rgba(249, 247, 246, 0.65), rgba(249, 247, 246, 0.65)), url(../img/header-image1.png);
+  /* MEDIA QUERY - when width of screen is 87.5rem ($bp-largest) */
+  background-image: linear-gradient(rgba(249, 247, 246, 0.7), rgba(249, 247, 246, 0.7)), url(../img/header-image1.png);
   background-size: cover;
   background-position: center;
   padding: 5rem;
-  padding-top: 4rem;
   display: grid;
   /* grid row explanation */
   grid-template-rows: 1fr min-content minmax(10rem, min-content) min-content;
   grid-template-columns: minmax(min-content, max-content);
   grid-row-gap: 1.5rem;
   justify-content: center; }
-  @media only screen and (max-width: 62.5rem) {
+  @media only screen and (max-width: 87.5em) {
     .header {
       grid-column: full-start / full-end; } }
   .header__headline-text {
@@ -119,11 +122,10 @@ body {
   justify-content: center;
   grid-row-gap: 2rem;
   justify-items: center;
-  /* MEDIA QUERY - when width of screen is 62.5rem ($bp-large */ }
-  @media only screen and (max-width: 62.5rem) {
+  /* MEDIA QUERY - when width of screen is 87.5rem ($bp-largest) */ }
+  @media only screen and (max-width: 87.5em) {
     .players {
-      grid-column: full-start / full-end;
-      justify-content: space-evenly; } }
+      grid-column: full-start / full-end; } }
   .players__list {
     display: grid;
     /* first column for images, second for the text */
@@ -131,37 +133,45 @@ body {
     grid-column-gap: 2rem;
     grid-row-gap: 5vh;
     align-items: center;
-    justify-items: center; }
+    justify-items: center;
+    /* largest being 87.5em - 1400px */
+    /* large being 62.5em - 1000px */
+    /* medium being 50em - 800px */ }
     @media only screen and (max-width: 87.5em) {
       .players__list {
-        grid-column-gap: 1.2rem;
-        grid-row-gap: 3vh; } }
-    @media only screen and (max-width: 62.5rem) {
-      .players__list {
         grid-template-columns: repeat(3, min-content max-content); } }
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 62.5em) {
       .players__list {
-        grid-template-columns: min-content max-content; } }
+        grid-column-gap: 4rem; } }
+    @media only screen and (max-width: 50em) {
+      .players__list {
+        grid-template-columns: min-content max-content;
+        grid-row-gap: 2vh;
+        justify-items: start; } }
   .players__img {
-    /* width: 120px */
-    width: 12rem;
+    /* width: 150px */
+    width: 15rem;
     border-radius: 50%;
-    display: block; }
-    @media only screen and (max-width: 62.5rem) {
+    display: block;
+    /* large being 62.5em - 1000px */ }
+    @media only screen and (max-width: 62.5em) {
       .players__img {
         width: 6rem; } }
   .players__goals {
     text-transform: uppercase;
     font-size: 1.5rem;
     color: #f9f7f6;
-    margin-top: -3px; }
-    @media only screen and (max-width: 62.5rem) {
+    margin-top: -3px;
+    /* large being 62.5em - 1000px */ }
+    @media only screen and (max-width: 62.5em) {
       .players__goals {
         font-size: 0.75rem;
         margin-top: 0px; } }
-  @media only screen and (max-width: 62.5rem) {
-    .players__name {
-      line-height: 1.7rem; } }
+  .players__name {
+    /* large being 62.5em - 1000px */ }
+    @media only screen and (max-width: 62.5em) {
+      .players__name {
+        line-height: 1.7rem; } }
 
 .navbar {
   background-color: #f9f7f6;
@@ -196,10 +206,10 @@ body {
   .menu-toggle:hover {
     background-color: #0a19a1; }
   .menu-toggle__inner {
-    height: 3rem;
-    width: 3rem;
     display: grid;
-    align-items: center; }
+    align-items: center;
+    height: 3rem;
+    width: 3rem; }
   .menu-toggle span {
     height: 2px;
     background-color: #f9f7f6; }
@@ -231,16 +241,18 @@ body {
     display: grid;
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(6, 1fr);
-    align-items: center; }
-    @media only screen and (max-width: 62.5rem) {
+    align-items: center;
+    /* MEDIA QUERY - when width of screen is 62.5rem ($bp-large) */ }
+    @media only screen and (max-width: 62.5em) {
       .story__pictures {
         grid-column: full-start / full-end;
-        padding: 6rem; } }
+        padding: 5rem; } }
   .story__img--1 {
     width: 100%;
     grid-row: 2 / 6;
-    grid-column: 1 / 5; }
-    @media only screen and (max-width: 62.5rem) {
+    grid-column: 1 / 5;
+    /* large being 62.5em - 1000px */ }
+    @media only screen and (max-width: 62.5em) {
       .story__img--1 {
         grid-column: 1 / 4;
         grid-row: 1 / -1;
@@ -250,8 +262,9 @@ body {
     width: 110%;
     z-index: 1;
     grid-row: 1 / 5;
-    grid-column: 4 / 7; }
-    @media only screen and (max-width: 62.5rem) {
+    grid-column: 4 / 7;
+    /* large being 62.5em - 1000px */ }
+    @media only screen and (max-width: 62.5em) {
       .story__img--2 {
         grid-row: 1 / -1;
         width: 100%;
@@ -259,12 +272,13 @@ body {
   .story__content {
     background-color: #f9f7f6;
     grid-column: col-start 5 / full-end;
-    padding: 6rem 8vw;
+    padding: 5rem 8vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; }
-    @media only screen and (max-width: 62.5rem) {
+    align-items: flex-start;
+    /* large being 62.5em - 1000px */ }
+    @media only screen and (max-width: 62.5em) {
       .story__content {
         grid-column: full-start / full-end;
         grid-row: 5 / 6; } }
