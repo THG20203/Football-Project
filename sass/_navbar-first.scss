@@ -1,0 +1,6 @@
+.first-nav {
+  grid-column: 5 / 10;
+  grid-template-rows: repeat(2, min-content);
+  grid-row-gap: 1.6rem;
+  margin-top: 1.6rem;
+}

@@ -45,7 +45,7 @@ body {
   /* comments for the grid-template-rows */
   // 80% of the view-height, then min-content - smallest size of box without overflowing content.
 
-  grid-template-rows: 10rem 80vh min-content repeat(2, min-content);
+  grid-template-rows: 10rem 10rem 80vh min-content repeat(2, min-content);
   grid-template-columns:
     [full-start] minmax(6rem, 1fr) [center-start] repeat(
       8,

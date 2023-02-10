@@ -27,7 +27,7 @@ body {
 .container {
   display: grid;
   /* comments for the grid-template-rows */
-  grid-template-rows: 10rem 80vh min-content repeat(2, min-content);
+  grid-template-rows: 10rem 10rem 80vh min-content repeat(2, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   /* AFTER NOTES */ }
   @media only screen and (max-width: 62.5em) {
@@ -172,6 +172,12 @@ body {
     @media only screen and (max-width: 62.5em) {
       .players__name {
         line-height: 1.7rem; } }
+
+.first-nav {
+  grid-column: 5 / 10;
+  grid-template-rows: repeat(2, min-content);
+  grid-row-gap: 1.6rem;
+  margin-top: 1.6rem; }
 
 .navbar {
   background-color: #f9f7f6;
