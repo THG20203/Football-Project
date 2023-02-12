@@ -1,6 +1,8 @@
 /* Brighter blue */
 /* blue */
 /* FONT VARIABLES */
+/* For general body */
+/* For titles */
 /* RESPONSIVE BREAKPOINTS */
 * {
   margin: 0;
@@ -177,14 +179,13 @@ body {
   /* provide first-nav elements some styles */
   /* sizing the favicons in first nav */ }
   .first-nav__container {
-    background-color: #0c22e8;
+    background-color: #0a19a1;
     display: grid;
     grid-column: full-start / full-end; }
   .first-nav__content {
     /* I want the first navbar to start halfway along the page horizontally - from column 5 */
     grid-column: 5 / 10;
     grid-template-rows: repeat(2, min-content);
-    grid-row-gap: 1.6rem;
     /* give sign up, cart etc a little space from the top of the container */
     margin-top: 1.6rem; }
   .first-nav__list {
@@ -213,25 +214,48 @@ body {
     margin-right: 0.3rem; }
 
 .search {
-  /* I want the first navbar to start 4/5 (or 8/10) along the page horizontally - (from column 8) */
-  grid-column: 8/ 10; }
+  /* I want the search typing field to start 4/5 (or 6/10) along the page horizontally - (from column 6) */
+  /* I want the search typing field to finish 9/10 along the page horizontally */
+  grid-column: 6 / 9;
+  display: inline-block;
+  /* center items in grid cells - need element to take up entire width of grid cell */
+  width: 100%;
+  text-align: center; }
   .search__form {
     display: grid;
     /* divide form element into 10 columns - each 10% width */
-    grid-template-columns: repeat(10, 10%); }
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); }
   .search__input {
-    /* 3 to the end hence -1 */
-    grid-column: 3 / -1;
-    grid-row: 1 / 2;
+    grid-row: 1 /2;
+    grid-column: 6 / 9;
     /* top and botton 0.3rem, left and right 0.4rem */
     padding: 0.3rem 0.4rem;
     font-size: 1.3rem;
     /* getting rid of the border around the search bar */
     border: none;
-    border-bottom: 0.1rem solid;
-    outline: none; }
+    /* change the background-color of inside of the search section to dark blue,
+    in line with the rest of the first nav */
+    background-color: #0a19a1;
+    /* change bottom border of search bar to white */
+    border-bottom: 0.1rem solid #f9f7f6;
+    outline: none;
+    font-family: "Nunito", sans-serif;
+    /* change the color of text I'm inputing into the search bar */
+    color: #f9f7f6;
+    /* change color of the placeholder Search message in the search bar */ }
+    .search__input::placeholder {
+      color: #f9f7f6; }
+  .search__btn {
+    grid-row: 1 / 2;
+    grid-column: 8 / 9;
+    border: none;
+    /* get rid of grey background box around the question mark */
+    background-color: transparent;
+    /* change the color of the question mark */
+    color: #f9f7f6;
+    cursor: pointer; }
 
-.navbar {
+.second-nav {
   background-color: #f9f7f6;
   grid-column: full-start / full-end;
   display: grid;
@@ -239,7 +263,7 @@ body {
   grid-column-gap: 1rem;
   grid-template-rows: 10% 80% 10%;
   align-items: center; }
-  .navbar__badge {
+  .second-nav__badge {
     width: 100%;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
