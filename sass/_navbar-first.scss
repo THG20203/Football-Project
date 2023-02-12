@@ -1,6 +1,31 @@
 .first-nav {
+  /* I want the first navbar to start halfway along the page horizontally - from column 5 */
   grid-column: 5 / 10;
   grid-template-rows: repeat(2, min-content);
   grid-row-gap: 1.6rem;
+  /* give sign up, cart etc a little space from the top of the container */
   margin-top: 1.6rem;
+}
+
+.first-nav-list {
+  display: grid;
+  /* minmax(10rem, 1fr); minimum width of 10rem, max of 1fr. autofit = as many 
+  columns as possible in in grid containers width */
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  /* get rid of default bullets */
+  list-style: none;
+}
+
+/* provide first-nav elements some styles */
+.first-nav-link {
+  /* get rid of default link styles */
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #0c22e8;
+  /* when an element is inline-block it still behaves like an inline element, but 
+  in this case we are able to define the width for it */
+  display: inline-block;
+  /* center items in grid cells - need element to take up entire width of grid cell */
+  width: 100%;
+  text-align: center;
 }
