@@ -16,6 +16,11 @@
 }
 
 .menu-toggle {
+  @media only screen and (max-width: $bp-large) {
+    /* only want to display the hamburger icon on smaller devices */
+    display: flex;
+  }
+  display: none;
   grid-column: 4 / 5;
   grid-row: 2 / 3;
   height: 100%;
@@ -23,7 +28,6 @@
   border: none;
   cursor: pointer;
 
-  display: flex;
   flex-direction: column;
   // this will align everything horizontally
   /* WHY? - remember the flex-direction has now been set as column so align-items will now be horizontally */
