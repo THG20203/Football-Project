@@ -32,7 +32,7 @@ body {
   /* AFTER NOTES */ }
   @media only screen and (max-width: 62.5em) {
     .container {
-      grid-template-rows: 10rem calc(100vh - 10rem); } }
+      grid-template-rows: 10rem 10rem calc(100vh - 20rem); } }
 
 .features {
   /* features go from center-start to center-end - beginning to end of centre 8 grid */
@@ -189,8 +189,8 @@ body {
     margin-top: 1.6rem; }
   .first-nav__list {
     display: grid;
-    /* minmax(10rem, 1fr); minimum width of 10rem, max of 1fr. autofit = as many 
-  columns as possible in in grid containers width */
+    /* minmax(10rem, 1fr); minimum width of each column is 10rem, max width of 1fr. autofit = as many 
+    columns as possible in in grid containers width. 1fr = 1 part of the space available */
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     /* get rid of default bullets */
     list-style: none; }
@@ -211,6 +211,10 @@ body {
     font-size: 1.3rem;
     /* providing some space on the right side */
     margin-right: 0.3rem; }
+
+.search {
+  /* I want the first navbar to start 4/5 (or 8/10) along the page horizontally - (from column 8) */
+  grid-column: 8/ 10; }
 
 .navbar {
   background-color: #f9f7f6;
