@@ -8,7 +8,6 @@
     /* I want the first navbar to start halfway along the page horizontally - from column 5 */
     grid-column: 5 / 10;
     grid-template-rows: repeat(2, min-content);
-    grid-row-gap: 1.6rem;
     /* give sign up, cart etc a little space from the top of the container */
     margin-top: 1.6rem;
   }
