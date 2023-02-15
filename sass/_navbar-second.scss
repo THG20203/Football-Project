@@ -12,11 +12,17 @@
   }
   &__content {
     grid-column: 2 / 10;
+    display: grid;
+    align-content: center;
   }
   &__list {
     display: grid;
+    justify-items: center;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     list-style: none;
+  }
+  &__link {
+    text-align: center;
   }
 }
 

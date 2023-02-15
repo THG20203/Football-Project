@@ -267,12 +267,18 @@ body {
   padding: 0.5rem; }
 
 .second-nav__content {
-  grid-column: 2 / 10; }
+  grid-column: 2 / 10;
+  display: grid;
+  align-content: center; }
 
 .second-nav__list {
   display: grid;
+  justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   list-style: none; }
+
+.second-nav__link {
+  text-align: center; }
 
 .menu-toggle {
   display: none;
