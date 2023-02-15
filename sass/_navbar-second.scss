@@ -25,7 +25,10 @@
     list-style: none;
   }
   &__link {
-    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: $color-primary-dark;
   }
 }
 
@@ -38,7 +41,7 @@
   display: none;
   grid-column: 9 / 10;
   margin: 0.5rem;
-  width: 8rem;
+  height: 100%;
   background: transparent;
   border: none;
   cursor: pointer;
