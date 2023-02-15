@@ -255,28 +255,26 @@ body {
     color: #f9f7f6;
     cursor: pointer; }
 
-.second-nav {
-  background-color: #f9f7f6;
-  grid-column: full-start / full-end;
+.second-nav__container {
+  grid-column: full-start / full-end; }
+
+.second-nav__content {
   display: grid;
-  grid-template-columns: 1rem 8rem 1fr 8rem 1rem;
-  grid-column-gap: 1rem;
-  grid-template-rows: 10% 80% 10%;
-  align-items: center; }
-  .second-nav__badge {
-    width: 100%;
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    margin: 0.5rem; }
+  grid-column: 3 / 10; }
+
+.second-nav__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  list-style: none; }
 
 .menu-toggle {
-  grid-column: 4 / 5;
+  display: none;
+  grid-column: 3 / 4;
   grid-row: 2 / 3;
   height: 100%;
   background: transparent;
   border: none;
   cursor: pointer;
-  display: flex;
   flex-direction: column;
   /* WHY? - remember the flex-direction has now been set as column so align-items will now be horizontally */
   align-items: center;
@@ -285,6 +283,10 @@ body {
   background-color: #0c22e8;
   position: relative;
   text-align: center; }
+  @media only screen and (max-width: 62.5em) {
+    .menu-toggle {
+      /* only want to display the hamburger icon on smaller devices */
+      display: flex; } }
   .menu-toggle:hover {
     background-color: #0a19a1; }
   .menu-toggle__inner {
