@@ -259,29 +259,39 @@ body {
   background-color: #f9f7f6;
   display: grid;
   grid-column: full-start / full-end;
+  /* seperate the image width from the list width of desktop */
   grid-template-columns: 8rem 1fr; }
   @media only screen and (max-width: 62.5em) {
     .second-nav__container {
+      /* seperate the image width from the list width AND the hamburger icon on smaller devices */
       grid-template-columns: 8rem 1fr 8rem;
       grid-template-rows: 10rem; } }
 
 .second-nav__badge {
   grid-column: 1 / 2;
+  /* width of badge */
   width: 8rem;
-  margin: 0.5rem; }
+  /* set margin from edge of page */
+  margin: 1rem; }
 
 .second-nav__content {
+  /* content being list and menu toggle */
   grid-column: 2 / 10;
   display: grid;
+  /* align list items vertically in middle */
   align-content: center; }
   @media only screen and (max-width: 62.5em) {
     .second-nav__content {
+      /* move hamburger to end horizontally */
       justify-content: end;
+      /* needed to make it stay in the default position within the row */
       align-content: stretch; } }
 
 .second-nav__list {
   display: grid;
+  /* align items on page horizontally */
   justify-items: center;
+  /* organise list items in columns with a minimum width of 10rem, max width 1fr */
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   list-style: none; }
 
@@ -292,9 +302,13 @@ body {
   color: #0a19a1; }
 
 .menu-toggle {
+  /* hide hamburger on larger viewports */
   display: none;
+  /* sit in the last part of the layout 8rem 1fr 8rem for smaller devices detailed above */
   grid-column: 2 / 3;
+  /* set margin from edge of page */
   margin: 1rem;
+  /*set width and height of hamburger */
   width: 8rem;
   height: 8rem;
   background: transparent;
