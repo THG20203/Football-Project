@@ -278,9 +278,9 @@ body {
     align-content: center; }
     @media only screen and (max-width: 62.5em) {
       .second-nav__content {
-        grid-column: 2 / 8;
+        grid-column: 1 / 10;
         /* push content down to lower in the container */
-        grid-row: 2 / 3;
+        grid-row: 1 / 2;
         /* put the list above the rest of content */
         z-index: 2;
         /* make z-index value work*/
@@ -292,6 +292,9 @@ body {
     /* organise list items in columns with a minimum width of 10rem, max width 1fr */
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     list-style: none; }
+    @media only screen and (max-width: 62.5em) {
+      .second-nav__list {
+        grid-template-columns: 100%; } }
   .second-nav__link {
     text-transform: uppercase;
     text-decoration: none;
@@ -299,8 +302,8 @@ body {
     color: #0a19a1; }
     @media only screen and (max-width: 62.5em) {
       .second-nav__link {
-        font-size: 2.5rem;
-        padding: 0.5rem 0;
+        font-size: 4rem;
+        padding: 1rem 0;
         color: red; } }
   .second-nav__background {
     grid-column: 9 /10;
@@ -308,7 +311,8 @@ body {
     height: 6rem;
     width: 6rem;
     margin: 1.5rem;
-    background-image: radial-gradient(#0c22e8, #0a19a1); }
+    background-image: radial-gradient(#0c22e8, #0a19a1);
+    transform: scale(50); }
     @media only screen and (max-width: 62.5em) {
       .second-nav__background {
         display: block;
@@ -321,8 +325,8 @@ body {
   /* set margin from edge of page */
   margin: 1rem;
   /*set width and height of hamburger */
-  width: 8rem;
-  height: 8rem;
+  width: 7rem;
+  height: 7rem;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -338,7 +342,8 @@ body {
   @media only screen and (max-width: 62.5em) {
     .menu-toggle {
       /* only want to display the hamburger icon on smaller devices */
-      display: flex; } }
+      display: flex;
+      z-index: 2; } }
   .menu-toggle:hover {
     background-color: #0a19a1; }
   .menu-toggle__inner {
