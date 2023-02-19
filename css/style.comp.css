@@ -260,62 +260,67 @@ body {
   .second-nav__container {
     background-color: #f9f7f6;
     display: grid;
-    grid-column: full-start / full-end;
-    /* seperate the image width from the list width of desktop */
-    grid-template-columns: 8rem 1fr; }
-    @media only screen and (max-width: 62.5em) {
-      .second-nav__container {
-        /* seperate the image width from the list width AND the hamburger icon on smaller devices */
-        grid-template-columns: 8rem 1fr 8rem;
-        grid-template-rows: 10rem; } }
+    grid-column: full-start / full-end; }
   .second-nav__badge {
     grid-column: 1 / 2;
+    grid-row: 1 /2;
     /* width of badge */
-    width: 8rem;
+    width: 7rem;
     /* height of the badge */
     height: 8rem;
     /* set margin from edge of page */
     margin: 1rem; }
-  .second-nav__inner {
+  .second-nav__content {
     /* content being list and menu toggle */
     grid-column: 2 / 10;
     display: grid;
     /* align list items vertically in middle */
     align-content: center; }
     @media only screen and (max-width: 62.5em) {
-      .second-nav__inner {
-        /* move hamburger to end horizontally */
-        justify-content: end;
-        /* needed to make it stay in the default position within the row */
-        align-content: stretch; } }
+      .second-nav__content {
+        /* make navbar from beginning to end on smaller devices so can center it */
+        grid-column: 1 / 10;
+        /* ensure the links don't push too far down the page on smaller viewports */
+        grid-row: 1 /2;
+        /* put the list above the rest of content */
+        z-index: 3;
+        /* make z-index value work*/
+        position: relative;
+        /* hide the links from view on smaller viewports if hamburger isn't clicked */
+        opacity: 0;
+        width: 0; } }
   .second-nav__list {
     display: grid;
     /* align items on page horizontally */
     justify-items: center;
     /* organise list items in columns with a minimum width of 10rem, max width 1fr */
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    list-style: none; }
+    /* get rid of bullet points */
+    list-style: none;
+    font-family: "Lato", sans-serif; }
+    @media only screen and (max-width: 62.5em) {
+      .second-nav__list {
+        /* make it one column taking up 100% of the width of to the content which was 1 / 10 column */
+        grid-template-columns: 100%; } }
   .second-nav__link {
     text-transform: uppercase;
     text-decoration: none;
     font-size: 1.8rem;
     color: #0a19a1; }
-  .second-nav__background {
-    display: none;
-    height: 6rem;
-    width: 6rem;
-    grid-column: 2/3;
-    margin: 1.5rem;
-    background-image: radial-gradient(#0c22e8, #0a19a1); }
     @media only screen and (max-width: 62.5em) {
-      .second-nav__background {
-        display: block; } }
+      .second-nav__link {
+        /* links font size increase */
+        font-size: 4rem;
+        /* padding top and bottom of the links */
+        padding: 1rem 0;
+        /* blue background - so links need to be white */
+        color: #f9f7f6; } }
 
 .menu-toggle {
+  grid-column: 9 / 10;
+  grid-row: 1 / 2;
   /* hide hamburger on larger viewports */
   display: none;
-  /* sit in the last part of the layout 8rem 1fr 8rem for smaller devices detailed above */
-  grid-column: 2 / 3;
   /* set margin from edge of page */
   margin: 1rem;
   /*set width and height of hamburger */
@@ -331,13 +336,36 @@ body {
   justify-content: center;
   background-color: #0c22e8;
   position: relative;
-  text-align: center; }
+  /* move toggle to the end horizontally*/
+  justify-self: end; }
   @media only screen and (max-width: 62.5em) {
     .menu-toggle {
       /* only want to display the hamburger icon on smaller devices */
-      display: flex; } }
+      display: flex;
+      /* needs to be at the top above background on transform and general content */
+      z-index: 3;
+      background-color: #0a19a1; } }
   .menu-toggle:hover {
     background-color: #0a19a1; }
+  .menu-toggle__background {
+    grid-column: 9 /10;
+    grid-row: 1/2;
+    display: none;
+    /* make slightly smaller than the actual button with a slightly bigger margin */
+    margin: 1.5rem;
+    height: 6rem;
+    width: 6rem;
+    background-image: radial-gradient(#0c22e8, #f9f7f6);
+    /* needs to be be above general content but below the hamburger */
+    z-index: 2; }
+    @media only screen and (max-width: 62.5em) {
+      .menu-toggle__background {
+        /* make background visible rather than not with display none on smaller devices */
+        display: block;
+        /* push the background to end of the container horizontally */
+        justify-self: end; } }
+  .menu-toggle__checkbox:checked ~ .menu-toggle__background {
+    transform: scale(80); }
   .menu-toggle__inner {
     display: grid;
     align-items: center;

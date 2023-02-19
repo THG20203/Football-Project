@@ -63,26 +63,6 @@
       color: $color-grey-1;
     }
   }
-  &__background {
-    @media only screen and (max-width: $bp-large) {
-      /* make background visible rather than not with display none on smaller devices */
-      display: block;
-      /* push the background to end of the container horizontally */
-      justify-self: end;
-    }
-    // put the background in same place as the button
-    grid-column: 9 /10;
-    grid-row: 1/2;
-    display: none;
-    /* make slightly smaller than the actual button with a slightly bigger margin */
-    margin: 1.5rem;
-    height: 6rem;
-    width: 6rem;
-    background-image: radial-gradient($color-primary, $color-grey-1);
-    // transform: scale(200);
-    /* needs to be be above general content but below the hamburger */
-    z-index: 2;
-  }
 }
 
 // Hamburger menu
@@ -105,9 +85,10 @@
   /*set width and height of hamburger */
   width: 8rem;
   height: 8rem;
-  background: transparent;
+  // background: transparent;
   border: none;
   cursor: pointer;
+  text-align: center;
 
   flex-direction: column;
   // this will align everything horizontally
@@ -123,6 +104,35 @@
 
   &:hover {
     background-color: $color-primary-dark;
+  }
+  &__background {
+    @media only screen and (max-width: $bp-large) {
+      /* make background visible rather than not with display none on smaller devices */
+      display: block;
+      /* push the background to end of the container horizontally */
+      justify-self: end;
+    }
+    // put the background in same place as the button
+    grid-column: 9 /10;
+    grid-row: 1/2;
+    display: none;
+    /* make slightly smaller than the actual button with a slightly bigger margin */
+    margin: 1.5rem;
+    height: 6rem;
+    width: 6rem;
+    background-image: radial-gradient($color-primary, $color-grey-1);
+    // transform: scale(200);
+    /* needs to be be above general content but below the hamburger */
+    z-index: 2;
+  }
+
+  //FUNCTIONALITY
+  &__checkbox[type='checked'] {
+    visibility: hidden;
+  }
+
+  &__checkbox[type='checked']:checked ~ &__background {
+    transform: scale(80);
   }
 
   &__inner {
