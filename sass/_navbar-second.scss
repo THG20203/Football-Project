@@ -47,7 +47,9 @@
   &__background {
     @media only screen and (max-width: $bp-large) {
       display: block;
+      justify-self: end;
     }
+    grid-column: 9 /10;
     display: none;
     height: 6rem;
     width: 6rem;
@@ -83,7 +85,8 @@
   justify-content: center;
   background-color: $color-primary;
   position: relative;
-  text-align: center;
+  /* move toggle to the end horizontally*/
+  justify-self: end;
 
   &:hover {
     background-color: $color-primary-dark;

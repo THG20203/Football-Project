@@ -297,6 +297,7 @@ body {
     font-size: 1.8rem;
     color: #0a19a1; }
   .second-nav__background {
+    grid-column: 9 /10;
     display: none;
     height: 6rem;
     width: 6rem;
@@ -304,7 +305,8 @@ body {
     background-image: radial-gradient(#0c22e8, #0a19a1); }
     @media only screen and (max-width: 62.5em) {
       .second-nav__background {
-        display: block; } }
+        display: block;
+        justify-self: end; } }
 
 .menu-toggle {
   grid-column: 9 /10;
@@ -325,7 +327,8 @@ body {
   justify-content: center;
   background-color: #0c22e8;
   position: relative;
-  text-align: center; }
+  /* move toggle to the end horizontally*/
+  justify-self: end; }
   @media only screen and (max-width: 62.5em) {
     .menu-toggle {
       /* only want to display the hamburger icon on smaller devices */
