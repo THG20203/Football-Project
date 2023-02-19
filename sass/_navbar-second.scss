@@ -22,13 +22,17 @@
     /* align list items vertically in middle */
     align-content: center;
     @media only screen and (max-width: $bp-large) {
+      /* make navbar from beginning to end on smaller devices so can center it */
       grid-column: 1 / 10;
-      grid-row: 1 / 2;
+      /* ensure the links don't push too far down the page on smaller viewports */
+      grid-row: 1 /2;
       /* put the list above the rest of content */
       z-index: 3;
       /* make z-index value work*/
       position: relative;
+      /* hide the links from view on smaller viewports if hamburger isn't clicked */
       opacity: 0;
+      width: 0;
     }
   }
   &__list {
@@ -37,8 +41,11 @@
     justify-items: center;
     /* organise list items in columns with a minimum width of 10rem, max width 1fr */
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    /* get rid of bullet points */
     list-style: none;
+    font-family: $font-display;
     @media only screen and (max-width: $bp-large) {
+      /* make it one column taking up 100% of the width of to the content which was 1 / 10 column */
       grid-template-columns: 100%;
     }
   }
@@ -48,23 +55,32 @@
     font-size: 1.8rem;
     color: $color-primary-dark;
     @media only screen and (max-width: $bp-large) {
+      /* links font size increase */
       font-size: 4rem;
+      /* padding top and bottom of the links */
       padding: 1rem 0;
+      /* blue background - so links need to be white */
       color: $color-grey-1;
     }
   }
   &__background {
     @media only screen and (max-width: $bp-large) {
+      /* make background visible rather than not with display none on smaller devices */
       display: block;
+      /* push the background to end of the container horizontally */
       justify-self: end;
     }
+    // put the background in same place as the button
     grid-column: 9 /10;
+    grid-row: 1/2;
     display: none;
+    /* make slightly smaller than the actual button with a slightly bigger margin */
+    margin: 1.5rem;
     height: 6rem;
     width: 6rem;
-    margin: 1.5rem;
     background-image: radial-gradient($color-primary, $color-grey-1);
     // transform: scale(200);
+    /* needs to be be above general content but below the hamburger */
     z-index: 2;
   }
 }
@@ -74,6 +90,7 @@
   @media only screen and (max-width: $bp-large) {
     /* only want to display the hamburger icon on smaller devices */
     display: flex;
+    /* needs to be at the top above background on transform and general content */
     z-index: 3;
     background-color: $color-primary-dark;
 
@@ -144,5 +161,6 @@
     text-transform: uppercase;
     font-size: 1rem;
     margin-top: 0.1rem;
+    // display: none;
   }
 }

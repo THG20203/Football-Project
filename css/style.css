@@ -278,22 +278,29 @@ body {
     align-content: center; }
     @media only screen and (max-width: 62.5em) {
       .second-nav__content {
+        /* make navbar from beginning to end on smaller devices so can center it */
         grid-column: 1 / 10;
-        grid-row: 1 / 2;
+        /* ensure the links don't push too far down the page on smaller viewports */
+        grid-row: 1 /2;
         /* put the list above the rest of content */
         z-index: 3;
         /* make z-index value work*/
         position: relative;
-        opacity: 0; } }
+        /* hide the links from view on smaller viewports if hamburger isn't clicked */
+        opacity: 0;
+        width: 0; } }
   .second-nav__list {
     display: grid;
     /* align items on page horizontally */
     justify-items: center;
     /* organise list items in columns with a minimum width of 10rem, max width 1fr */
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    list-style: none; }
+    /* get rid of bullet points */
+    list-style: none;
+    font-family: "Lato", sans-serif; }
     @media only screen and (max-width: 62.5em) {
       .second-nav__list {
+        /* make it one column taking up 100% of the width of to the content which was 1 / 10 column */
         grid-template-columns: 100%; } }
   .second-nav__link {
     text-transform: uppercase;
@@ -302,20 +309,28 @@ body {
     color: #0a19a1; }
     @media only screen and (max-width: 62.5em) {
       .second-nav__link {
+        /* links font size increase */
         font-size: 4rem;
+        /* padding top and bottom of the links */
         padding: 1rem 0;
+        /* blue background - so links need to be white */
         color: #f9f7f6; } }
   .second-nav__background {
     grid-column: 9 /10;
+    grid-row: 1/2;
     display: none;
+    /* make slightly smaller than the actual button with a slightly bigger margin */
+    margin: 1.5rem;
     height: 6rem;
     width: 6rem;
-    margin: 1.5rem;
     background-image: radial-gradient(#0c22e8, #f9f7f6);
+    /* needs to be be above general content but below the hamburger */
     z-index: 2; }
     @media only screen and (max-width: 62.5em) {
       .second-nav__background {
+        /* make background visible rather than not with display none on smaller devices */
         display: block;
+        /* push the background to end of the container horizontally */
         justify-self: end; } }
 
 .menu-toggle {
@@ -344,6 +359,7 @@ body {
     .menu-toggle {
       /* only want to display the hamburger icon on smaller devices */
       display: flex;
+      /* needs to be at the top above background on transform and general content */
       z-index: 3;
       background-color: #0a19a1; } }
   .menu-toggle:hover {
