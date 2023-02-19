@@ -334,7 +334,8 @@ body {
   text-align: center; }
   @media only screen and (max-width: 62.5em) {
     .menu-toggle {
-      /* only want to display the hamburger icon on smaller devices */ } }
+      /* only want to display the hamburger icon on smaller devices */
+      display: flex; } }
   .menu-toggle:hover {
     background-color: #0a19a1; }
   .menu-toggle__inner {

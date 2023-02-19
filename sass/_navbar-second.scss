@@ -65,7 +65,7 @@
 .menu-toggle {
   @media only screen and (max-width: $bp-large) {
     /* only want to display the hamburger icon on smaller devices */
-    // display: flex;
+    display: flex;
   }
   /* hide hamburger on larger viewports */
   display: none;
