@@ -281,7 +281,7 @@ body {
         grid-column: 1 / 10;
         grid-row: 1 / 2;
         /* put the list above the rest of content */
-        z-index: 2;
+        z-index: 3;
         /* make z-index value work*/
         position: relative; } }
   .second-nav__list {
@@ -310,8 +310,9 @@ body {
     height: 6rem;
     width: 6rem;
     margin: 1.5rem;
-    background-image: radial-gradient(#0a19a1, #f9f7f6);
-    transform: scale(50); }
+    background-image: radial-gradient(#0c22e8, #f9f7f6);
+    transform: scale(200);
+    z-index: 2; }
     @media only screen and (max-width: 62.5em) {
       .second-nav__background {
         display: block;
@@ -343,7 +344,7 @@ body {
     .menu-toggle {
       /* only want to display the hamburger icon on smaller devices */
       display: flex;
-      z-index: 2;
+      z-index: 3;
       background-color: #0a19a1;
       translate: 0 -10vh; } }
   .menu-toggle:hover {
