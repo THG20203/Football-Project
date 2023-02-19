@@ -23,11 +23,12 @@
     align-content: center;
     @media only screen and (max-width: $bp-large) {
       grid-column: 2 / 8;
-      display: none;
-      /* move hamburger to end horizontally */
-      justify-content: end;
-      /* needed to make it stay in the default position within the row */
-      align-content: stretch;
+      /* push content down to lower in the container */
+      grid-row: 2 / 3;
+      /* put the list above the rest of content */
+      z-index: 2;
+      /* make z-index value work*/
+      position: relative;
     }
   }
   &__list {
@@ -43,6 +44,11 @@
     text-decoration: none;
     font-size: 1.8rem;
     color: $color-primary-dark;
+    @media only screen and (max-width: $bp-large) {
+      font-size: 2.5rem;
+      padding: 0.5rem 0;
+      color: red;
+    }
   }
   &__background {
     @media only screen and (max-width: $bp-large) {
