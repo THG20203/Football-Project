@@ -334,15 +334,15 @@ body {
         justify-self: end; } }
 
 .menu-toggle {
-  grid-column: 9 /10;
+  grid-column: 9 / 10;
   grid-row: 1 / 2;
   /* hide hamburger on larger viewports */
   display: none;
   /* set margin from edge of page */
   margin: 1rem;
   /*set width and height of hamburger */
-  width: 7rem;
-  height: 7rem;
+  width: 8rem;
+  height: 8rem;
   background: transparent;
   border: none;
   cursor: pointer;
