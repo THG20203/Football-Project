@@ -20,6 +20,7 @@
     /* set margin from edge of page */
     margin: 1rem;
   }
+  /* inner being the links and the hamburger menu */
   &__inner {
     /* content being list and menu toggle */
     grid-column: 2 / 10;
@@ -47,13 +48,24 @@
     font-size: 1.8rem;
     color: $color-primary-dark;
   }
+  &__background {
+    @media only screen and (max-width: $bp-large) {
+      display: block;
+    }
+    display: none;
+    height: 6rem;
+    width: 6rem;
+    grid-column: 2/3;
+    margin: 1.5rem;
+    background-image: radial-gradient($color-primary, $color-primary-dark);
+  }
 }
 
 // Hamburger menu
 .menu-toggle {
   @media only screen and (max-width: $bp-large) {
     /* only want to display the hamburger icon on smaller devices */
-    display: flex;
+    // display: flex;
   }
   /* hide hamburger on larger viewports */
   display: none;
