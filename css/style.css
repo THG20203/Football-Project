@@ -276,14 +276,14 @@ body {
   /* set margin from edge of page */
   margin: 1rem; }
 
-.second-nav__content {
+.second-nav__inner {
   /* content being list and menu toggle */
   grid-column: 2 / 10;
   display: grid;
   /* align list items vertically in middle */
   align-content: center; }
   @media only screen and (max-width: 62.5em) {
-    .second-nav__content {
+    .second-nav__inner {
       /* move hamburger to end horizontally */
       justify-content: end;
       /* needed to make it stay in the default position within the row */

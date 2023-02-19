@@ -20,7 +20,7 @@
     /* set margin from edge of page */
     margin: 1rem;
   }
-  &__content {
+  &__inner {
     /* content being list and menu toggle */
     grid-column: 2 / 10;
     display: grid;
