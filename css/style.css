@@ -279,7 +279,6 @@ body {
     @media only screen and (max-width: 62.5em) {
       .second-nav__content {
         grid-column: 1 / 10;
-        /* push content down to lower in the container */
         grid-row: 1 / 2;
         /* put the list above the rest of content */
         z-index: 2;
@@ -304,14 +303,14 @@ body {
       .second-nav__link {
         font-size: 4rem;
         padding: 1rem 0;
-        color: red; } }
+        color: #f9f7f6; } }
   .second-nav__background {
     grid-column: 9 /10;
     display: none;
     height: 6rem;
     width: 6rem;
     margin: 1.5rem;
-    background-image: radial-gradient(#0c22e8, #0a19a1);
+    background-image: radial-gradient(#0a19a1, #f9f7f6);
     transform: scale(50); }
     @media only screen and (max-width: 62.5em) {
       .second-nav__background {
@@ -320,6 +319,7 @@ body {
 
 .menu-toggle {
   grid-column: 9 /10;
+  grid-row: 1 / 2;
   /* hide hamburger on larger viewports */
   display: none;
   /* set margin from edge of page */
@@ -343,7 +343,9 @@ body {
     .menu-toggle {
       /* only want to display the hamburger icon on smaller devices */
       display: flex;
-      z-index: 2; } }
+      z-index: 2;
+      background-color: #0a19a1;
+      translate: 0 -10vh; } }
   .menu-toggle:hover {
     background-color: #0a19a1; }
   .menu-toggle__inner {

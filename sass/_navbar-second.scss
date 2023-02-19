@@ -23,7 +23,6 @@
     align-content: center;
     @media only screen and (max-width: $bp-large) {
       grid-column: 1 / 10;
-      /* push content down to lower in the container */
       grid-row: 1 / 2;
       /* put the list above the rest of content */
       z-index: 2;
@@ -50,7 +49,7 @@
     @media only screen and (max-width: $bp-large) {
       font-size: 4rem;
       padding: 1rem 0;
-      color: red;
+      color: $color-grey-1;
     }
   }
   &__background {
@@ -63,8 +62,7 @@
     height: 6rem;
     width: 6rem;
     margin: 1.5rem;
-    background-image: radial-gradient($color-primary, $color-primary-dark);
-
+    background-image: radial-gradient($color-primary-dark, $color-grey-1);
     transform: scale(50);
   }
 }
@@ -75,8 +73,12 @@
     /* only want to display the hamburger icon on smaller devices */
     display: flex;
     z-index: 2;
+    background-color: $color-primary-dark;
+
+    translate: 0 -10vh;
   }
   grid-column: 9 /10;
+  grid-row: 1 / 2;
   /* hide hamburger on larger viewports */
   display: none;
   /* set margin from edge of page */
