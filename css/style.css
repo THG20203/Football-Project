@@ -271,6 +271,8 @@ body {
   grid-column: 1 / 2;
   /* width of badge */
   width: 8rem;
+  /* height of the badge */
+  height: 8rem;
   /* set margin from edge of page */
   margin: 1rem; }
 
