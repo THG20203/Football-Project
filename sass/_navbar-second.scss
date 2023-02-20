@@ -63,47 +63,49 @@
       color: $color-grey-1;
     }
   }
-}
 
-// Hamburger menu
-.menu-toggle {
-  @media only screen and (max-width: $bp-large) {
-    /* only want to display the hamburger icon on smaller devices */
-    display: flex;
-    /* needs to be at the top above background on transform and general content */
-    z-index: 3;
-    background-color: $color-primary-dark;
-
-    // translate: 0 -10vh;
+  // Hamburger menu
+  &__checkbox {
+    display: none;
   }
-  grid-column: 9 / 10;
-  grid-row: 1 / 2;
-  /* hide hamburger on larger viewports */
-  display: none;
-  /* set margin from edge of page */
-  margin: 1rem;
-  /*set width and height of hamburger */
-  width: 8rem;
-  height: 8rem;
-  // background: transparent;
-  border: none;
-  cursor: pointer;
-  text-align: center;
 
-  flex-direction: column;
-  // this will align everything horizontally
-  /* WHY? - remember the flex-direction has now been set as column so align-items will now be horizontally */
-  align-items: center;
-  // this will align everything vertically
-  /* WHY? - remember the flex-direction has now been set as column so justify-content will now be vertically */
-  justify-content: center;
-  background-color: $color-primary;
-  position: relative;
-  /* move toggle to the end horizontally*/
-  justify-self: end;
+  &__toggle {
+    @media only screen and (max-width: $bp-large) {
+      /* only want to display the hamburger icon on smaller devices */
+      display: flex;
+      /* needs to be at the top above background on transform and general content */
+      z-index: 3;
+      background-color: $color-primary-dark;
+    }
+    grid-column: 9 / 10;
+    grid-row: 1 / 2;
+    /* hide hamburger on larger viewports */
+    display: none;
+    /* set margin from edge of page */
+    margin: 1rem;
+    /*set width and height of hamburger */
+    width: 8rem;
+    height: 8rem;
+    // background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: center;
 
-  &:hover {
-    background-color: $color-primary-dark;
+    flex-direction: column;
+    // this will align everything horizontally
+    /* WHY? - remember the flex-direction has now been set as column so align-items will now be horizontally */
+    align-items: center;
+    // this will align everything vertically
+    /* WHY? - remember the flex-direction has now been set as column so justify-content will now be vertically */
+    justify-content: center;
+    background-color: $color-primary;
+    position: relative;
+    /* move toggle to the end horizontally*/
+    justify-self: end;
+
+    &:hover {
+      background-color: $color-primary-dark;
+    }
   }
   &__background {
     @media only screen and (max-width: $bp-large) {
@@ -121,18 +123,18 @@
     height: 6rem;
     width: 6rem;
     background-image: radial-gradient($color-primary, $color-grey-1);
-    // transform: scale(200);
     /* needs to be be above general content but below the hamburger */
     z-index: 2;
   }
 
   //FUNCTIONALITY
-  &__checkbox[type='checked'] {
-    visibility: hidden;
+  &__checkbox:checked ~ &__background {
+    transform: scale(120);
   }
 
-  &__checkbox[type='checked']:checked ~ &__background {
-    transform: scale(80);
+  &__checkbox:checked ~ &__content {
+    opacity: 1;
+    width: 100%;
   }
 
   &__inner {
@@ -141,8 +143,8 @@
     // align them vertically centrally - rather than at top of blue button as before
     align-items: center;
     // define height and width of the grid with the span and before & after elements in it
-    height: 3rem;
-    width: 3rem;
+    height: 4rem;
+    width: 4rem;
   }
   span {
     height: 2px;
@@ -157,11 +159,11 @@
     }
     &::before {
       // move before element up
-      transform: translateY(-1rem);
+      transform: translateY(-1.2rem);
     }
     &::after {
       // move after elements down
-      transform: translateY(0.8rem);
+      transform: translateY(1rem);
     }
   }
 
