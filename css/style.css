@@ -317,7 +317,7 @@ body {
         color: #f9f7f6; } }
   .second-nav__checkbox {
     display: none; }
-  .second-nav__toggle {
+  .second-nav__button {
     grid-column: 9 / 10;
     grid-row: 1 / 2;
     /* hide hamburger on larger viewports */
@@ -340,13 +340,13 @@ body {
     /* move toggle to the end horizontally*/
     justify-self: end; }
     @media only screen and (max-width: 62.5em) {
-      .second-nav__toggle {
+      .second-nav__button {
         /* only want to display the hamburger icon on smaller devices */
         display: flex;
         /* needs to be at the top above background on transform and general content */
         z-index: 3;
         background-color: #0a19a1; } }
-    .second-nav__toggle:hover {
+    .second-nav__button:hover {
       background-color: #0a19a1; }
   .second-nav__background {
     grid-column: 9 /10;
@@ -370,29 +370,34 @@ body {
   .second-nav__checkbox:checked ~ .second-nav__content {
     opacity: 1;
     width: 100%; }
-  .second-nav__inner {
-    display: grid;
-    align-items: center;
-    height: 4rem;
-    width: 4rem; }
-  .second-nav span {
-    height: 2px;
-    background-color: #f9f7f6; }
-    .second-nav span::before, .second-nav span::after {
-      background-color: #f9f7f6;
+  .second-nav__icon {
+    position: relative; }
+    .second-nav__icon, .second-nav__icon::before, .second-nav__icon::after {
+      width: 4rem;
       height: 2px;
+      background-color: #f9f7f6;
+      display: inline-block; }
+    .second-nav__icon::before, .second-nav__icon::after {
       content: '';
-      display: block; }
-    .second-nav span::before {
-      transform: translateY(-1.2rem); }
-    .second-nav span::after {
-      transform: translateY(1rem); }
-  .second-nav__label {
-    font-family: "Lato", sans-serif;
-    color: #f9f7f6;
-    text-transform: uppercase;
-    font-size: 1rem;
-    margin-top: 0.1rem; }
+      position: absolute;
+      left: 0;
+      transition: all 0.2s; }
+    .second-nav__icon::before {
+      top: -0.8rem; }
+    .second-nav__icon::after {
+      top: 0.8rem; }
+  .second-nav__button:hover .second-nav__icon::before {
+    top: -1rem; }
+  .second-nav__button:hover .second-nav__icon::after {
+    top: 1rem; }
+  .second-nav__checkbox:checked + .second-nav__button .second-nav__icon {
+    background-color: transparent; }
+  .second-nav__checkbox:checked + .second-nav__button .second-nav__icon::before {
+    top: 0;
+    transform: rotate(135deg); }
+  .second-nav__checkbox:checked + .second-nav__button .second-nav__icon::after {
+    top: 0;
+    transform: rotate(-135deg); }
 
 .story {
   /* Set the styles for images */ }
