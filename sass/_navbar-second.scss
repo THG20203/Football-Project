@@ -33,6 +33,7 @@
       /* hide the links from view on smaller viewports if hamburger isn't clicked */
       opacity: 0;
       width: 0;
+      transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
   }
   &__list {
@@ -66,6 +67,7 @@
 
   // Hamburger menu
   &__checkbox {
+    /* checkbox hack - hide checkbox tick for the hamburger menu */
     display: none;
   }
 
@@ -129,6 +131,7 @@
 
   //FUNCTIONALITY
   &__checkbox:checked ~ &__background {
+    /* scale the background on click */
     transform: scale(120);
   }
 
@@ -144,6 +147,7 @@
     &,
     &::before,
     &::after {
+      /* dimensions for lines on the hamburger menu */
       width: 4rem;
       height: 2px;
       background-color: $color-grey-1;
@@ -159,19 +163,23 @@
     }
 
     &::before {
-      top: -0.8rem;
+      /* move the before element up vertically hence minus rem */
+      top: -1.2rem;
     }
     &::after {
-      top: 0.8rem;
+      /* move the after element down vertically hence positive rem */
+      top: 1.2rem;
     }
   }
 
   &__button:hover &__icon::before {
-    top: -1rem;
+    /* effects on hover - moving the lines closer to the middle span */
+    top: -0.8rem;
   }
 
   &__button:hover &__icon::after {
-    top: 1rem;
+    /* effects on hover - moving the lines closer to the middle span */
+    top: 0.8rem;
   }
 
   &__checkbox:checked + &__button &__icon {

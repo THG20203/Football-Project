@@ -288,7 +288,8 @@ body {
         position: relative;
         /* hide the links from view on smaller viewports if hamburger isn't clicked */
         opacity: 0;
-        width: 0; } }
+        width: 0;
+        transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); } }
   .second-nav__list {
     display: grid;
     /* align items on page horizontally */
@@ -316,6 +317,7 @@ body {
         /* blue background - so links need to be white */
         color: #f9f7f6; } }
   .second-nav__checkbox {
+    /* checkbox hack - hide checkbox tick for the hamburger menu */
     display: none; }
   .second-nav__button {
     grid-column: 9 / 10;
@@ -366,6 +368,7 @@ body {
         /* push the background to end of the container horizontally */
         justify-self: end; } }
   .second-nav__checkbox:checked ~ .second-nav__background {
+    /* scale the background on click */
     transform: scale(120); }
   .second-nav__checkbox:checked ~ .second-nav__content {
     opacity: 1;
@@ -373,6 +376,7 @@ body {
   .second-nav__icon {
     position: relative; }
     .second-nav__icon, .second-nav__icon::before, .second-nav__icon::after {
+      /* dimensions for lines on the hamburger menu */
       width: 4rem;
       height: 2px;
       background-color: #f9f7f6;
@@ -383,13 +387,17 @@ body {
       left: 0;
       transition: all 0.2s; }
     .second-nav__icon::before {
-      top: -0.8rem; }
+      /* move the before element up vertically hence minus rem */
+      top: -1.2rem; }
     .second-nav__icon::after {
-      top: 0.8rem; }
+      /* move the after element down vertically hence positive rem */
+      top: 1.2rem; }
   .second-nav__button:hover .second-nav__icon::before {
-    top: -1rem; }
+    /* effects on hover - moving the lines closer to the middle span */
+    top: -0.8rem; }
   .second-nav__button:hover .second-nav__icon::after {
-    top: 1rem; }
+    /* effects on hover - moving the lines closer to the middle span */
+    top: 0.8rem; }
   .second-nav__checkbox:checked + .second-nav__button .second-nav__icon {
     background-color: transparent; }
   .second-nav__checkbox:checked + .second-nav__button .second-nav__icon::before {
