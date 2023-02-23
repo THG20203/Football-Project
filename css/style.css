@@ -258,10 +258,14 @@ body {
 .second-nav {
   /* inner being the links and the hamburger menu */ }
   .second-nav__container {
+    /* ensure the background-color of the overall bar is grey */
     background-color: #f9f7f6;
+    /* make second nav a grid */
     display: grid;
+    /* ensure second nav is full width across the page */
     grid-column: full-start / full-end; }
   .second-nav__badge {
+    /* take the first column of the second nav grid */
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     /* width of badge */
@@ -281,15 +285,16 @@ body {
         /* make navbar from beginning to end on smaller devices so can center it */
         grid-column: 1 / 10;
         /* ensure the links don't push too far down the page on smaller viewports */
-        grid-row: 1 /2;
+        grid-row: 1 / 2;
         /* put the list above the rest of content */
         z-index: 3;
         /* make z-index value work*/
         position: relative;
         /* hide the links from view on smaller viewports if hamburger isn't clicked */
         opacity: 0;
+        /* links will be present if width is not 0 */
         width: 0;
-        transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); } }
+        transition: all 0.8s; } }
   .second-nav__list {
     display: grid;
     /* align items on page horizontally */
@@ -298,6 +303,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     /* get rid of bullet points */
     list-style: none;
+    /* ensure font is right font for titles */
     font-family: "Lato", sans-serif; }
     @media only screen and (max-width: 62.5em) {
       .second-nav__list {
@@ -305,8 +311,10 @@ body {
         grid-template-columns: 100%; } }
   .second-nav__link {
     text-transform: uppercase;
+    /* get rid of list bullet points */
     text-decoration: none;
     font-size: 1.8rem;
+    /* blue on the grey background for desktop */
     color: #0a19a1; }
     @media only screen and (max-width: 62.5em) {
       .second-nav__link {
@@ -314,12 +322,13 @@ body {
         font-size: 4rem;
         /* padding top and bottom of the links */
         padding: 1rem 0;
-        /* blue background - so links need to be white */
+        /* smaller devices - blue background - so links need to be white */
         color: #f9f7f6; } }
   .second-nav__checkbox {
     /* checkbox hack - hide checkbox tick for the hamburger menu */
     display: none; }
   .second-nav__button {
+    /* put it to the right on the viewport */
     grid-column: 9 / 10;
     grid-row: 1 / 2;
     /* hide hamburger on larger viewports */
@@ -360,17 +369,19 @@ body {
     width: 6rem;
     background-image: radial-gradient(#0c22e8, #f9f7f6);
     /* needs to be be above general content but below the hamburger */
-    z-index: 2; }
+    z-index: 2;
+    transition: transform 0.8s; }
     @media only screen and (max-width: 62.5em) {
       .second-nav__background {
         /* make background visible rather than not with display none on smaller devices */
-        display: block;
+        display: flex;
         /* push the background to end of the container horizontally */
         justify-self: end; } }
   .second-nav__checkbox:checked ~ .second-nav__background {
-    /* scale the background on click */
+    /* scale the background on click - sibling of checkbox - background */
     transform: scale(120); }
   .second-nav__checkbox:checked ~ .second-nav__content {
+    /* when click on checkbox - want sibling element content (i.e. the links be visible cause opacity and width was set as 0) */
     opacity: 1;
     width: 100%; }
   .second-nav__icon {
@@ -380,7 +391,7 @@ body {
       width: 4rem;
       height: 2px;
       background-color: #f9f7f6;
-      display: inline-block; }
+      display: flex; }
     .second-nav__icon::before, .second-nav__icon::after {
       content: '';
       position: absolute;

@@ -36,8 +36,9 @@
       position: relative;
       /* hide the links from view on smaller viewports if hamburger isn't clicked */
       opacity: 0;
+      /* links will be present if width is not 0 */
       width: 0;
-      transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      transition: all 0.8s;
     }
   }
   &__list {
@@ -118,7 +119,7 @@
   &__background {
     @media only screen and (max-width: $bp-large) {
       /* make background visible rather than not with display none on smaller devices */
-      display: block;
+      display: flex;
       /* push the background to end of the container horizontally */
       justify-self: end;
     }
@@ -133,11 +134,12 @@
     background-image: radial-gradient($color-primary, $color-grey-1);
     /* needs to be be above general content but below the hamburger */
     z-index: 2;
+    transition: transform 0.8s;
   }
 
   //FUNCTIONALITY
   &__checkbox:checked ~ &__background {
-    /* scale the background on click */
+    /* scale the background on click - sibling of checkbox - background */
     transform: scale(120);
   }
 
@@ -158,7 +160,7 @@
       width: 4rem;
       height: 2px;
       background-color: $color-grey-1;
-      display: inline-block;
+      display: flex;
     }
 
     &::before,
