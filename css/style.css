@@ -75,7 +75,7 @@ body {
   /* 6/8 columns = for the header, 2/8 columns for the players section */
   grid-column: full-start / col-end 6;
   /* MEDIA QUERY - when width of screen is 87.5rem ($bp-largest) */
-  background-image: linear-gradient(rgba(249, 247, 246, 0.7), rgba(249, 247, 246, 0.7)), url(../img/header-image1.png);
+  background-image: linear-gradient(rgba(249, 247, 246, 0.7), rgba(249, 247, 246, 0.7)), url(../img/training-top.png);
   background-size: cover;
   background-position: center;
   padding: 5rem;
