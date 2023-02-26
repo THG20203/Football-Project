@@ -1,5 +1,6 @@
 .banner {
   grid-column: full-start / col-end 4;
+  background-color: grey;
 }
 
 .slideshow {
@@ -8,9 +9,9 @@
   &__wrapper {
     /* display images in a row using flex */
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     /* wrapper of 400% because 4 images - each image take up 1/4 of wrapper */
-    width: 400%;
+    width: 200vw;
     height: 100%;
     position: relative;
     animation: slideshow 20s infinite;
@@ -34,43 +35,43 @@
   }
 
   15% {
-    left: -100%;
+    left: -50vw;
   }
 
   25% {
-    left: -100%;
+    left: -50vw;
   }
 
   30% {
-    left: -200%;
+    left: -100vw;
   }
 
   40% {
-    left: -200%;
+    left: -100vw;
   }
 
   45% {
-    left: -300%;
+    left: -150vw;
   }
 
   55% {
-    left: -300%;
+    left: -150vw;
   }
 
   60% {
-    left: -200%;
+    left: -100vw;
   }
 
   70% {
-    left: -200%;
+    left: -100vw;
   }
 
   75% {
-    left: -100%;
+    left: -50vw;
   }
 
   85% {
-    left: -100%;
+    left: -50vw;
   }
 
   90% {
