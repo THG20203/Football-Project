@@ -71,6 +71,13 @@ body {
   /* goes all the way from one end to the other end full bleed section */
   grid-column: full-start / full-end; }
 
+.banner {
+  grid-column: full-start / full-end;
+  background-color: grey; }
+
+.slideshow {
+  display: none; }
+
 .header {
   /* 6/8 columns = for the header, 2/8 columns for the players section */
   grid-column: full-start / col-end 6;
