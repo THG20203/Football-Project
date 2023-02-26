@@ -72,7 +72,7 @@ body {
   grid-column: full-start / full-end; }
 
 .banner {
-  grid-column: full-start / col-end 5; }
+  grid-column: full-start / col-end 4; }
 
 .slideshow {
   height: 100%;
@@ -80,6 +80,7 @@ body {
   .slideshow__wrapper {
     /* display images in a row using flex */
     display: flex;
+    justify-content: space-evenly;
     /* wrapper of 400% because 4 images - each image take up 1/4 of wrapper */
     width: 400%;
     height: 100%;
@@ -88,9 +89,10 @@ body {
 
 .slide img {
   height: 100%;
-  width: 100%;
+  width: 50vw;
   object-fit: cover; }
 
+/* keyframes percentages? = percentage of the animation duration */
 @keyframes slideshow {
   0% {
     left: 0; }
