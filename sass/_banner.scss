@@ -9,10 +9,11 @@
   &__wrapper {
     /* display images in a row using flex */
     display: flex;
-    /* justify-content: space-evenly; */
-    /* wrapper of 400% because 4 images - each image take up 1/4 of wrapper */
+    /* wrapper of 200vw because 4 images which are 50vw each - each image take up 1/4 of wrapper */
     width: 200vw;
     height: 100%;
+    /* because in the keyframes below we are manipulating the slideshow wrapper, we need to define the position
+    as relative i.e. to move the wrapper left */
     position: relative;
     animation: slideshow 20s infinite;
   }
@@ -20,13 +21,14 @@
 
 .slide img {
   height: 100%;
-  /* want the width to be half the viewport */
+  /* want the width to be half the viewport hence 50vw */
   width: 50vw;
-  /* image keeps its aspect ratio and fills the given dimension. Image = clipped to fit */
+  /* image keeps its aspect ratio (so not stretched) and fills the given dimension. Image = clipped to fit */
   object-fit: cover;
 }
 
 /* keyframes percentages? = percentage of the animation duration */
+// moving entire slideshow wrapper with some intervals - manipulate using positions
 @keyframes slideshow {
   0% {
     left: 0;
