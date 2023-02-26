@@ -30,55 +30,44 @@
 /* keyframes percentages? = percentage of the animation duration */
 // moving entire slideshow wrapper with some intervals - manipulate using positions
 @keyframes slideshow {
+  /* in the timeframe of the animation we don't want to image to move for a while - so need to define the 
+  left position as 0. This is for 0 to 15% of the animation */
   0% {
     left: 0;
   }
-
-  10% {
+  15% {
     left: 0;
   }
-
-  15% {
+  /* after 0-15% of animation time, want image to be moved to the left by its width - 50vw */
+  /* this'll mean first image is entirely hidden and the second one is displayed */
+  20% {
     left: -50vw;
   }
-
-  25% {
+  /* second image displayed from 15% to 35% */
+  35% {
     left: -50vw;
   }
-
-  30% {
-    left: -100vw;
-  }
-
+  /* need we need to hide second image and display the third one - hence -100vw */
   40% {
     left: -100vw;
   }
-
-  45% {
-    left: -150vw;
-  }
-
+  /* third image displayed from 40% to 55% */
   55% {
+    left: -100vw;
+  }
+  /* need to hide third image and display fourth one - hence -150vw */
+  60% {
     left: -150vw;
   }
-
-  60% {
-    left: -100vw;
-  }
-
-  70% {
-    left: -100vw;
-  }
-
+  /* fourth image displayed from 60% to 75% */
   75% {
-    left: -50vw;
+    left: -150vw;
   }
-
-  85% {
-    left: -50vw;
+  // then need to return back to the original image hence left: 0vw;
+  80% {
+    left: 0vw;
   }
-
-  90% {
-    left: 0;
+  95% {
+    left: 0vw;
   }
 }
