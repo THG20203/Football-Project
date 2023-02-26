@@ -76,8 +76,7 @@ body {
   grid-column: full-start / col-end 4; }
 
 .slideshow {
-  height: 100%;
-  overflow: hidden; }
+  height: 100%; }
   .slideshow__wrapper {
     /* display images in a row using flex */
     display: flex;
@@ -87,7 +86,8 @@ body {
     /* because in the keyframes below we are manipulating the slideshow wrapper, we need to define the position
     as relative i.e. to move the wrapper left */
     position: relative;
-    animation: slideshow 20s infinite; }
+    /* define animation property for wrapper as slideshow with the duration of 15 seconds */
+    animation: slideshow 15s infinite; }
 
 .slide img {
   height: 100%;
@@ -99,33 +99,33 @@ body {
 /* keyframes percentages? = percentage of the animation duration */
 @keyframes slideshow {
   /* in the timeframe of the animation we don't want to image to move for a while - so need to define the 
-  left position as 0. This is for 0 to 15% of the animation */
+  left position as 0. This is for 0 to 5% of the animation */
   0% {
     left: 0; }
-  15% {
+  5% {
     left: 0; }
-  /* after 0-15% of animation time, want image to be moved to the left by its width - 50vw */
+  /* after 0-5% of animation time, want image to be moved to the left by its width - 50vw */
   /* this'll mean first image is entirely hidden and the second one is displayed */
-  20% {
+  10% {
     left: -50vw; }
-  /* second image displayed from 15% to 35% */
-  35% {
+  /* second image displayed from 10% to 30% */
+  30% {
     left: -50vw; }
   /* need we need to hide second image and display the third one - hence -100vw */
-  40% {
+  35% {
     left: -100vw; }
-  /* third image displayed from 40% to 55% */
+  /* third image displayed from 35% to 55% */
   55% {
     left: -100vw; }
   /* need to hide third image and display fourth one - hence -150vw */
   60% {
     left: -150vw; }
-  /* fourth image displayed from 60% to 75% */
-  75% {
-    left: -150vw; }
+  /* fourth image displayed from 60% to 80% */
   80% {
+    left: -150vw; }
+  85% {
     left: 0vw; }
-  95% {
+  100% {
     left: 0vw; } }
 
 .header {
