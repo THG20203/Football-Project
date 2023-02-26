@@ -137,7 +137,24 @@ body {
   border: 0.2rem solid #aaa;
   border-radius: 50%;
   cursor: pointer;
-  outline: none; }
+  outline: none;
+  position: absolute;
+  top: 95%;
+  /* perfect positioning horizontally */
+  transform: translateX(-50%);
+  /* want to put the buttons on top of the slideshow */
+  z-index: 2;
+  /* position absolute will put one button on top of another so need to move them individually */
+  /* remember the quarter of the way across the page is 25% so want 22, 24, 26 and 28 of the way across 
+    the viewport, to center it albeit in a slideshow spanning halfway the viewport 50vw */ }
+  .slide__btn--1 {
+    left: 22%; }
+  .slide__btn--2 {
+    left: 24%; }
+  .slide__btn--3 {
+    left: 26%; }
+  .slide__btn--4 {
+    left: 28%; }
 
 .header {
   /* 6/8 columns = for the header, 2/8 columns for the players section */

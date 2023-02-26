@@ -86,5 +86,26 @@
     border-radius: 50%;
     cursor: pointer;
     outline: none;
+    position: absolute;
+    top: 95%;
+    /* perfect positioning horizontally */
+    transform: translateX(-50%);
+    /* want to put the buttons on top of the slideshow */
+    z-index: 2;
+    /* position absolute will put one button on top of another so need to move them individually */
+    /* remember the quarter of the way across the page is 25% so want 22, 24, 26 and 28 of the way across 
+    the viewport, to center it albeit in a slideshow spanning halfway the viewport 50vw */
+    &--1 {
+      left: 22%;
+    }
+    &--2 {
+      left: 24%;
+    }
+    &--3 {
+      left: 26%;
+    }
+    &--4 {
+      left: 28%;
+    }
   }
 }
