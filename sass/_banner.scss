@@ -4,10 +4,12 @@
 
 .slideshow {
   height: 100%;
+  overflow: hidden;
   &__wrapper {
     /* display images in a row using flex */
     display: flex;
     /* wrapper of 400% because 4 images - each image take up 1/4 of wrapper */
+    width: 400%;
     height: 100%;
     position: relative;
     animation: slideshow 20s infinite;
@@ -16,6 +18,8 @@
 
 .slide img {
   height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 @keyframes slideshow {
