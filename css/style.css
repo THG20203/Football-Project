@@ -29,12 +29,12 @@ body {
 .container {
   display: grid;
   /* comments for the grid-template-rows */
-  grid-template-rows: 10rem 10rem 80vh min-content repeat(2, min-content);
+  grid-template-rows: 10rem 10rem 80vh 80vh min-content repeat(2, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   /* AFTER NOTES */ }
   @media only screen and (max-width: 62.5em) {
     .container {
-      grid-template-rows: 10rem 10rem calc(100vh - 20rem); } }
+      grid-template-rows: 10rem 10rem calc(100vh - 20rem) calc(100vh - 20rem); } }
 
 .features {
   /* features go from center-start to center-end - beginning to end of centre 8 grid */
