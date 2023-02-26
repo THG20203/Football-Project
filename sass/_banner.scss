@@ -109,3 +109,36 @@
     }
   }
 }
+
+/* first of all need to make sure its obvious which button we are focusing on when click it */
+.slide__btn:focus {
+  background-color: $color-primary-dark;
+}
+
+.slide__btn--1:focus ~ .slideshow__wrapper {
+  /* in order to stop animation - need to write animation none */
+  animation: none;
+  /* when we focus on first button, we need to display first image */
+  left: 0;
+}
+
+.slide__btn--2:focus ~ .slideshow__wrapper {
+  /* in order to stop animation - need to write animation none */
+  animation: none;
+  /* when we focus on second button, we need to display second image */
+  left: -50vw;
+}
+
+.slide__btn--3:focus ~ .slideshow__wrapper {
+  /* in order to stop animation - need to write animation none */
+  animation: none;
+  /* when we focus on third button, we need to display third image */
+  left: -100vw;
+}
+
+.slide__btn--4:focus ~ .slideshow__wrapper {
+  /* in order to stop animation - need to write animation none */
+  animation: none;
+  /* when we focus on fourth button, we need to display fourth image */
+  left: -150vw;
+}
