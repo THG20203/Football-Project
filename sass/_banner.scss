@@ -1,6 +1,6 @@
 .banner {
+  /* col-end 4 - halfway across the page */
   grid-column: full-start / col-end 4;
-  background-color: grey;
 }
 
 .slideshow {
@@ -20,7 +20,9 @@
 
 .slide img {
   height: 100%;
+  /* want the width to be half the viewport */
   width: 50vw;
+  /* image keeps its aspect ratio and fills the given dimension. Image = clipped to fit */
   object-fit: cover;
 }
 

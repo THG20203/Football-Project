@@ -72,8 +72,8 @@ body {
   grid-column: full-start / full-end; }
 
 .banner {
-  grid-column: full-start / col-end 4;
-  background-color: grey; }
+  /* col-end 4 - halfway across the page */
+  grid-column: full-start / col-end 4; }
 
 .slideshow {
   height: 100%;
@@ -90,7 +90,9 @@ body {
 
 .slide img {
   height: 100%;
+  /* want the width to be half the viewport */
   width: 50vw;
+  /* image keeps its aspect ratio and fills the given dimension. Image = clipped to fit */
   object-fit: cover; }
 
 /* keyframes percentages? = percentage of the animation duration */
