@@ -1,8 +1,18 @@
 .banner {
   grid-column: full-start / full-end;
-  background-color: grey;
 }
 
 .slideshow {
-  display: none;
+  height: 100%;
+  &__wrapper {
+    /* display images in a row using flex */
+    display: flex;
+    width: 400%;
+    height: 100%;
+  }
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
 }
