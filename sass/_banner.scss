@@ -5,6 +5,8 @@
 
 .slideshow {
   height: 100%;
+  /* failsafe to hide excess banner images */
+  overflow: hidden;
   &__wrapper {
     /* display images in a row using flex */
     display: flex;

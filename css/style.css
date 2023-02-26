@@ -76,7 +76,9 @@ body {
   grid-column: full-start / col-end 4; }
 
 .slideshow {
-  height: 100%; }
+  height: 100%;
+  /* failsafe to hide excess banner images */
+  overflow: hidden; }
   .slideshow__wrapper {
     /* display images in a row using flex */
     display: flex;
