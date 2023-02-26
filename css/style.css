@@ -130,6 +130,15 @@ body {
   100% {
     left: 0vw; } }
 
+.slide__btn {
+  width: 2rem;
+  height: 2rem;
+  background-color: #f9f7f6;
+  border: 0.2rem solid #aaa;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none; }
+
 .header {
   /* 6/8 columns = for the header, 2/8 columns for the players section */
   grid-column: full-start / col-end 6;

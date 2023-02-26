@@ -22,12 +22,14 @@
   }
 }
 
-.slide img {
-  height: 100%;
-  /* want the width to be half the viewport hence 50vw */
-  width: 50vw;
-  /* image keeps its aspect ratio (so not stretched) and fills the given dimension. Image = clipped to fit */
-  object-fit: cover;
+.slide {
+  & img {
+    height: 100%;
+    /* want the width to be half the viewport hence 50vw */
+    width: 50vw;
+    /* image keeps its aspect ratio (so not stretched) and fills the given dimension. Image = clipped to fit */
+    object-fit: cover;
+  }
 }
 
 /* keyframes percentages? = percentage of the animation duration */
@@ -72,5 +74,17 @@
   }
   100% {
     left: 0vw;
+  }
+}
+
+.slide {
+  &__btn {
+    width: 2rem;
+    height: 2rem;
+    background-color: $color-grey-1;
+    border: 0.2rem solid $color-grey-2;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
   }
 }
