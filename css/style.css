@@ -76,6 +76,7 @@ body {
   grid-column: full-start / col-end 4; }
   @media only screen and (max-width: 62.5em) {
     .banner {
+      /* want it to span whole page on smaller devices */
       grid-column: full-start / full-end; } }
 
 .slideshow {
@@ -106,6 +107,7 @@ body {
   object-fit: cover; }
   @media only screen and (max-width: 62.5em) {
     .slide img {
+      /* want images to span whole viewport width smaller devices */
       width: 100vw; } }
 
 /* keyframes percentages? = percentage of the animation duration */
@@ -140,6 +142,7 @@ body {
   100% {
     left: 0vw; } }
 
+/* remember- each image is now 100vw, so need to move -100vw to the left to go to next image etc */
 @keyframes slideshowSmallViewport {
   0% {
     left: 0; }
@@ -181,12 +184,15 @@ body {
     the viewport, to center it albeit in a slideshow spanning halfway the viewport 50vw */ }
   @media only screen and (max-width: 62.5em) {
     .slide__btn {
+      /* make buttons bigger on smaller devices so they're easier to click on phones */
       width: 2rem;
       height: 2rem; } }
   .slide__btn--1 {
     left: 22%; }
     @media only screen and (max-width: 62.5em) {
       .slide__btn--1 {
+        /* need to remember positioning for when viewport is 100% - because the width of the banner is 
+        100% on smaller devices */
         left: 38%; } }
   .slide__btn--2 {
     left: 24%; }
@@ -221,6 +227,7 @@ body {
   left: -50vw; }
   @media only screen and (max-width: 62.5em) {
     .slide__btn--2:focus ~ .slideshow__wrapper {
+      /* viewport width of images is npw 100vw - so to click through each one need -100vw */
       left: -100vw; } }
 
 .slide__btn--3:focus ~ .slideshow__wrapper {

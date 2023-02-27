@@ -2,6 +2,7 @@
   /* col-end 4 - halfway across the page */
   grid-column: full-start / col-end 4;
   @media only screen and (max-width: $bp-large) {
+    /* want it to span whole page on smaller devices */
     grid-column: full-start / full-end;
   }
 }
@@ -37,6 +38,7 @@
     /* image keeps its aspect ratio (so not stretched) and fills the given dimension. Image = clipped to fit */
     object-fit: cover;
     @media only screen and (max-width: $bp-large) {
+      /* want images to span whole viewport width smaller devices */
       width: 100vw;
     }
   }
@@ -87,6 +89,7 @@
   }
 }
 
+/* remember- each image is now 100vw, so need to move -100vw to the left to go to next image etc */
 @keyframes slideshowSmallViewport {
   0% {
     left: 0;
@@ -136,6 +139,7 @@
     /* want to put the buttons on top of the slideshow */
     z-index: 2;
     @media only screen and (max-width: $bp-large) {
+      /* make buttons bigger on smaller devices so they're easier to click on phones */
       width: 2rem;
       height: 2rem;
     }
@@ -145,6 +149,8 @@
     &--1 {
       left: 22%;
       @media only screen and (max-width: $bp-large) {
+        /* need to remember positioning for when viewport is 100% - because the width of the banner is 
+        100% on smaller devices */
         left: 38%;
       }
     }
@@ -187,6 +193,7 @@
   /* when we focus on second button, we need to display second image */
   left: -50vw;
   @media only screen and (max-width: $bp-large) {
+    /* viewport width of images is npw 100vw - so to click through each one need -100vw */
     left: -100vw;
   }
 }
