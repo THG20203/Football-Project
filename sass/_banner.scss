@@ -135,20 +135,36 @@
     transform: translateX(-50%);
     /* want to put the buttons on top of the slideshow */
     z-index: 2;
+    @media only screen and (max-width: $bp-largest) {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
     /* position absolute will put one button on top of another so need to move them individually */
     /* remember the quarter of the way across the page is 25% so want 22, 24, 26 and 28 of the way across 
     the viewport, to center it albeit in a slideshow spanning halfway the viewport 50vw */
     &--1 {
       left: 22%;
+      @media only screen and (max-width: $bp-largest) {
+        left: 47%;
+      }
     }
     &--2 {
       left: 24%;
+      @media only screen and (max-width: $bp-largest) {
+        left: 49%;
+      }
     }
     &--3 {
       left: 26%;
+      @media only screen and (max-width: $bp-largest) {
+        left: 51%;
+      }
     }
     &--4 {
       left: 28%;
+      @media only screen and (max-width: $bp-largest) {
+        left: 53%;
+      }
     }
   }
 }

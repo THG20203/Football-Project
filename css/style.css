@@ -178,14 +178,30 @@ body {
   /* position absolute will put one button on top of another so need to move them individually */
   /* remember the quarter of the way across the page is 25% so want 22, 24, 26 and 28 of the way across 
     the viewport, to center it albeit in a slideshow spanning halfway the viewport 50vw */ }
+  @media only screen and (max-width: 87.5em) {
+    .slide__btn {
+      width: 1.5rem;
+      height: 1.5rem; } }
   .slide__btn--1 {
     left: 22%; }
+    @media only screen and (max-width: 87.5em) {
+      .slide__btn--1 {
+        left: 47%; } }
   .slide__btn--2 {
     left: 24%; }
+    @media only screen and (max-width: 87.5em) {
+      .slide__btn--2 {
+        left: 49%; } }
   .slide__btn--3 {
     left: 26%; }
+    @media only screen and (max-width: 87.5em) {
+      .slide__btn--3 {
+        left: 51%; } }
   .slide__btn--4 {
     left: 28%; }
+    @media only screen and (max-width: 87.5em) {
+      .slide__btn--4 {
+        left: 53%; } }
 
 /* first of all need to make sure its obvious which button we are focusing on when click it */
 .slide__btn:focus {
