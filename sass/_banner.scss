@@ -1,6 +1,9 @@
 .banner {
   /* col-end 4 - halfway across the page */
   grid-column: full-start / col-end 4;
+  @media only screen and (max-width: $bp-largest) {
+    grid-column: full-start / full-end;
+  }
 }
 
 .slideshow {
@@ -19,6 +22,9 @@
     /* define animation property for wrapper as slideshow with the duration of 15 seconds */
     // we want animation to be played infinitely, hence animation iteration 'infinite'
     animation: slideshow 15s infinite;
+    @media only screen and (max-width: $bp-largest) {
+      width: 400vw;
+    }
   }
 }
 
@@ -29,6 +35,9 @@
     width: 50vw;
     /* image keeps its aspect ratio (so not stretched) and fills the given dimension. Image = clipped to fit */
     object-fit: cover;
+    @media only screen and (max-width: $bp-largest) {
+      width: 100vw;
+    }
   }
 }
 
@@ -74,6 +83,40 @@
   }
   100% {
     left: 0vw;
+  }
+  @media only screen and (max-width: $bp-largest) {
+    @keyframes slideshow {
+      0% {
+        left: 0;
+      }
+      5% {
+        left: 0;
+      }
+      10% {
+        left: -1000vw;
+      }
+      30% {
+        left: -100vw;
+      }
+      35% {
+        left: -200vw;
+      }
+      55% {
+        left: -200vw;
+      }
+      60% {
+        left: -300vw;
+      }
+      80% {
+        left: -300vw;
+      }
+      85% {
+        left: 0vw;
+      }
+      100% {
+        left: 0vw;
+      }
+    }
   }
 }
 
