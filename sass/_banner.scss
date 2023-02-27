@@ -186,6 +186,9 @@
   animation: none;
   /* when we focus on second button, we need to display second image */
   left: -50vw;
+  @media only screen and (max-width: $bp-large) {
+    left: -100vw;
+  }
 }
 
 .slide__btn--3:focus ~ .slideshow__wrapper {
@@ -193,6 +196,9 @@
   animation: none;
   /* when we focus on third button, we need to display third image */
   left: -100vw;
+  @media only screen and (max-width: $bp-large) {
+    left: -200vw;
+  }
 }
 
 .slide__btn--4:focus ~ .slideshow__wrapper {
@@ -200,4 +206,7 @@
   animation: none;
   /* when we focus on fourth button, we need to display fourth image */
   left: -150vw;
+  @media only screen and (max-width: $bp-large) {
+    left: -300vw;
+  }
 }
