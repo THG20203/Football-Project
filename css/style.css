@@ -695,3 +695,6 @@ body {
 
 .mb-hg {
   margin-bottom: 8rem; }
+
+.table {
+  grid-column: col-start 5 / full-end; }
