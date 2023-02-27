@@ -74,7 +74,7 @@ body {
 .banner {
   /* col-end 4 - halfway across the page */
   grid-column: full-start / col-end 4; }
-  @media only screen and (max-width: 87.5em) {
+  @media only screen and (max-width: 62.5em) {
     .banner {
       grid-column: full-start / full-end; } }
 
@@ -93,9 +93,10 @@ body {
     position: relative;
     /* define animation property for wrapper as slideshow with the duration of 15 seconds */
     animation: slideshow 15s infinite; }
-    @media only screen and (max-width: 87.5em) {
+    @media only screen and (max-width: 62.5em) {
       .slideshow__wrapper {
-        width: 400vw; } }
+        width: 400vw;
+        animation: slideshowSmallViewport 15s infinite; } }
 
 .slide img {
   height: 100%;
@@ -103,7 +104,7 @@ body {
   width: 50vw;
   /* image keeps its aspect ratio (so not stretched) and fills the given dimension. Image = clipped to fit */
   object-fit: cover; }
-  @media only screen and (max-width: 87.5em) {
+  @media only screen and (max-width: 62.5em) {
     .slide img {
       width: 100vw; } }
 
@@ -137,33 +138,33 @@ body {
   85% {
     left: 0vw; }
   100% {
+    left: 0vw; } }
+
+@keyframes slideshowSmallViewport {
+  0% {
+    left: 0; }
+  5% {
+    left: 0; }
+  10% {
+    left: -100vw; }
+  30% {
+    left: -100vw; }
+  35% {
+    left: -200vw; }
+  55% {
+    left: -200vw; }
+  60% {
+    left: -300vw; }
+  80% {
+    left: -300vw; }
+  85% {
     left: 0vw; }
-  @media only screen and (max-width: 87.5em) {
-    @keyframes slideshow {
-      0% {
-        left: 0; }
-      5% {
-        left: 0; }
-      10% {
-        left: -1000vw; }
-      30% {
-        left: -100vw; }
-      35% {
-        left: -200vw; }
-      55% {
-        left: -200vw; }
-      60% {
-        left: -300vw; }
-      80% {
-        left: -300vw; }
-      85% {
-        left: 0vw; }
-      100% {
-        left: 0vw; } } } }
+  100% {
+    left: 0vw; } }
 
 .slide__btn {
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   background-color: #f9f7f6;
   border: 0.2rem solid #aaa;
   border-radius: 50%;
@@ -178,30 +179,30 @@ body {
   /* position absolute will put one button on top of another so need to move them individually */
   /* remember the quarter of the way across the page is 25% so want 22, 24, 26 and 28 of the way across 
     the viewport, to center it albeit in a slideshow spanning halfway the viewport 50vw */ }
-  @media only screen and (max-width: 87.5em) {
+  @media only screen and (max-width: 62.5em) {
     .slide__btn {
-      width: 1.5rem;
-      height: 1.5rem; } }
+      width: 2rem;
+      height: 2rem; } }
   .slide__btn--1 {
     left: 22%; }
-    @media only screen and (max-width: 87.5em) {
+    @media only screen and (max-width: 62.5em) {
       .slide__btn--1 {
-        left: 47%; } }
+        left: 38%; } }
   .slide__btn--2 {
     left: 24%; }
-    @media only screen and (max-width: 87.5em) {
+    @media only screen and (max-width: 62.5em) {
       .slide__btn--2 {
-        left: 49%; } }
+        left: 46%; } }
   .slide__btn--3 {
     left: 26%; }
-    @media only screen and (max-width: 87.5em) {
+    @media only screen and (max-width: 62.5em) {
       .slide__btn--3 {
-        left: 51%; } }
+        left: 54%; } }
   .slide__btn--4 {
     left: 28%; }
-    @media only screen and (max-width: 87.5em) {
+    @media only screen and (max-width: 62.5em) {
       .slide__btn--4 {
-        left: 53%; } }
+        left: 62%; } }
 
 /* first of all need to make sure its obvious which button we are focusing on when click it */
 .slide__btn:focus {
