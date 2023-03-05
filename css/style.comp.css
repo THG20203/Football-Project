@@ -29,12 +29,12 @@ body {
 .container {
   display: grid;
   /* comments for the grid-template-rows */
-  grid-template-rows: 10rem 10rem 80vh min-content repeat(2, min-content);
+  grid-template-rows: 10rem 10rem 80vh 80vh min-content repeat(2, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   /* AFTER NOTES */ }
   @media only screen and (max-width: 62.5em) {
     .container {
-      grid-template-rows: 10rem 10rem calc(100vh - 20rem); } }
+      grid-template-rows: 10rem 10rem calc(100vh - 20rem) calc(100vh - 20rem); } }
 
 .features {
   /* features go from center-start to center-end - beginning to end of centre 8 grid */
@@ -71,11 +71,195 @@ body {
   /* goes all the way from one end to the other end full bleed section */
   grid-column: full-start / full-end; }
 
+.banner {
+  /* col-end 4 - halfway across the page */
+  grid-column: full-start / col-end 4; }
+  @media only screen and (max-width: 62.5em) {
+    .banner {
+      /* want it to span whole page on smaller devices */
+      grid-column: full-start / full-end; } }
+
+.slideshow {
+  height: 100%;
+  /* failsafe to hide excess banner images */
+  overflow: hidden; }
+  .slideshow__wrapper {
+    /* display images in a row using flex */
+    display: flex;
+    /* wrapper of 200vw because 4 images which are 50vw each - each image take up 1/4 of wrapper */
+    width: 200vw;
+    height: 100%;
+    /* because in the keyframes below we are manipulating the slideshow wrapper, we need to define the position
+    as relative i.e. to move the wrapper left */
+    position: relative;
+    /* define animation property for wrapper as slideshow with the duration of 15 seconds */
+    animation: slideshow 15s infinite; }
+    @media only screen and (max-width: 62.5em) {
+      .slideshow__wrapper {
+        width: 400vw;
+        animation: slideshowSmallViewport 15s infinite; } }
+
+.slide__image {
+  height: 100%;
+  /* want the width to be half the viewport hence 50vw */
+  width: 50vw;
+  /* image keeps its aspect ratio (so not stretched) and fills the given dimension. Image = clipped to fit */
+  object-fit: cover;
+  position: relative; }
+  @media only screen and (max-width: 62.5em) {
+    .slide__image {
+      /* want images to span whole viewport width smaller devices */
+      width: 100vw; } }
+
+.slide__image::after {
+  height: 100%;
+  width: 50vw;
+  background: linear-gradient(rgba(249, 247, 246, 0.7), rgba(249, 247, 246, 0.7));
+  z-index: 100; }
+
+/* keyframes percentages? = percentage of the animation duration */
+@keyframes slideshow {
+  /* in the timeframe of the animation we don't want to image to move for a while - so need to define the 
+  left position as 0. This is for 0 to 5% of the animation */
+  0% {
+    left: 0; }
+  5% {
+    left: 0; }
+  /* after 0-5% of animation time, want image to be moved to the left by its width - 50vw */
+  /* this'll mean first image is entirely hidden and the second one is displayed */
+  10% {
+    left: -50vw; }
+  /* second image displayed from 10% to 30% */
+  30% {
+    left: -50vw; }
+  /* need we need to hide second image and display the third one - hence -100vw */
+  35% {
+    left: -100vw; }
+  /* third image displayed from 35% to 55% */
+  55% {
+    left: -100vw; }
+  /* need to hide third image and display fourth one - hence -150vw */
+  60% {
+    left: -150vw; }
+  /* fourth image displayed from 60% to 80% */
+  80% {
+    left: -150vw; }
+  85% {
+    left: 0vw; }
+  100% {
+    left: 0vw; } }
+
+/* remember- each image is now 100vw, so need to move -100vw to the left to go to next image etc */
+@keyframes slideshowSmallViewport {
+  0% {
+    left: 0; }
+  5% {
+    left: 0; }
+  10% {
+    left: -100vw; }
+  30% {
+    left: -100vw; }
+  35% {
+    left: -200vw; }
+  55% {
+    left: -200vw; }
+  60% {
+    left: -300vw; }
+  80% {
+    left: -300vw; }
+  85% {
+    left: 0vw; }
+  100% {
+    left: 0vw; } }
+
+.slide__btn {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #f9f7f6;
+  border: 0.2rem solid #aaa;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  top: 95%;
+  /* perfect positioning horizontally */
+  transform: translateX(-50%);
+  /* want to put the buttons on top of the slideshow */
+  z-index: 2;
+  /* position absolute will put one button on top of another so need to move them individually */
+  /* remember the quarter of the way across the page is 25% so want 22, 24, 26 and 28 of the way across 
+    the viewport, to center it albeit in a slideshow spanning halfway the viewport 50vw */ }
+  @media only screen and (max-width: 62.5em) {
+    .slide__btn {
+      /* make buttons bigger on smaller devices so they're easier to click on phones */
+      width: 2rem;
+      height: 2rem; } }
+  .slide__btn--1 {
+    left: 22%; }
+    @media only screen and (max-width: 62.5em) {
+      .slide__btn--1 {
+        /* need to remember positioning for when viewport is 100% - because the width of the banner is 
+        100% on smaller devices */
+        left: 38%; } }
+  .slide__btn--2 {
+    left: 24%; }
+    @media only screen and (max-width: 62.5em) {
+      .slide__btn--2 {
+        left: 46%; } }
+  .slide__btn--3 {
+    left: 26%; }
+    @media only screen and (max-width: 62.5em) {
+      .slide__btn--3 {
+        left: 54%; } }
+  .slide__btn--4 {
+    left: 28%; }
+    @media only screen and (max-width: 62.5em) {
+      .slide__btn--4 {
+        left: 62%; } }
+
+/* first of all need to make sure its obvious which button we are focusing on when click it */
+.slide__btn:focus {
+  background-color: #0a19a1; }
+
+.slide__btn--1:focus ~ .slideshow__wrapper {
+  /* in order to stop animation - need to write animation none */
+  animation: none;
+  /* when we focus on first button, we need to display first image */
+  left: 0; }
+
+.slide__btn--2:focus ~ .slideshow__wrapper {
+  /* in order to stop animation - need to write animation none */
+  animation: none;
+  /* when we focus on second button, we need to display second image */
+  left: -50vw; }
+  @media only screen and (max-width: 62.5em) {
+    .slide__btn--2:focus ~ .slideshow__wrapper {
+      /* viewport width of images is npw 100vw - so to click through each one need -100vw */
+      left: -100vw; } }
+
+.slide__btn--3:focus ~ .slideshow__wrapper {
+  /* in order to stop animation - need to write animation none */
+  animation: none;
+  /* when we focus on third button, we need to display third image */
+  left: -100vw; }
+  @media only screen and (max-width: 62.5em) {
+    .slide__btn--3:focus ~ .slideshow__wrapper {
+      left: -200vw; } }
+
+.slide__btn--4:focus ~ .slideshow__wrapper {
+  /* in order to stop animation - need to write animation none */
+  animation: none;
+  /* when we focus on fourth button, we need to display fourth image */
+  left: -150vw; }
+  @media only screen and (max-width: 62.5em) {
+    .slide__btn--4:focus ~ .slideshow__wrapper {
+      left: -300vw; } }
+
 .header {
   /* 6/8 columns = for the header, 2/8 columns for the players section */
   grid-column: full-start / col-end 6;
   /* MEDIA QUERY - when width of screen is 87.5rem ($bp-largest) */
-  background-image: linear-gradient(rgba(249, 247, 246, 0.7), rgba(249, 247, 246, 0.7)), url(../img/header-image1.png);
+  background-image: linear-gradient(rgba(249, 247, 246, 0.7), rgba(249, 247, 246, 0.7)), url(../img/training-top.png);
   background-size: cover;
   background-position: center;
   padding: 5rem;
@@ -258,12 +442,16 @@ body {
 .second-nav {
   /* inner being the links and the hamburger menu */ }
   .second-nav__container {
+    /* ensure the background-color of the overall bar is grey */
     background-color: #f9f7f6;
+    /* make second nav a grid */
     display: grid;
+    /* ensure second nav is full width across the page */
     grid-column: full-start / full-end; }
   .second-nav__badge {
+    /* take the first column of the second nav grid */
     grid-column: 1 / 2;
-    grid-row: 1 /2;
+    grid-row: 1 / 2;
     /* width of badge */
     width: 7rem;
     /* height of the badge */
@@ -281,14 +469,16 @@ body {
         /* make navbar from beginning to end on smaller devices so can center it */
         grid-column: 1 / 10;
         /* ensure the links don't push too far down the page on smaller viewports */
-        grid-row: 1 /2;
+        grid-row: 1 / 2;
         /* put the list above the rest of content */
         z-index: 3;
         /* make z-index value work*/
         position: relative;
         /* hide the links from view on smaller viewports if hamburger isn't clicked */
         opacity: 0;
-        width: 0; } }
+        /* links will be present if width is not 0 */
+        width: 0;
+        transition: all 0.8s; } }
   .second-nav__list {
     display: grid;
     /* align items on page horizontally */
@@ -297,6 +487,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     /* get rid of bullet points */
     list-style: none;
+    /* ensure font is right font for titles */
     font-family: "Lato", sans-serif; }
     @media only screen and (max-width: 62.5em) {
       .second-nav__list {
@@ -304,8 +495,10 @@ body {
         grid-template-columns: 100%; } }
   .second-nav__link {
     text-transform: uppercase;
+    /* get rid of list bullet points */
     text-decoration: none;
     font-size: 1.8rem;
+    /* blue on the grey background for desktop */
     color: #0a19a1; }
     @media only screen and (max-width: 62.5em) {
       .second-nav__link {
@@ -313,43 +506,46 @@ body {
         font-size: 4rem;
         /* padding top and bottom of the links */
         padding: 1rem 0;
-        /* blue background - so links need to be white */
+        /* smaller devices - blue background - so links need to be white */
         color: #f9f7f6; } }
-
-.menu-toggle {
-  grid-column: 9 / 10;
-  grid-row: 1 / 2;
-  /* hide hamburger on larger viewports */
-  display: none;
-  /* set margin from edge of page */
-  margin: 1rem;
-  /*set width and height of hamburger */
-  width: 8rem;
-  height: 8rem;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  flex-direction: column;
-  /* WHY? - remember the flex-direction has now been set as column so align-items will now be horizontally */
-  align-items: center;
-  /* WHY? - remember the flex-direction has now been set as column so justify-content will now be vertically */
-  justify-content: center;
-  background-color: #0c22e8;
-  position: relative;
-  /* move toggle to the end horizontally*/
-  justify-self: end; }
-  @media only screen and (max-width: 62.5em) {
-    .menu-toggle {
-      /* only want to display the hamburger icon on smaller devices */
-      display: flex;
-      /* needs to be at the top above background on transform and general content */
-      z-index: 3;
-      background-color: #0a19a1; } }
-  .menu-toggle:hover {
-    background-color: #0a19a1; }
-  .menu-toggle__background {
-    grid-column: 9 /10;
-    grid-row: 1/2;
+  .second-nav__checkbox {
+    /* checkbox hack - hide checkbox tick for the hamburger menu */
+    display: none; }
+  .second-nav__button {
+    /* put it to the right on the viewport */
+    grid-column: 9 / 10;
+    grid-row: 1 / 2;
+    /* hide hamburger on larger viewports */
+    display: none;
+    /* set margin from edge of page */
+    margin: 1rem;
+    /*set width and height of hamburger */
+    width: 8rem;
+    height: 8rem;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    flex-direction: column;
+    /* WHY? - remember the flex-direction has now been set as column so align-items will now be horizontally */
+    align-items: center;
+    /* WHY? - remember the flex-direction has now been set as column so justify-content will now be vertically */
+    justify-content: center;
+    background-color: #0c22e8;
+    position: relative;
+    /* move toggle to the end horizontally*/
+    justify-self: end; }
+    @media only screen and (max-width: 62.5em) {
+      .second-nav__button {
+        /* only want to display the hamburger icon on smaller devices */
+        display: flex;
+        /* needs to be at the top above background on transform and general content */
+        z-index: 3;
+        background-color: #0a19a1; } }
+    .second-nav__button:hover {
+      background-color: #0a19a1; }
+  .second-nav__background {
+    grid-column: 9 / 10;
+    grid-row: 1 / 2;
     display: none;
     /* make slightly smaller than the actual button with a slightly bigger margin */
     margin: 1.5rem;
@@ -357,38 +553,54 @@ body {
     width: 6rem;
     background-image: radial-gradient(#0c22e8, #f9f7f6);
     /* needs to be be above general content but below the hamburger */
-    z-index: 2; }
+    z-index: 2;
+    transition: transform 0.8s; }
     @media only screen and (max-width: 62.5em) {
-      .menu-toggle__background {
+      .second-nav__background {
         /* make background visible rather than not with display none on smaller devices */
-        display: block;
+        display: flex;
         /* push the background to end of the container horizontally */
         justify-self: end; } }
-  .menu-toggle__checkbox:checked ~ .menu-toggle__background {
-    transform: scale(80); }
-  .menu-toggle__inner {
-    display: grid;
-    align-items: center;
-    height: 3rem;
-    width: 3rem; }
-  .menu-toggle span {
-    height: 2px;
-    background-color: #f9f7f6; }
-    .menu-toggle span::before, .menu-toggle span::after {
-      background-color: #f9f7f6;
+  .second-nav__checkbox:checked ~ .second-nav__background {
+    /* scale the background on click - sibling of checkbox - background */
+    transform: scale(120); }
+  .second-nav__checkbox:checked ~ .second-nav__content {
+    /* when click on checkbox - want sibling element content (i.e. the links be visible cause opacity and width was set as 0) */
+    opacity: 1;
+    width: 100%; }
+  .second-nav__icon {
+    position: relative; }
+    .second-nav__icon, .second-nav__icon::before, .second-nav__icon::after {
+      /* dimensions for lines on the hamburger menu */
+      width: 4rem;
       height: 2px;
+      background-color: #f9f7f6;
+      display: flex; }
+    .second-nav__icon::before, .second-nav__icon::after {
       content: '';
-      display: block; }
-    .menu-toggle span::before {
-      transform: translateY(-1rem); }
-    .menu-toggle span::after {
-      transform: translateY(0.8rem); }
-  .menu-toggle__label {
-    font-family: "Lato", sans-serif;
-    color: #f9f7f6;
-    text-transform: uppercase;
-    font-size: 1rem;
-    margin-top: 0.1rem; }
+      position: absolute;
+      left: 0;
+      transition: all 0.2s; }
+    .second-nav__icon::before {
+      /* move the before element up vertically hence minus rem */
+      top: -1.2rem; }
+    .second-nav__icon::after {
+      /* move the after element down vertically hence positive rem */
+      top: 1.2rem; }
+  .second-nav__button:hover .second-nav__icon::before {
+    /* effects on hover - moving the lines closer to the middle span */
+    top: -0.8rem; }
+  .second-nav__button:hover .second-nav__icon::after {
+    /* effects on hover - moving the lines closer to the middle span */
+    top: 0.8rem; }
+  .second-nav__checkbox:checked + .second-nav__button .second-nav__icon {
+    background-color: transparent; }
+  .second-nav__checkbox:checked + .second-nav__button .second-nav__icon::before {
+    top: 0;
+    transform: rotate(135deg); }
+  .second-nav__checkbox:checked + .second-nav__button .second-nav__icon::after {
+    top: 0;
+    transform: rotate(-135deg); }
 
 .story {
   /* Set the styles for images */ }
@@ -497,3 +709,69 @@ body {
 
 .mb-hg {
   margin-bottom: 8rem; }
+
+.sea-serpent__container {
+  grid-column: col-end 4 / full-end;
+  background-color: blue;
+  height: 100vh;
+  display: grid; }
+
+.sea-serpent__content {
+  grid-column: col-end 6 / full-end;
+  background-color: blue; }
+
+.sea-serpent__ripple {
+  width: 50rem;
+  height: 50rem; }
+  .sea-serpent__ripple span {
+    position: absolute;
+    z-index: 2;
+    transform: rotateX(80deg);
+    box-sizing: border-box;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    animation: ripple 5s linear infinite;
+    animation-delay: calc(-0.5s * var(--i)); }
+  .sea-serpent__ripple:nth-child(2) span {
+    animation: ripple2 5s linear infinite;
+    translate: -800px 0;
+    border: 8px solid #6699cc;
+    animation-delay: calc(-0.5s * var(--i)); }
+  .sea-serpent__ripple:nth-child(3) span {
+    animation: ripple3 5s linear infinite;
+    border: 10px solid #00577b;
+    translate: -400px -800px;
+    animation-delay: calc(-0.5s * var(--i)); }
+
+@keyframes ripple {
+  0% {
+    width: 20rem;
+    height: 20rem; }
+  50% {
+    opacity: 1; }
+  100% {
+    width: 50rem;
+    height: 50rem;
+    opacity: 0; } }
+
+@keyframes ripple2 {
+  0% {
+    width: 20rem;
+    height: 20rem; }
+  50% {
+    opacity: 1; }
+  100% {
+    width: 50rem;
+    height: 50rem;
+    opacity: 0; } }
+
+@keyframes ripple3 {
+  0% {
+    width: 20rem;
+    height: 20rem; }
+  50% {
+    opacity: 1; }
+  100% {
+    width: 40rem;
+    height: 40rem;
+    opacity: 0; } }

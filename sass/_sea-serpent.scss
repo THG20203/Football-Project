@@ -1,19 +1,17 @@
 .sea-serpent {
   &__container {
-    grid-column: col-start 5 / full-end;
+    grid-column: col-end 4 / full-end;
+    background-color: blue;
     height: 100vh;
-    display: flex;
-    flex-flow: wrap;
-    align-items: center;
-    justify-content: center;
-    background-image: url(../img/sea-serpent.png);
+    display: grid;
+  }
+  &__content {
+    grid-column: col-end 6 / full-end;
+    background-color: blue;
   }
   &__ripple {
     width: 50rem;
     height: 50rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     & span {
       position: absolute;
       z-index: 2;

@@ -711,20 +711,18 @@ body {
   margin-bottom: 8rem; }
 
 .sea-serpent__container {
-  grid-column: col-start 5 / full-end;
+  grid-column: col-end 4 / full-end;
+  background-color: blue;
   height: 100vh;
-  display: flex;
-  flex-flow: wrap;
-  align-items: center;
-  justify-content: center;
-  background-image: url(../img/sea-serpent.png); }
+  display: grid; }
+
+.sea-serpent__content {
+  grid-column: col-end 6 / full-end;
+  background-color: blue; }
 
 .sea-serpent__ripple {
   width: 50rem;
-  height: 50rem;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
+  height: 50rem; }
   .sea-serpent__ripple span {
     position: absolute;
     z-index: 2;
