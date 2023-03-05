@@ -182,7 +182,7 @@ left position as 0. This is for 0 to 5% of the animation */
   cursor: pointer;
   outline: none;
   position: absolute;
-  top: 170%;
+  top: 90%;
   /* perfect positioning horizontally */
   transform: translateX(-50%);
   /* want to put the buttons on top of the slideshow */
@@ -192,7 +192,7 @@ left position as 0. This is for 0 to 5% of the animation */
     the viewport, to center it albeit in a slideshow spanning halfway the viewport 50vw */ }
   @media only screen and (max-width: 62.5em) {
     .slide__btn {
-      top: 160%; } }
+      top: 80%; } }
   @media only screen and (max-width: 62.5em) {
     .slide__btn {
       /* make buttons bigger on smaller devices so they're easier to click on phones */

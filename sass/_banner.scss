@@ -149,9 +149,9 @@ left position as 0. This is for 0 to 5% of the animation */
     cursor: pointer;
     outline: none;
     position: absolute;
-    top: 170%;
+    top: 90%;
     @media only screen and (max-width: $bp-large) {
-      top: 160%;
+      top: 80%;
     }
     /* perfect positioning horizontally */
     transform: translateX(-50%);
