@@ -704,4 +704,5 @@ body {
   margin-bottom: 8rem; }
 
 .table {
-  grid-column: col-start 5 / full-end; }
+  grid-column: col-start 5 / full-end;
+  display: grid; }
