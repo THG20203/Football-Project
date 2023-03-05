@@ -1,15 +1,11 @@
 .sea-serpent {
-  &__container {
-    grid-column: col-end 4 / full-end;
-    background-color: blue;
-    height: 100vh;
-    display: grid;
-  }
   &__content {
-    grid-column: col-end 6 / full-end;
-    background-color: blue;
+    display: grid;
+    background: url(../img/sea-serpent.png);
+    width: 100%;
   }
-  &__ripple {
+}
+/* &__ripple {
     width: 50rem;
     height: 50rem;
     & span {
@@ -80,3 +76,4 @@
     opacity: 0;
   }
 }
+*/
