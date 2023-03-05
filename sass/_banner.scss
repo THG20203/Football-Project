@@ -1,6 +1,12 @@
 .banner {
   /* col-end 4 - halfway across the page */
-  grid-column: full-start / full-end;
+  grid-column: full-start / col-end 4;
+  @media only screen and (max-width: 62.5em) {
+    .banner {
+      /* want it to span whole page on smaller devices */
+      grid-column: full-start / full-end;
+    }
+  }
 }
 
 .slideshow {
@@ -11,7 +17,7 @@
     /* display images in a row using flex */
     display: flex;
     /* wrapper of 200vw because 4 images which are 50vw each - each image take up 1/4 of wrapper */
-    width: 400vw;
+    width: 200vw;
     height: 100%;
     /* because in the keyframes below we are manipulating the slideshow wrapper, we need to define the position
     as relative i.e. to move the wrapper left */
@@ -19,6 +25,12 @@
     /* define animation property for wrapper as slideshow with the duration of 15 seconds */
     // we want animation to be played infinitely, hence animation iteration 'infinite'
     animation: slideshow 15s infinite;
+    @media only screen and (max-width: 62.5em) {
+      .slideshow__wrapper {
+        width: 400vw;
+        animation: slideshowSmallViewport 15s infinite;
+      }
+    }
   }
 }
 
@@ -26,15 +38,75 @@
   &__image {
     height: 100%;
     /* want the width to be half the viewport hence 50vw */
-    width: 100vw;
+    width: 50vw;
     /* image keeps its aspect ratio (so not stretched) and fills the given dimension. Image = clipped to fit */
     object-fit: cover;
     position: relative;
   }
 }
 
-/* remember- each image is now 100vw, so need to move -100vw to the left to go to next image etc */
+@media only screen and (max-width: 62.5em) {
+  .slide__image {
+    /* want images to span whole viewport width smaller devices */
+    width: 100vw;
+  }
+}
+
+.slide__image::after {
+  height: 100%;
+  width: 50vw;
+  background: linear-gradient(
+    rgba(249, 247, 246, 0.7),
+    rgba(249, 247, 246, 0.7)
+  );
+  z-index: 100;
+}
+
+/* keyframes percentages? = percentage of the animation duration */
 @keyframes slideshow {
+  /* in the timeframe of the animation we don't want to image to move for a while - so need to define the 
+left position as 0. This is for 0 to 5% of the animation */
+  0% {
+    left: 0;
+  }
+  5% {
+    left: 0;
+  }
+  /* after 0-5% of animation time, want image to be moved to the left by its width - 50vw */
+  /* this'll mean first image is entirely hidden and the second one is displayed */
+  10% {
+    left: -50vw;
+  }
+  /* second image displayed from 10% to 30% */
+  30% {
+    left: -50vw;
+  }
+  /* need we need to hide second image and display the third one - hence -100vw */
+  35% {
+    left: -100vw;
+  }
+  /* third image displayed from 35% to 55% */
+  55% {
+    left: -100vw;
+  }
+  /* need to hide third image and display fourth one - hence -150vw */
+  60% {
+    left: -150vw;
+  }
+  /* fourth image displayed from 60% to 80% */
+  80% {
+    left: -150vw;
+  }
+  85% {
+    left: 0vw;
+  }
+  100% {
+    left: 0vw;
+  }
+}
+
+/* remember- each image is now 100vw, so need to move -100vw to the left to go to next image etc */
+@keyframes slideshowSmallViewport {
   0% {
     left: 0;
   }
@@ -94,25 +166,25 @@
     /* remember the quarter of the way across the page is 25% so want 22, 24, 26 and 28 of the way across 
     the viewport, to center it albeit in a slideshow spanning halfway the viewport 50vw */
     &--1 {
-      left: 44%;
+      left: 22%;
       @media only screen and (max-width: $bp-large) {
         left: 38%;
       }
     }
     &--2 {
-      left: 48%;
+      left: 24%;
       @media only screen and (max-width: $bp-large) {
         left: 46%;
       }
     }
     &--3 {
-      left: 52%;
+      left: 26%;
       @media only screen and (max-width: $bp-large) {
         left: 54%;
       }
     }
     &--4 {
-      left: 56%;
+      left: 28%;
       @media only screen and (max-width: $bp-large) {
         left: 62%;
       }

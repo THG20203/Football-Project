@@ -1,1 +1,7 @@
-
+.sea-serpent {
+  &__container {
+    grid-column: col-end 4 / full-end;
+    background-color: blue;
+    display: grid;
+  }
+}
