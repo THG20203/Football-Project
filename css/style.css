@@ -725,6 +725,16 @@ body {
     border-radius: 50%;
     animation: ripple 5s linear infinite;
     animation-delay: calc(-0.5s * var(--i)); }
+  .sea-serpent__ripple:nth-child(2) span {
+    animation: ripple2 5s linear infinite;
+    translate: -800px 0;
+    border: 8px solid #6699cc;
+    animation-delay: calc(-0.5s * var(--i)); }
+  .sea-serpent__ripple:nth-child(3) span {
+    animation: ripple3 5s linear infinite;
+    border: 10px solid #00577b;
+    translate: -400px -800px;
+    animation-delay: calc(-0.5s * var(--i)); }
 
 @keyframes ripple {
   0% {
