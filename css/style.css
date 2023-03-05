@@ -99,16 +99,23 @@ body {
         width: 400vw;
         animation: slideshowSmallViewport 15s infinite; } }
 
-.slide img {
+.slide__image {
   height: 100%;
   /* want the width to be half the viewport hence 50vw */
   width: 50vw;
   /* image keeps its aspect ratio (so not stretched) and fills the given dimension. Image = clipped to fit */
-  object-fit: cover; }
+  object-fit: cover;
+  position: relative; }
   @media only screen and (max-width: 62.5em) {
-    .slide img {
+    .slide__image {
       /* want images to span whole viewport width smaller devices */
       width: 100vw; } }
+
+.slide__image::after {
+  height: 100%;
+  width: 50vw;
+  background: linear-gradient(rgba(249, 247, 246, 0.7), rgba(249, 247, 246, 0.7));
+  z-index: 100; }
 
 /* keyframes percentages? = percentage of the animation duration */
 @keyframes slideshow {
@@ -705,10 +712,12 @@ body {
 
 .sea-serpent__container {
   grid-column: col-start 5 / full-end;
+  height: 100vh;
   display: flex;
   flex-flow: wrap;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  background-image: url(../img/sea-serpent.png); }
 
 .sea-serpent__ripple {
   width: 50rem;

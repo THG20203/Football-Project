@@ -1,10 +1,12 @@
 .sea-serpent {
   &__container {
     grid-column: col-start 5 / full-end;
+    height: 100vh;
     display: flex;
     flex-flow: wrap;
     align-items: center;
     justify-content: center;
+    background-image: url(../img/sea-serpent.png);
   }
   &__ripple {
     width: 50rem;
