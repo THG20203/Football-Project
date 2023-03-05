@@ -703,6 +703,58 @@ body {
 .mb-hg {
   margin-bottom: 8rem; }
 
-.sea-serpent {
+.sea-serpent__container {
   grid-column: col-start 5 / full-end;
-  display: grid; }
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center; }
+
+.sea-serpent__ripple {
+  width: 50rem;
+  height: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .sea-serpent__ripple span {
+    position: absolute;
+    z-index: 2;
+    transform: rotateX(80deg);
+    box-sizing: border-box;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    animation: ripple 5s linear infinite;
+    animation-delay: calc(-0.5s * var(--i)); }
+
+@keyframes ripple {
+  0% {
+    width: 20rem;
+    height: 20rem; }
+  50% {
+    opacity: 1; }
+  100% {
+    width: 50rem;
+    height: 50rem;
+    opacity: 0; } }
+
+@keyframes ripple2 {
+  0% {
+    width: 20rem;
+    height: 20rem; }
+  50% {
+    opacity: 1; }
+  100% {
+    width: 50rem;
+    height: 50rem;
+    opacity: 0; } }
+
+@keyframes ripple3 {
+  0% {
+    width: 20rem;
+    height: 20rem; }
+  50% {
+    opacity: 1; }
+  100% {
+    width: 40rem;
+    height: 40rem;
+    opacity: 0; } }
