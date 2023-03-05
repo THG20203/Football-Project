@@ -1,10 +1,6 @@
 .banner {
   /* col-end 4 - halfway across the page */
-  grid-column: full-start / col-end 4;
-  @media only screen and (max-width: $bp-large) {
-    /* want it to span whole page on smaller devices */
-    grid-column: full-start / full-end;
-  }
+  grid-column: full-start / full-end;
 }
 
 .slideshow {
@@ -15,7 +11,7 @@
     /* display images in a row using flex */
     display: flex;
     /* wrapper of 200vw because 4 images which are 50vw each - each image take up 1/4 of wrapper */
-    width: 200vw;
+    width: 400vw;
     height: 100%;
     /* because in the keyframes below we are manipulating the slideshow wrapper, we need to define the position
     as relative i.e. to move the wrapper left */
@@ -23,10 +19,6 @@
     /* define animation property for wrapper as slideshow with the duration of 15 seconds */
     // we want animation to be played infinitely, hence animation iteration 'infinite'
     animation: slideshow 15s infinite;
-    @media only screen and (max-width: $bp-large) {
-      width: 400vw;
-      animation: slideshowSmallViewport 15s infinite;
-    }
   }
 }
 
@@ -34,73 +26,15 @@
   &__image {
     height: 100%;
     /* want the width to be half the viewport hence 50vw */
-    width: 50vw;
+    width: 100vw;
     /* image keeps its aspect ratio (so not stretched) and fills the given dimension. Image = clipped to fit */
     object-fit: cover;
     position: relative;
-    @media only screen and (max-width: $bp-large) {
-      /* want images to span whole viewport width smaller devices */
-      width: 100vw;
-    }
-  }
-  &__image::after {
-    height: 100%;
-    width: 50vw;
-    background: linear-gradient(
-      rgba($color-grey-1, 0.7),
-      rgba($color-grey-1, 0.7)
-    );
-    z-index: 100;
-  }
-}
-
-/* keyframes percentages? = percentage of the animation duration */
-// moving entire slideshow wrapper with some intervals - manipulate using positions
-@keyframes slideshow {
-  /* in the timeframe of the animation we don't want to image to move for a while - so need to define the 
-  left position as 0. This is for 0 to 5% of the animation */
-  0% {
-    left: 0;
-  }
-  5% {
-    left: 0;
-  }
-  /* after 0-5% of animation time, want image to be moved to the left by its width - 50vw */
-  /* this'll mean first image is entirely hidden and the second one is displayed */
-  10% {
-    left: -50vw;
-  }
-  /* second image displayed from 10% to 30% */
-  30% {
-    left: -50vw;
-  }
-  /* need we need to hide second image and display the third one - hence -100vw */
-  35% {
-    left: -100vw;
-  }
-  /* third image displayed from 35% to 55% */
-  55% {
-    left: -100vw;
-  }
-  /* need to hide third image and display fourth one - hence -150vw */
-  60% {
-    left: -150vw;
-  }
-  /* fourth image displayed from 60% to 80% */
-  80% {
-    left: -150vw;
-  }
-  // then need to return back to the original image hence left: 0vw;
-  85% {
-    left: 0vw;
-  }
-  100% {
-    left: 0vw;
   }
 }
 
 /* remember- each image is now 100vw, so need to move -100vw to the left to go to next image etc */
-@keyframes slideshowSmallViewport {
+@keyframes slideshow {
   0% {
     left: 0;
   }
@@ -143,41 +77,42 @@
     cursor: pointer;
     outline: none;
     position: absolute;
-    top: 95%;
+    top: 170%;
+    @media only screen and (max-width: $bp-large) {
+      top: 160%;
+    }
     /* perfect positioning horizontally */
     transform: translateX(-50%);
     /* want to put the buttons on top of the slideshow */
     z-index: 2;
     @media only screen and (max-width: $bp-large) {
       /* make buttons bigger on smaller devices so they're easier to click on phones */
-      width: 2rem;
-      height: 2rem;
+      width: 1.8rem;
+      height: 1.8rem;
     }
     /* position absolute will put one button on top of another so need to move them individually */
     /* remember the quarter of the way across the page is 25% so want 22, 24, 26 and 28 of the way across 
     the viewport, to center it albeit in a slideshow spanning halfway the viewport 50vw */
     &--1 {
-      left: 22%;
+      left: 44%;
       @media only screen and (max-width: $bp-large) {
-        /* need to remember positioning for when viewport is 100% - because the width of the banner is 
-        100% on smaller devices */
         left: 38%;
       }
     }
     &--2 {
-      left: 24%;
+      left: 48%;
       @media only screen and (max-width: $bp-large) {
         left: 46%;
       }
     }
     &--3 {
-      left: 26%;
+      left: 52%;
       @media only screen and (max-width: $bp-large) {
         left: 54%;
       }
     }
     &--4 {
-      left: 28%;
+      left: 56%;
       @media only screen and (max-width: $bp-large) {
         left: 62%;
       }

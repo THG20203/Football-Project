@@ -73,11 +73,7 @@ body {
 
 .banner {
   /* col-end 4 - halfway across the page */
-  grid-column: full-start / col-end 4; }
-  @media only screen and (max-width: 62.5em) {
-    .banner {
-      /* want it to span whole page on smaller devices */
-      grid-column: full-start / full-end; } }
+  grid-column: full-start / full-end; }
 
 .slideshow {
   height: 100%;
@@ -87,70 +83,24 @@ body {
     /* display images in a row using flex */
     display: flex;
     /* wrapper of 200vw because 4 images which are 50vw each - each image take up 1/4 of wrapper */
-    width: 200vw;
+    width: 400vw;
     height: 100%;
     /* because in the keyframes below we are manipulating the slideshow wrapper, we need to define the position
     as relative i.e. to move the wrapper left */
     position: relative;
     /* define animation property for wrapper as slideshow with the duration of 15 seconds */
     animation: slideshow 15s infinite; }
-    @media only screen and (max-width: 62.5em) {
-      .slideshow__wrapper {
-        width: 400vw;
-        animation: slideshowSmallViewport 15s infinite; } }
 
 .slide__image {
   height: 100%;
   /* want the width to be half the viewport hence 50vw */
-  width: 50vw;
+  width: 100vw;
   /* image keeps its aspect ratio (so not stretched) and fills the given dimension. Image = clipped to fit */
   object-fit: cover;
   position: relative; }
-  @media only screen and (max-width: 62.5em) {
-    .slide__image {
-      /* want images to span whole viewport width smaller devices */
-      width: 100vw; } }
-
-.slide__image::after {
-  height: 100%;
-  width: 50vw;
-  background: linear-gradient(rgba(249, 247, 246, 0.7), rgba(249, 247, 246, 0.7));
-  z-index: 100; }
-
-/* keyframes percentages? = percentage of the animation duration */
-@keyframes slideshow {
-  /* in the timeframe of the animation we don't want to image to move for a while - so need to define the 
-  left position as 0. This is for 0 to 5% of the animation */
-  0% {
-    left: 0; }
-  5% {
-    left: 0; }
-  /* after 0-5% of animation time, want image to be moved to the left by its width - 50vw */
-  /* this'll mean first image is entirely hidden and the second one is displayed */
-  10% {
-    left: -50vw; }
-  /* second image displayed from 10% to 30% */
-  30% {
-    left: -50vw; }
-  /* need we need to hide second image and display the third one - hence -100vw */
-  35% {
-    left: -100vw; }
-  /* third image displayed from 35% to 55% */
-  55% {
-    left: -100vw; }
-  /* need to hide third image and display fourth one - hence -150vw */
-  60% {
-    left: -150vw; }
-  /* fourth image displayed from 60% to 80% */
-  80% {
-    left: -150vw; }
-  85% {
-    left: 0vw; }
-  100% {
-    left: 0vw; } }
 
 /* remember- each image is now 100vw, so need to move -100vw to the left to go to next image etc */
-@keyframes slideshowSmallViewport {
+@keyframes slideshow {
   0% {
     left: 0; }
   5% {
@@ -181,7 +131,7 @@ body {
   cursor: pointer;
   outline: none;
   position: absolute;
-  top: 95%;
+  top: 195%;
   /* perfect positioning horizontally */
   transform: translateX(-50%);
   /* want to put the buttons on top of the slideshow */
@@ -192,30 +142,28 @@ body {
   @media only screen and (max-width: 62.5em) {
     .slide__btn {
       /* make buttons bigger on smaller devices so they're easier to click on phones */
-      width: 2rem;
-      height: 2rem; } }
+      width: 1.8rem;
+      height: 1.8rem; } }
   .slide__btn--1 {
-    left: 22%; }
+    left: 44%; }
     @media only screen and (max-width: 62.5em) {
       .slide__btn--1 {
-        /* need to remember positioning for when viewport is 100% - because the width of the banner is 
-        100% on smaller devices */
-        left: 38%; } }
+        left: 40%; } }
   .slide__btn--2 {
-    left: 24%; }
+    left: 48%; }
     @media only screen and (max-width: 62.5em) {
       .slide__btn--2 {
-        left: 46%; } }
+        left: 45%; } }
   .slide__btn--3 {
-    left: 26%; }
+    left: 52%; }
     @media only screen and (max-width: 62.5em) {
       .slide__btn--3 {
-        left: 54%; } }
+        left: 55%; } }
   .slide__btn--4 {
-    left: 28%; }
+    left: 56%; }
     @media only screen and (max-width: 62.5em) {
       .slide__btn--4 {
-        left: 62%; } }
+        left: 60%; } }
 
 /* first of all need to make sure its obvious which button we are focusing on when click it */
 .slide__btn:focus {
@@ -254,50 +202,6 @@ body {
   @media only screen and (max-width: 62.5em) {
     .slide__btn--4:focus ~ .slideshow__wrapper {
       left: -300vw; } }
-
-.header {
-  /* 6/8 columns = for the header, 2/8 columns for the players section */
-  grid-column: full-start / col-end 6;
-  /* MEDIA QUERY - when width of screen is 87.5rem ($bp-largest) */
-  background-image: linear-gradient(rgba(249, 247, 246, 0.7), rgba(249, 247, 246, 0.7)), url(../img/training-top.png);
-  background-size: cover;
-  background-position: center;
-  padding: 5rem;
-  display: grid;
-  /* grid row explanation */
-  grid-template-rows: 1fr min-content minmax(10rem, min-content) min-content;
-  grid-template-columns: minmax(min-content, max-content);
-  grid-row-gap: 1.5rem;
-  justify-content: center; }
-  @media only screen and (max-width: 87.5em) {
-    .header {
-      grid-column: full-start / full-end; } }
-  .header__headline-text {
-    align-self: end; }
-  .header__btn {
-    align-self: center;
-    justify-self: start; }
-  .header__corporate-text {
-    display: grid;
-    grid-template-columns: 1fr max-content 1fr;
-    grid-column-gap: 15px;
-    align-items: center;
-    font-size: 2rem;
-    color: #101d2c;
-    text-transform: uppercase; }
-    .header__corporate-text::before, .header__corporate-text::after {
-      content: '';
-      height: 1px;
-      display: block;
-      background-color: currentColor; }
-  .header__corporate-logos {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 3rem;
-    justify-items: center; }
-    .header__corporate-logos img {
-      max-height: 8rem;
-      max-width: 100%; }
 
 .players {
   background-color: #0a19a1;
@@ -709,69 +613,3 @@ body {
 
 .mb-hg {
   margin-bottom: 8rem; }
-
-.sea-serpent__container {
-  grid-column: col-end 4 / full-end;
-  background-color: blue;
-  height: 100vh;
-  display: grid; }
-
-.sea-serpent__content {
-  grid-column: col-end 6 / full-end;
-  background-color: blue; }
-
-.sea-serpent__ripple {
-  width: 50rem;
-  height: 50rem; }
-  .sea-serpent__ripple span {
-    position: absolute;
-    z-index: 2;
-    transform: rotateX(80deg);
-    box-sizing: border-box;
-    border: 4px solid #fff;
-    border-radius: 50%;
-    animation: ripple 5s linear infinite;
-    animation-delay: calc(-0.5s * var(--i)); }
-  .sea-serpent__ripple:nth-child(2) span {
-    animation: ripple2 5s linear infinite;
-    translate: -800px 0;
-    border: 8px solid #6699cc;
-    animation-delay: calc(-0.5s * var(--i)); }
-  .sea-serpent__ripple:nth-child(3) span {
-    animation: ripple3 5s linear infinite;
-    border: 10px solid #00577b;
-    translate: -400px -800px;
-    animation-delay: calc(-0.5s * var(--i)); }
-
-@keyframes ripple {
-  0% {
-    width: 20rem;
-    height: 20rem; }
-  50% {
-    opacity: 1; }
-  100% {
-    width: 50rem;
-    height: 50rem;
-    opacity: 0; } }
-
-@keyframes ripple2 {
-  0% {
-    width: 20rem;
-    height: 20rem; }
-  50% {
-    opacity: 1; }
-  100% {
-    width: 50rem;
-    height: 50rem;
-    opacity: 0; } }
-
-@keyframes ripple3 {
-  0% {
-    width: 20rem;
-    height: 20rem; }
-  50% {
-    opacity: 1; }
-  100% {
-    width: 40rem;
-    height: 40rem;
-    opacity: 0; } }
