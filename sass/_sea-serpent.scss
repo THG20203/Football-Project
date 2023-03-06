@@ -7,6 +7,9 @@
     display: grid;
   }
   &__content {
-    background-color: red;
+    background-image: url(../img/sea-serpent.png);
+    background-repeat: no-repeat;
+    background-position: 50% 60%;
+    background-size: cover;
   }
 }

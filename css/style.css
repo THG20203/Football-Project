@@ -681,4 +681,7 @@ left position as 0. This is for 0 to 5% of the animation */
       grid-column: full-start / full-end; } }
 
 .sea-serpent__content {
-  background-color: red; }
+  background-image: url(../img/sea-serpent.png);
+  background-repeat: no-repeat;
+  background-position: 50% 60%;
+  background-size: cover; }
