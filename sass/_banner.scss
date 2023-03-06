@@ -1,7 +1,7 @@
 .banner {
   /* col-end 4 - halfway across the page */
   grid-column: full-start / col-end 4;
-  @media only screen and (max-width: 62.5em) {
+  @media only screen and (max-width: $bp-large) {
     .banner {
       /* want it to span whole page on smaller devices */
       grid-column: full-start / full-end;
@@ -25,7 +25,7 @@
     /* define animation property for wrapper as slideshow with the duration of 15 seconds */
     // we want animation to be played infinitely, hence animation iteration 'infinite'
     animation: slideshow 15s infinite;
-    @media only screen and (max-width: 62.5em) {
+    @media only screen and (max-width: $bp-large) {
       .slideshow__wrapper {
         width: 400vw;
         animation: slideshowSmallViewport 15s infinite;
@@ -45,7 +45,7 @@
   }
 }
 
-@media only screen and (max-width: 62.5em) {
+@media only screen and (max-width: $bp-large) {
   .slide__image {
     /* want images to span whole viewport width smaller devices */
     width: 100vw;
