@@ -2,10 +2,8 @@
   /* col-end 4 - halfway across the page */
   grid-column: full-start / col-end 4;
   @media only screen and (max-width: $bp-large) {
-    .banner {
-      /* want it to span whole page on smaller devices */
-      grid-column: full-start / full-end;
-    }
+    /* want it to span whole page on smaller devices */
+    grid-column: full-start / full-end;
   }
 }
 
@@ -26,10 +24,8 @@
     // we want animation to be played infinitely, hence animation iteration 'infinite'
     animation: slideshow 15s infinite;
     @media only screen and (max-width: $bp-large) {
-      .slideshow__wrapper {
-        width: 400vw;
-        animation: slideshowSmallViewport 15s infinite;
-      }
+      width: 400vw;
+      animation: slideshowSmallViewport 15s infinite;
     }
   }
 }
@@ -42,13 +38,10 @@
     /* image keeps its aspect ratio (so not stretched) and fills the given dimension. Image = clipped to fit */
     object-fit: cover;
     position: relative;
-  }
-}
-
-@media only screen and (max-width: $bp-large) {
-  .slide__image {
-    /* want images to span whole viewport width smaller devices */
-    width: 100vw;
+    @media only screen and (max-width: $bp-large) {
+      /* want images to span whole viewport width smaller devices */
+      width: 100vw;
+    }
   }
 }
 

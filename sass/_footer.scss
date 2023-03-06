@@ -2,4 +2,7 @@
   background-color: $color-primary-dark;
   /* goes all the way from one end to the other end full bleed section */
   grid-column: full-start / full-end;
+  @media only screen and (max-width: $bp-large) {
+    grid-row: 10 /11;
+  }
 }

@@ -20,6 +20,7 @@
     /* MEDIA QUERY - when width of screen is 62.5rem ($bp-large) */
     @media only screen and (max-width: $bp-large) {
       grid-column: full-start / full-end;
+      grid-row: 8 / 9;
       padding: 5rem;
     }
   }
@@ -70,7 +71,7 @@
     @media only screen and (max-width: $bp-large) {
       grid-column: full-start / full-end;
       // swap around the graffiti art description with the images below it
-      grid-row: 5 / 6;
+      grid-row: 9 / 10;
     }
   }
 

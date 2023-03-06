@@ -17,6 +17,7 @@
   /* MEDIA QUERY - when width of screen is 87.5rem ($bp-largest) */
   @media only screen and (max-width: $bp-largest) {
     grid-column: full-start / full-end;
+    grid-row: 6 / 7;
   }
   &__list {
     display: grid;

@@ -34,7 +34,7 @@ body {
   /* AFTER NOTES */ }
   @media only screen and (max-width: 62.5em) {
     .container {
-      grid-template-rows: 10rem 10rem calc(100vh - 20rem) calc(100vh - 20rem); } }
+      grid-template-rows: 10rem 10rem calc(100vh - 20rem) calc(100vh - 20rem) calc( 100vh - 20rem); } }
 
 .features {
   /* features go from center-start to center-end - beginning to end of centre 8 grid */
@@ -50,7 +50,8 @@ body {
   /* large being 87.5em - 1400px */ }
   @media only screen and (max-width: 87.5em) {
     .features {
-      margin: 5rem 0; } }
+      margin: 5rem 0;
+      grid-row: 7 / 8; } }
 
 .feature {
   /* Need to make the feature elements themselves individual grids */
@@ -70,12 +71,15 @@ body {
   background-color: #0a19a1;
   /* goes all the way from one end to the other end full bleed section */
   grid-column: full-start / full-end; }
+  @media only screen and (max-width: 62.5em) {
+    .footer {
+      grid-row: 10 /11; } }
 
 .banner {
   /* col-end 4 - halfway across the page */
   grid-column: full-start / col-end 4; }
   @media only screen and (max-width: 62.5em) {
-    .banner .banner {
+    .banner {
       /* want it to span whole page on smaller devices */
       grid-column: full-start / full-end; } }
 
@@ -95,7 +99,7 @@ body {
     /* define animation property for wrapper as slideshow with the duration of 15 seconds */
     animation: slideshow 15s infinite; }
     @media only screen and (max-width: 62.5em) {
-      .slideshow__wrapper .slideshow__wrapper {
+      .slideshow__wrapper {
         width: 400vw;
         animation: slideshowSmallViewport 15s infinite; } }
 
@@ -106,11 +110,10 @@ body {
   /* image keeps its aspect ratio (so not stretched) and fills the given dimension. Image = clipped to fit */
   object-fit: cover;
   position: relative; }
-
-@media only screen and (max-width: 62.5em) {
-  .slide__image {
-    /* want images to span whole viewport width smaller devices */
-    width: 100vw; } }
+  @media only screen and (max-width: 62.5em) {
+    .slide__image {
+      /* want images to span whole viewport width smaller devices */
+      width: 100vw; } }
 
 .slide__image::after {
   height: 100%;
@@ -269,7 +272,8 @@ left position as 0. This is for 0 to 5% of the animation */
   /* MEDIA QUERY - when width of screen is 87.5rem ($bp-largest) */ }
   @media only screen and (max-width: 87.5em) {
     .players {
-      grid-column: full-start / full-end; } }
+      grid-column: full-start / full-end;
+      grid-row: 6 / 7; } }
   .players__list {
     display: grid;
     /* first column for images, second for the text */
@@ -577,6 +581,7 @@ left position as 0. This is for 0 to 5% of the animation */
     @media only screen and (max-width: 62.5em) {
       .story__pictures {
         grid-column: full-start / full-end;
+        grid-row: 8 / 9;
         padding: 5rem; } }
   .story__img--1 {
     width: 100%;
@@ -612,7 +617,7 @@ left position as 0. This is for 0 to 5% of the animation */
     @media only screen and (max-width: 62.5em) {
       .story__content {
         grid-column: full-start / full-end;
-        grid-row: 5 / 6; } }
+        grid-row: 9 / 10; } }
   .story__text {
     font-size: 1.5rem;
     margin-bottom: 4rem; }
@@ -671,6 +676,9 @@ left position as 0. This is for 0 to 5% of the animation */
 .sea-serpent__container {
   grid-column: col-end 4 / full-end;
   display: grid; }
+  @media only screen and (max-width: 62.5em) {
+    .sea-serpent__container {
+      grid-column: full-start / full-end; } }
 
 .sea-serpent__content {
   background-color: red; }
