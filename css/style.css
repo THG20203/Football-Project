@@ -32,7 +32,7 @@ body {
   grid-template-rows: 10rem 10rem 80vh 80vh min-content repeat(2, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   /* AFTER NOTES */ }
-  @media only screen and (max-width: 62.5em) {
+  @media only screen and (max-width: 87.5em) {
     .container {
       grid-template-rows: 10rem 10rem calc(100vh - 20rem) calc(100vh - 20rem) calc( 100vh - 20rem); } }
 
@@ -71,14 +71,14 @@ body {
   background-color: #0a19a1;
   /* goes all the way from one end to the other end full bleed section */
   grid-column: full-start / full-end; }
-  @media only screen and (max-width: 62.5em) {
+  @media only screen and (max-width: 87.5em) {
     .footer {
       grid-row: 10 /11; } }
 
 .banner {
   /* col-end 4 - halfway across the page */
   grid-column: full-start / col-end 4; }
-  @media only screen and (max-width: 62.5em) {
+  @media only screen and (max-width: 87.5em) {
     .banner {
       /* want it to span whole page on smaller devices */
       grid-column: full-start / full-end; } }
@@ -98,7 +98,7 @@ body {
     position: relative;
     /* define animation property for wrapper as slideshow with the duration of 15 seconds */
     animation: slideshow 15s infinite; }
-    @media only screen and (max-width: 62.5em) {
+    @media only screen and (max-width: 87.5em) {
       .slideshow__wrapper {
         width: 400vw;
         animation: slideshowSmallViewport 15s infinite; } }
@@ -110,7 +110,7 @@ body {
   /* image keeps its aspect ratio (so not stretched) and fills the given dimension. Image = clipped to fit */
   object-fit: cover;
   position: relative; }
-  @media only screen and (max-width: 62.5em) {
+  @media only screen and (max-width: 87.5em) {
     .slide__image {
       /* want images to span whole viewport width smaller devices */
       width: 100vw; } }
@@ -193,32 +193,32 @@ left position as 0. This is for 0 to 5% of the animation */
   /* position absolute will put one button on top of another so need to move them individually */
   /* remember the quarter of the way across the page is 25% so want 22, 24, 26 and 28 of the way across 
     the viewport, to center it albeit in a slideshow spanning halfway the viewport 50vw */ }
-  @media only screen and (max-width: 62.5em) {
+  @media only screen and (max-width: 87.5em) {
     .slide__btn {
       top: 80%; } }
-  @media only screen and (max-width: 62.5em) {
+  @media only screen and (max-width: 87.5em) {
     .slide__btn {
       /* make buttons bigger on smaller devices so they're easier to click on phones */
       width: 1.8rem;
       height: 1.8rem; } }
   .slide__btn--1 {
     left: 22%; }
-    @media only screen and (max-width: 62.5em) {
+    @media only screen and (max-width: 87.5em) {
       .slide__btn--1 {
         left: 38%; } }
   .slide__btn--2 {
     left: 24%; }
-    @media only screen and (max-width: 62.5em) {
+    @media only screen and (max-width: 87.5em) {
       .slide__btn--2 {
         left: 46%; } }
   .slide__btn--3 {
     left: 26%; }
-    @media only screen and (max-width: 62.5em) {
+    @media only screen and (max-width: 87.5em) {
       .slide__btn--3 {
         left: 54%; } }
   .slide__btn--4 {
     left: 28%; }
-    @media only screen and (max-width: 62.5em) {
+    @media only screen and (max-width: 87.5em) {
       .slide__btn--4 {
         left: 62%; } }
 
@@ -237,7 +237,7 @@ left position as 0. This is for 0 to 5% of the animation */
   animation: none;
   /* when we focus on second button, we need to display second image */
   left: -50vw; }
-  @media only screen and (max-width: 62.5em) {
+  @media only screen and (max-width: 87.5em) {
     .slide__btn--2:focus ~ .slideshow__wrapper {
       /* viewport width of images is npw 100vw - so to click through each one need -100vw */
       left: -100vw; } }
@@ -247,7 +247,7 @@ left position as 0. This is for 0 to 5% of the animation */
   animation: none;
   /* when we focus on third button, we need to display third image */
   left: -100vw; }
-  @media only screen and (max-width: 62.5em) {
+  @media only screen and (max-width: 87.5em) {
     .slide__btn--3:focus ~ .slideshow__wrapper {
       left: -200vw; } }
 
@@ -256,7 +256,7 @@ left position as 0. This is for 0 to 5% of the animation */
   animation: none;
   /* when we focus on fourth button, we need to display fourth image */
   left: -150vw; }
-  @media only screen and (max-width: 62.5em) {
+  @media only screen and (max-width: 87.5em) {
     .slide__btn--4:focus ~ .slideshow__wrapper {
       left: -300vw; } }
 
@@ -578,7 +578,7 @@ left position as 0. This is for 0 to 5% of the animation */
     grid-template-columns: repeat(6, 1fr);
     align-items: center;
     /* MEDIA QUERY - when width of screen is 62.5rem ($bp-large) */ }
-    @media only screen and (max-width: 62.5em) {
+    @media only screen and (max-width: 87.5em) {
       .story__pictures {
         grid-column: full-start / full-end;
         grid-row: 8 / 9;
@@ -588,7 +588,7 @@ left position as 0. This is for 0 to 5% of the animation */
     grid-row: 2 / 6;
     grid-column: 1 / 5;
     /* large being 62.5em - 1000px */ }
-    @media only screen and (max-width: 62.5em) {
+    @media only screen and (max-width: 87.5em) {
       .story__img--1 {
         grid-column: 1 / 4;
         grid-row: 1 / -1;
@@ -600,7 +600,7 @@ left position as 0. This is for 0 to 5% of the animation */
     grid-row: 1 / 5;
     grid-column: 4 / 7;
     /* large being 62.5em - 1000px */ }
-    @media only screen and (max-width: 62.5em) {
+    @media only screen and (max-width: 87.5em) {
       .story__img--2 {
         grid-row: 1 / -1;
         width: 100%;
@@ -614,7 +614,7 @@ left position as 0. This is for 0 to 5% of the animation */
     justify-content: center;
     align-items: flex-start;
     /* large being 62.5em - 1000px */ }
-    @media only screen and (max-width: 62.5em) {
+    @media only screen and (max-width: 87.5em) {
       .story__content {
         grid-column: full-start / full-end;
         grid-row: 9 / 10; } }

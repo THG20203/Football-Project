@@ -18,7 +18,7 @@
     // needs to be done cause images have aspect ratio - need to be aligned.
     align-items: center;
     /* MEDIA QUERY - when width of screen is 62.5rem ($bp-large) */
-    @media only screen and (max-width: $bp-large) {
+    @media only screen and (max-width: $bp-largest) {
       grid-column: full-start / full-end;
       grid-row: 8 / 9;
       padding: 5rem;
@@ -31,7 +31,7 @@
     grid-column: 1 / 5;
     /* large being 62.5em - 1000px */
     // we have a 6x6 grid so lets put this image starting on grid column 1 to end at grid column 3
-    @media only screen and (max-width: $bp-large) {
+    @media only screen and (max-width: $bp-largest) {
       grid-column: 1 / 4;
       // row - from the start to the end (could have used full-start / full end)
       grid-row: 1 / -1;
@@ -46,7 +46,7 @@
     grid-row: 1 / 5;
     grid-column: 4 / 7;
     /* large being 62.5em - 1000px */
-    @media only screen and (max-width: $bp-large) {
+    @media only screen and (max-width: $bp-largest) {
       // row - from the start to the end (could have used full-start / full end)
       grid-row: 1 / -1;
       // don't want width of 110%
@@ -68,7 +68,7 @@
     /* large being 62.5em - 1000px */
     // Could've done this with grid - display: grid, align-content: center
     // equivalent of align-items? justify-items: start - align rows in grid
-    @media only screen and (max-width: $bp-large) {
+    @media only screen and (max-width: $bp-largest) {
       grid-column: full-start / full-end;
       // swap around the graffiti art description with the images below it
       grid-row: 9 / 10;

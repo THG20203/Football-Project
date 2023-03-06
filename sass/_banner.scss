@@ -1,7 +1,7 @@
 .banner {
   /* col-end 4 - halfway across the page */
   grid-column: full-start / col-end 4;
-  @media only screen and (max-width: $bp-large) {
+  @media only screen and (max-width: $bp-largest) {
     /* want it to span whole page on smaller devices */
     grid-column: full-start / full-end;
   }
@@ -23,7 +23,7 @@
     /* define animation property for wrapper as slideshow with the duration of 15 seconds */
     // we want animation to be played infinitely, hence animation iteration 'infinite'
     animation: slideshow 15s infinite;
-    @media only screen and (max-width: $bp-large) {
+    @media only screen and (max-width: $bp-largest) {
       width: 400vw;
       animation: slideshowSmallViewport 15s infinite;
     }
@@ -38,7 +38,7 @@
     /* image keeps its aspect ratio (so not stretched) and fills the given dimension. Image = clipped to fit */
     object-fit: cover;
     position: relative;
-    @media only screen and (max-width: $bp-large) {
+    @media only screen and (max-width: $bp-largest) {
       /* want images to span whole viewport width smaller devices */
       width: 100vw;
     }
@@ -143,14 +143,14 @@ left position as 0. This is for 0 to 5% of the animation */
     outline: none;
     position: absolute;
     top: 90%;
-    @media only screen and (max-width: $bp-large) {
+    @media only screen and (max-width: $bp-largest) {
       top: 80%;
     }
     /* perfect positioning horizontally */
     transform: translateX(-50%);
     /* want to put the buttons on top of the slideshow */
     z-index: 2;
-    @media only screen and (max-width: $bp-large) {
+    @media only screen and (max-width: $bp-largest) {
       /* make buttons bigger on smaller devices so they're easier to click on phones */
       width: 1.8rem;
       height: 1.8rem;
@@ -160,25 +160,25 @@ left position as 0. This is for 0 to 5% of the animation */
     the viewport, to center it albeit in a slideshow spanning halfway the viewport 50vw */
     &--1 {
       left: 22%;
-      @media only screen and (max-width: $bp-large) {
+      @media only screen and (max-width: $bp-largest) {
         left: 38%;
       }
     }
     &--2 {
       left: 24%;
-      @media only screen and (max-width: $bp-large) {
+      @media only screen and (max-width: $bp-largest) {
         left: 46%;
       }
     }
     &--3 {
       left: 26%;
-      @media only screen and (max-width: $bp-large) {
+      @media only screen and (max-width: $bp-largest) {
         left: 54%;
       }
     }
     &--4 {
       left: 28%;
-      @media only screen and (max-width: $bp-large) {
+      @media only screen and (max-width: $bp-largest) {
         left: 62%;
       }
     }
@@ -202,7 +202,7 @@ left position as 0. This is for 0 to 5% of the animation */
   animation: none;
   /* when we focus on second button, we need to display second image */
   left: -50vw;
-  @media only screen and (max-width: $bp-large) {
+  @media only screen and (max-width: $bp-largest) {
     /* viewport width of images is npw 100vw - so to click through each one need -100vw */
     left: -100vw;
   }
@@ -213,7 +213,7 @@ left position as 0. This is for 0 to 5% of the animation */
   animation: none;
   /* when we focus on third button, we need to display third image */
   left: -100vw;
-  @media only screen and (max-width: $bp-large) {
+  @media only screen and (max-width: $bp-largest) {
     left: -200vw;
   }
 }
@@ -223,7 +223,7 @@ left position as 0. This is for 0 to 5% of the animation */
   animation: none;
   /* when we focus on fourth button, we need to display fourth image */
   left: -150vw;
-  @media only screen and (max-width: $bp-large) {
+  @media only screen and (max-width: $bp-largest) {
     left: -300vw;
   }
 }
