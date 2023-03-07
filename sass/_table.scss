@@ -3,7 +3,11 @@
     /* this section to go from column 8 to the right side of the viewport horzionatally */
     grid-column: col-end 8 / full-end;
     background-color: $color-secondary;
-    background-image: url(../img/identity/football-badge-white.png);
+    background-image: linear-gradient(
+        rgba($color-grey-1, 0.1),
+        rgba($color-grey-1, 0.1)
+      ),
+      url(../img/identity/football-badge-white.png);
     background-position: center;
     background-size: cover;
     position: relative;
