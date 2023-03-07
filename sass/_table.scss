@@ -1,7 +1,7 @@
 .table {
   &__container {
     grid-column: col-end 8 / full-end;
-    background-color: $color-grey-2;
+    background-color: $color-secondary;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,8 +12,8 @@
   }
   &__cube {
     position: relative;
-    width: 8rem;
-    height: 8rem;
+    width: 7rem;
+    height: 7rem;
     &--item {
       position: absolute;
       top: 0;
@@ -21,7 +21,7 @@
       display: block;
       width: 100%;
       height: 100%;
-      background-color: red;
+      background-color: $color-grey-1;
     }
     &--1 {
     }
