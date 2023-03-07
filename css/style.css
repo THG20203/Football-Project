@@ -675,7 +675,19 @@ left position as 0. This is for 0 to 5% of the animation */
 
 .table__container {
   grid-column: col-end 8 / full-end;
-  background-color: #aaa; }
+  background-color: #aaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+
+.table__row {
+  position: relative; }
+
+.table__cube {
+  position: relative;
+  width: 10rem;
+  height: 10rem; }
 
 .ss-corp__container {
   grid-column: col-end 4 / col-end 8;
