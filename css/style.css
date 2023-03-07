@@ -674,20 +674,33 @@ left position as 0. This is for 0 to 5% of the animation */
   margin-bottom: 8rem; }
 
 .table__container {
+  /* this section to go from column 8 to the right side of the viewport horzionatally */
   grid-column: col-end 8 / full-end;
   background-color: #101d2c;
   display: flex;
+  /* align content center horizontally in flex */
   justify-content: center;
+  /* align content center vertically in flex */
   align-items: center;
-  position: relative; }
+  position: relative;
+  /* height of the container */
+  min-height: 70vh;
+  /* overflow is clipped at height of the container - rest is hidden */
+  overflow: hidden; }
 
 .table__row {
-  position: relative; }
+  position: relative;
+  /* display inline-flex - makes the flex container display inline */
+  /* inline meaning - element display inline - inside the current block on the same line */
+  /* this will make the container display in a row */
+  display: inline-flex; }
 
 .table__cube {
   position: relative;
-  width: 7rem;
-  height: 7rem; }
+  /* dimensions below are for overall cude shape - each polygon side going to fit within this */
+  width: 10rem;
+  height: 10rem;
+  /* item being each individual side of the cube */ }
   .table__cube--item {
     position: absolute;
     top: 0;
@@ -697,10 +710,13 @@ left position as 0. This is for 0 to 5% of the animation */
     height: 100%;
     background-color: #f9f7f6; }
   .table__cube--1 {
+    /* top of the cube */
     clip-path: polygon(50% 0%, 100% 25%, 50% 50%, 0 25%); }
   .table__cube--2 {
+    /* left side of cube */
     clip-path: polygon(0 75%, 50% 100%, 50% 50%, 0 25%); }
     .table__cube--2::before {
+      /* setting styles for before element to change the background-color to distinguish from rest of code */
       content: '';
       position: absolute;
       top: 0%;
@@ -709,8 +725,10 @@ left position as 0. This is for 0 to 5% of the animation */
       height: 100%;
       background-color: #aaa; }
   .table__cube--3 {
+    /* right side of cube */
     clip-path: polygon(100% 75%, 50% 100%, 50% 50%, 100% 25%); }
     .table__cube--3::before {
+      /* setting styles for before element to change the background-color to distinguish from rest of code */
       content: '';
       position: absolute;
       top: 0%;
