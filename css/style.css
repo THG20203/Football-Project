@@ -673,6 +673,10 @@ left position as 0. This is for 0 to 5% of the animation */
 .mb-hg {
   margin-bottom: 8rem; }
 
+.table__container {
+  grid-column: col-end 8 / full-end;
+  background-color: #aaa; }
+
 .ss-corp__container {
   grid-column: col-end 4 / col-end 8;
   display: grid;
@@ -682,6 +686,8 @@ left position as 0. This is for 0 to 5% of the animation */
   grid-row: 1 /2;
   background-image: url(../img/sea-serpent.png);
   background-repeat: no-repeat;
+  /* first value = horizontal position. second = vertical. Top left corner = 0% 0%, 
+    right corner = 100% 100% */
   background-position: 50% 60%;
   background-size: cover; }
   @media only screen and (max-width: 62.5em) {

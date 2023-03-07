@@ -9,6 +9,8 @@
     grid-row: 1 /2;
     background-image: url(../img/sea-serpent.png);
     background-repeat: no-repeat;
+    /* first value = horizontal position. second = vertical. Top left corner = 0% 0%, 
+    right corner = 100% 100% */
     background-position: 50% 60%;
     background-size: cover;
     @media only screen and (max-width: $bp-large) {
