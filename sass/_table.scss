@@ -8,6 +8,10 @@
     grid-row: 1 /2;
     background-color: $color-primary-dark;
     display: flex;
+    /* align title horizontally */
+    justify-content: center;
+    /* align title vertically */
+    align-items: center;
   }
 }
 
@@ -25,6 +29,11 @@
     background-size: cover;
     /* overflow is clipped at height of the container - rest is hidden */
     overflow: hidden;
+    display: grid;
+    /* need to use grid to centre cubes vertically */
+    align-items: center;
+    /* need to use grid to centre cubes horiztonally */
+    justify-content: center;
   }
   &__row {
     /* display inline-flex - makes the flex container display inline */
