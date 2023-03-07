@@ -2,12 +2,7 @@
   &__container {
     /* this section to go from column 8 to the right side of the viewport horzionatally */
     grid-column: col-end 8 / full-end;
-    background-color: $color-secondary;
-    display: flex;
-    /* align content center horizontally in flex */
-    justify-content: center;
-    /* align content center vertically in flex */
-    align-items: center;
+    background-color: $color-grey-2;
     position: relative;
     /* height of the container */
     min-height: 70vh;
@@ -15,7 +10,6 @@
     overflow: hidden;
   }
   &__row {
-    position: relative;
     /* display inline-flex - makes the flex container display inline */
     /* inline meaning - element display inline - inside the current block on the same line */
     /* this will make the container display in a row */

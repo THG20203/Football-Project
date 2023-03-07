@@ -676,12 +676,7 @@ left position as 0. This is for 0 to 5% of the animation */
 .table__container {
   /* this section to go from column 8 to the right side of the viewport horzionatally */
   grid-column: col-end 8 / full-end;
-  background-color: #101d2c;
-  display: flex;
-  /* align content center horizontally in flex */
-  justify-content: center;
-  /* align content center vertically in flex */
-  align-items: center;
+  background-color: #aaa;
   position: relative;
   /* height of the container */
   min-height: 70vh;
@@ -689,7 +684,6 @@ left position as 0. This is for 0 to 5% of the animation */
   overflow: hidden; }
 
 .table__row {
-  position: relative;
   /* display inline-flex - makes the flex container display inline */
   /* inline meaning - element display inline - inside the current block on the same line */
   /* this will make the container display in a row */
