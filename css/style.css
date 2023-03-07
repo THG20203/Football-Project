@@ -673,15 +673,21 @@ left position as 0. This is for 0 to 5% of the animation */
 .mb-hg {
   margin-bottom: 8rem; }
 
-.sea-serpent__container {
-  grid-column: col-end 4 / full-end;
-  display: grid; }
-  @media only screen and (max-width: 62.5em) {
-    .sea-serpent__container {
-      grid-column: full-start / full-end; } }
+.ss-corp__container {
+  grid-column: col-end 4 / col-end 8;
+  display: grid;
+  grid-template-rows: 65% 35%; }
 
 .sea-serpent__content {
+  grid-row: 1 /2;
   background-image: url(../img/sea-serpent.png);
   background-repeat: no-repeat;
   background-position: 50% 60%;
   background-size: cover; }
+  @media only screen and (max-width: 62.5em) {
+    .sea-serpent__content {
+      grid-column: full-start / full-end; } }
+
+.corporate__container {
+  grid-row: 2 /3;
+  background-color: black; }
