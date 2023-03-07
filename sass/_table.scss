@@ -1,8 +1,21 @@
+.table-cube {
+  &__container {
+    grid-column: col-end 8 / full-end;
+    display: grid;
+    grid-template-rows: 15rem calc(80vh - 15rem);
+  }
+  &__title {
+    grid-row: 1 /2;
+    background-color: $color-primary-dark;
+    display: flex;
+  }
+}
+
 .cube {
   &__container {
     /* this section to go from column 8 to the right side of the viewport horzionatally */
-    grid-column: col-end 8 / full-end;
     background-color: $color-secondary;
+    grid-row: 2 / 3;
     background-image: linear-gradient(
         rgba($color-grey-1, 0.2),
         rgba($color-grey-1, 0.2)
@@ -10,9 +23,6 @@
       url(../img/identity/football-badge-white.png);
     background-position: center;
     background-size: cover;
-    position: relative;
-    /* height of the container */
-    min-height: 70vh;
     /* overflow is clipped at height of the container - rest is hidden */
     overflow: hidden;
   }

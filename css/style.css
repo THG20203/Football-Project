@@ -673,19 +673,26 @@ left position as 0. This is for 0 to 5% of the animation */
 .mb-hg {
   margin-bottom: 8rem; }
 
+.table-cube__container {
+  grid-column: col-end 8 / full-end;
+  display: grid;
+  grid-template-rows: 15rem calc(80vh - 15rem); }
+
+.table-cube__title {
+  grid-row: 1 /2;
+  background-color: #0a19a1;
+  display: flex; }
+
 .cube {
   /* dimensions below are for overall cube shape - each polygon side going to fit within this */
   /* item being each individual side of the cube */ }
   .cube__container {
     /* this section to go from column 8 to the right side of the viewport horzionatally */
-    grid-column: col-end 8 / full-end;
     background-color: #101d2c;
+    grid-row: 2 / 3;
     background-image: linear-gradient(rgba(249, 247, 246, 0.2), rgba(249, 247, 246, 0.2)), url(../img/identity/football-badge-white.png);
     background-position: center;
     background-size: cover;
-    position: relative;
-    /* height of the container */
-    min-height: 70vh;
     /* overflow is clipped at height of the container - rest is hidden */
     overflow: hidden; }
   .cube__row {
