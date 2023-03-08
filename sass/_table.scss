@@ -1,7 +1,7 @@
 .table {
   &__container {
     display: grid;
-    grid-template-rows: 15rem calc(80vh - 15rem);
+    grid-template-rows: 5rem calc(80vh - 5rem);
   }
   &__title {
     grid-row: 1 /2;
@@ -20,6 +20,7 @@
   justify-content: center;
   /* align content vertically */
   align-content: center;
+  /* collapse all table borders into single border */
   border-collapse: collapse;
 }
 
@@ -28,20 +29,21 @@ td {
   padding: 1rem;
 }
 
-th {
-  background-color: black;
-  color: $color-primary;
+tr {
+  background-color: $color-grey-1;
+  font-size: 1.5rem;
+  &:hover {
+    background-color: red;
+  }
 }
 
 .wpos {
   text-align: center;
-}
-.wpos td {
-  color: #77ff21;
-}
-
-.wpos:hover {
-  background-color: #77ff21;
+  color: red;
+  &:hover {
+    cursor: pointer;
+    color: white;
+  }
 }
 
 .wpos:hover td {
