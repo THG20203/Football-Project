@@ -8,8 +8,8 @@
   &__content {
     grid-row: 1 /2;
     background-image: linear-gradient(
-        rgba($color-grey-1, 0.3),
-        rgba($color-grey-1, 0.3)
+        rgba($color-primary, 0.2),
+        rgba($color-primary-dark, 0.5)
       ),
       url(../img/sea-serpent.png);
     background-repeat: no-repeat;

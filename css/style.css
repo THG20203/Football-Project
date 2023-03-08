@@ -729,7 +729,7 @@ td {
 
 .sea-serpent__content {
   grid-row: 1 /2;
-  background-image: linear-gradient(rgba(249, 247, 246, 0.3), rgba(249, 247, 246, 0.3)), url(../img/sea-serpent.png);
+  background-image: linear-gradient(rgba(12, 34, 232, 0.2), rgba(10, 25, 161, 0.5)), url(../img/sea-serpent.png);
   background-repeat: no-repeat;
   /* first value = horizontal position. second = vertical. Top left corner = 0% 0%, 
     right corner = 100% 100% */
