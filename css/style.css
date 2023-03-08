@@ -733,10 +733,6 @@ table .col {
     .sea-serpent__content {
       grid-column: full-start / full-end; } }
 
-.corporate__container {
-  grid-row: 2 /3;
-  background-color: black; }
-
 .cube {
   /* dimensions below are for overall cube shape - each polygon side going to fit within this */
   /* item being each individual side of the cube */ }
@@ -748,9 +744,9 @@ table .col {
     overflow: hidden;
     display: grid;
     /* need to use grid to centre cubes vertically */
-    align-items: center;
-    /* need to use grid to centre cubes horiztonally */
-    justify-content: center; }
+    align-items: start;
+    /* need to use grid to move cubes to the left horizontally */
+    justify-content: start; }
   .cube__row {
     /* display inline-flex - makes the flex container display inline */
     /* inline meaning - element display inline - inside the current block on the same line */

@@ -19,13 +19,6 @@
   }
 }
 
-.corporate {
-  &__container {
-    grid-row: 2 /3;
-    background-color: black;
-  }
-}
-
 .cube {
   &__container {
     /* this section to go from column 8 to the right side of the viewport horzionatally */
@@ -35,9 +28,9 @@
     overflow: hidden;
     display: grid;
     /* need to use grid to centre cubes vertically */
-    align-items: center;
-    /* need to use grid to centre cubes horiztonally */
-    justify-content: center;
+    align-items: start;
+    /* need to use grid to move cubes to the left horizontally */
+    justify-content: start;
   }
   &__row {
     /* display inline-flex - makes the flex container display inline */
