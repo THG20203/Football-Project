@@ -97,11 +97,11 @@ body {
     as relative i.e. to move the wrapper left */
     position: relative;
     /* define animation property for wrapper as slideshow with the duration of 15 seconds */
-    animation: slideshow 15s infinite; }
+    animation: slideshow 20s infinite; }
     @media only screen and (max-width: 87.5em) {
       .slideshow__wrapper {
         width: 400vw;
-        animation: slideshowSmallViewport 15s infinite; } }
+        animation: slideshowSmallViewport 20s infinite; } }
 
 .slide__image {
   height: 100%;
@@ -673,12 +673,11 @@ left position as 0. This is for 0 to 5% of the animation */
 .mb-hg {
   margin-bottom: 8rem; }
 
-.table-cube__container {
-  grid-column: col-end 8 / full-end;
+.table__container {
   display: grid;
   grid-template-rows: 15rem calc(80vh - 15rem); }
 
-.table-cube__title {
+.table__title {
   grid-row: 1 /2;
   background-color: #0a19a1;
   display: flex;
@@ -687,16 +686,64 @@ left position as 0. This is for 0 to 5% of the animation */
   /* align title vertically */
   align-items: center; }
 
+.ptable table {
+  margin: 30px auto;
+  border-collapse: collapse; }
+
+.ptable {
+  margin: 0px 0% 30px 0%; }
+
+th,
+td {
+  padding: 1rem; }
+
+th {
+  background-color: black;
+  color: #0c22e8; }
+
+.wpos {
+  text-align: center; }
+
+.wpos td {
+  color: #77ff21; }
+
+.wpos:hover {
+  background-color: #77ff21; }
+
+.wpos:hover td {
+  color: #000000; }
+
+table .col {
+  border-bottom: 1px solid #ffffff; }
+
+.ss-corp__container {
+  grid-column: col-end 4 / col-end 8;
+  display: grid;
+  grid-template-rows: 65% 35%; }
+
+.sea-serpent__content {
+  grid-row: 1 /2;
+  background-image: url(../img/sea-serpent.png);
+  background-repeat: no-repeat;
+  /* first value = horizontal position. second = vertical. Top left corner = 0% 0%, 
+    right corner = 100% 100% */
+  background-position: 50% 60%;
+  background-size: cover; }
+  @media only screen and (max-width: 62.5em) {
+    .sea-serpent__content {
+      grid-column: full-start / full-end; } }
+
+.corporate__container {
+  grid-row: 2 /3;
+  background-color: black; }
+
 .cube {
   /* dimensions below are for overall cube shape - each polygon side going to fit within this */
   /* item being each individual side of the cube */ }
   .cube__container {
     /* this section to go from column 8 to the right side of the viewport horzionatally */
-    background-color: #101d2c;
+    background-color: #0a19a1;
     grid-row: 2 / 3;
-    background-image: linear-gradient(rgba(249, 247, 246, 0.2), rgba(249, 247, 246, 0.2)), url(../img/identity/football-badge-white.png);
-    background-position: center;
-    background-size: cover;
     /* overflow is clipped at height of the container - rest is hidden */
     overflow: hidden;
     display: grid;
@@ -712,8 +759,8 @@ left position as 0. This is for 0 to 5% of the animation */
     opacity: 0.9; }
   .cube__shape {
     position: relative;
-    width: 10rem;
-    height: 10rem; }
+    width: 5rem;
+    height: 5rem; }
   .cube__item {
     position: absolute;
     top: 0;
@@ -727,7 +774,7 @@ left position as 0. This is for 0 to 5% of the animation */
       /* top of the cube */
       clip-path: polygon(50% 0%, 100% 25%, 50% 50%, 0 25%); }
       .cube__item--1:hover {
-        background-color: #0a19a1;
+        background-color: #0c22e8;
         transition: 0s; }
     .cube__item--2 {
       /* left side of cube */
@@ -753,24 +800,3 @@ left position as 0. This is for 0 to 5% of the animation */
         width: 100%;
         height: 100%;
         background-color: #aaa; }
-
-.ss-corp__container {
-  grid-column: col-end 4 / col-end 8;
-  display: grid;
-  grid-template-rows: 65% 35%; }
-
-.sea-serpent__content {
-  grid-row: 1 /2;
-  background-image: url(../img/sea-serpent.png);
-  background-repeat: no-repeat;
-  /* first value = horizontal position. second = vertical. Top left corner = 0% 0%, 
-    right corner = 100% 100% */
-  background-position: 50% 60%;
-  background-size: cover; }
-  @media only screen and (max-width: 62.5em) {
-    .sea-serpent__content {
-      grid-column: full-start / full-end; } }
-
-.corporate__container {
-  grid-row: 2 /3;
-  background-color: black; }

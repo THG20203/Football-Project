@@ -1,6 +1,5 @@
-.table-cube {
+.table {
   &__container {
-    grid-column: col-end 8 / full-end;
     display: grid;
     grid-template-rows: 15rem calc(80vh - 15rem);
   }
@@ -15,84 +14,40 @@
   }
 }
 
-.cube {
-  &__container {
-    /* this section to go from column 8 to the right side of the viewport horzionatally */
-    background-color: $color-secondary;
-    grid-row: 2 / 3;
-    background-image: linear-gradient(
-        rgba($color-grey-1, 0.2),
-        rgba($color-grey-1, 0.2)
-      ),
-      url(../img/identity/football-badge-white.png);
-    background-position: center;
-    background-size: cover;
-    /* overflow is clipped at height of the container - rest is hidden */
-    overflow: hidden;
-    display: grid;
-    /* need to use grid to centre cubes vertically */
-    align-items: center;
-    /* need to use grid to centre cubes horiztonally */
-    justify-content: center;
-  }
-  &__row {
-    /* display inline-flex - makes the flex container display inline */
-    /* inline meaning - element display inline - inside the current block on the same line */
-    /* this will make the container display in a row */
-    display: inline-flex;
-    opacity: 0.9;
-  }
-  /* dimensions below are for overall cube shape - each polygon side going to fit within this */
-  &__shape {
-    position: relative;
-    width: 10rem;
-    height: 10rem;
-  }
-  /* item being each individual side of the cube */
-  &__item {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    transition: 2s;
-    &--1 {
-      /* top of the cube */
-      clip-path: polygon(50% 0%, 100% 25%, 50% 50%, 0 25%);
-      &:hover {
-        background-color: $color-primary-dark;
-        transition: 0s;
-      }
-    }
-    &--2 {
-      /* left side of cube */
-      clip-path: polygon(0 75%, 50% 100%, 50% 50%, 0 25%);
-      &::before {
-        /* setting styles for before element to change the background-color to distinguish from rest of code */
-        content: '';
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        width: 100%;
-        height: 100%;
-        background-color: $color-grey-1;
-      }
-    }
-    &--3 {
-      /* right side of cube */
-      clip-path: polygon(100% 75%, 50% 100%, 50% 50%, 100% 25%);
-      &::before {
-        /* setting styles for before element to change the background-color to distinguish from rest of code */
-        content: '';
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        width: 100%;
-        height: 100%;
-        background-color: $color-grey-2;
-      }
-    }
-  }
+.ptable table {
+  margin: 30px auto;
+  border-collapse: collapse;
+}
+
+.ptable {
+  margin: 0px 0% 30px 0%;
+}
+
+th,
+td {
+  padding: 1rem;
+}
+
+th {
+  background-color: black;
+  color: $color-primary;
+}
+
+.wpos {
+  text-align: center;
+}
+.wpos td {
+  color: #77ff21;
+}
+
+.wpos:hover {
+  background-color: #77ff21;
+}
+
+.wpos:hover td {
+  color: #000000;
+}
+
+table .col {
+  border-bottom: 1px solid #ffffff;
 }

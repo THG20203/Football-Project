@@ -25,3 +25,78 @@
     background-color: black;
   }
 }
+
+.cube {
+  &__container {
+    /* this section to go from column 8 to the right side of the viewport horzionatally */
+    background-color: $color-primary-dark;
+    grid-row: 2 / 3;
+    /* overflow is clipped at height of the container - rest is hidden */
+    overflow: hidden;
+    display: grid;
+    /* need to use grid to centre cubes vertically */
+    align-items: center;
+    /* need to use grid to centre cubes horiztonally */
+    justify-content: center;
+  }
+  &__row {
+    /* display inline-flex - makes the flex container display inline */
+    /* inline meaning - element display inline - inside the current block on the same line */
+    /* this will make the container display in a row */
+    display: inline-flex;
+    opacity: 0.9;
+  }
+  /* dimensions below are for overall cube shape - each polygon side going to fit within this */
+  &__shape {
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+  }
+  /* item being each individual side of the cube */
+  &__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transition: 2s;
+    &--1 {
+      /* top of the cube */
+      clip-path: polygon(50% 0%, 100% 25%, 50% 50%, 0 25%);
+      &:hover {
+        background-color: $color-primary;
+        transition: 0s;
+      }
+    }
+    &--2 {
+      /* left side of cube */
+      clip-path: polygon(0 75%, 50% 100%, 50% 50%, 0 25%);
+      &::before {
+        /* setting styles for before element to change the background-color to distinguish from rest of code */
+        content: '';
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: $color-grey-1;
+      }
+    }
+    &--3 {
+      /* right side of cube */
+      clip-path: polygon(100% 75%, 50% 100%, 50% 50%, 100% 25%);
+      &::before {
+        /* setting styles for before element to change the background-color to distinguish from rest of code */
+        content: '';
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: $color-grey-2;
+      }
+    }
+  }
+}

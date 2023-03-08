@@ -22,10 +22,10 @@
     position: relative;
     /* define animation property for wrapper as slideshow with the duration of 15 seconds */
     // we want animation to be played infinitely, hence animation iteration 'infinite'
-    animation: slideshow 15s infinite;
+    animation: slideshow 20s infinite;
     @media only screen and (max-width: $bp-largest) {
       width: 400vw;
-      animation: slideshowSmallViewport 15s infinite;
+      animation: slideshowSmallViewport 20s infinite;
     }
   }
 }
