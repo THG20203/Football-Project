@@ -1,5 +1,6 @@
 .games {
   &__container {
+    grid-column: col-end 7 / full-end;
     display: grid;
     grid-template-rows: 10rem 1fr;
   }

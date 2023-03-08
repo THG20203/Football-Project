@@ -674,6 +674,7 @@ left position as 0. This is for 0 to 5% of the animation */
   margin-bottom: 8rem; }
 
 .games__container {
+  grid-column: col-end 7 / full-end;
   display: grid;
   grid-template-rows: 10rem 1fr; }
 
@@ -723,7 +724,7 @@ table .col {
   border-bottom: 1px solid #ffffff; }
 
 .ss-corp__container {
-  grid-column: col-end 4 / col-end 8;
+  grid-column: col-end 4 / col-end 7;
   display: grid;
   grid-template-rows: 65% 35%; }
 
