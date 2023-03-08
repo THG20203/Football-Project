@@ -686,12 +686,13 @@ left position as 0. This is for 0 to 5% of the animation */
   /* align title vertically */
   align-items: center; }
 
-.ptable table {
-  margin: 30px auto;
-  border-collapse: collapse; }
-
 .ptable {
-  margin: 0px 0% 30px 0%; }
+  display: grid;
+  /* align content horizontally */
+  justify-content: center;
+  /* align content vertically */
+  align-content: center;
+  border-collapse: collapse; }
 
 th,
 td {
