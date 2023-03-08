@@ -20,6 +20,12 @@
 }
 
 .cube {
+  &__header {
+    position: absolute;
+    left: 70%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+  }
   &__container {
     /* this section to go from column 8 to the right side of the viewport horzionatally */
     background-color: white;
@@ -31,6 +37,7 @@
     align-items: start;
     /* need to use grid to move cubes to the left horizontally */
     justify-content: start;
+    position: relative;
   }
   &__row {
     /* display inline-flex - makes the flex container display inline */
