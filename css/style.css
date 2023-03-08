@@ -676,7 +676,7 @@ left position as 0. This is for 0 to 5% of the animation */
 .games__container {
   grid-column: col-end 7 / full-end;
   display: grid;
-  grid-template-rows: 10rem max-content 10rem; }
+  grid-template-rows: 10rem max-content; }
 
 .games__title {
   background-color: #0a19a1;
@@ -687,7 +687,7 @@ left position as 0. This is for 0 to 5% of the animation */
   align-items: center; }
 
 .table__title {
-  grid-row: 1 /2; }
+  grid-row: 1 / 2; }
 
 .table__content {
   display: grid;
@@ -717,7 +717,7 @@ left position as 0. This is for 0 to 5% of the animation */
 
 th,
 td {
-  padding: 1rem; }
+  padding: 1.2rem; }
 
 .match__title {
   grid-row: 3 / 4; }
