@@ -738,7 +738,7 @@ table .col {
   /* item being each individual side of the cube */ }
   .cube__container {
     /* this section to go from column 8 to the right side of the viewport horzionatally */
-    background-color: #0a19a1;
+    background-color: white;
     grid-row: 2 / 3;
     /* overflow is clipped at height of the container - rest is hidden */
     overflow: hidden;
@@ -770,7 +770,7 @@ table .col {
       /* top of the cube */
       clip-path: polygon(50% 0%, 100% 25%, 50% 50%, 0 25%); }
       .cube__item--1:hover {
-        background-color: #0c22e8;
+        background-color: #0a19a1;
         transition: 0s; }
     .cube__item--2 {
       /* left side of cube */

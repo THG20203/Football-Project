@@ -22,7 +22,7 @@
 .cube {
   &__container {
     /* this section to go from column 8 to the right side of the viewport horzionatally */
-    background-color: $color-primary-dark;
+    background-color: white;
     grid-row: 2 / 3;
     /* overflow is clipped at height of the container - rest is hidden */
     overflow: hidden;
@@ -59,7 +59,7 @@
       /* top of the cube */
       clip-path: polygon(50% 0%, 100% 25%, 50% 50%, 0 25%);
       &:hover {
-        background-color: $color-primary;
+        background-color: $color-primary-dark;
         transition: 0s;
       }
     }
