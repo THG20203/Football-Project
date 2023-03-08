@@ -30,7 +30,19 @@
     background-color: $color-grey-1;
     font-size: 1.5rem;
     &:hover {
-      background-color: red;
+      cursor: pointer;
+    }
+    &--THG:hover {
+      background-color: $color-primary-dark;
+      color: $color-grey-1;
+    }
+    &--Lions:hover {
+      background-color: #b31900;
+      color: $color-grey-1;
+    }
+    &--EGFC:hover {
+      background-color: black;
+      color: #f6be00;
     }
   }
 }
@@ -38,15 +50,6 @@
 th,
 td {
   padding: 1rem;
-}
-
-.wpos {
-  text-align: center;
-  color: red;
-  &:hover {
-    cursor: pointer;
-    color: white;
-  }
 }
 
 .wpos:hover td {

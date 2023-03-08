@@ -701,18 +701,20 @@ left position as 0. This is for 0 to 5% of the animation */
   background-color: #f9f7f6;
   font-size: 1.5rem; }
   .table__row:hover {
-    background-color: red; }
+    cursor: pointer; }
+  .table__row--THG:hover {
+    background-color: #0a19a1;
+    color: #f9f7f6; }
+  .table__row--Lions:hover {
+    background-color: #b31900;
+    color: #f9f7f6; }
+  .table__row--EGFC:hover {
+    background-color: black;
+    color: #f6be00; }
 
 th,
 td {
   padding: 1rem; }
-
-.wpos {
-  text-align: center;
-  color: red; }
-  .wpos:hover {
-    cursor: pointer;
-    color: white; }
 
 .wpos:hover td {
   color: #000000; }
