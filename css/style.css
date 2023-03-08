@@ -673,11 +673,11 @@ left position as 0. This is for 0 to 5% of the animation */
 .mb-hg {
   margin-bottom: 8rem; }
 
-.table__container {
+.games__container {
   display: grid;
-  grid-template-rows: 5rem calc(80vh - 5rem); }
+  grid-template-rows: 10rem 1fr; }
 
-.table__title {
+.games__title {
   grid-row: 1 /2;
   background-color: #0a19a1;
   display: flex;
@@ -686,24 +686,26 @@ left position as 0. This is for 0 to 5% of the animation */
   /* align title vertically */
   align-items: center; }
 
-.ptable {
+.table__content {
   display: grid;
-  /* align content horizontally */
-  justify-content: center;
-  /* align content vertically */
-  align-content: center;
+  /* aligin content vertically at start */
+  align-content: start;
   /* collapse all table borders into single border */
   border-collapse: collapse; }
+
+.table__headers {
+  background-color: #aaa;
+  font-size: 1.5rem; }
+
+.table__row {
+  background-color: #f9f7f6;
+  font-size: 1.5rem; }
+  .table__row:hover {
+    background-color: red; }
 
 th,
 td {
   padding: 1rem; }
-
-tr {
-  background-color: #f9f7f6;
-  font-size: 1.5rem; }
-  tr:hover {
-    background-color: red; }
 
 .wpos {
   text-align: center;

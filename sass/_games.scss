@@ -1,7 +1,7 @@
-.table {
+.games {
   &__container {
     display: grid;
-    grid-template-rows: 5rem calc(80vh - 5rem);
+    grid-template-rows: 10rem 1fr;
   }
   &__title {
     grid-row: 1 /2;
@@ -14,27 +14,30 @@
   }
 }
 
-.ptable {
-  display: grid;
-  /* align content horizontally */
-  justify-content: center;
-  /* align content vertically */
-  align-content: center;
-  /* collapse all table borders into single border */
-  border-collapse: collapse;
+.table {
+  &__content {
+    display: grid;
+    /* aligin content vertically at start */
+    align-content: start;
+    /* collapse all table borders into single border */
+    border-collapse: collapse;
+  }
+  &__headers {
+    background-color: $color-grey-2;
+    font-size: 1.5rem;
+  }
+  &__row {
+    background-color: $color-grey-1;
+    font-size: 1.5rem;
+    &:hover {
+      background-color: red;
+    }
+  }
 }
 
 th,
 td {
   padding: 1rem;
-}
-
-tr {
-  background-color: $color-grey-1;
-  font-size: 1.5rem;
-  &:hover {
-    background-color: red;
-  }
 }
 
 .wpos {
