@@ -2,10 +2,9 @@
   &__container {
     grid-column: col-end 7 / full-end;
     display: grid;
-    grid-template-rows: 10rem 1fr;
+    grid-template-rows: 10rem max-content 10rem;
   }
   &__title {
-    grid-row: 1 /2;
     background-color: $color-primary-dark;
     display: flex;
     /* align title horizontally */
@@ -16,6 +15,9 @@
 }
 
 .table {
+  &__title {
+    grid-row: 1 /2;
+  }
   &__content {
     display: grid;
     /* aligin content vertically at start */
@@ -23,10 +25,11 @@
     /* collapse all table borders into single border */
     border-collapse: collapse;
   }
-  &__headers {
+  &__header {
     background-color: $color-grey-2;
     font-size: 1.5rem;
   }
+
   &__row {
     background-color: $color-grey-1;
     font-size: 1.5rem;
@@ -53,10 +56,8 @@ td {
   padding: 1rem;
 }
 
-.wpos:hover td {
-  color: #000000;
-}
-
-table .col {
-  border-bottom: 1px solid #ffffff;
+.match {
+  &__title {
+    grid-row: 3 / 4;
+  }
 }

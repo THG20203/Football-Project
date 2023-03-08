@@ -97,11 +97,11 @@ body {
     as relative i.e. to move the wrapper left */
     position: relative;
     /* define animation property for wrapper as slideshow with the duration of 15 seconds */
-    animation: slideshow 15s infinite; }
+    animation: slideshow 20s infinite; }
     @media only screen and (max-width: 87.5em) {
       .slideshow__wrapper {
         width: 400vw;
-        animation: slideshowSmallViewport 15s infinite; } }
+        animation: slideshowSmallViewport 20s infinite; } }
 
 .slide__image {
   height: 100%;
@@ -673,12 +673,59 @@ left position as 0. This is for 0 to 5% of the animation */
 .mb-hg {
   margin-bottom: 8rem; }
 
-.table__container {
-  grid-column: col-end 8 / full-end;
-  background-color: blue; }
+.games__container {
+  grid-column: col-end 7 / full-end;
+  display: grid;
+  grid-template-rows: 10rem 1fr; }
+
+.games__title {
+  grid-row: 1 /2;
+  background-color: #0a19a1;
+  display: flex;
+  /* align title horizontally */
+  justify-content: center;
+  /* align title vertically */
+  align-items: center; }
+
+.table__content {
+  display: grid;
+  /* aligin content vertically at start */
+  align-content: start;
+  /* collapse all table borders into single border */
+  border-collapse: collapse;
+  border: 3px; }
+
+.table__headers {
+  background-color: #aaa;
+  font-size: 1.5rem; }
+
+.table__row {
+  background-color: #f9f7f6;
+  font-size: 1.5rem; }
+  .table__row:hover {
+    cursor: pointer; }
+  .table__row--THG:hover {
+    background-color: #0a19a1;
+    color: #f9f7f6; }
+  .table__row--Lions:hover {
+    background-color: #b31900;
+    color: #f9f7f6; }
+  .table__row--EGFC:hover {
+    background-color: black;
+    color: #f6be00; }
+
+th,
+td {
+  padding: 1rem; }
+
+.wpos:hover td {
+  color: #000000; }
+
+table .col {
+  border-bottom: 1px solid #ffffff; }
 
 .ss-corp__container {
-  grid-column: col-end 4 / col-end 8;
+  grid-column: col-end 4 / col-end 7;
   display: grid;
   grid-template-rows: 65% 35%; }
 
@@ -694,6 +741,72 @@ left position as 0. This is for 0 to 5% of the animation */
     .sea-serpent__content {
       grid-column: full-start / full-end; } }
 
-.corporate__container {
-  grid-row: 2 /3;
-  background-color: black; }
+.cube {
+  /* dimensions below are for overall cube shape - each polygon side going to fit within this */
+  /* item being each individual side of the cube */ }
+  .cube__header {
+    position: absolute;
+    left: 70%;
+    top: 40%;
+    transform: translate(-50%, -50%); }
+  .cube__container {
+    /* this section to go from column 8 to the right side of the viewport horzionatally */
+    background-color: white;
+    grid-row: 2 / 3;
+    /* overflow is clipped at height of the container - rest is hidden */
+    overflow: hidden;
+    display: grid;
+    /* need to use grid to centre cubes vertically */
+    align-items: start;
+    /* need to use grid to move cubes to the left horizontally */
+    justify-content: start;
+    position: relative; }
+  .cube__row {
+    /* display inline-flex - makes the flex container display inline */
+    /* inline meaning - element display inline - inside the current block on the same line */
+    /* this will make the container display in a row */
+    display: inline-flex;
+    opacity: 0.9; }
+  .cube__shape {
+    position: relative;
+    width: 5rem;
+    height: 5rem; }
+  .cube__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transition: 2s; }
+    .cube__item--1 {
+      /* top of the cube */
+      clip-path: polygon(50% 0%, 100% 25%, 50% 50%, 0 25%); }
+      .cube__item--1:hover {
+        background-color: #0a19a1;
+        transition: 0s; }
+    .cube__item--2 {
+      /* left side of cube */
+      clip-path: polygon(0 75%, 50% 100%, 50% 50%, 0 25%); }
+      .cube__item--2::before {
+        /* setting styles for before element to change the background-color to distinguish from rest of code */
+        content: '';
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: #f9f7f6; }
+    .cube__item--3 {
+      /* right side of cube */
+      clip-path: polygon(100% 75%, 50% 100%, 50% 50%, 100% 25%); }
+      .cube__item--3::before {
+        /* setting styles for before element to change the background-color to distinguish from rest of code */
+        content: '';
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: #aaa; }
