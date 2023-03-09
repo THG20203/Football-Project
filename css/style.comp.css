@@ -29,7 +29,7 @@ body {
 .container {
   display: grid;
   /* comments for the grid-template-rows */
-  grid-template-rows: 10rem 10rem 80vh 80vh min-content repeat(2, min-content);
+  grid-template-rows: 10rem 10rem calc(100vh - 20rem) 80vh min-content repeat(2, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   /* AFTER NOTES */ }
   @media only screen and (max-width: 87.5em) {
@@ -673,138 +673,92 @@ left position as 0. This is for 0 to 5% of the animation */
 .mb-hg {
   margin-bottom: 8rem; }
 
-.games__container {
+.table-sale__container {
   grid-column: col-end 7 / full-end;
   display: grid;
-  grid-template-rows: 10rem max-content; }
+  grid-template-rows: 10rem 30rem calc(100vh - 40rem); }
 
-.games__title {
+.table__title {
   background-color: #0a19a1;
   display: flex;
   /* align title horizontally */
   justify-content: center;
   /* align title vertically */
-  align-items: center; }
-
-.table__title {
+  align-items: center;
   grid-row: 1 / 2; }
 
-.table__content {
+.table__container {
+  grid-row: 2 /3;
   display: grid;
-  /* aligin content vertically at start */
-  align-content: start;
+  /* align content vertically at start */
+  align-content: center;
+  justify-content: center;
+  background-color: #f9f7f6; }
+
+.table__content {
   /* collapse all table borders into single border */
-  border-collapse: collapse; }
+  border-collapse: collapse;
+  border-radius: 1rem 1rem 0 0;
+  /* table rows still have square borders - overflow hidden ensures border radius set on table will 
+    display nicely */
+  overflow: hidden;
+  box-shadow: 0 1rem 4rem #101d2c; }
 
 .table__header {
-  background-color: #aaa;
-  font-size: 1.5rem; }
+  background-color: #101d2c;
+  color: #f9f7f6;
+  font-size: 1.5rem;
+  border-bottom: 0.1rem solid #aaa; }
 
 .table__row {
-  background-color: #f9f7f6;
   font-size: 1.5rem; }
   .table__row:hover {
     cursor: pointer; }
-  .table__row--THG:hover {
-    background-color: #0a19a1;
-    color: #f9f7f6; }
-  .table__row--Lions:hover {
-    background-color: #b31900;
-    color: #f9f7f6; }
-  .table__row--EGFC:hover {
-    background-color: black;
-    color: #f6be00; }
+  .table__row--THG {
+    background-color: white; }
+    .table__row--THG:hover {
+      background-color: #0a19a1;
+      color: #f9f7f6; }
+  .table__row--Lions {
+    background-color: #f9f7f6; }
+    .table__row--Lions:hover {
+      background-color: #b31900;
+      color: #f9f7f6; }
+  .table__row--EGFC {
+    background-color: white;
+    border-bottom: 1px solid #aaa; }
+    .table__row--EGFC:hover {
+      background-color: black;
+      color: #f6be00; }
 
 th,
 td {
   padding: 1.2rem; }
 
-.match__title {
-  grid-row: 3 / 4; }
+.shirt-sale__container {
+  grid-row: 3 /4;
+  display: grid;
+  /* align title horizontally */
+  justify-content: center;
+  background-image: linear-gradient(rgba(10, 25, 161, 0.7), rgba(249, 247, 246, 0.1)); }
 
-.ss-corp__container {
+.shirt-sale__image {
+  transition: all 0.5s;
+  width: 20vw;
+  cursor: pointer; }
+
+.sea-serpent__container {
   grid-column: col-end 4 / col-end 7;
   display: grid;
   grid-template-rows: 65% 35%; }
-
-.sea-serpent__content {
-  grid-row: 1 /2;
-  background-image: linear-gradient(rgba(12, 34, 232, 0.2), rgba(10, 25, 161, 0.5)), url(../img/sea-serpent.png);
-  background-repeat: no-repeat;
-  /* first value = horizontal position. second = vertical. Top left corner = 0% 0%, 
+  .sea-serpent__container__content {
+    grid-row: 1 /2;
+    background-image: linear-gradient(rgba(12, 34, 232, 0.2), rgba(10, 25, 161, 0.5)), url(../img/sea-serpent.png);
+    background-repeat: no-repeat;
+    /* first value = horizontal position. second = vertical. Top left corner = 0% 0%, 
     right corner = 100% 100% */
-  background-position: 50% 60%;
-  background-size: cover; }
-  @media only screen and (max-width: 62.5em) {
-    .sea-serpent__content {
-      grid-column: full-start / full-end; } }
-
-.cube {
-  /* dimensions below are for overall cube shape - each polygon side going to fit within this */
-  /* item being each individual side of the cube */ }
-  .cube__header {
-    position: absolute;
-    left: 70%;
-    top: 40%;
-    transform: translate(-50%, -50%); }
-  .cube__container {
-    /* this section to go from column 8 to the right side of the viewport horzionatally */
-    background-color: white;
-    grid-row: 2 / 3;
-    /* overflow is clipped at height of the container - rest is hidden */
-    overflow: hidden;
-    display: grid;
-    /* need to use grid to centre cubes vertically */
-    align-items: start;
-    /* need to use grid to move cubes to the left horizontally */
-    justify-content: start;
-    position: relative; }
-  .cube__row {
-    /* display inline-flex - makes the flex container display inline */
-    /* inline meaning - element display inline - inside the current block on the same line */
-    /* this will make the container display in a row */
-    display: inline-flex;
-    opacity: 0.9; }
-  .cube__shape {
-    position: relative;
-    width: 5rem;
-    height: 5rem; }
-  .cube__item {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    transition: 2s; }
-    .cube__item--1 {
-      /* top of the cube */
-      clip-path: polygon(50% 0%, 100% 25%, 50% 50%, 0 25%); }
-      .cube__item--1:hover {
-        background-color: #0a19a1;
-        transition: 0s; }
-    .cube__item--2 {
-      /* left side of cube */
-      clip-path: polygon(0 75%, 50% 100%, 50% 50%, 0 25%); }
-      .cube__item--2::before {
-        /* setting styles for before element to change the background-color to distinguish from rest of code */
-        content: '';
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        width: 100%;
-        height: 100%;
-        background-color: #f9f7f6; }
-    .cube__item--3 {
-      /* right side of cube */
-      clip-path: polygon(100% 75%, 50% 100%, 50% 50%, 100% 25%); }
-      .cube__item--3::before {
-        /* setting styles for before element to change the background-color to distinguish from rest of code */
-        content: '';
-        position: absolute;
-        top: 0%;
-        left: 0%;
-        width: 100%;
-        height: 100%;
-        background-color: #aaa; }
+    background-position: 50% 60%;
+    background-size: cover; }
+    @media only screen and (max-width: 62.5em) {
+      .sea-serpent__container__content {
+        grid-column: full-start / full-end; } }
