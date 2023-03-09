@@ -676,7 +676,7 @@ left position as 0. This is for 0 to 5% of the animation */
 .table-sale__container {
   grid-column: col-end 7 / full-end;
   display: grid;
-  grid-template-rows: 10rem max-content max-content; }
+  grid-template-rows: 10rem 30rem calc(100vh - 40rem); }
 
 .table__title {
   background-color: #0a19a1;
@@ -688,14 +688,16 @@ left position as 0. This is for 0 to 5% of the animation */
   grid-row: 1 / 2; }
 
 .table__content {
+  grid-row: 2 /3;
   display: grid;
-  /* aligin content vertically at start */
-  align-content: start;
+  /* align content vertically at start */
+  align-content: center;
+  justify-content: center;
   /* collapse all table borders into single border */
   border-collapse: collapse; }
 
 .table__header {
-  background-color: #aaa;
+  background-color: #fff;
   font-size: 1.5rem; }
 
 .table__row {
@@ -718,18 +720,16 @@ td {
   padding: 1.2rem; }
 
 .shirt-sale__container {
+  grid-row: 3 /4;
   display: grid;
   /* align title horizontally */
   justify-content: center;
-  /* align title vertically */
-  align-items: center; }
+  background-image: linear-gradient(rgba(10, 25, 161, 0.7), rgba(249, 247, 246, 0.1)); }
 
 .shirt-sale__image {
+  transition: all 0.5s;
   width: 20vw;
-  transition: all 0.5s; }
-
-.shirt-sale__caption {
-  display: none; }
+  cursor: pointer; }
 
 .ss-corp__container {
   grid-column: col-end 4 / col-end 7;

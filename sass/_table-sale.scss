@@ -2,7 +2,7 @@
   &__container {
     grid-column: col-end 7 / full-end;
     display: grid;
-    grid-template-rows: 10rem max-content max-content;
+    grid-template-rows: 10rem 30rem calc(100vh - 40rem);
   }
 }
 .table {
@@ -16,14 +16,16 @@
     grid-row: 1 / 2;
   }
   &__content {
+    grid-row: 2 /3;
     display: grid;
-    /* aligin content vertically at start */
-    align-content: start;
+    /* align content vertically at start */
+    align-content: center;
+    justify-content: center;
     /* collapse all table borders into single border */
     border-collapse: collapse;
   }
   &__header {
-    background-color: $color-grey-2;
+    background-color: #fff;
     font-size: 1.5rem;
   }
 
@@ -55,17 +57,18 @@ td {
 
 .shirt-sale {
   &__container {
+    grid-row: 3 /4;
     display: grid;
     /* align title horizontally */
     justify-content: center;
-    /* align title vertically */
-    align-items: center;
+    background-image: linear-gradient(
+      rgba($color-primary-dark, 0.7),
+      rgba($color-grey-1, 0.1)
+    );
   }
   &__image {
-    width: 20vw;
     transition: all 0.5s;
-  }
-  &__caption {
-    display: none;
+    width: 20vw;
+    cursor: pointer;
   }
 }
