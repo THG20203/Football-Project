@@ -699,24 +699,30 @@ left position as 0. This is for 0 to 5% of the animation */
   border-collapse: collapse; }
 
 .table__header {
-  background-color: #fff;
+  background-color: #101d2c;
+  color: #f9f7f6;
   font-size: 1.5rem;
-  border-bottom: 1px solid #0c22e8; }
+  border-bottom: 1px solid #aaa; }
 
 .table__row {
-  background-color: #f9f7f6;
   font-size: 1.5rem; }
   .table__row:hover {
     cursor: pointer; }
-  .table__row--THG:hover {
-    background-color: #0a19a1;
-    color: #f9f7f6; }
-  .table__row--Lions:hover {
-    background-color: #b31900;
-    color: #f9f7f6; }
-  .table__row--EGFC:hover {
-    background-color: black;
-    color: #f6be00; }
+  .table__row--THG {
+    background-color: white; }
+    .table__row--THG:hover {
+      background-color: #0a19a1;
+      color: #f9f7f6; }
+  .table__row--Lions {
+    background-color: #f9f7f6; }
+    .table__row--Lions:hover {
+      background-color: #b31900;
+      color: #f9f7f6; }
+  .table__row--EGFC {
+    background-color: white; }
+    .table__row--EGFC:hover {
+      background-color: black;
+      color: #f6be00; }
 
 th,
 td {

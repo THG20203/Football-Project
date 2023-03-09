@@ -27,28 +27,38 @@
     border-collapse: collapse;
   }
   &__header {
-    background-color: #fff;
+    background-color: $color-secondary;
+    color: $color-grey-1;
     font-size: 1.5rem;
-    border-bottom: 1px solid $color-primary;
+    border-bottom: 1px solid $color-grey-2;
   }
 
   &__row {
-    background-color: $color-grey-1;
     font-size: 1.5rem;
     &:hover {
       cursor: pointer;
     }
-    &--THG:hover {
-      background-color: $color-primary-dark;
-      color: $color-grey-1;
+
+    &--THG {
+      background-color: white;
+      &:hover {
+        background-color: $color-primary-dark;
+        color: $color-grey-1;
+      }
     }
-    &--Lions:hover {
-      background-color: #b31900;
-      color: $color-grey-1;
+    &--Lions {
+      background-color: $color-grey-1;
+      &:hover {
+        background-color: #b31900;
+        color: $color-grey-1;
+      }
     }
-    &--EGFC:hover {
-      background-color: black;
-      color: #f6be00;
+    &--EGFC {
+      background-color: white;
+      &:hover {
+        background-color: black;
+        color: #f6be00;
+      }
     }
   }
 }
