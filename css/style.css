@@ -692,13 +692,17 @@ left position as 0. This is for 0 to 5% of the animation */
   display: grid;
   /* align content vertically at start */
   align-content: center;
-  justify-content: center; }
+  justify-content: center;
+  background-color: #f9f7f6; }
 
 .table__content {
   /* collapse all table borders into single border */
   border-collapse: collapse;
-  border-radius: 10px 10px 0 0;
-  overflow: hidden; }
+  border-radius: 1rem 1rem 0 0;
+  /* table rows still have square borders - overflow hidden ensures border radius set on table will 
+    display nicely */
+  overflow: hidden;
+  box-shadow: 0 1rem 4rem #101d2c; }
 
 .table__header {
   background-color: #101d2c;

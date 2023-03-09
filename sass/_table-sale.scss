@@ -21,12 +21,16 @@
     /* align content vertically at start */
     align-content: center;
     justify-content: center;
+    background-color: $color-grey-1;
   }
   &__content {
     /* collapse all table borders into single border */
     border-collapse: collapse;
-    border-radius: 10px 10px 0 0;
+    border-radius: 1rem 1rem 0 0;
+    /* table rows still have square borders - overflow hidden ensures border radius set on table will 
+    display nicely */
     overflow: hidden;
+    box-shadow: 0 1rem 4rem $color-secondary;
   }
   &__header {
     background-color: $color-secondary;
