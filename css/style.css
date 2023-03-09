@@ -673,20 +673,18 @@ left position as 0. This is for 0 to 5% of the animation */
 .mb-hg {
   margin-bottom: 8rem; }
 
-.games__container {
+.table-sale__container {
   grid-column: col-end 7 / full-end;
   display: grid;
-  grid-template-rows: 10rem max-content; }
+  grid-template-rows: 10rem max-content max-content; }
 
-.games__title {
+.table__title {
   background-color: #0a19a1;
   display: flex;
   /* align title horizontally */
   justify-content: center;
   /* align title vertically */
-  align-items: center; }
-
-.table__title {
+  align-items: center;
   grid-row: 1 / 2; }
 
 .table__content {
@@ -719,8 +717,19 @@ th,
 td {
   padding: 1.2rem; }
 
-.match__title {
-  grid-row: 3 / 4; }
+.shirt-sale__container {
+  display: grid;
+  /* align title horizontally */
+  justify-content: center;
+  /* align title vertically */
+  align-items: center; }
+
+.shirt-sale__image {
+  width: 20vw;
+  transition: all 0.5s; }
+
+.shirt-sale__caption {
+  display: none; }
 
 .ss-corp__container {
   grid-column: col-end 4 / col-end 7;

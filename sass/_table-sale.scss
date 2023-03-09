@@ -1,9 +1,11 @@
-.games {
+.table-sale {
   &__container {
     grid-column: col-end 7 / full-end;
     display: grid;
-    grid-template-rows: 10rem max-content;
+    grid-template-rows: 10rem max-content max-content;
   }
+}
+.table {
   &__title {
     background-color: $color-primary-dark;
     display: flex;
@@ -11,11 +13,6 @@
     justify-content: center;
     /* align title vertically */
     align-items: center;
-  }
-}
-
-.table {
-  &__title {
     grid-row: 1 / 2;
   }
   &__content {
@@ -56,8 +53,19 @@ td {
   padding: 1.2rem;
 }
 
-.match {
-  &__title {
-    grid-row: 3 / 4;
+.shirt-sale {
+  &__container {
+    display: grid;
+    /* align title horizontally */
+    justify-content: center;
+    /* align title vertically */
+    align-items: center;
+  }
+  &__image {
+    width: 20vw;
+    transition: all 0.5s;
+  }
+  &__caption {
+    display: none;
   }
 }
