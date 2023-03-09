@@ -696,13 +696,15 @@ left position as 0. This is for 0 to 5% of the animation */
 
 .table__content {
   /* collapse all table borders into single border */
-  border-collapse: collapse; }
+  border-collapse: collapse;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden; }
 
 .table__header {
   background-color: #101d2c;
   color: #f9f7f6;
   font-size: 1.5rem;
-  border-bottom: 1px solid #aaa; }
+  border-bottom: 0.1rem solid #aaa; }
 
 .table__row {
   font-size: 1.5rem; }
@@ -719,7 +721,8 @@ left position as 0. This is for 0 to 5% of the animation */
       background-color: #b31900;
       color: #f9f7f6; }
   .table__row--EGFC {
-    background-color: white; }
+    background-color: white;
+    border-bottom: 1px solid #aaa; }
     .table__row--EGFC:hover {
       background-color: black;
       color: #f6be00; }

@@ -25,12 +25,14 @@
   &__content {
     /* collapse all table borders into single border */
     border-collapse: collapse;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
   }
   &__header {
     background-color: $color-secondary;
     color: $color-grey-1;
     font-size: 1.5rem;
-    border-bottom: 1px solid $color-grey-2;
+    border-bottom: 0.1rem solid $color-grey-2;
   }
 
   &__row {
@@ -55,6 +57,7 @@
     }
     &--EGFC {
       background-color: white;
+      border-bottom: 1px solid $color-grey-2;
       &:hover {
         background-color: black;
         color: #f6be00;
