@@ -687,18 +687,21 @@ left position as 0. This is for 0 to 5% of the animation */
   align-items: center;
   grid-row: 1 / 2; }
 
-.table__content {
+.table__container {
   grid-row: 2 /3;
   display: grid;
   /* align content vertically at start */
   align-content: center;
-  justify-content: center;
+  justify-content: center; }
+
+.table__content {
   /* collapse all table borders into single border */
   border-collapse: collapse; }
 
 .table__header {
   background-color: #fff;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  border-bottom: 1px solid #0c22e8; }
 
 .table__row {
   background-color: #f9f7f6;

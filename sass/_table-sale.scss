@@ -15,18 +15,21 @@
     align-items: center;
     grid-row: 1 / 2;
   }
-  &__content {
+  &__container {
     grid-row: 2 /3;
     display: grid;
     /* align content vertically at start */
     align-content: center;
     justify-content: center;
+  }
+  &__content {
     /* collapse all table borders into single border */
     border-collapse: collapse;
   }
   &__header {
     background-color: #fff;
     font-size: 1.5rem;
+    border-bottom: 1px solid $color-primary;
   }
 
   &__row {
