@@ -761,25 +761,28 @@ td {
   display: flex;
   align-items: center;
   justify-content: center; }
-  .sea-serpent__ripple--effect {
-    position: absolute;
-    z-index: 5;
-    transform: rotateX(80deg);
-    box-sizing: border-box;
-    border: 4px solid blue;
-    border-radius: 50%;
-    animation: animate 5s linear infinite;
-    animation-delay: calc(-0.5s * var(--i)); }
-    .sea-serpent__ripple--effect--effect:nth-child(2) {
-      animation: animate2 5s linear infinite;
-      translate: -800px 0;
-      border: 8px solid #6699cc;
-      animation-delay: calc(-0.5s * var(--i)); }
-    .sea-serpent__ripple--effect--effect:nth-child(3) {
-      animation: animate3 5s linear infinite;
-      border: 10px solid #00577b;
-      translate: -400px -800px;
-      animation-delay: calc(-0.5s * var(--i)); }
+
+.sea-serpent__ripple span {
+  position: absolute;
+  z-index: 5;
+  transform: rotateX(80deg);
+  box-sizing: border-box;
+  border: 4px solid blue;
+  border-radius: 50%;
+  animation: animate 5s linear infinite;
+  animation-delay: calc(-0.5s * var(--i)); }
+
+.sea-serpent__ripple:nth-child(2) span {
+  animation: animate2 5s linear infinite;
+  translate: -800px 0;
+  border: 8px solid #6699cc;
+  animation-delay: calc(-0.5s * var(--i)); }
+
+.sea-serpent__ripple:nth-child(3) span {
+  animation: animate3 5s linear infinite;
+  border: 10px solid #00577b;
+  translate: -400px -800px;
+  animation-delay: calc(-0.5s * var(--i)); }
 
 @keyframes animate {
   0% {
