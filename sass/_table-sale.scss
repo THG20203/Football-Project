@@ -21,7 +21,7 @@
     /* table rows still have square borders - overflow hidden ensures border radius set on table will 
     display nicely */
     overflow: hidden;
-    box-shadow: 0 1rem 4rem $color-grey-1;
+    box-shadow: 0 0.5rem 1.5rem $color-grey-1;
   }
   &__header {
     background-color: $color-secondary;
@@ -39,14 +39,18 @@
     &--THG {
       background-color: white;
       &:hover {
-        background-color: $color-primary-dark;
+        background: linear-gradient(
+          $color-primary,
+          $color-primary-dark,
+          $color-primary
+        );
         color: $color-grey-1;
       }
     }
     &--Lions {
       background-color: $color-grey-1;
       &:hover {
-        background-color: #b31900;
+        background: linear-gradient(#b31900, #801504, #b31900);
         color: $color-grey-1;
       }
     }
@@ -54,7 +58,7 @@
       background-color: white;
       border-bottom: 1px solid $color-grey-2;
       &:hover {
-        background-color: black;
+        background: linear-gradient($color-secondary, black, $color-secondary);
         color: #f6be00;
       }
     }

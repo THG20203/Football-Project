@@ -693,7 +693,7 @@ left position as 0. This is for 0 to 5% of the animation */
   /* table rows still have square borders - overflow hidden ensures border radius set on table will 
     display nicely */
   overflow: hidden;
-  box-shadow: 0 1rem 4rem #f9f7f6; }
+  box-shadow: 0 0.5rem 1.5rem #f9f7f6; }
 
 .table__header {
   background-color: #101d2c;
@@ -708,18 +708,18 @@ left position as 0. This is for 0 to 5% of the animation */
   .table__row--THG {
     background-color: white; }
     .table__row--THG:hover {
-      background-color: #0a19a1;
+      background: linear-gradient(#0c22e8, #0a19a1, #0c22e8);
       color: #f9f7f6; }
   .table__row--Lions {
     background-color: #f9f7f6; }
     .table__row--Lions:hover {
-      background-color: #b31900;
+      background: linear-gradient(#b31900, #801504, #b31900);
       color: #f9f7f6; }
   .table__row--EGFC {
     background-color: white;
     border-bottom: 1px solid #aaa; }
     .table__row--EGFC:hover {
-      background-color: black;
+      background: linear-gradient(#101d2c, black, #101d2c);
       color: #f6be00; }
 
 th,
