@@ -9,10 +9,20 @@
   &__container {
     grid-row: 1 /2;
     display: grid;
+
     /* align content vertically at start */
     align-content: center;
     justify-content: center;
-    background-color: $color-secondary;
+    background-color: #35b3e7;
+    box-shadow: inset 0 0 0.1rem rgba(0, 0, 0, 0.8),
+      0 0 0.1rem 0 rgba(0, 0, 0, 0.3);
+    &::after,
+    ::before {
+      content: '';
+      grid-row: 2/3;
+      left: 80%;
+      background: #fff;
+    }
   }
   &__content {
     /* collapse all table borders into single border */
