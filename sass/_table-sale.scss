@@ -12,7 +12,7 @@
     /* align content vertically at start */
     align-content: center;
     justify-content: center;
-    background-color: $color-grey-1;
+    background-color: $color-secondary;
   }
   &__content {
     /* collapse all table borders into single border */
@@ -21,7 +21,7 @@
     /* table rows still have square borders - overflow hidden ensures border radius set on table will 
     display nicely */
     overflow: hidden;
-    box-shadow: 0 1rem 4rem $color-secondary;
+    box-shadow: 0 1rem 4rem $color-grey-1;
   }
   &__header {
     background-color: $color-secondary;
