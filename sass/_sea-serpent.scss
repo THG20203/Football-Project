@@ -29,7 +29,6 @@
   }
   &__ripple span {
     position: absolute;
-    z-index: 5;
     transform: rotateX(80deg);
     box-sizing: border-box;
     border: 4px solid blue;
@@ -39,7 +38,7 @@
   }
   &__ripple:nth-child(2) span {
     animation: animate2 5s linear infinite;
-    translate: -800px 0;
+    translate: 0rem 0rem;
     border: 8px solid #6699cc;
     animation-delay: calc(-0.5s * var(--i));
   }
@@ -52,8 +51,8 @@
 }
 @keyframes animate {
   0% {
-    width: 20rem;
-    height: 20rem;
+    width: 13rem;
+    height: 13rem;
   }
   50% {
     opacity: 1;
@@ -67,8 +66,8 @@
 
 @keyframes animate2 {
   0% {
-    width: 20rem;
-    height: 20rem;
+    width: 13rem;
+    height: 13rem;
   }
   50% {
     opacity: 1;
@@ -81,8 +80,8 @@
 }
 @keyframes animate3 {
   0% {
-    width: 20rem;
-    height: 20rem;
+    width: 13rem;
+    height: 13rem;
   }
   50% {
     opacity: 1;
