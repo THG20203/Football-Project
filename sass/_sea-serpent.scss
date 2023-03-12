@@ -36,13 +36,13 @@
     border-left: 0.3rem solid #00577b;
     border-right: 0.3rem solid #00577b;
     border-radius: 50%;
-    translate: -8rem 11rem;
+    translate: -8rem 10rem;
     animation: ripple 5s linear infinite;
     animation-delay: calc(-0.5s * var(--i));
   }
   &__ripple:nth-child(2) span {
     animation: ripple2 5s linear infinite;
-    translate: -8rem -39rem;
+    translate: -8rem -40rem;
     /* border styles for the ripples */
     border-bottom: 0.5rem solid #043950;
     border-left: 0.5rem solid #043950;
@@ -55,14 +55,14 @@
     border-bottom: 0.3rem solid $color-primary-dark;
     border-left: 0.3rem solid $color-primary-dark;
     border-right: 0.3rem solid $color-primary-dark;
-    translate: -8rem -89rem;
+    translate: -8rem -90rem;
     animation-delay: calc(-0.5s * var(--i));
   }
 }
 @keyframes ripple {
   0% {
-    width: 12rem;
-    height: 12rem;
+    width: 11rem;
+    height: 11rem;
   }
   50% {
     opacity: 1;
@@ -76,22 +76,8 @@
 
 @keyframes ripple2 {
   0% {
-    width: 13rem;
-    height: 13rem;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    width: 25rem;
-    height: 25rem;
-    opacity: 0;
-  }
-}
-@keyframes ripple3 {
-  0% {
-    width: 13rem;
-    height: 13rem;
+    width: 11rem;
+    height: 11rem;
   }
   50% {
     opacity: 1;
@@ -99,6 +85,20 @@
   100% {
     width: 30rem;
     height: 30rem;
+    opacity: 0;
+  }
+}
+@keyframes ripple3 {
+  0% {
+    width: 11rem;
+    height: 11rem;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    width: 35rem;
+    height: 35rem;
     opacity: 0;
   }
 }
