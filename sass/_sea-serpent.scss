@@ -7,8 +7,8 @@
   &__content {
     grid-row: 1 /2;
     background-image: linear-gradient(
-        rgba($color-primary, 0.2),
-        rgba($color-primary-dark, 0.5)
+        rgba($color-primary-dark, 0.5),
+        rgba($color-primary, 0.2)
       ),
       url(../img/sea-serpent.png);
     background-repeat: no-repeat;
@@ -31,7 +31,7 @@
     position: absolute;
     transform: rotateX(80deg);
     box-sizing: border-box;
-    border: 0.7rem solid $color-primary-dark;
+    border: 0.5rem solid $color-primary-dark;
     border-radius: 50%;
     translate: -8rem 11rem;
     animation: ripple 5s linear infinite;
@@ -40,12 +40,12 @@
   &__ripple:nth-child(2) span {
     animation: ripple2 5s linear infinite;
     translate: -8rem -39rem;
-    border: 0.2rem solid #00577b;
+    border: 0.2rem solid $color-primary;
     animation-delay: calc(-0.5s * var(--i));
   }
   &__ripple:nth-child(3) span {
     animation: ripple3 5s linear infinite;
-    border: 0.2rem solid #6699cc;
+    border: 0.2rem solid #00577b;
     translate: -8rem -89rem;
     animation-delay: calc(-0.5s * var(--i));
   }

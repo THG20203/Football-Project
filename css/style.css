@@ -745,7 +745,7 @@ td {
 
 .sea-serpent__content {
   grid-row: 1 /2;
-  background-image: linear-gradient(rgba(12, 34, 232, 0.2), rgba(10, 25, 161, 0.5)), url(../img/sea-serpent.png);
+  background-image: linear-gradient(rgba(10, 25, 161, 0.5), rgba(12, 34, 232, 0.2)), url(../img/sea-serpent.png);
   background-repeat: no-repeat;
   /* first value = horizontal position. second = vertical. Top left corner = 0% 0%, 
     right corner = 100% 100% */
@@ -766,7 +766,7 @@ td {
   position: absolute;
   transform: rotateX(80deg);
   box-sizing: border-box;
-  border: 0.7rem solid #0a19a1;
+  border: 0.5rem solid #0a19a1;
   border-radius: 50%;
   translate: -8rem 11rem;
   animation: ripple 5s linear infinite;
@@ -775,12 +775,12 @@ td {
 .sea-serpent__ripple:nth-child(2) span {
   animation: ripple2 5s linear infinite;
   translate: -8rem -39rem;
-  border: 0.2rem solid #00577b;
+  border: 0.2rem solid #0c22e8;
   animation-delay: calc(-0.5s * var(--i)); }
 
 .sea-serpent__ripple:nth-child(3) span {
   animation: ripple3 5s linear infinite;
-  border: 0.2rem solid #6699cc;
+  border: 0.2rem solid #00577b;
   translate: -8rem -89rem;
   animation-delay: calc(-0.5s * var(--i)); }
 
