@@ -2,21 +2,12 @@
   &__container {
     grid-column: col-end 7 / full-end;
     display: grid;
-    grid-template-rows: 10rem 30rem calc(100vh - 40rem);
+    grid-template-rows: 40rem calc(100vh - 40rem);
   }
 }
 .table {
-  &__title {
-    background-color: $color-primary-dark;
-    display: flex;
-    /* align title horizontally */
-    justify-content: center;
-    /* align title vertically */
-    align-items: center;
-    grid-row: 1 / 2;
-  }
   &__container {
-    grid-row: 2 /3;
+    grid-row: 1 /2;
     display: grid;
     /* align content vertically at start */
     align-content: center;
@@ -77,7 +68,7 @@ td {
 
 .shirt-sale {
   &__container {
-    grid-row: 3 /4;
+    grid-row: 2 /3;
     display: grid;
     /* align title horizontally */
     justify-content: center;
