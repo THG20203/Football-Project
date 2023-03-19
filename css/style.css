@@ -290,8 +290,7 @@ left position as 0. This is for 0 to 5% of the animation */
   border-bottom: 0.1rem solid #aaa; }
 
 .table__row {
-  font-size: 1.6rem;
-  height: 5rem; }
+  font-size: 1.6rem; }
   .table__row:hover {
     cursor: pointer; }
   .table__row--THG {
