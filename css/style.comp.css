@@ -29,7 +29,7 @@ body {
 .container {
   display: grid;
   /* comments for the grid-template-rows */
-  grid-template-rows: 10rem 10rem calc(100vh - 20rem) 80vh min-content repeat(2, min-content);
+  grid-template-rows: 10rem 10rem calc(100vh - 20rem) 50vh min-content repeat(2, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   /* AFTER NOTES */ }
   @media only screen and (max-width: 87.5em) {
@@ -38,10 +38,11 @@ body {
 
 .features {
   /* features go from center-start to center-end - beginning to end of centre 8 grid */
-  grid-column: center-start / center-end;
-  margin: 5rem 0;
+  grid-column: full-start / col-end 6;
+  margin: 5rem;
   /* making features grid item a grid container */
   display: grid;
+  align-content: center;
   /* making columns for this 'sub grid'. */
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 6rem;
@@ -260,10 +261,64 @@ left position as 0. This is for 0 to 5% of the animation */
     .slide__btn--4:focus ~ .slideshow__wrapper {
       left: -300vw; } }
 
+.table__container {
+  grid-column: col-end 4 / col-start 8;
+  background-image: linear-gradient(rgba(249, 247, 246, 0.9), rgba(16, 29, 44, 0.95));
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  text-align: center; }
+
+.table__title {
+  padding-bottom: 2rem; }
+
+.table__content {
+  /* collapse all table borders into single border */
+  border-collapse: collapse;
+  border-radius: 1rem 1rem 0 0;
+  /* table rows still have square borders - overflow hidden ensures border radius set on table will 
+    display nicely */
+  overflow: hidden;
+  /* stop text dropping a line */
+  white-space: nowrap;
+  box-shadow: 0 0.5rem 1.5rem #101d2c; }
+
+.table__header {
+  background-color: #101d2c;
+  color: #f9f7f6;
+  font-size: 1.6rem;
+  border-bottom: 0.1rem solid #aaa; }
+
+.table__row {
+  font-size: 1.6rem;
+  height: 5rem; }
+  .table__row:hover {
+    cursor: pointer; }
+  .table__row--THG {
+    background-color: white; }
+    .table__row--THG:hover {
+      background: linear-gradient(#0c22e8, #0a19a1, #0c22e8);
+      color: #f9f7f6; }
+  .table__row--Lions {
+    background-color: #f9f7f6; }
+    .table__row--Lions:hover {
+      background: linear-gradient(#b31900, #801504, #b31900);
+      color: #f9f7f6; }
+  .table__row--EGFC {
+    background-color: white;
+    border-bottom: 1px solid #aaa; }
+    .table__row--EGFC:hover {
+      background: linear-gradient(#101d2c, black, #101d2c);
+      color: #f6be00; }
+
+th,
+td {
+  padding: 1.5rem; }
+
 .players {
   background-color: #0a19a1;
   display: grid;
-  grid-column: col-start 7 / full-end;
+  grid-column: col-start 8 / full-end;
   padding: 3rem;
   align-content: center;
   justify-content: center;
@@ -279,7 +334,7 @@ left position as 0. This is for 0 to 5% of the animation */
     /* first column for images, second for the text */
     grid-template-columns: min-content max-content;
     grid-column-gap: 2rem;
-    grid-row-gap: 5vh;
+    grid-row-gap: 3vh;
     align-items: center;
     justify-items: center;
     /* largest being 87.5em - 1400px */
@@ -298,7 +353,7 @@ left position as 0. This is for 0 to 5% of the animation */
         justify-items: start; } }
   .players__img {
     /* width: 150px */
-    width: 15rem;
+    width: 8rem;
     border-radius: 50%;
     display: block;
     /* large being 62.5em - 1000px */ }
@@ -673,71 +728,17 @@ left position as 0. This is for 0 to 5% of the animation */
 .mb-hg {
   margin-bottom: 8rem; }
 
-.table-sale__container {
+.history-sale__container {
   grid-column: col-end 7 / full-end;
   display: grid;
   grid-template-rows: 40rem calc(100vh - 40rem); }
-
-.table__container {
-  grid-row: 1 / 2;
-  /* align content vertically at start */
-  align-content: center;
-  justify-content: center;
-  background-color: #35b3e7;
-  box-shadow: inset #101d2c, #101d2c, #101d2c, #101d2c;
-  display: grid; }
-  .table__container::after,
-  .table__container ::before {
-    content: '';
-    width: 100%;
-    background: #fff; }
-
-.table__content {
-  /* collapse all table borders into single border */
-  border-collapse: collapse;
-  border-radius: 1rem 1rem 0 0;
-  /* table rows still have square borders - overflow hidden ensures border radius set on table will 
-    display nicely */
-  overflow: hidden;
-  box-shadow: 0 0.5rem 1.5rem #f9f7f6; }
-
-.table__header {
-  background-color: #101d2c;
-  color: #f9f7f6;
-  font-size: 1.5rem;
-  border-bottom: 0.1rem solid #aaa; }
-
-.table__row {
-  font-size: 1.5rem; }
-  .table__row:hover {
-    cursor: pointer; }
-  .table__row--THG {
-    background-color: white; }
-    .table__row--THG:hover {
-      background: linear-gradient(#0c22e8, #0a19a1, #0c22e8);
-      color: #f9f7f6; }
-  .table__row--Lions {
-    background-color: #f9f7f6; }
-    .table__row--Lions:hover {
-      background: linear-gradient(#b31900, #801504, #b31900);
-      color: #f9f7f6; }
-  .table__row--EGFC {
-    background-color: white;
-    border-bottom: 1px solid #aaa; }
-    .table__row--EGFC:hover {
-      background: linear-gradient(#101d2c, black, #101d2c);
-      color: #f6be00; }
-
-th,
-td {
-  padding: 1.2rem; }
 
 .shirt-sale__container {
   grid-row: 2 /3;
   display: grid;
   /* align title horizontally */
   justify-content: center;
-  background-image: linear-gradient(rgba(10, 25, 161, 0.7), rgba(249, 247, 246, 0.1)); }
+  background-image: linear-gradient(rgba(10, 25, 161, 0.95), rgba(249, 247, 246, 0.1)); }
 
 .shirt-sale__image {
   transition: all 0.5s;
