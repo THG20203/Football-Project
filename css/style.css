@@ -679,6 +679,7 @@ left position as 0. This is for 0 to 5% of the animation */
   grid-template-rows: 40rem calc(100vh - 40rem); }
 
 .table__container {
+  background-image: linear-gradient(rgba(249, 247, 246, 0.1), rgba(10, 25, 161, 0.95));
   display: grid;
   align-content: center;
   justify-content: center; }
@@ -724,14 +725,14 @@ left position as 0. This is for 0 to 5% of the animation */
 
 th,
 td {
-  padding: 1rem; }
+  padding: 1.2rem; }
 
 .shirt-sale__container {
   grid-row: 2 /3;
   display: grid;
   /* align title horizontally */
   justify-content: center;
-  background-image: linear-gradient(rgba(10, 25, 161, 0.7), rgba(249, 247, 246, 0.1)); }
+  background-image: linear-gradient(rgba(10, 25, 161, 0.95), rgba(249, 247, 246, 0.1)); }
 
 .shirt-sale__image {
   transition: all 0.5s;
