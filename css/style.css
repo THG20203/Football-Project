@@ -678,19 +678,21 @@ left position as 0. This is for 0 to 5% of the animation */
   display: grid;
   grid-template-rows: 40rem calc(100vh - 40rem); }
 
-.table__container {
-  grid-row: 1 /2;
+.table__water-wave {
   display: grid;
+  background-color: #35b3e7;
+  box-shadow: inset 0 0 1rem 0 rgba(0, 0, 0, 0.6), 0 0 1rem 0 rgba(0, 0, 0, 0.3); }
+
+.table__container {
+  grid-row: 1 / 2;
   /* align content vertically at start */
   align-content: center;
   justify-content: center;
-  background-color: #35b3e7;
-  box-shadow: inset 0 0 0.1rem rgba(0, 0, 0, 0.8), 0 0 0.1rem 0 rgba(0, 0, 0, 0.3); }
+  display: grid; }
   .table__container::after,
   .table__container ::before {
     content: '';
-    grid-row: 2/3;
-    left: 80%;
+    width: 100%;
     background: #fff; }
 
 .table__content {
