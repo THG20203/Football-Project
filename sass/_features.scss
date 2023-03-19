@@ -1,9 +1,10 @@
 .features {
   /* features go from center-start to center-end - beginning to end of centre 8 grid */
-  grid-column: center-start / center-end;
-  margin: 5rem 0;
+  grid-column: full-start / col-end 6;
+  margin: 5rem;
   /* making features grid item a grid container */
   display: grid;
+  align-content: center;
   /* making columns for this 'sub grid'. */
   // auto-fit - CSS add as many tracks as fit in the container, 25rem (or 250px) minimum size column has to have
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -42,4 +43,74 @@
   &__text {
     font-size: 1.7rem;
   }
+}
+
+.table {
+  &__container {
+    grid-column: col-end 6 / full-end;
+    background-image: linear-gradient(
+      rgba($color-grey-1, 0.9),
+      rgba($color-primary-dark, 0.95)
+    );
+    display: grid;
+    align-content: center;
+    justify-content: center;
+  }
+  &__content {
+    /* collapse all table borders into single border */
+    border-collapse: collapse;
+    border-radius: 1rem 1rem 0 0;
+    /* table rows still have square borders - overflow hidden ensures border radius set on table will 
+    display nicely */
+    overflow: hidden;
+    /* stop text dropping a line */
+    white-space: nowrap;
+    box-shadow: 0 0.5rem 1.5rem $color-secondary;
+  }
+  &__header {
+    background-color: $color-secondary;
+    color: $color-grey-1;
+    font-size: 1.6rem;
+    border-bottom: 0.1rem solid $color-grey-2;
+  }
+
+  &__row {
+    font-size: 1.6rem;
+    height: 5rem;
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--THG {
+      background-color: white;
+      &:hover {
+        background: linear-gradient(
+          $color-primary,
+          $color-primary-dark,
+          $color-primary
+        );
+        color: $color-grey-1;
+      }
+    }
+    &--Lions {
+      background-color: $color-grey-1;
+      &:hover {
+        background: linear-gradient(#b31900, #801504, #b31900);
+        color: $color-grey-1;
+      }
+    }
+    &--EGFC {
+      background-color: white;
+      border-bottom: 1px solid $color-grey-2;
+      &:hover {
+        background: linear-gradient($color-secondary, black, $color-secondary);
+        color: #f6be00;
+      }
+    }
+  }
+}
+
+th,
+td {
+  padding: 1.5rem;
 }
