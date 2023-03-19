@@ -680,20 +680,24 @@ left position as 0. This is for 0 to 5% of the animation */
 
 .table__water-wave {
   display: grid;
+  grid-template-rows: 50% 50%;
   background-color: #35b3e7;
-  box-shadow: inset 0 0 1rem 0 rgba(0, 0, 0, 0.6), 0 0 1rem 0 rgba(0, 0, 0, 0.3); }
-
-.table__container {
-  grid-row: 1 / 2;
-  /* align content vertically at start */
-  align-content: center;
-  justify-content: center;
-  display: grid; }
-  .table__container::after,
-  .table__container ::before {
+  /* box sahdow for the beginning of wave effect */
+  box-shadow: inset 0 0 1rem 0 rgba(0, 0, 0, 0.6), 0 0 1rem 0 rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden; }
+  .table__water-wave::after,
+  .table__water-wave ::before {
     content: '';
     width: 100%;
-    background: #fff; }
+    background: #fff;
+    grid-row: 2 /3; }
+
+.table__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
 
 .table__content {
   /* collapse all table borders into single border */
@@ -702,6 +706,8 @@ left position as 0. This is for 0 to 5% of the animation */
   /* table rows still have square borders - overflow hidden ensures border radius set on table will 
     display nicely */
   overflow: hidden;
+  /* stop text dropping a line */
+  white-space: nowrap;
   box-shadow: 0 0.5rem 1.5rem #f9f7f6; }
 
 .table__header {
@@ -711,7 +717,8 @@ left position as 0. This is for 0 to 5% of the animation */
   border-bottom: 0.1rem solid #aaa; }
 
 .table__row {
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  height: 5rem; }
   .table__row:hover {
     cursor: pointer; }
   .table__row--THG {
