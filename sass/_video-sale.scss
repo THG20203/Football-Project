@@ -1,9 +1,24 @@
-.history-sale {
+.video-sale {
   &__container {
     grid-column: col-end 7 / full-end;
     display: grid;
-    grid-template-rows: 40rem calc(100vh - 40rem);
+    grid-template-rows: 40rem calc(100vh - 60rem);
   }
+}
+
+.player {
+  max-width: 100%;
+  display: grid;
+  background: $color-secondary;
+  &__text-container {
+  }
+  &__title {
+  }
+}
+video {
+  display: grid;
+  width: 100%;
+  height: auto;
 }
 
 .shirt-sale {

@@ -29,16 +29,16 @@ body {
 .container {
   display: grid;
   /* comments for the grid-template-rows */
-  grid-template-rows: 10rem 10rem calc(100vh - 20rem) 50vh min-content repeat(2, min-content);
+  grid-template-rows: 10rem 10rem calc(100vh - 20rem) 80vh min-content repeat(2, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   /* AFTER NOTES */ }
   @media only screen and (max-width: 87.5em) {
     .container {
-      grid-template-rows: 10rem 10rem calc(100vh - 20rem) calc(100vh - 20rem) calc( 100vh - 20rem); } }
+      grid-template-rows: 10rem 10rem 120vh calc(100vh - 20rem) calc( 100vh - 20rem); } }
 
 .features {
   /* features go from center-start to center-end - beginning to end of centre 8 grid */
-  grid-column: full-start / col-end 6;
+  grid-column: center-start / center-end;
   margin: 5rem;
   /* making features grid item a grid container */
   display: grid;
@@ -65,8 +65,6 @@ body {
     height: 4.5rem;
     grid-row: 1 / span 2;
     transform: translateY(-1rem); }
-  .feature__text {
-    font-size: 1.7rem; }
 
 .footer {
   background-color: #0a19a1;
@@ -261,16 +259,18 @@ left position as 0. This is for 0 to 5% of the animation */
     .slide__btn--4:focus ~ .slideshow__wrapper {
       left: -300vw; } }
 
+.team {
+  grid-column: col-start 8 / full-end;
+  display: grid; }
+
 .table__container {
-  grid-column: col-end 4 / col-start 8;
-  background-image: linear-gradient(rgba(249, 247, 246, 0.9), rgba(16, 29, 44, 0.95));
   display: grid;
   align-content: center;
   justify-content: center;
   text-align: center; }
 
 .table__title {
-  padding-bottom: 2rem; }
+  padding: 3rem 0; }
 
 .table__content {
   /* collapse all table borders into single border */
@@ -284,13 +284,13 @@ left position as 0. This is for 0 to 5% of the animation */
   box-shadow: 0 0.5rem 1.5rem #101d2c; }
 
 .table__header {
-  background-color: #101d2c;
-  color: #f9f7f6;
-  font-size: 1.6rem;
+  background-color: #f9f7f6;
+  color: #101d2c;
+  font-size: 1.4rem;
   border-bottom: 0.1rem solid #aaa; }
 
 .table__row {
-  font-size: 1.6rem; }
+  font-size: 1.4rem; }
   .table__row:hover {
     cursor: pointer; }
   .table__row--THG {
@@ -316,8 +316,8 @@ td {
 
 .players {
   background-color: #0a19a1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='18' viewBox='0 0 100 18'%3E%3Cpath fill='%230c22e8' fill-opacity='0.4' d='M61.82 18c3.47-1.45 6.86-3.78 11.3-7.34C78 6.76 80.34 5.1 83.87 3.42 88.56 1.16 93.75 0 100 0v6.16C98.76 6.05 97.43 6 96 6c-9.59 0-14.23 2.23-23.13 9.34-1.28 1.03-2.39 1.9-3.4 2.66h-7.65zm-23.64 0H22.52c-1-.76-2.1-1.63-3.4-2.66C11.57 9.3 7.08 6.78 0 6.16V0c6.25 0 11.44 1.16 16.14 3.42 3.53 1.7 5.87 3.35 10.73 7.24 4.45 3.56 7.84 5.9 11.31 7.34zM61.82 0h7.66a39.57 39.57 0 0 1-7.34 4.58C57.44 6.84 52.25 8 46 8S34.56 6.84 29.86 4.58A39.57 39.57 0 0 1 22.52 0h15.66C41.65 1.44 45.21 2 50 2c4.8 0 8.35-.56 11.82-2z'%3E%3C/path%3E%3C/svg%3E");
   display: grid;
-  grid-column: col-start 8 / full-end;
   padding: 3rem;
   align-content: center;
   justify-content: center;
@@ -360,14 +360,11 @@ td {
       .players__img {
         width: 6rem; } }
   .players__goals {
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    color: #f9f7f6;
     margin-top: -3px;
-    /* large being 62.5em - 1000px */ }
+    /* large being 62.5em - 1000px */
+    color: #f9f7f6; }
     @media only screen and (max-width: 62.5em) {
       .players__goals {
-        font-size: 0.75rem;
         margin-top: 0px; } }
   .players__name {
     /* large being 62.5em - 1000px */ }
@@ -623,7 +620,7 @@ td {
   .story__pictures {
     background-color: #0c22e8;
     grid-column: full-start / col-end 4;
-    background-image: linear-gradient(rgba(16, 29, 44, 0.7), rgba(16, 29, 44, 0.7)), url(../img/stadium-stand.png);
+    background-image: linear-gradient(rgba(10, 25, 161, 0.7), rgba(12, 34, 232, 0.7)), url(../img/graffiti/stadium-stand.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -673,7 +670,6 @@ td {
         grid-column: full-start / full-end;
         grid-row: 9 / 10; } }
   .story__text {
-    font-size: 1.5rem;
     margin-bottom: 4rem; }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
@@ -697,9 +693,19 @@ td {
   color: #101d2c; }
 
 .heading-4 {
-  font-size: 1.5rem; }
+  font-size: 1.8rem; }
   .heading-4--light {
     color: #aaa; }
+
+.paragraph-text {
+  font-size: 1.5rem; }
+  @media only screen and (max-width: 62.5em) {
+    .paragraph-text {
+      font-size: 0.75rem; } }
+  .paragraph-text--uppercase {
+    text-transform: uppercase; }
+  .paragraph-text--light {
+    color: #f9f7f6; }
 
 .btn {
   background-color: #0c22e8;
@@ -727,10 +733,20 @@ td {
 .mb-hg {
   margin-bottom: 8rem; }
 
-.history-sale__container {
+.video-sale__container {
   grid-column: col-end 7 / full-end;
   display: grid;
-  grid-template-rows: 40rem calc(100vh - 40rem); }
+  grid-template-rows: 40rem calc(100vh - 60rem); }
+
+.player {
+  max-width: 100%;
+  display: grid;
+  background: #101d2c; }
+
+video {
+  display: grid;
+  width: 100%;
+  height: auto; }
 
 .shirt-sale__container {
   grid-row: 2 /3;
@@ -747,7 +763,7 @@ td {
 .sea-serpent__container {
   grid-column: col-end 4 / col-end 7;
   display: grid;
-  grid-template-rows: 40rem calc(100vh - 40rem); }
+  grid-template-rows: 40rem calc(100vh - 60rem); }
 
 .sea-serpent__content {
   grid-row: 1 /2;
@@ -806,8 +822,8 @@ td {
   50% {
     opacity: 1; }
   100% {
-    width: 20rem;
-    height: 20rem;
+    width: 25rem;
+    height: 25rem;
     opacity: 0; } }
 
 @keyframes ripple2 {
@@ -831,3 +847,29 @@ td {
     width: 35rem;
     height: 35rem;
     opacity: 0; } }
+
+.cards__container {
+  grid-row: 2 /3;
+  /* display flex makes them alinged in a row */
+  display: flex;
+  background-color: #101d2c;
+  /* align items centerally vertically - within flex box */
+  align-items: center; }
+
+.panel {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 1rem;
+  height: 90%;
+  flex: 0.5; }
+  .panel__one {
+    background-image: linear-gradient(rgba(10, 25, 161, 0.3), rgba(12, 34, 232, 0.3)), url(../img/panel/player-flag.png); }
+  .panel__two {
+    background-image: linear-gradient(rgba(10, 25, 161, 0.3), rgba(12, 34, 232, 0.3)), url(../img/panel/goalkeeper.png); }
+  .panel__three {
+    background-image: linear-gradient(rgba(10, 25, 161, 0.3), rgba(12, 34, 232, 0.3)), url(../img/panel/membership-badge.png); }
+  .panel__four {
+    background-image: linear-gradient(rgba(10, 25, 161, 0.3), rgba(12, 34, 232, 0.3)), url(../img/panel/corner-flag.png); }
+  .panel__five {
+    background-image: linear-gradient(rgba(10, 25, 161, 0.3), rgba(12, 34, 232, 0.3)), url(../img/panel/huddle.png); }

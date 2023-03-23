@@ -1,6 +1,6 @@
 .features {
   /* features go from center-start to center-end - beginning to end of centre 8 grid */
-  grid-column: full-start / col-end 6;
+  grid-column: center-start / center-end;
   margin: 5rem;
   /* making features grid item a grid container */
   display: grid;
@@ -38,9 +38,5 @@
     grid-row: 1 / span 2;
     // move the icon up a bit
     transform: translateY(-1rem);
-  }
-
-  &__text {
-    font-size: 1.7rem;
   }
 }

@@ -29,10 +29,23 @@
 
 .heading-4 {
   @extend %heading;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 
   &--light {
     color: $color-grey-2;
+  }
+}
+
+.paragraph-text {
+  font-size: 1.5rem;
+  @media only screen and (max-width: $bp-large) {
+    font-size: 0.75rem;
+  }
+  &--uppercase {
+    text-transform: uppercase;
+  }
+  &--light {
+    color: $color-grey-1;
   }
 }
 

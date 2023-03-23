@@ -3,10 +3,10 @@
     background-color: $color-primary;
     grid-column: full-start / col-end 4;
     background-image: linear-gradient(
-        rgba($color-secondary, 0.7),
-        rgba($color-secondary, 0.7)
+        rgba($color-primary-dark, 0.7),
+        rgba($color-primary, 0.7)
       ),
-      url(../img/stadium-stand.png);
+      url(../img/graffiti/stadium-stand.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -76,7 +76,6 @@
   }
 
   &__text {
-    font-size: 1.5rem;
     // ok to use margin-bottom here because story__text is not going to be a re usable element
     margin-bottom: 4rem;
   }

@@ -2,7 +2,7 @@
   &__container {
     grid-column: col-end 4 / col-end 7;
     display: grid;
-    grid-template-rows: 40rem calc(100vh - 40rem);
+    grid-template-rows: 40rem calc(100vh - 60rem);
   }
   &__content {
     grid-row: 1 /2;
@@ -69,8 +69,8 @@
     opacity: 1;
   }
   100% {
-    width: 20rem;
-    height: 20rem;
+    width: 25rem;
+    height: 25rem;
     opacity: 0;
   }
 }
@@ -101,5 +101,60 @@
     width: 35rem;
     height: 35rem;
     opacity: 0;
+  }
+}
+
+.cards {
+  &__container {
+    grid-row: 2 /3;
+    /* display flex makes them alinged in a row */
+    display: flex;
+    background-color: $color-secondary;
+    /* align items centerally vertically - within flex box */
+    align-items: center;
+  }
+}
+
+.panel {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 1rem;
+  height: 90%;
+  flex: 0.5;
+  &__one {
+    background-image: linear-gradient(
+        rgba($color-primary-dark, 0.3),
+        rgba($color-primary, 0.3)
+      ),
+      url(../img/panel/player-flag.png);
+  }
+  &__two {
+    background-image: linear-gradient(
+        rgba($color-primary-dark, 0.3),
+        rgba($color-primary, 0.3)
+      ),
+      url(../img/panel/goalkeeper.png);
+  }
+  &__three {
+    background-image: linear-gradient(
+        rgba($color-primary-dark, 0.3),
+        rgba($color-primary, 0.3)
+      ),
+      url(../img/panel/membership-badge.png);
+  }
+  &__four {
+    background-image: linear-gradient(
+        rgba($color-primary-dark, 0.3),
+        rgba($color-primary, 0.3)
+      ),
+      url(../img/panel/corner-flag.png);
+  }
+  &__five {
+    background-image: linear-gradient(
+        rgba($color-primary-dark, 0.3),
+        rgba($color-primary, 0.3)
+      ),
+      url(../img/panel/huddle.png);
   }
 }
