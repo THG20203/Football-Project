@@ -123,38 +123,18 @@
   height: 90%;
   flex: 0.5;
   &__one {
-    background-image: linear-gradient(
-        rgba($color-primary-dark, 0.3),
-        rgba($color-primary, 0.3)
-      ),
-      url(../img/panel/player-flag.png);
+    background-image: url(../img/panel/player-flag.png);
   }
   &__two {
-    background-image: linear-gradient(
-        rgba($color-primary-dark, 0.3),
-        rgba($color-primary, 0.3)
-      ),
-      url(../img/panel/goalkeeper.png);
+    background-image: url(../img/panel/goalkeeper.png);
   }
   &__three {
-    background-image: linear-gradient(
-        rgba($color-primary-dark, 0.3),
-        rgba($color-primary, 0.3)
-      ),
-      url(../img/panel/membership-badge.png);
+    background-image: url(../img/panel/membership-badge.png);
   }
   &__four {
-    background-image: linear-gradient(
-        rgba($color-primary-dark, 0.3),
-        rgba($color-primary, 0.3)
-      ),
-      url(../img/panel/corner-flag.png);
+    background-image: url(../img/panel/corner-flag.png);
   }
   &__five {
-    background-image: linear-gradient(
-        rgba($color-primary-dark, 0.3),
-        rgba($color-primary, 0.3)
-      ),
-      url(../img/panel/huddle.png);
+    background-image: url(../img/panel/huddle.png);
   }
 }
