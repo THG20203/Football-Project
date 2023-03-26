@@ -771,8 +771,9 @@ video {
   background-repeat: no-repeat;
   /* first value = horizontal position. second = vertical. Top left corner = 0% 0%, 
     right corner = 100% 100% */
-  background-position: 50% 60%;
+  background-position: 50% 50%;
   background-size: cover;
+  overflow: hidden;
   filter: blur(0.05rem); }
   @media only screen and (max-width: 62.5em) {
     .sea-serpent__content {
@@ -794,13 +795,13 @@ video {
   border-left: 0.3rem solid #00577b;
   border-right: 0.3rem solid #00577b;
   border-radius: 50%;
-  translate: -8rem 10rem;
+  translate: -11rem 9rem;
   animation: ripple 5s linear infinite;
   animation-delay: calc(-0.5s * var(--i)); }
 
 .sea-serpent__ripple:nth-child(2) span {
   animation: ripple2 5s linear infinite;
-  translate: -8rem -40rem;
+  translate: -11rem -41rem;
   /* border styles for the ripples */
   border-bottom: 0.5rem solid #043950;
   border-left: 0.5rem solid #043950;
@@ -812,24 +813,13 @@ video {
   border-bottom: 0.3rem solid #0a19a1;
   border-left: 0.3rem solid #0a19a1;
   border-right: 0.3rem solid #0a19a1;
-  translate: -8rem -90rem;
+  translate: -11rem -91rem;
   animation-delay: calc(-0.5s * var(--i)); }
 
 @keyframes ripple {
   0% {
-    width: 11rem;
-    height: 11rem; }
-  50% {
-    opacity: 1; }
-  100% {
-    width: 25rem;
-    height: 25rem;
-    opacity: 0; } }
-
-@keyframes ripple2 {
-  0% {
-    width: 11rem;
-    height: 11rem; }
+    width: 10rem;
+    height: 10rem; }
   50% {
     opacity: 1; }
   100% {
@@ -837,15 +827,26 @@ video {
     height: 30rem;
     opacity: 0; } }
 
-@keyframes ripple3 {
+@keyframes ripple2 {
   0% {
-    width: 11rem;
-    height: 11rem; }
+    width: 10rem;
+    height: 10rem; }
   50% {
     opacity: 1; }
   100% {
     width: 35rem;
     height: 35rem;
+    opacity: 0; } }
+
+@keyframes ripple3 {
+  0% {
+    width: 10rem;
+    height: 10rem; }
+  50% {
+    opacity: 1; }
+  100% {
+    width: 40rem;
+    height: 40rem;
     opacity: 0; } }
 
 .cards__container {
@@ -872,8 +873,8 @@ video {
   min-width: 0;
   /* seperate the boxes slightly */
   margin: 0.5rem;
-  cursor: pointer;
-  transition: flex 0.7s ease-in; }
+  transition: flex 0.7s ease-in;
+  cursor: pointer; }
   .panel__text {
     /* want to make text invisible unless clicking on panel */
     opacity: 0; }
