@@ -863,8 +863,14 @@ video {
   border-radius: 1rem;
   /* don't want the height to be 100% of container */
   height: 90%;
+  /* width of an initial value of 0.5 for each of them */
   flex: 0.5;
-  cursor: pointer; }
+  /* seperate the boxes slightly */
+  margin: 0.3rem;
+  cursor: pointer;
+  /* because want to place the text inside absolute */
+  position: relative;
+  transition: flex 0.7s ease-in; }
   .panel__one {
     background-image: url(../img/panel/player-flag.png); }
   .panel__two {
