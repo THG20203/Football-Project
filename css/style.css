@@ -375,7 +375,12 @@ td {
 .progress-timeline__container {
   background-color: #0a19a1;
   display: grid;
-  grid-column: full-start / full-end; }
+  grid-column: full-start / full-end;
+  align-content: center;
+  justify-content: center; }
+
+.progress-timeline__content {
+  display: flex; }
 
 .nav {
   /* inner being the links and the hamburger menu */ }

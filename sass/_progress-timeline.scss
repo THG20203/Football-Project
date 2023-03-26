@@ -3,5 +3,10 @@
     background-color: $color-primary-dark;
     display: grid;
     grid-column: full-start / full-end;
+    align-content: center;
+    justify-content: center;
+  }
+  &__content {
+    display: flex;
   }
 }
