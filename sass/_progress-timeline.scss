@@ -1,0 +1,7 @@
+.progress-timeline {
+  &__container {
+    background-color: $color-primary-dark;
+    display: grid;
+    grid-column: full-start / full-end;
+  }
+}

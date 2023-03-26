@@ -372,96 +372,21 @@ td {
       .players__name {
         line-height: 1.7rem; } }
 
-.first-nav {
-  /* provide first-nav elements some styles */
-  /* sizing the favicons in first nav */ }
-  .first-nav__container {
-    background-color: #0a19a1;
-    display: grid;
-    grid-column: full-start / full-end; }
-  .first-nav__content {
-    /* I want the first navbar to start halfway along the page horizontally - from column 5 */
-    grid-column: 5 / 10;
-    grid-template-rows: repeat(2, min-content);
-    /* give sign up, cart etc a little space from the top of the container */
-    margin-top: 1.6rem; }
-  .first-nav__list {
-    display: grid;
-    /* minmax(10rem, 1fr); minimum width of each column is 10rem, max width of 1fr. autofit = as many 
-    columns as possible in in grid containers width. 1fr = 1 part of the space available */
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    /* get rid of default bullets */
-    list-style: none; }
-  .first-nav__link {
-    /* get rid of default link styles */
-    text-decoration: none;
-    font-size: 1.6rem;
-    color: #f9f7f6;
-    /* when an element is inline-block it still behaves like an inline element, but 
-  in this case we are able to define the width for it */
-    display: inline-block;
-    /* center items in grid cells - need element to take up entire width of grid cell */
-    width: 100%;
-    text-align: center; }
-  .first-nav__link span {
-    font-size: 1.3rem; }
-  .first-nav__link i {
-    font-size: 1.3rem;
-    /* providing some space on the right side */
-    margin-right: 0.3rem; }
+.progress-timeline__container {
+  background-color: #0a19a1;
+  display: grid;
+  grid-column: full-start / full-end; }
 
-.search {
-  /* I want the search typing field to start 4/5 (or 6/10) along the page horizontally - (from column 6) */
-  /* I want the search typing field to finish 9/10 along the page horizontally */
-  grid-column: 6 / 9;
-  display: inline-block;
-  /* center items in grid cells - need element to take up entire width of grid cell */
-  width: 100%;
-  text-align: center; }
-  .search__form {
-    display: grid;
-    /* divide form element into 10 columns - each 10% width */
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); }
-  .search__input {
-    grid-row: 1 /2;
-    grid-column: 6 / 9;
-    /* top and botton 0.3rem, left and right 0.4rem */
-    padding: 0.3rem 0.4rem;
-    font-size: 1.3rem;
-    /* getting rid of the border around the search bar */
-    border: none;
-    /* change the background-color of inside of the search section to dark blue,
-    in line with the rest of the first nav */
-    background-color: #0a19a1;
-    /* change bottom border of search bar to white */
-    border-bottom: 0.1rem solid #f9f7f6;
-    outline: none;
-    font-family: "Nunito", sans-serif;
-    /* change the color of text I'm inputing into the search bar */
-    color: #f9f7f6;
-    /* change color of the placeholder Search message in the search bar */ }
-    .search__input::placeholder {
-      color: #f9f7f6; }
-  .search__btn {
-    grid-row: 1 / 2;
-    grid-column: 8 / 9;
-    border: none;
-    /* get rid of grey background box around the question mark */
-    background-color: transparent;
-    /* change the color of the question mark */
-    color: #f9f7f6;
-    cursor: pointer; }
-
-.second-nav {
+.nav {
   /* inner being the links and the hamburger menu */ }
-  .second-nav__container {
+  .nav__container {
     /* ensure the background-color of the overall bar is grey */
     background-color: #f9f7f6;
     /* make second nav a grid */
     display: grid;
     /* ensure second nav is full width across the page */
     grid-column: full-start / full-end; }
-  .second-nav__badge {
+  .nav__badge {
     /* take the first column of the second nav grid */
     grid-column: 1 / 2;
     grid-row: 1 / 2;
@@ -471,14 +396,14 @@ td {
     height: 8rem;
     /* set margin from edge of page */
     margin: 1rem; }
-  .second-nav__content {
+  .nav__content {
     /* content being list and menu toggle */
     grid-column: 2 / 10;
     display: grid;
     /* align list items vertically in middle */
     align-content: center; }
     @media only screen and (max-width: 62.5em) {
-      .second-nav__content {
+      .nav__content {
         /* make navbar from beginning to end on smaller devices so can center it */
         grid-column: 1 / 10;
         /* ensure the links don't push too far down the page on smaller viewports */
@@ -492,7 +417,7 @@ td {
         /* links will be present if width is not 0 */
         width: 0;
         transition: all 0.8s; } }
-  .second-nav__list {
+  .nav__list {
     display: grid;
     /* align items on page horizontally */
     justify-items: center;
@@ -503,10 +428,10 @@ td {
     /* ensure font is right font for titles */
     font-family: "Lato", sans-serif; }
     @media only screen and (max-width: 62.5em) {
-      .second-nav__list {
+      .nav__list {
         /* make it one column taking up 100% of the width of to the content which was 1 / 10 column */
         grid-template-columns: 100%; } }
-  .second-nav__link {
+  .nav__link {
     text-transform: uppercase;
     /* get rid of list bullet points */
     text-decoration: none;
@@ -514,17 +439,17 @@ td {
     /* blue on the grey background for desktop */
     color: #0a19a1; }
     @media only screen and (max-width: 62.5em) {
-      .second-nav__link {
+      .nav__link {
         /* links font size increase */
         font-size: 4rem;
         /* padding top and bottom of the links */
         padding: 1rem 0;
         /* smaller devices - blue background - so links need to be white */
         color: #f9f7f6; } }
-  .second-nav__checkbox {
+  .nav__checkbox {
     /* checkbox hack - hide checkbox tick for the hamburger menu */
     display: none; }
-  .second-nav__button {
+  .nav__button {
     /* put it to the right on the viewport */
     grid-column: 9 / 10;
     grid-row: 1 / 2;
@@ -548,15 +473,15 @@ td {
     /* move toggle to the end horizontally*/
     justify-self: end; }
     @media only screen and (max-width: 62.5em) {
-      .second-nav__button {
+      .nav__button {
         /* only want to display the hamburger icon on smaller devices */
         display: flex;
         /* needs to be at the top above background on transform and general content */
         z-index: 3;
         background-color: #0a19a1; } }
-    .second-nav__button:hover {
+    .nav__button:hover {
       background-color: #0a19a1; }
-  .second-nav__background {
+  .nav__background {
     grid-column: 9 / 10;
     grid-row: 1 / 2;
     display: none;
@@ -569,49 +494,49 @@ td {
     z-index: 2;
     transition: transform 0.8s; }
     @media only screen and (max-width: 62.5em) {
-      .second-nav__background {
+      .nav__background {
         /* make background visible rather than not with display none on smaller devices */
         display: flex;
         /* push the background to end of the container horizontally */
         justify-self: end; } }
-  .second-nav__checkbox:checked ~ .second-nav__background {
+  .nav__checkbox:checked ~ .nav__background {
     /* scale the background on click - sibling of checkbox - background */
     transform: scale(120); }
-  .second-nav__checkbox:checked ~ .second-nav__content {
+  .nav__checkbox:checked ~ .nav__content {
     /* when click on checkbox - want sibling element content (i.e. the links be visible cause opacity and width was set as 0) */
     opacity: 1;
     width: 100%; }
-  .second-nav__icon {
+  .nav__icon {
     position: relative; }
-    .second-nav__icon, .second-nav__icon::before, .second-nav__icon::after {
+    .nav__icon, .nav__icon::before, .nav__icon::after {
       /* dimensions for lines on the hamburger menu */
       width: 4rem;
       height: 2px;
       background-color: #f9f7f6;
       display: flex; }
-    .second-nav__icon::before, .second-nav__icon::after {
+    .nav__icon::before, .nav__icon::after {
       content: '';
       position: absolute;
       left: 0;
       transition: all 0.2s; }
-    .second-nav__icon::before {
+    .nav__icon::before {
       /* move the before element up vertically hence minus rem */
       top: -1.2rem; }
-    .second-nav__icon::after {
+    .nav__icon::after {
       /* move the after element down vertically hence positive rem */
       top: 1.2rem; }
-  .second-nav__button:hover .second-nav__icon::before {
+  .nav__button:hover .nav__icon::before {
     /* effects on hover - moving the lines closer to the middle span */
     top: -0.8rem; }
-  .second-nav__button:hover .second-nav__icon::after {
+  .nav__button:hover .nav__icon::after {
     /* effects on hover - moving the lines closer to the middle span */
     top: 0.8rem; }
-  .second-nav__checkbox:checked + .second-nav__button .second-nav__icon {
+  .nav__checkbox:checked + .nav__button .nav__icon {
     background-color: transparent; }
-  .second-nav__checkbox:checked + .second-nav__button .second-nav__icon::before {
+  .nav__checkbox:checked + .nav__button .nav__icon::before {
     top: 0;
     transform: rotate(135deg); }
-  .second-nav__checkbox:checked + .second-nav__button .second-nav__icon::after {
+  .nav__checkbox:checked + .nav__button .nav__icon::after {
     top: 0;
     transform: rotate(-135deg); }
 
@@ -873,7 +798,7 @@ video {
   min-width: 0;
   /* positioning the text */
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   /* seperate the boxes slightly */
   margin: 0.5rem;
