@@ -1,5 +1,7 @@
 'use script';
 
+//progress steps
+
 //players cards
 const panels = document.querySelectorAll('.panel');
 // querySelector all putting all panels into a node list
