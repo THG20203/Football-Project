@@ -864,9 +864,14 @@ video {
   /* don't want the height to be 100% of container */
   height: 90%;
   /* width of an initial value of 0.5 for each of them */
-  flex: 0.5;
+  flex-grow: 0.5;
+  /* flex-basis ensure flexbox ensure columns are distributed evenly */
+  flex-basis: 0;
+  /*  in cases where the width of the column content is forced (for example with image width or white-space: 
+  nowrap), the solution is to set min-width: 0 */
+  min-width: 0;
   /* seperate the boxes slightly */
-  margin: 0.3rem;
+  margin: 0.5rem;
   cursor: pointer;
   transition: flex 0.7s ease-in; }
   .panel__text {
@@ -882,3 +887,14 @@ video {
     background-image: url(../img/panel/corner-flag.png); }
   .panel__five {
     background-image: url(../img/panel/huddle.png); }
+
+.panel.active {
+  flex: 3; }
+
+.panel.active p {
+  opacity: 1; }
+
+@media only screen and (max-width: 62.5em) {
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none; } }
