@@ -77,8 +77,8 @@
 
 @keyframes ripple2 {
   0% {
-    width: 11rem;
-    height: 11rem;
+    width: 12rem;
+    height: 12rem;
   }
   50% {
     opacity: 1;
@@ -131,8 +131,8 @@
   min-width: 0;
   /* positioning the text */
   display: flex;
-  align-items: start;
-  justify-content: start;
+  align-items: center;
+  justify-content: center;
   /* seperate the boxes slightly */
   margin: 0.5rem;
   transition: flex 0.7s ease-in;
