@@ -767,7 +767,7 @@ video {
 
 .sea-serpent__content {
   grid-row: 1 /2;
-  background-image: linear-gradient(rgba(10, 25, 161, 0.5), rgba(12, 34, 232, 0.1)), url(../img/sea-serpent.png);
+  background-image: linear-gradient(rgba(12, 34, 232, 0.3), rgba(10, 25, 161, 0.9)), url(../img/sea-serpent.png);
   background-repeat: no-repeat;
   /* first value = horizontal position. second = vertical. Top left corner = 0% 0%, 
     right corner = 100% 100% */
@@ -791,62 +791,62 @@ video {
   transform: rotateX(80deg);
   box-sizing: border-box;
   /* border styles for the ripples */
-  border-bottom: 0.3rem solid #00577b;
-  border-left: 0.3rem solid #00577b;
-  border-right: 0.3rem solid #00577b;
+  border-bottom: 0.3rem solid #0374a4;
+  border-left: 0.3rem solid #0374a4;
+  border-right: 0.3rem solid #0374a4;
   border-radius: 50%;
-  translate: -11rem 9rem;
+  translate: -10rem 9rem;
   animation: ripple 5s linear infinite;
   animation-delay: calc(-0.5s * var(--i)); }
 
 .sea-serpent__ripple:nth-child(2) span {
   animation: ripple2 5s linear infinite;
-  translate: -11rem -41rem;
+  translate: -10rem -41rem;
   /* border styles for the ripples */
-  border-bottom: 0.5rem solid #043950;
-  border-left: 0.5rem solid #043950;
-  border-right: 0.5rem solid #043950;
+  border-bottom: 0.5rem solid #00577b;
+  border-left: 0.5rem solid #00577b;
+  border-right: 0.5rem solid #00577b;
   animation-delay: calc(-0.5s * var(--i)); }
 
 .sea-serpent__ripple:nth-child(3) span {
   animation: ripple3 5s linear infinite;
-  border-bottom: 0.3rem solid #0a19a1;
-  border-left: 0.3rem solid #0a19a1;
-  border-right: 0.3rem solid #0a19a1;
-  translate: -11rem -91rem;
+  border-bottom: 0.3rem solid #043950;
+  border-left: 0.3rem solid #043950;
+  border-right: 0.3rem solid #043950;
+  translate: -10rem -91rem;
   animation-delay: calc(-0.5s * var(--i)); }
 
 @keyframes ripple {
   0% {
-    width: 10rem;
-    height: 10rem; }
-  50% {
-    opacity: 1; }
-  100% {
-    width: 30rem;
-    height: 30rem;
-    opacity: 0; } }
-
-@keyframes ripple2 {
-  0% {
-    width: 10rem;
-    height: 10rem; }
-  50% {
-    opacity: 1; }
-  100% {
-    width: 35rem;
-    height: 35rem;
-    opacity: 0; } }
-
-@keyframes ripple3 {
-  0% {
-    width: 10rem;
-    height: 10rem; }
+    width: 11rem;
+    height: 11rem; }
   50% {
     opacity: 1; }
   100% {
     width: 40rem;
     height: 40rem;
+    opacity: 0; } }
+
+@keyframes ripple2 {
+  0% {
+    width: 11rem;
+    height: 11rem; }
+  50% {
+    opacity: 1; }
+  100% {
+    width: 45rem;
+    height: 45rem;
+    opacity: 0; } }
+
+@keyframes ripple3 {
+  0% {
+    width: 11rem;
+    height: 11rem; }
+  50% {
+    opacity: 1; }
+  100% {
+    width: 50rem;
+    height: 50rem;
     opacity: 0; } }
 
 .cards__container {
@@ -871,23 +871,28 @@ video {
   /*  in cases where the width of the column content is forced (for example with image width or white-space: 
   nowrap), the solution is to set min-width: 0 */
   min-width: 0;
+  /* positioning the text */
+  display: flex;
+  align-items: start;
+  justify-content: start;
   /* seperate the boxes slightly */
   margin: 0.5rem;
   transition: flex 0.7s ease-in;
   cursor: pointer; }
   .panel__text {
     /* want to make text invisible unless clicking on panel */
-    opacity: 0; }
+    opacity: 0;
+    padding: 1rem; }
   .panel__one {
-    background-image: url(../img/panel/player-flag.png); }
+    background-image: linear-gradient(rgba(16, 29, 44, 0.3), rgba(10, 25, 161, 0.3)), url(../img/panel/player-flag.png); }
   .panel__two {
-    background-image: url(../img/panel/goalkeeper.png); }
+    background-image: linear-gradient(rgba(16, 29, 44, 0.5), rgba(10, 25, 161, 0.5)), url(../img/panel/goalkeeper.png); }
   .panel__three {
-    background-image: url(../img/panel/membership-badge.png); }
+    background-image: linear-gradient(rgba(16, 29, 44, 0.3), rgba(10, 25, 161, 0.3)), url(../img/panel/membership-badge.png); }
   .panel__four {
-    background-image: url(../img/panel/corner-flag.png); }
+    background-image: linear-gradient(rgba(16, 29, 44, 0.6), rgba(10, 25, 161, 0.6)), url(../img/panel/corner-flag.png); }
   .panel__five {
-    background-image: url(../img/panel/huddle.png); }
+    background-image: linear-gradient(rgba(16, 29, 44, 0.6), rgba(10, 25, 161, 0.6)), url(../img/panel/huddle.png); }
 
 .panel.active {
   flex: 3; }
