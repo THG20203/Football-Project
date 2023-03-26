@@ -861,8 +861,10 @@ video {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 1rem;
+  /* don't want the height to be 100% of container */
   height: 90%;
-  flex: 0.5; }
+  flex: 0.5;
+  cursor: pointer; }
   .panel__one {
     background-image: url(../img/panel/player-flag.png); }
   .panel__two {
