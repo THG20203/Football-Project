@@ -47,7 +47,7 @@ body {
   /* comments for the grid-template-rows */
   // 80% of the view-height, then min-content - smallest size of box without overflowing content.
 
-  grid-template-rows: 10rem 10rem calc(100vh - 20rem) 80vh min-content repeat(
+  grid-template-rows: 15rem 10rem calc(95vh - 20rem) 80vh min-content repeat(
       2,
       min-content
     );
@@ -61,7 +61,7 @@ body {
   // why only name the columns and not the rows?
   // in overall layout focus is generally on the columns and not the rows - columns more important
   @media only screen and (max-width: $bp-largest) {
-    grid-template-rows: 10rem 10rem 120vh calc(100vh - 20rem) calc(
+    grid-template-rows: 15rem 10rem 120vh calc(100vh - 20rem) calc(
         100vh - 20rem
       );
   }

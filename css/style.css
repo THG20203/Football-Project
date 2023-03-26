@@ -29,12 +29,12 @@ body {
 .container {
   display: grid;
   /* comments for the grid-template-rows */
-  grid-template-rows: 10rem 10rem calc(100vh - 20rem) 80vh min-content repeat(2, min-content);
+  grid-template-rows: 15rem 10rem calc(95vh - 20rem) 80vh min-content repeat(2, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   /* AFTER NOTES */ }
   @media only screen and (max-width: 87.5em) {
     .container {
-      grid-template-rows: 10rem 10rem 120vh calc(100vh - 20rem) calc( 100vh - 20rem); } }
+      grid-template-rows: 15rem 10rem 120vh calc(100vh - 20rem) calc( 100vh - 20rem); } }
 
 .features {
   /* features go from center-start to center-end - beginning to end of centre 8 grid */
@@ -688,7 +688,7 @@ video {
 .sea-serpent__container {
   grid-column: col-end 4 / col-end 7;
   display: grid;
-  grid-template-rows: 40rem calc(100vh - 60rem); }
+  grid-template-rows: 40rem calc(95vh - 60rem); }
 
 .sea-serpent__content {
   grid-row: 1 /2;
@@ -807,23 +807,26 @@ video {
   .panel__text {
     /* want to make text invisible unless clicking on panel */
     opacity: 0;
-    padding: 1rem; }
+    margin-top: 0.5vh; }
   .panel__one {
     background-image: linear-gradient(rgba(16, 29, 44, 0.3), rgba(10, 25, 161, 0.3)), url(../img/panel/player-flag.png); }
   .panel__two {
-    background-image: linear-gradient(rgba(16, 29, 44, 0.5), rgba(10, 25, 161, 0.5)), url(../img/panel/goalkeeper.png); }
+    background-image: linear-gradient(rgba(16, 29, 44, 0.6), rgba(10, 25, 161, 0.6)), url(../img/panel/huddle.png); }
   .panel__three {
     background-image: linear-gradient(rgba(16, 29, 44, 0.3), rgba(10, 25, 161, 0.3)), url(../img/panel/membership-badge.png); }
   .panel__four {
     background-image: linear-gradient(rgba(16, 29, 44, 0.6), rgba(10, 25, 161, 0.6)), url(../img/panel/corner-flag.png); }
   .panel__five {
-    background-image: linear-gradient(rgba(16, 29, 44, 0.6), rgba(10, 25, 161, 0.6)), url(../img/panel/huddle.png); }
+    background-image: linear-gradient(rgba(16, 29, 44, 0.5), rgba(10, 25, 161, 0.5)), url(../img/panel/goalkeeper.png); }
 
 .panel.active {
   flex: 3; }
 
 .panel.active p {
-  opacity: 1; }
+  opacity: 1;
+  /* to slow down the opacity changes */
+  /* opacity to take 0.3 secondads, ease-in effect, 04.s delay */
+  transition: opacity 0.3s ease-in 0.4s; }
 
 @media only screen and (max-width: 62.5em) {
   .panel:nth-of-type(4),
