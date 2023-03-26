@@ -127,9 +127,11 @@
   /* seperate the boxes slightly */
   margin: 0.3rem;
   cursor: pointer;
-  /* because want to place the text inside absolute */
-  position: relative;
   transition: flex 0.7s ease-in;
+  &__text {
+    /* want to make text invisible unless clicking on panel */
+    opacity: 0;
+  }
   &__one {
     background-image: url(../img/panel/player-flag.png);
   }
