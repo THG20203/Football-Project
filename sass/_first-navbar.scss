@@ -57,7 +57,7 @@
     grid-row: 1 /2;
     width: 100%;
     /* top and botton 0.3rem, left and right 0.4rem */
-    padding: 0.3rem 0.4rem;
+    padding: 0.3vh 0.4vw;
     grid-column: 6 / 9;
     font-size: 1.6rem;
     /* getting rid of the border around the search bar */
@@ -83,7 +83,7 @@
     /* get rid of grey background box around the question mark */
     background-color: $color-secondary;
     transform: translateY(-0.5vh);
-    padding: 1rem;
+    padding: 1vh 1vw;
     /* change the color of the question mark */
     color: $color-grey-1;
     cursor: pointer;

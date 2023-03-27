@@ -5,7 +5,6 @@
     grid-template-rows: 40rem calc(100vh - 60rem);
   }
 }
-
 .player {
   max-width: 100%;
   display: grid;
@@ -17,6 +16,7 @@
 }
 video {
   display: grid;
+  justify-content: start;
   width: 100%;
   height: auto;
 }
@@ -33,7 +33,6 @@ video {
     );
   }
   &__image {
-    transition: all 0.5s;
     width: 20vw;
     cursor: pointer;
   }

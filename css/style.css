@@ -460,7 +460,7 @@ td {
     grid-row: 1 /2;
     width: 100%;
     /* top and botton 0.3rem, left and right 0.4rem */
-    padding: 0.3rem 0.4rem;
+    padding: 0.3vh 0.4vw;
     grid-column: 6 / 9;
     font-size: 1.6rem;
     /* getting rid of the border around the search bar */
@@ -483,7 +483,7 @@ td {
     /* get rid of grey background box around the question mark */
     background-color: #101d2c;
     transform: translateY(-0.5vh);
-    padding: 1rem;
+    padding: 1vh 1vw;
     /* change the color of the question mark */
     color: #f9f7f6;
     cursor: pointer; }
@@ -782,6 +782,7 @@ td {
 
 video {
   display: grid;
+  justify-content: start;
   width: 100%;
   height: auto; }
 
@@ -793,7 +794,6 @@ video {
   background-image: linear-gradient(rgba(10, 25, 161, 0.95), rgba(249, 247, 246, 0.1)); }
 
 .shirt-sale__image {
-  transition: all 0.5s;
   width: 20vw;
   cursor: pointer; }
 
