@@ -25,6 +25,7 @@ function backgroundOpacity() {
   then out_min of 1 opacity down to out_max of 0 opacity */
   loadText.style.opacity = scale(load, 0, 100, 1, 0);
   backgroundOverlay.style.opacity = scale(load, 0, 100, 1, 0);
+  /* make the z-index values of the overlay very low after the opacity is decreased */
   loadText.style.zIndex = scale(load, 0, 100, 6, -2);
   backgroundOverlay.style.zIndex = scale(load, 0, 100, 5, -2);
 }
@@ -34,6 +35,16 @@ function backgroundOpacity() {
 const scale = (num, in_min, in_max, out_min, out_max) => {
   return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
 };
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//HIDDEN SEARCH WIDGET
+const searchInput = document.querySelector('.search__input');
+const searchButton = document.querySelector('.search__btn');
+
+searchButton.addEventListener('click', () => {
+  searchInput.classList.toggle('active');
+  searchInput.focus();
+});
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //PLAYERS CARDS

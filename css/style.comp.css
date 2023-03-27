@@ -36,6 +36,27 @@ body {
     .container {
       grid-template-rows: 10rem 10rem 120vh calc(100vh - 20rem) calc( 100vh - 20rem); } }
 
+.background__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  opacity: 1;
+  background-color: #0a19a1;
+  display: grid;
+  align-content: start;
+  justify-content: center;
+  object-fit: contain; }
+
+.background__loading-text {
+  margin-top: 50vh;
+  font-size: 8rem;
+  color: #f9f7f6;
+  z-index: 6;
+  position: relative; }
+
 .features {
   /* features go from center-start to center-end - beginning to end of centre 8 grid */
   grid-column: center-start / center-end;
@@ -372,43 +393,55 @@ td {
       .players__name {
         line-height: 1.7rem; } }
 
-.first-nav {
-  /* provide first-nav elements some styles */
-  /* sizing the favicons in first nav */ }
-  .first-nav__container {
-    background-color: #0a19a1;
-    display: grid;
-    grid-column: full-start / full-end; }
-  .first-nav__content {
-    /* I want the first navbar to start halfway along the page horizontally - from column 5 */
-    grid-column: 5 / 10;
-    grid-template-rows: repeat(2, min-content);
-    /* give sign up, cart etc a little space from the top of the container */
-    margin-top: 1.6rem; }
-  .first-nav__list {
-    display: grid;
-    /* minmax(10rem, 1fr); minimum width of each column is 10rem, max width of 1fr. autofit = as many 
-    columns as possible in in grid containers width. 1fr = 1 part of the space available */
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    /* get rid of default bullets */
-    list-style: none; }
-  .first-nav__link {
-    /* get rid of default link styles */
-    text-decoration: none;
-    font-size: 1.6rem;
-    color: #f9f7f6;
-    /* when an element is inline-block it still behaves like an inline element, but 
-  in this case we are able to define the width for it */
-    display: inline-block;
-    /* center items in grid cells - need element to take up entire width of grid cell */
-    width: 100%;
-    text-align: center; }
-  .first-nav__link span {
-    font-size: 1.3rem; }
-  .first-nav__link i {
-    font-size: 1.3rem;
-    /* providing some space on the right side */
-    margin-right: 0.3rem; }
+.progress-timeline__container {
+  background-color: #0a19a1;
+  display: grid;
+  grid-column: full-start / full-end;
+  align-content: center;
+  justify-content: center; }
+
+.progress-timeline__content {
+  display: flex; }
+
+.first-nav__container {
+  background-color: #0a19a1;
+  display: grid;
+  grid-column: full-start / full-end; }
+
+.first-nav__content {
+  /* I want the first navbar to start halfway along the page horizontally - from column 5 */
+  grid-column: 5 / 10;
+  grid-template-rows: repeat(2, min-content);
+  /* give sign up, cart etc a little space from the top of the container */
+  margin-top: 1.6rem; }
+
+.first-nav__list {
+  display: grid;
+  /* minmax(10rem, 1fr); minimum width of each column is 10rem, max width of 1fr. autofit = as many 
+      columns as possible in in grid containers width. 1fr = 1 part of the space available */
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  /* get rid of default bullets */
+  list-style: none; }
+
+.first-nav__link {
+  /* get rid of default link styles */
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #f9f7f6;
+  /* when an element is inline-block it still behaves like an inline element, but 
+    in this case we are able to define the width for it */
+  display: inline-block;
+  /* center items in grid cells - need element to take up entire width of grid cell */
+  width: 100%;
+  text-align: center; }
+
+.first-nav__link span {
+  font-size: 1.3rem; }
+
+.first-nav__link i {
+  font-size: 1.3rem;
+  /* providing some space on the right side */
+  margin-right: 0.3rem; }
 
 .search {
   /* I want the search typing field to start 4/5 (or 6/10) along the page horizontally - (from column 6) */
@@ -417,37 +450,44 @@ td {
   display: inline-block;
   /* center items in grid cells - need element to take up entire width of grid cell */
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  /* change color of the placeholder Search message in the search bar */ }
   .search__form {
     display: grid;
     /* divide form element into 10 columns - each 10% width */
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); }
   .search__input {
     grid-row: 1 /2;
+    width: 0%;
+    padding: 0;
     grid-column: 6 / 9;
-    /* top and botton 0.3rem, left and right 0.4rem */
-    padding: 0.3rem 0.4rem;
     font-size: 1.3rem;
     /* getting rid of the border around the search bar */
     border: none;
     /* change the background-color of inside of the search section to dark blue,
-    in line with the rest of the first nav */
+      in line with the rest of the first nav */
     background-color: #0a19a1;
     /* change bottom border of search bar to white */
     border-bottom: 0.1rem solid #f9f7f6;
     outline: none;
-    font-family: "Nunito", sans-serif;
+    font-family: 'Nunito', sans-serif;
     /* change the color of text I'm inputing into the search bar */
     color: #f9f7f6;
-    /* change color of the placeholder Search message in the search bar */ }
-    .search__input::placeholder {
-      color: #f9f7f6; }
+    transition: width 0.3s ease, padding 0.3s ease; }
+    .search__input.active {
+      /* top and botton 0.3rem, left and right 0.4rem */
+      padding: 0.3rem 0.4rem;
+      width: 100%; }
+  .search__input::placeholder {
+    color: #f9f7f6; }
   .search__btn {
     grid-row: 1 / 2;
     grid-column: 8 / 9;
-    border: none;
+    border: 0.1rem solid #f9f7f6;
     /* get rid of grey background box around the question mark */
-    background-color: transparent;
+    background-color: #101d2c;
+    transform: translateY(-0.5vh);
+    padding: 1rem;
     /* change the color of the question mark */
     color: #f9f7f6;
     cursor: pointer; }
@@ -552,7 +592,7 @@ td {
         /* only want to display the hamburger icon on smaller devices */
         display: flex;
         /* needs to be at the top above background on transform and general content */
-        z-index: 3;
+        z-index: 4;
         background-color: #0a19a1; } }
     .second-nav__button:hover {
       background-color: #0a19a1; }
@@ -564,9 +604,10 @@ td {
     margin: 1.5rem;
     height: 6rem;
     width: 6rem;
-    background-image: radial-gradient(#0c22e8, #f9f7f6);
-    /* needs to be be above general content but below the hamburger */
-    z-index: 2;
+    background-image: radial-gradient(#0c22e8, #aaa);
+    /* needs to be be above general content but below the hamburger 
+    - remember z-index: 2 for navigation buttons on slider */
+    z-index: 3;
     transition: transform 0.8s; }
     @media only screen and (max-width: 62.5em) {
       .second-nav__background {
@@ -715,7 +756,7 @@ td {
   font-family: "Lato", sans-serif;
   font-size: 1.5rem;
   text-transform: uppercase;
-  padding: 1.8rem 3rem;
+  padding: 1.5rem 2rem;
   cursor: pointer;
   transition: all 0.2s; }
   .btn:hover {
@@ -767,12 +808,13 @@ video {
 
 .sea-serpent__content {
   grid-row: 1 /2;
-  background-image: linear-gradient(rgba(10, 25, 161, 0.5), rgba(12, 34, 232, 0.1)), url(../img/sea-serpent.png);
+  background-image: linear-gradient(rgba(12, 34, 232, 0.3), rgba(10, 25, 161, 0.9)), url(../img/sea-serpent.png);
   background-repeat: no-repeat;
   /* first value = horizontal position. second = vertical. Top left corner = 0% 0%, 
     right corner = 100% 100% */
-  background-position: 50% 60%;
+  background-position: 50% 50%;
   background-size: cover;
+  overflow: hidden;
   filter: blur(0.05rem); }
   @media only screen and (max-width: 62.5em) {
     .sea-serpent__content {
@@ -790,51 +832,51 @@ video {
   transform: rotateX(80deg);
   box-sizing: border-box;
   /* border styles for the ripples */
-  border-bottom: 0.3rem solid #00577b;
-  border-left: 0.3rem solid #00577b;
-  border-right: 0.3rem solid #00577b;
+  border-bottom: 0.3rem solid #0374a4;
+  border-left: 0.3rem solid #0374a4;
+  border-right: 0.3rem solid #0374a4;
   border-radius: 50%;
-  translate: -8rem 10rem;
+  translate: -11rem 9rem;
   animation: ripple 5s linear infinite;
   animation-delay: calc(-0.5s * var(--i)); }
 
 .sea-serpent__ripple:nth-child(2) span {
   animation: ripple2 5s linear infinite;
-  translate: -8rem -40rem;
+  translate: -11rem -41rem;
   /* border styles for the ripples */
-  border-bottom: 0.5rem solid #043950;
-  border-left: 0.5rem solid #043950;
-  border-right: 0.5rem solid #043950;
+  border-bottom: 0.5rem solid #00577b;
+  border-left: 0.5rem solid #00577b;
+  border-right: 0.5rem solid #00577b;
   animation-delay: calc(-0.5s * var(--i)); }
 
 .sea-serpent__ripple:nth-child(3) span {
   animation: ripple3 5s linear infinite;
-  border-bottom: 0.3rem solid #0a19a1;
-  border-left: 0.3rem solid #0a19a1;
-  border-right: 0.3rem solid #0a19a1;
-  translate: -8rem -90rem;
+  border-bottom: 0.3rem solid #043950;
+  border-left: 0.3rem solid #043950;
+  border-right: 0.3rem solid #043950;
+  translate: -11rem -91rem;
   animation-delay: calc(-0.5s * var(--i)); }
 
 @keyframes ripple {
   0% {
-    width: 11rem;
-    height: 11rem; }
+    width: 10rem;
+    height: 10rem; }
   50% {
     opacity: 1; }
   100% {
-    width: 25rem;
-    height: 25rem;
+    width: 40rem;
+    height: 40rem;
     opacity: 0; } }
 
 @keyframes ripple2 {
   0% {
-    width: 11rem;
-    width: 11rem; }
+    width: 12rem;
+    height: 12rem; }
   50% {
     opacity: 1; }
   100% {
-    width: 30rem;
-    height: 30rem;
+    width: 45rem;
+    height: 45rem;
     opacity: 0; } }
 
 @keyframes ripple3 {
@@ -844,8 +886,8 @@ video {
   50% {
     opacity: 1; }
   100% {
-    width: 35rem;
-    height: 35rem;
+    width: 50rem;
+    height: 50rem;
     opacity: 0; } }
 
 .cards__container {
@@ -870,29 +912,37 @@ video {
   /*  in cases where the width of the column content is forced (for example with image width or white-space: 
   nowrap), the solution is to set min-width: 0 */
   min-width: 0;
+  /* positioning the text */
+  display: flex;
+  align-items: start;
+  justify-content: center;
   /* seperate the boxes slightly */
   margin: 0.5rem;
-  cursor: pointer;
-  transition: flex 0.7s ease-in; }
+  transition: flex 0.7s ease-in;
+  cursor: pointer; }
   .panel__text {
     /* want to make text invisible unless clicking on panel */
-    opacity: 0; }
+    opacity: 0;
+    margin-top: 0.5vh; }
   .panel__one {
-    background-image: url(../img/panel/player-flag.png); }
+    background-image: linear-gradient(rgba(16, 29, 44, 0.3), rgba(10, 25, 161, 0.3)), url(../img/panel/player-flag.png); }
   .panel__two {
-    background-image: url(../img/panel/goalkeeper.png); }
+    background-image: linear-gradient(rgba(16, 29, 44, 0.6), rgba(10, 25, 161, 0.6)), url(../img/panel/huddle.png); }
   .panel__three {
-    background-image: url(../img/panel/membership-badge.png); }
+    background-image: linear-gradient(rgba(16, 29, 44, 0.3), rgba(10, 25, 161, 0.3)), url(../img/panel/membership-badge.png); }
   .panel__four {
-    background-image: url(../img/panel/corner-flag.png); }
+    background-image: linear-gradient(rgba(16, 29, 44, 0.6), rgba(10, 25, 161, 0.6)), url(../img/panel/corner-flag.png); }
   .panel__five {
-    background-image: url(../img/panel/huddle.png); }
+    background-image: linear-gradient(rgba(16, 29, 44, 0.5), rgba(10, 25, 161, 0.5)), url(../img/panel/goalkeeper.png); }
 
 .panel.active {
   flex: 3; }
 
 .panel.active p {
-  opacity: 1; }
+  opacity: 1;
+  /* to slow down the opacity changes */
+  /* opacity to take 0.3 secondads, ease-in effect, 04.s delay */
+  transition: opacity 0.3s ease-in 0.4s; }
 
 @media only screen and (max-width: 62.5em) {
   .panel:nth-of-type(4),

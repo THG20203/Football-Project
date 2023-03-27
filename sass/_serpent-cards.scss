@@ -38,13 +38,13 @@
     border-left: 0.3rem solid #0374a4;
     border-right: 0.3rem solid #0374a4;
     border-radius: 50%;
-    translate: -10rem 9rem;
+    translate: -11rem 9rem;
     animation: ripple 5s linear infinite;
     animation-delay: calc(-0.5s * var(--i));
   }
   &__ripple:nth-child(2) span {
     animation: ripple2 5s linear infinite;
-    translate: -10rem -41rem;
+    translate: -11rem -41rem;
     /* border styles for the ripples */
     border-bottom: 0.5rem solid #00577b;
     border-left: 0.5rem solid #00577b;
@@ -56,14 +56,14 @@
     border-bottom: 0.3rem solid #043950;
     border-left: 0.3rem solid #043950;
     border-right: 0.3rem solid #043950;
-    translate: -10rem -91rem;
+    translate: -11rem -91rem;
     animation-delay: calc(-0.5s * var(--i));
   }
 }
 @keyframes ripple {
   0% {
-    width: 11rem;
-    height: 11rem;
+    width: 10rem;
+    height: 10rem;
   }
   50% {
     opacity: 1;

@@ -41,7 +41,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 700%;
+  height: 100%;
   z-index: 5;
   opacity: 1;
   background-color: #0a19a1;
@@ -51,8 +51,8 @@ body {
   object-fit: contain; }
 
 .background__loading-text {
-  margin-top: 30vh;
-  font-size: 20rem;
+  margin-top: 50vh;
+  font-size: 8rem;
   color: #f9f7f6;
   z-index: 6;
   position: relative; }
@@ -450,16 +450,17 @@ td {
   display: inline-block;
   /* center items in grid cells - need element to take up entire width of grid cell */
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  /* change color of the placeholder Search message in the search bar */ }
   .search__form {
     display: grid;
     /* divide form element into 10 columns - each 10% width */
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); }
   .search__input {
     grid-row: 1 /2;
+    width: 0%;
+    padding: 0;
     grid-column: 6 / 9;
-    /* top and botton 0.3rem, left and right 0.4rem */
-    padding: 0.3rem 0.4rem;
     font-size: 1.3rem;
     /* getting rid of the border around the search bar */
     border: none;
@@ -472,15 +473,21 @@ td {
     font-family: 'Nunito', sans-serif;
     /* change the color of text I'm inputing into the search bar */
     color: #f9f7f6;
-    /* change color of the placeholder Search message in the search bar */ }
+    transition: width 1s ease, padding 1s ease; }
+    .search__input.active {
+      /* top and botton 0.3rem, left and right 0.4rem */
+      padding: 0.3rem 0.4rem;
+      width: 100%; }
   .search__input::placeholder {
     color: #f9f7f6; }
   .search__btn {
     grid-row: 1 / 2;
     grid-column: 8 / 9;
-    border: none;
+    border: 0.1rem solid #f9f7f6;
     /* get rid of grey background box around the question mark */
-    background-color: transparent;
+    background-color: #101d2c;
+    transform: translateY(-0.5vh);
+    padding: 1rem;
     /* change the color of the question mark */
     color: #f9f7f6;
     cursor: pointer; }
@@ -829,13 +836,13 @@ video {
   border-left: 0.3rem solid #0374a4;
   border-right: 0.3rem solid #0374a4;
   border-radius: 50%;
-  translate: -10rem 9rem;
+  translate: -11rem 9rem;
   animation: ripple 5s linear infinite;
   animation-delay: calc(-0.5s * var(--i)); }
 
 .sea-serpent__ripple:nth-child(2) span {
   animation: ripple2 5s linear infinite;
-  translate: -10rem -41rem;
+  translate: -11rem -41rem;
   /* border styles for the ripples */
   border-bottom: 0.5rem solid #00577b;
   border-left: 0.5rem solid #00577b;
@@ -847,13 +854,13 @@ video {
   border-bottom: 0.3rem solid #043950;
   border-left: 0.3rem solid #043950;
   border-right: 0.3rem solid #043950;
-  translate: -10rem -91rem;
+  translate: -11rem -91rem;
   animation-delay: calc(-0.5s * var(--i)); }
 
 @keyframes ripple {
   0% {
-    width: 11rem;
-    height: 11rem; }
+    width: 10rem;
+    height: 10rem; }
   50% {
     opacity: 1; }
   100% {
