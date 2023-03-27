@@ -775,7 +775,7 @@ video {
 .sea-serpent__container {
   grid-column: col-end 4 / col-end 7;
   display: grid;
-  grid-template-rows: 40rem calc(95vh - 60rem); }
+  grid-template-rows: 40rem calc(100vh - 60rem); }
 
 .sea-serpent__content {
   grid-row: 1 /2;

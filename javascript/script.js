@@ -4,10 +4,10 @@
 
 //players cards
 const panels = document.querySelectorAll('.panel');
-// querySelector all putting all panels into a node list
+/* querySelector all putting all panels into a node list */
 
 panels.forEach((panel) => {
-  // want an event listener on each panel so if we click on it something happens
+  /* want an event listener on each panel so if we click on it something happens */
   panel.addEventListener('click', () => {
     /* before we add a class of active - remove the class of active on all the others 
     so we're going to use a function called removeActiveClasses we'll create below */
@@ -23,3 +23,5 @@ function removeActiveClasses() {
     panel.classList.remove('active');
   });
 }
+
+// video javascript
