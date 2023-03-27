@@ -84,7 +84,7 @@
       /* only want to display the hamburger icon on smaller devices */
       display: flex;
       /* needs to be at the top above background on transform and general content */
-      z-index: 3;
+      z-index: 4;
       background-color: $color-primary-dark;
     }
     /* put it to the right on the viewport */
@@ -131,9 +131,10 @@
     margin: 1.5rem;
     height: 6rem;
     width: 6rem;
-    background-image: radial-gradient($color-primary, $color-grey-1);
-    /* needs to be be above general content but below the hamburger */
-    z-index: 2;
+    background-image: radial-gradient($color-primary, $color-grey-2);
+    /* needs to be be above general content but below the hamburger 
+    - remember z-index: 2 for navigation buttons on slider */
+    z-index: 3;
     transition: transform 0.8s;
   }
 
