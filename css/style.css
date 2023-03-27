@@ -53,7 +53,9 @@ body {
 .background__loading-text {
   margin-top: 30vh;
   font-size: 20rem;
-  color: #f9f7f6; }
+  color: #f9f7f6;
+  z-index: 6;
+  position: relative; }
 
 .features {
   /* features go from center-start to center-end - beginning to end of centre 8 grid */

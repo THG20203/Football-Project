@@ -3,7 +3,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //BACKGROUND OVERLAY
 const loadText = document.querySelector('.background__loading-text');
-const backgroundOverlay = document.querySelector('background__container');
+const backgroundOverlay = document.querySelector('.background__container');
 
 /* initalise load at 0 */
 let load = 0;
@@ -24,6 +24,9 @@ function backgroundOpacity() {
   /* so applying the scale function which is written below - the in_min of 0 on load, in_max on load of 100,
   then out_min of 1 opacity down to out_max of 0 opacity */
   loadText.style.opacity = scale(load, 0, 100, 1, 0);
+  backgroundOverlay.style.opacity = scale(load, 0, 100, 1, 0);
+  loadText.style.zIndex = scale(load, 0, 100, 6, -2);
+  backgroundOverlay.style.zIndex = scale(load, 0, 100, 5, -2);
 }
 
 /* function from stack overflow - map range of numbers to another range of numbers - map 0 to 100 to
@@ -57,3 +60,6 @@ function removeActiveClasses() {
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // VIDEO JAVASCRIPT
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// COUNTER FOR YOUTH DEVELOPMENT
