@@ -1,5 +1,27 @@
 'use script';
 
+//background blur
+const loadText = document.querySelector('.background__loading-text');
+const bg = document.querySelector('background__container');
+
+/* initalise load at 0 */
+let load = 0;
+let int = setInterval(backgroundOpacity, 20);
+
+function backgroundOpacity() {
+  load++;
+  /* should stop at 100% */
+  if (load > 99) {
+    clearInterval(int);
+  }
+  loadText.innerText = `${load}%`;
+  loadText.style.opacity = scale(load, 0, 100, 1, 0);
+}
+
+const scale = (num, in_min, in_max, out_min, out_max) => {
+  return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
+};
+
 //progress steps
 
 //players cards

@@ -1,0 +1,20 @@
+.background {
+  &__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 700%;
+    z-index: 5;
+    opacity: 1;
+    background-color: $color-primary;
+    display: grid;
+    align-content: start;
+    justify-content: center;
+  }
+  &__loading-text {
+    margin-top: 30vh;
+    font-size: 20rem;
+    color: $color-grey-1;
+  }
+}

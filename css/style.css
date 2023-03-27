@@ -36,6 +36,24 @@ body {
     .container {
       grid-template-rows: 10rem 10rem 120vh calc(100vh - 20rem) calc( 100vh - 20rem); } }
 
+.background__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 700%;
+  z-index: 5;
+  opacity: 1;
+  background-color: #0c22e8;
+  display: grid;
+  align-content: start;
+  justify-content: center; }
+
+.background__loading-text {
+  margin-top: 30vh;
+  font-size: 20rem;
+  color: #f9f7f6; }
+
 .features {
   /* features go from center-start to center-end - beginning to end of centre 8 grid */
   grid-column: center-start / center-end;
