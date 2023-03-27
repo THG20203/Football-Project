@@ -37,16 +37,6 @@ const scale = (num, in_min, in_max, out_min, out_max) => {
 };
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//HIDDEN SEARCH WIDGET
-const searchInput = document.querySelector('.search__input');
-const searchButton = document.querySelector('.search__btn');
-
-searchButton.addEventListener('click', () => {
-  searchInput.classList.toggle('active');
-  searchInput.focus();
-});
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //PLAYERS CARDS
 const panels = document.querySelectorAll('.panel');
 /* querySelector all putting all panels into a node list */

@@ -458,10 +458,11 @@ td {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); }
   .search__input {
     grid-row: 1 /2;
-    width: 0%;
-    padding: 0;
+    width: 100%;
+    /* top and botton 0.3rem, left and right 0.4rem */
+    padding: 0.3rem 0.4rem;
     grid-column: 6 / 9;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     /* getting rid of the border around the search bar */
     border: none;
     /* change the background-color of inside of the search section to dark blue,
@@ -472,12 +473,7 @@ td {
     outline: none;
     font-family: 'Nunito', sans-serif;
     /* change the color of text I'm inputing into the search bar */
-    color: #f9f7f6;
-    transition: width 1s ease, padding 1s ease; }
-    .search__input.active {
-      /* top and botton 0.3rem, left and right 0.4rem */
-      padding: 0.3rem 0.4rem;
-      width: 100%; }
+    color: #f9f7f6; }
   .search__input::placeholder {
     color: #f9f7f6; }
   .search__btn {
