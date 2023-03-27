@@ -1,30 +1,39 @@
 'use script';
 
-//background blur
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//BACKGROUND OVERLAY
 const loadText = document.querySelector('.background__loading-text');
-const bg = document.querySelector('background__container');
+const backgroundOverlay = document.querySelector('background__container');
 
 /* initalise load at 0 */
 let load = 0;
+/* run function in an interval - every 20 miliseconds 
+setInterval() repeatedly calls a function or executes a code snippet, with a fixed time delay 
+between each call. */
 let int = setInterval(backgroundOpacity, 20);
 
 function backgroundOpacity() {
+  /* take load value and increment by 1 */
   load++;
-  /* should stop at 100% */
+  /* should stop at 100% - because if loadvalue = greater than 99 - stop it*/
   if (load > 99) {
+    /* stops interval - passing in int - which represents setInterval */
     clearInterval(int);
   }
   loadText.innerText = `${load}%`;
+  /* so applying the scale function which is written below - the in_min of 0 on load, in_max on load of 100,
+  then out_min of 1 opacity down to out_max of 0 opacity */
   loadText.style.opacity = scale(load, 0, 100, 1, 0);
 }
 
+/* function from stack overflow - map range of numbers to another range of numbers - map 0 to 100 to
+1 to 0 for the opacity */
 const scale = (num, in_min, in_max, out_min, out_max) => {
   return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
 };
 
-//progress steps
-
-//players cards
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//PLAYERS CARDS
 const panels = document.querySelectorAll('.panel');
 /* querySelector all putting all panels into a node list */
 
@@ -46,4 +55,5 @@ function removeActiveClasses() {
   });
 }
 
-// video javascript
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// VIDEO JAVASCRIPT
