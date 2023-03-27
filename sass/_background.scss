@@ -7,10 +7,11 @@
     height: 700%;
     z-index: 5;
     opacity: 1;
-    background-color: $color-primary;
+    background-color: $color-primary-dark;
     display: grid;
     align-content: start;
     justify-content: center;
+    object-fit: contain;
   }
   &__loading-text {
     margin-top: 30vh;

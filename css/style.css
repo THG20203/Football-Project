@@ -44,10 +44,11 @@ body {
   height: 700%;
   z-index: 5;
   opacity: 1;
-  background-color: #0c22e8;
+  background-color: #0a19a1;
   display: grid;
   align-content: start;
-  justify-content: center; }
+  justify-content: center;
+  object-fit: contain; }
 
 .background__loading-text {
   margin-top: 30vh;
