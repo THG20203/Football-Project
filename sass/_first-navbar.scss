@@ -79,9 +79,9 @@
   &__btn {
     grid-row: 1 / 2;
     grid-column: 8 / 9;
-    border: 0.1rem solid $color-grey-1;
+    border: none;
     /* get rid of grey background box around the question mark */
-    background-color: $color-secondary;
+    background-color: transparent;
     transform: translateY(-0.5vh);
     padding: 1vh 1vw;
     /* change the color of the question mark */

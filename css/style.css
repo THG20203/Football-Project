@@ -479,9 +479,9 @@ td {
   .search__btn {
     grid-row: 1 / 2;
     grid-column: 8 / 9;
-    border: 0.1rem solid #f9f7f6;
+    border: none;
     /* get rid of grey background box around the question mark */
-    background-color: #101d2c;
+    background-color: transparent;
     transform: translateY(-0.5vh);
     padding: 1vh 1vw;
     /* change the color of the question mark */
@@ -782,7 +782,6 @@ td {
 
 video {
   display: grid;
-  justify-content: start;
   width: 100%;
   height: auto; }
 
